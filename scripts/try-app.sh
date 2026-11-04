@@ -6,7 +6,10 @@
 # to a temporary folder, the built files replace its JavaScript there, and the
 # app loads that copy with pkgload::load_all().
 #
-# Usage: npm run try-app [-- --no-tests]
+# Usage: npm run try-app [-- --no-tests] [-- --r-tests]
+#   --no-tests  only start the app
+#   --r-tests   also run the R package's own tests (devtools::test()) on the
+#               temporary copy, which include its browser tests
 #
 # Settings (environment variables, or a .try-app.env file in this repo):
 #   GENEVIEWER_R_DIR    the geneviewer R package repo
@@ -19,9 +22,11 @@ cd "$(dirname "$0")/.."
 
 PORT="${PORT:-4849}"
 RUN_TESTS=1
+R_TESTS=0
 for arg in "$@"; do
   case "$arg" in
     --no-tests) RUN_TESTS=0 ;;
+    --r-tests) R_TESTS=1 ;;
     *) echo "Unknown option: $arg" >&2; exit 2 ;;
   esac
 done
@@ -101,6 +106,18 @@ if [ "$RUN_TESTS" -eq 1 ]; then
   done
   echo "  ${#passed[@]} passed, ${#failed[@]} failed"
   [ "${#failed[@]}" -eq 0 ] || status=1
+fi
+
+if [ "$R_TESTS" -eq 1 ]; then
+  echo "== R package tests (devtools::test() on the copy)"
+  if Rscript --vanilla -e "devtools::test('$pkg', stop_on_failure = TRUE)" \
+      > "$work/r-tests.log" 2>&1; then
+    echo "  pass  (log: $work/r-tests.log)"
+  else
+    echo "  FAIL  (log: $work/r-tests.log)"
+    status=1
+  fi
+  tail -n 15 "$work/r-tests.log" | sed 's/^/  /'
 fi
 
 echo
