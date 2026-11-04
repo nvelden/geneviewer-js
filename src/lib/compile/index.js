@@ -7,6 +7,8 @@ import { chart } from "./chart.js";
 import { renderTheme } from "./render.js";
 import { cluster } from "./cluster.js";
 import { color, coordinates, genes, labels, legend, pattern, sequence, tooltip } from "./genes.js";
+import { clusterFooter, clusterLabel, clusterTitle, grid, title } from "./layout.js";
+import { clone } from "./r.js";
 
 /**
  * How each spec key changes the chart. The keys of a spec are applied in
@@ -24,6 +26,11 @@ const handlers = {
   sequence,
   coordinates,
   tooltip,
+  title,
+  clusterTitle,
+  clusterLabel,
+  clusterFooter,
+  grid,
 };
 
 // Keys GC_chart() itself reads
@@ -46,6 +53,8 @@ export function entries(value) {
  */
 export function compile(spec) {
   if (!spec || typeof spec !== "object") throw new Error("compile() needs a spec object");
+  // The options of the render model are copies: drawing never changes the spec
+  spec = clone(spec);
   const state = chart(spec);
   for (const [key, value] of Object.entries(spec)) {
     if (CHART_KEYS.has(key)) continue;
