@@ -8,15 +8,24 @@ gene cluster charts with the same JavaScript.
 
 | File | What it is |
 |------|------------|
-| `src/geneviewer.js` | Chart library: genes, links, labels, legends, scales, colour bars, SVG/PNG export |
+| `src/geneviewer.js` | Drawing functions: genes, links, labels, legends, scales, colour bars, SVG/PNG export |
+| `src/chart.js` | `geneviewer.newChart()`: the chart, with its toolbar, zoom, selection, drag and undo/redo |
 | `src/styles.css` | Chart styles |
-| `src/htmlwidgets/geneviewerwidget.js` | htmlwidgets binding used by the R package: rendering pipeline, toolbar, zoom, selection, drag and undo/redo |
+| `src/htmlwidgets/geneviewerwidget.js` | htmlwidgets binding used by the R package: calls `newChart` and sends events to Shiny |
 
-The files run as classic browser scripts. They expect these globals:
+The build joins `geneviewer.js` and `chart.js` into `dist/geneviewer.js`. The
+files run as classic browser scripts and need the global `d3` (D3 7.8.5);
+the binding also needs `HTMLWidgets`.
 
-- `d3` (D3 7.8.5)
-- `saveAs` (FileSaver.js 2.0.4), for the save buttons
-- `HTMLWidgets`, for `HTMLWidgets.dataframeToD3` and the widget binding
+```js
+const chart = geneviewer.newChart(el, renderModel, { on: { select: (e) => console.log(e.detail) } });
+chart.on("zoom", (e) => console.log(e.detail));
+```
+
+The render model is what the R package sends today (`widget$x`); from M4 it
+is the chart spec. Events also arrive as `geneviewer:<name>` DOM events on
+`el`. The save menu downloads with the browser; pass `options.saveAs(blob,
+filename)` to save another way.
 
 ## Build
 
@@ -26,8 +35,8 @@ npm run build   # write dist/ and dist/SHA256SUMS
 ```
 
 The build copies the sources unchanged and unminified, so the R package can
-ship readable source, as CRAN expects. D3 and FileSaver are not bundled; each
-host package ships them as separate dependencies with their own licences.
+ship readable source, as CRAN expects. D3 is not bundled; each host package
+ships it as a separate dependency with its own licence.
 
 ## Tests
 
@@ -48,9 +57,10 @@ Rscript test/coverage.R             # update test/coverage.md
 - **Two modes:** fixtures and interaction tests run twice against the same
   baselines: through the R binding, as R draws charts, and with
   `geneviewer.newChart()` directly (`test/harness/mount.js`).
-- **Save and two-chart tests** (`test/save.cjs`, `test/two-charts.cjs`): the
-  save menu downloads a valid SVG and PNG; two charts on a page keep their
-  own selection and undo history.
+- **Save, two-chart and site checks** (`test/save.cjs`,
+  `test/two-charts.cjs`, `test/site.cjs`): the save menu downloads a valid
+  SVG and PNG; two charts on a page keep their own selection and undo
+  history; every chart on the docs site draws without errors.
 - **Coverage** (`test/coverage.md`): every documented argument of the `GC_*`
   chart functions is used by at least one fixture.
 - **Fixed environment:** the tests run in a Docker image (`docker/`) with
@@ -64,6 +74,7 @@ Rscript test/coverage.R             # update test/coverage.md
 ```sh
 npm run try-app               # build, start the app, run the app's tests
 npm run try-app -- --no-tests # build and start the app only
+npm run try-app -- --r-tests  # also run the R package's tests on the copy
 ```
 
 This runs the [geneviewer Shiny app](https://github.com/nvelden/geneviewer-shinylive)
@@ -89,7 +100,8 @@ Set `PORT` to use a port other than 4849.
 
 ## Releases
 
-1. Bump `version` in `package.json`.
+1. Bump `version` in `package.json` and `src/chart.js` (`npm run check`
+   compares them).
 2. Commit, then tag and push: `git tag v0.2.1 && git push origin main v0.2.1`.
 
 The release workflow checks that the tag matches `package.json`, builds
@@ -111,9 +123,8 @@ the R repo; make changes here and cut a new release.
 
 ## Roadmap
 
-- Separate the shared chart logic in `geneviewerwidget.js` (pipeline, toolbar,
-  zoom, selection, undo/redo) from the htmlwidgets-specific parts, so a Python
-  binding can reuse it.
+See [docs/roadmap.md](docs/roadmap.md). Next:
+
 - Add an ES-module build with D3 included, for anywidget and Shinylive (Python).
 - Split `geneviewer.js` into ES modules.
 

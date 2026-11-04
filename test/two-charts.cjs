@@ -35,7 +35,7 @@ const fixture = path.join(__dirname, "fixtures", "vig-geneviewer-5");
         el.style.height = meta.height || "400px";
         const on = {};
         ["select", "selection", "drag", "moves"].forEach((name) => {
-          on[name] = (detail) => window.__events[id].push({ name, detail });
+          on[name] = (event) => window.__events[id].push({ name: event.type, detail: event.detail });
         });
         window.__charts[id] = geneviewer.newChart(el, payload, { on });
       });

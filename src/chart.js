@@ -115,10 +115,11 @@ var createMoveHistory = function () {
  * @typedef {Object} Chart
  * @property {function(Object): void} update  Draw again with a new render model.
  * @property {function(): void} resize  Draw again at the element's current size.
- * @property {function(ChartEvent, function(*): void): function(): void} on
- *   Call a handler with the detail of each event of that name; gives the
- *   function that removes it.
- * @property {function(ChartEvent, function(*): void): void} off  Remove a handler.
+ * @property {function(ChartEvent, function({type: ChartEvent, detail: *}): void): function(): void} on
+ *   Call a handler with each event of that name, as { type, detail }; gives
+ *   the function that removes it.
+ * @property {function(ChartEvent, function({type: ChartEvent, detail: *}): void): void} off
+ *   Remove a handler.
  * @property {function(?Array<number>): void} zoomTo  Set the zoom window
  *   (GC_zoom()): a range in the units of its mode, or null for everything.
  * @property {function(): string} toSVG  The chart as a standalone SVG.
@@ -129,16 +130,17 @@ var createMoveHistory = function () {
 /**
  * Draw a chart into an element.
  *
- * Events go to chart.on() handlers and are dispatched on el as
- * geneviewer:<name> DOM events, which bubble.
+ * Events go to chart.on() handlers, as { type, detail }, and are dispatched
+ * on el as geneviewer:<name> DOM events with the same detail, which bubble.
  *
- * @param {HTMLElement} el  The element to draw into; the chart takes its size.
+ * @param {HTMLElement|string} el  The element to draw into, or a CSS
+ *   selector for it; the chart takes its size.
  * @param {Object} renderModel  The chart as the R package sends it (widget$x).
  * @param {Object} [options]
  * @param {function(Blob, string): *} [options.saveAs]  Saves a file from the
  *   save menu, given the blob and a file name. By default the browser
  *   downloads it.
- * @param {Object<ChartEvent, function(*): void>} [options.on]  Event
+ * @param {Object<ChartEvent, function({type: ChartEvent, detail: *}): void>} [options.on]  Event
  *   handlers by name, added before the first draw, so they also get its
  *   events (rendered, zoom). Same as chart.on() for each.
  * @param {boolean} [options.server=false]  The chart's events go to a server
@@ -149,8 +151,16 @@ var createMoveHistory = function () {
  * @returns {Chart}
  */
 function newChart(el, renderModel, options) {
+    if (typeof el === "string") {
+      var found = document.querySelector(el);
+      if (!found) throw new Error("No element matches " + el);
+      el = found;
+    }
     // Kept as given: server is read each time it is used
     options = options || {};
+    // The stylesheet styles charts by this class (htmlwidgets also sets it)
+    var addedClass = !el.classList.contains("geneviewer");
+    el.classList.add("geneviewer");
     var
       graphContainer,
       style,
@@ -298,7 +308,7 @@ function newChart(el, renderModel, options) {
 
     // To the chart.on() handlers, then as a DOM event on el
     var report = function (name, detail) {
-      (handlers[name] || []).slice().forEach(function (handler) { handler(detail); });
+      (handlers[name] || []).slice().forEach(function (handler) { handler({ type: name, detail: detail }); });
       el.dispatchEvent(new CustomEvent("geneviewer:" + name, { bubbles: true, detail: detail }));
     };
 
@@ -1750,6 +1760,7 @@ function newChart(el, renderModel, options) {
         appliedStyleKeys.forEach(function (key) { el.style[key] = ""; });
         el.classList.remove("geneviewer-draggable", "geneviewer-selectable", "geneviewer-highlight",
                             "geneviewer-dragging", "geneviewer-hover-below");
+        if (addedClass) el.classList.remove("geneviewer");
       }
     };
     Object.keys(options.on || {}).forEach(function (name) { chart.on(name, options.on[name]); });

@@ -10,11 +10,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
   <link rel="stylesheet" href="lib/styles.css">
   <script src="lib/d3.min.js"></script>
-  <script src="lib/FileSaver.min.js"></script>
   <script src="lib/geneviewer.js"></script>
-  <script src="lib/htmlwidgets-shim.js"></script>
   <script src="assets/embed.js"></script>
-  <script src="lib/geneviewerwidget.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -71,16 +68,18 @@
         chart.className = "chart";
         section.append(title, description, chart);
 
+        // The interactive example logs its events, from the first draw on
+        var on = {};
         if (payload.id === "interactive") {
           var log = document.createElement("div");
           log.className = "event-log";
           log.setAttribute("aria-live", "polite");
           section.append(log);
           events.forEach(function (name) {
-            chart.addEventListener("geneviewer:" + name, function (event) {
-              var line = "geneviewer:" + name + "  " + summary(event.detail);
+            on[name] = function (event) {
+              var line = event.type + "  " + summary(event.detail);
               log.textContent = line + "\n" + log.textContent;
-            });
+            };
           });
         }
 
@@ -93,7 +92,7 @@
         pre.append(code);
         details.append(summaryEl, pre);
         section.append(details);
-        return { section: section, chart: chart };
+        return { section: section, chart: chart, on: on };
       }
 
       // A short, one-line view of an event's detail
@@ -113,7 +112,7 @@
             var parts = card(payload);
             container.append(parts.section);
             try {
-              geneviewerSite.render(parts.chart, payload);
+              geneviewerSite.render(parts.chart, payload, { on: parts.on });
             } catch (error) {
               parts.chart.className = "chart-error";
               parts.chart.textContent = "The chart could not be drawn: " + error.message;

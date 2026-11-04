@@ -19,7 +19,7 @@ function mountChart(payload, meta, eventNames, record) {
   if (harnessMode() === "direct") {
     var on = {};
     eventNames.forEach(function (name) {
-      on[name] = function (detail) { record(name, detail); };
+      on[name] = function (event) { record(event.type, event.detail); };
     });
     return geneviewer.newChart(el, payload, { on: on });
   }
