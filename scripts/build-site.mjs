@@ -18,6 +18,7 @@ const lib = {
   "dist/styles.css": "styles.css",
   "vendor/d3-7.8.5/d3.min.js": "d3.min.js",
   "vendor/filesaver-2.0.4/FileSaver.min.js": "FileSaver.min.js",
+  "test/harness/htmlwidgets-shim.js": "htmlwidgets-shim.js",
 };
 for (const [from, to] of Object.entries(lib)) cpSync(from, `_site/lib/${to}`);
 
