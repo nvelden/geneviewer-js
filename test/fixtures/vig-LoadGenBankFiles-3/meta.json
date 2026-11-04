@@ -1,0 +1,7 @@
+{
+  "id": "vig-LoadGenBankFiles-3",
+  "source": "vig-LoadGenBankFiles",
+  "width": 1000,
+  "height": "800px",
+  "covers": ["GC_chart", "GC_clusterLabel", "GC_clusterTitle", "GC_color", "GC_genes", "GC_legend", "GC_scaleBar", "GC_theme", "GC_tooltip"]
+}

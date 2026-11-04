@@ -1,0 +1,44 @@
+library(geneviewer)
+library(dplyr)
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+lacZ_operon <- data.frame(
+  start = c(361249, 361926, 363231, 366428), 
+  end = c(361860, 363179, 366305, 367510), 
+  Gene_symbol = c("lacA", "lacY", "lacZ", "lacI"), 
+  Strand = c("minus", "minus", "minus", "minus"), 
+  NCBI_Gene_ID = as.character(c(945674, 949083, 945006, 945007)), 
+  Description = c("galactoside O-acetyltransferase", 
+                  "lactose permease", "beta-galactosidase", 
+                  "DNA-binding transcriptional repressor LacI")
+)
+lacZ_operon <- data.frame(
+  start = c(361249, 361926, 363231, 366428), 
+  end = c(361860, 363179, 366305, 367510), 
+  Gene_symbol = c("lacA", "lacY", "lacZ", "lacI"), 
+  Strand = c("minus", "minus", "minus", "minus"), 
+  NCBI_Gene_ID = as.character(c(945674, 949083, 945006, 945007)), 
+  Description = c("galactoside O-acetyltransferase", 
+                  "lactose permease", "beta-galactosidase", 
+                  "DNA-binding transcriptional repressor LacI")
+)
+GC_chart(
+  human_hox_genes,
+  group = "cluster",
+  strand = "strand",
+  cluster = "cluster",
+  height = "400px") %>%
+  GC_clusterLabel() %>%
+  GC_legend(FALSE) %>%
+  GC_genes(
+    marker = "boxarrow",
+    markerHeight = 10,
+    arrowheadHeight = 10,
+    arrowheadWidth = 6
+  ) %>%
+  GC_labels("name", fontSize = "10px") %>%
+  GC_scale(cluster = c(1, 2), hidden = TRUE, reverse = TRUE) %>%
+  GC_cluster(prevent_gene_overlap = TRUE) %>%
+  GC_theme("dark")

@@ -1,0 +1,7 @@
+{
+  "id": "vig-Examples-11",
+  "source": "vig-Examples",
+  "width": 1000,
+  "height": "170px",
+  "covers": ["GC_chart", "GC_color", "GC_genes", "GC_legend", "GC_scale", "GC_theme", "GC_title", "GC_tooltip"]
+}

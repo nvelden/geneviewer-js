@@ -1,0 +1,7 @@
+{
+  "id": "rd-GC-pattern-1",
+  "source": "rd-GC_pattern",
+  "width": 1000,
+  "height": "150px",
+  "covers": ["GC_chart", "GC_pattern"]
+}

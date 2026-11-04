@@ -1,0 +1,7 @@
+{
+  "id": "vig-geneviewer-37",
+  "source": "vig-geneviewer",
+  "width": 1000,
+  "height": "150px",
+  "covers": ["GC_chart", "GC_legend", "GC_sequence"]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "rd-mitochondrial-gene-order-1",
+  "source": "rd-mitochondrial_gene_order",
+  "width": 1000,
+  "height": "400px",
+  "covers": ["GC_chart", "GC_clusterLabel", "GC_labels"]
+}

@@ -1,0 +1,13 @@
+genes_data <- data.frame(
+  start = c(10, 50, 90, 130, 170, 210),
+  end = c(40, 80, 120, 160, 200, 240),
+  name = c('Gene 1', 'Gene 2', 'Gene 3', 'Gene 4', 'Gene 5', 'Gene 6'),
+  group = c('A', 'A', 'B', 'B', 'A', 'C'),
+  cluster = c(1, 1, 1, 2, 2, 2)
+)
+GC_chart(genes_data, cluster = "cluster", group = "group", height = "150px") %>%
+  GC_pattern(
+    patterns = list(A = "checkerboard", B = "rings", C = "bricks"),
+    color = list(A = "black", B = "black", C = "white"),
+    background = list(A = "white", B = "white", C = "black")
+  )

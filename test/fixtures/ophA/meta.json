@@ -1,6 +1,7 @@
 {
   "id": "ophA",
+  "source": "charts",
   "width": 1000,
   "height": "100px",
-  "covers": []
+  "covers": ["GC_chart", "GC_labels"]
 }

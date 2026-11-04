@@ -1,0 +1,7 @@
+{
+  "id": "rd-GC-sequence-1",
+  "source": "rd-GC_sequence",
+  "width": 1000,
+  "height": "200px",
+  "covers": ["GC_chart", "GC_labels", "GC_sequence"]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "rd-GC-element-style-1",
+  "source": "rd-GC_element_style",
+  "width": 1000,
+  "height": "400px",
+  "covers": ["GC_chart", "GC_clusterTitle", "GC_element_style", "GC_labels"]
+}

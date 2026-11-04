@@ -1,0 +1,7 @@
+{
+  "id": "rd-GC-trackMouse-1",
+  "source": "rd-GC_trackMouse",
+  "width": 1000,
+  "height": "220px",
+  "covers": ["GC_chart", "GC_trackMouse"]
+}

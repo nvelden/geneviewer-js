@@ -1,0 +1,7 @@
+{
+  "id": "rd-coronavirus-genomes-1",
+  "source": "rd-coronavirus_genomes",
+  "width": 1000,
+  "height": "700px",
+  "covers": ["GC_chart", "GC_clusterLabel", "GC_labels", "GC_zoom"]
+}

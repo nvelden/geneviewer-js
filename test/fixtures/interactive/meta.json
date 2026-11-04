@@ -1,0 +1,7 @@
+{
+  "id": "interactive",
+  "source": "charts",
+  "width": 1000,
+  "height": "320px",
+  "covers": ["GC_chart", "GC_clusterLabel", "GC_events", "GC_labels", "GC_links", "GC_zoom"]
+}

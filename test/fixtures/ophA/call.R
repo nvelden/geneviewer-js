@@ -6,6 +6,5 @@ gene_cluster <- data.frame(
   "O-acyltransferase", "Monooxygenase", "Prolyloligopeptidase",
   "F-box/RNHI-like")
 )
-
 GC_chart(gene_cluster, group = "class", height = "100px") %>%
   GC_labels("name")

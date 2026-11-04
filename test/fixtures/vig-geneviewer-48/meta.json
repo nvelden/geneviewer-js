@@ -1,0 +1,7 @@
+{
+  "id": "vig-geneviewer-48",
+  "source": "vig-geneviewer",
+  "width": 1000,
+  "height": "150px",
+  "covers": ["GC_annotation", "GC_chart", "GC_legend", "GC_trackMouse"]
+}

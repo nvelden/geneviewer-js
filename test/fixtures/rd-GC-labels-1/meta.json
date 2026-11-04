@@ -1,0 +1,7 @@
+{
+  "id": "rd-GC-labels-1",
+  "source": "rd-GC_labels",
+  "width": 1000,
+  "height": "200px",
+  "covers": ["GC_chart", "GC_labels"]
+}

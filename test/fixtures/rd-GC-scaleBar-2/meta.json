@@ -1,0 +1,7 @@
+{
+  "id": "rd-GC-scaleBar-2",
+  "source": "rd-GC_scaleBar",
+  "width": 1000,
+  "height": "400px",
+  "covers": ["GC_chart", "GC_scaleBar"]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "rd-GC-coordinates-1",
+  "source": "rd-GC_coordinates",
+  "width": 1000,
+  "height": "200px",
+  "covers": ["GC_chart", "GC_coordinates"]
+}
