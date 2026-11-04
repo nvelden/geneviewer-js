@@ -7,7 +7,7 @@
 //   node test/run.cjs --only <id>  one fixture (repeatable)
 const fs = require("node:fs");
 const path = require("node:path");
-const puppeteer = require("puppeteer");
+const { chromium } = require("playwright-core");
 const { renderFixture } = require("./harness/render.cjs");
 
 const fixturesDir = path.join(__dirname, "fixtures");
@@ -34,9 +34,8 @@ function firstDifference(expected, actual) {
     .sort();
   if (!ids.length) throw new Error("No fixtures found.");
 
-  const browser = await puppeteer.launch({
-    headless: true,
-    args: ["--no-sandbox", "--font-render-hinting=none", "--disable-gpu"],
+  const browser = await chromium.launch({
+    args: ["--font-render-hinting=none", "--disable-gpu"],
   });
   let failed = 0;
   let written = 0;

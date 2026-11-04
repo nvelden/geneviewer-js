@@ -1,0 +1,126 @@
+<div class="geneviewer-container" id="geneviewer-title-container-chart">
+  <svg class="geneviewer-svg-content" height="40" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 40" width="1000">
+    <g data-component="title" transform="translate(50, 5)">
+      <text data-part="title" style="cursor: default; fill: rgb(70, 70, 70); font-family: sans-serif; font-size: 18px; font-style: normal; font-weight: bold" text-anchor="start" transform="translate(0, 0)" x="0" y="22.5">
+        <tspan>
+          "Erythromycin A biosynthetic gene cluster from"
+        <tspan style="font-style: italic">
+          "Saccharopolyspora erythraea"
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <svg class="geneviewer-svg-content" data-cluster="cluster" height="74" id="svg-container-3" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 74" width="1000">
+    <g data-component="scale" transform="translate(0, 0) translate(50,56.2)">
+      <g fill="none" font-family="sans-serif" font-size="10" text-anchor="middle">
+        <path class="domain" d="M0.5,6V0.5H900.5V6" stroke="currentColor" style="stroke-width: 1; stroke: rgb(110, 112, 121)">
+        <g class="tick" opacity="1" transform="translate(33.33,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: rgb(110, 112, 121)" y2="5">
+          <text dy="0.71em" fill="currentColor" style="cursor: default; fill: rgb(110, 112, 121); font-family: sans-serif; font-size: 12px" y="9">
+            "780,000"
+        <g class="tick" opacity="1" transform="translate(116.67,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: rgb(110, 112, 121)" y2="5">
+          <text dy="0.71em" fill="currentColor" style="cursor: default; fill: rgb(110, 112, 121); font-family: sans-serif; font-size: 12px" y="9">
+            "785,000"
+        <g class="tick" opacity="1" transform="translate(200,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: rgb(110, 112, 121)" y2="5">
+          <text dy="0.71em" fill="currentColor" style="cursor: default; fill: rgb(110, 112, 121); font-family: sans-serif; font-size: 12px" y="9">
+            "790,000"
+        <g class="tick" opacity="1" transform="translate(283.33,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: rgb(110, 112, 121)" y2="5">
+          <text dy="0.71em" fill="currentColor" style="cursor: default; fill: rgb(110, 112, 121); font-family: sans-serif; font-size: 12px" y="9">
+            "795,000"
+        <g class="tick" opacity="1" transform="translate(366.67,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: rgb(110, 112, 121)" y2="5">
+          <text dy="0.71em" fill="currentColor" style="cursor: default; fill: rgb(110, 112, 121); font-family: sans-serif; font-size: 12px" y="9">
+            "800,000"
+        <g class="tick" opacity="1" transform="translate(450,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: rgb(110, 112, 121)" y2="5">
+          <text dy="0.71em" fill="currentColor" style="cursor: default; fill: rgb(110, 112, 121); font-family: sans-serif; font-size: 12px" y="9">
+            "805,000"
+        <g class="tick" opacity="1" transform="translate(533.33,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: rgb(110, 112, 121)" y2="5">
+          <text dy="0.71em" fill="currentColor" style="cursor: default; fill: rgb(110, 112, 121); font-family: sans-serif; font-size: 12px" y="9">
+            "810,000"
+        <g class="tick" opacity="1" transform="translate(616.67,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: rgb(110, 112, 121)" y2="5">
+          <text dy="0.71em" fill="currentColor" style="cursor: default; fill: rgb(110, 112, 121); font-family: sans-serif; font-size: 12px" y="9">
+            "815,000"
+        <g class="tick" opacity="1" transform="translate(700,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: rgb(110, 112, 121)" y2="5">
+          <text dy="0.71em" fill="currentColor" style="cursor: default; fill: rgb(110, 112, 121); font-family: sans-serif; font-size: 12px" y="9">
+            "820,000"
+        <g class="tick" opacity="1" transform="translate(783.33,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: rgb(110, 112, 121)" y2="5">
+          <text dy="0.71em" fill="currentColor" style="cursor: default; fill: rgb(110, 112, 121); font-family: sans-serif; font-size: 12px" y="9">
+            "825,000"
+        <g class="tick" opacity="1" transform="translate(866.67,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: rgb(110, 112, 121)" y2="5">
+          <text dy="0.71em" fill="currentColor" style="cursor: default; fill: rgb(110, 112, 121); font-family: sans-serif; font-size: 12px" y="9">
+            "830,000"
+    <g data-component="sequence" transform="translate(50,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: rgb(110, 112, 121)" x1="-14.21" x2="910.43" y1="32" y2="32">
+    <g data-component="genes" transform="translate(50, 5)">
+      <path class="gene" cluster="cluster" d="M1.47 19.89 L4.86 13.86 Q6.33 11.25 4.86 8.64 L1.47 2.61 Q0 0 0 3 L0 19.5 Q0 22.5 1.47 19.89 Z" end="778594" fill="grey" id="cluster-gene-0" rowID="1" start="778214" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 3.57, 32) translate(3.57, 20.75)">
+      <path class="gene" cluster="cluster" d="M0 3 L0 19.5 Q0 22.5 3 22.5 L9.38 22.5 Q12.38 22.5 14.05 20 L18.22 13.75 Q19.88 11.25 18.22 8.75 L14.05 2.5 Q12.38 0 9.38 0 L3 0 Q0 0 0 3 Z" end="779847" fill="#91cc75" id="cluster-gene-1" rowID="2" start="778654" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 10.9, 32) translate(10.9, 20.75)">
+      <path class="gene" cluster="cluster" d="M0 1.27 L0 21.23 Q0 22.5 1.27 22.5 L1.27 22.5 Q2.53 22.5 3.24 21.45 L8.37 13.75 Q10.03 11.25 8.37 8.75 L3.24 1.05 Q2.53 0 1.27 0 L1.27 0 Q0 0 0 1.27 Z" end="779802" fill="#fac858" id="cluster-gene-2" rowID="3" start="780404" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(180, 40.07, 32) translate(40.07, 20.75)">
+      <path class="gene" cluster="cluster" d="M0 3 L0 19.5 Q0 22.5 3 22.5 L13.98 22.5 Q16.98 22.5 18.65 20 L22.82 13.75 Q24.48 11.25 22.82 8.75 L18.65 2.5 Q16.98 0 13.98 0 L3 0 Q0 0 0 3 Z" end="780412" fill="#fac858" id="cluster-gene-3" rowID="4" start="781881" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(180, 64.68, 32) translate(64.68, 20.75)">
+      <path class="gene" cluster="cluster" d="M0 3 L0 19.5 Q0 22.5 3 22.5 L9.58 22.5 Q12.58 22.5 14.25 20 L18.42 13.75 Q20.08 11.25 18.42 8.75 L14.25 2.5 Q12.58 0 9.58 0 L3 0 Q0 0 0 3 Z" end="781919" fill="#fac858" id="cluster-gene-4" rowID="5" start="783124" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(180, 85.4, 32) translate(85.4, 20.75)">
+      <path class="gene" cluster="cluster" d="M0 3 L0 19.5 Q0 22.5 3 22.5 L13.88 22.5 Q16.88 22.5 18.55 20 L22.72 13.75 Q24.38 11.25 22.72 8.75 L18.55 2.5 Q16.88 0 13.88 0 L3 0 Q0 0 0 3 Z" end="783121" fill="#fac858" id="cluster-gene-5" rowID="6" start="784584" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(180, 109.73, 32) translate(109.73, 20.75)">
+      <path class="gene" cluster="cluster" d="M0 2.19 L0 20.31 Q0 22.5 2.19 22.5 L2.19 22.5 Q4.38 22.5 5.6 20.68 L10.22 13.75 Q11.88 11.25 10.22 8.75 L5.6 1.82 Q4.38 0 2.19 0 L2.19 0 Q0 0 0 2.19 Z" end="784738" fill="#fac858" id="cluster-gene-6" rowID="7" start="785451" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(180, 124.18, 32) translate(124.18, 20.75)">
+      <path class="gene" cluster="cluster" d="M0 3 L0 19.5 Q0 22.5 3 22.5 L10.28 22.5 Q13.28 22.5 14.95 20 L19.12 13.75 Q20.78 11.25 19.12 8.75 L14.95 2.5 Q13.28 0 10.28 0 L3 0 Q0 0 0 3 Z" end="785504" fill="#ee6666" id="cluster-gene-7" rowID="8" start="786751" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(180, 145.85, 32) translate(145.85, 20.75)">
+      <path class="gene" cluster="cluster" d="M0 3 L0 19.5 Q0 22.5 3 22.5 L5.63 22.5 Q8.63 22.5 10.3 20 L14.47 13.75 Q16.13 11.25 14.47 8.75 L10.3 2.5 Q8.63 0 5.63 0 L3 0 Q0 0 0 3 Z" end="786751" fill="#fac858" id="cluster-gene-8" rowID="9" start="787719" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(180, 161.98, 32) translate(161.98, 20.75)">
+      <path class="gene" cluster="cluster" d="M0 3 L0 19.5 Q0 22.5 3 22.5 L166.78 22.5 Q169.78 22.5 171.45 20 L175.62 13.75 Q177.28 11.25 175.62 8.75 L171.45 2.5 Q169.78 0 166.78 0 L3 0 Q0 0 0 3 Z" end="798581" fill="#73c0de" id="cluster-gene-9" rowID="10" start="787944" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 165.73, 32) translate(165.73, 20.75)">
+      <path class="gene" cluster="cluster" d="M0 3 L0 19.5 Q0 22.5 3 22.5 L9.68 22.5 Q12.68 22.5 14.35 20 L18.52 13.75 Q20.18 11.25 18.52 8.75 L14.35 2.5 Q12.68 0 9.68 0 L3 0 Q0 0 0 3 Z" end="798638" fill="grey" id="cluster-gene-10" rowID="11" start="799849" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(180, 364.15, 32) translate(364.15, 20.75)">
+      <path class="gene" cluster="cluster" d="M0 3 L0 19.5 Q0 22.5 3 22.5 L167.88 22.5 Q170.88 22.5 172.55 20 L176.72 13.75 Q178.38 11.25 176.72 8.75 L172.55 2.5 Q170.88 0 167.88 0 L3 0 Q0 0 0 3 Z" end="810726" fill="#73c0de" id="cluster-gene-11" rowID="12" start="800023" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 367.05, 32) translate(367.05, 20.75)">
+      <path class="gene" cluster="cluster" d="M0 3 L0 19.5 Q0 22.5 3 22.5 L148.08 22.5 Q151.08 22.5 152.75 20 L156.92 13.75 Q158.58 11.25 156.92 8.75 L152.75 2.5 Q151.08 0 148.08 0 L3 0 Q0 0 0 3 Z" end="820242" fill="#73c0de" id="cluster-gene-12" rowID="13" start="810727" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 545.45, 32) translate(545.45, 20.75)">
+      <path class="gene" cluster="cluster" d="M0 3 L0 19.5 Q0 22.5 3 22.5 L7.58 22.5 Q10.58 22.5 12.25 20 L16.42 13.75 Q18.08 11.25 16.42 8.75 L12.25 2.5 Q10.58 0 7.58 0 L3 0 Q0 0 0 3 Z" end="821324" fill="#fac858" id="cluster-gene-13" rowID="14" start="820239" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 703.98, 32) translate(703.98, 20.75)">
+      <path class="gene" cluster="cluster" d="M0 3 L0 19.5 Q0 22.5 3 22.5 L10.58 22.5 Q13.58 22.5 15.25 20 L19.42 13.75 Q21.08 11.25 19.42 8.75 L15.25 2.5 Q13.58 0 10.58 0 L3 0 Q0 0 0 3 Z" end="822600" fill="#ee6666" id="cluster-gene-14" rowID="15" start="821335" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 722.25, 32) translate(722.25, 20.75)">
+      <path class="gene" cluster="cluster" d="M0 3 L0 19.5 Q0 22.5 3 22.5 L6.18 22.5 Q9.18 22.5 10.85 20 L15.02 13.75 Q16.68 11.25 15.02 8.75 L10.85 2.5 Q9.18 0 6.18 0 L3 0 Q0 0 0 3 Z" end="823598" fill="#fac858" id="cluster-gene-15" rowID="16" start="822597" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 743.28, 32) translate(743.28, 20.75)">
+      <path class="gene" cluster="cluster" d="M0 3 L0 19.5 Q0 22.5 3 22.5 L4.83 22.5 Q7.83 22.5 9.5 20 L13.67 13.75 Q15.33 11.25 13.67 8.75 L9.5 2.5 Q7.83 0 4.83 0 L3 0 Q0 0 0 3 Z" end="824550" fill="#3ba272" id="cluster-gene-16" rowID="17" start="823630" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 760.5, 32) translate(760.5, 20.75)">
+      <path class="gene" cluster="cluster" d="M0 2.44 L0 20.06 Q0 22.5 2.44 22.5 L2.44 22.5 Q4.88 22.5 6.24 20.47 L10.72 13.75 Q12.38 11.25 10.72 8.75 L6.24 2.03 Q4.88 0 2.44 0 L2.44 0 Q0 0 0 2.44 Z" end="824527" fill="#fc8452" id="cluster-gene-17" rowID="18" start="825270" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(180, 787.83, 32) translate(787.83, 20.75)">
+      <path class="gene" cluster="cluster" d="M0 3 L0 19.5 Q0 22.5 3 22.5 L9.73 22.5 Q12.73 22.5 14.4 20 L18.57 13.75 Q20.23 11.25 18.57 8.75 L14.4 2.5 Q12.73 0 9.73 0 L3 0 Q0 0 0 3 Z" end="825267" fill="#91cc75" id="cluster-gene-18" rowID="19" start="826481" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(180, 808.02, 32) translate(808.02, 20.75)">
+      <path class="gene" cluster="cluster" d="M0 3 L0 19.5 Q0 22.5 3 22.5 L10.03 22.5 Q13.03 22.5 14.7 20 L18.87 13.75 Q20.53 11.25 18.87 8.75 L14.7 2.5 Q13.03 0 10.03 0 L3 0 Q0 0 0 3 Z" end="826478" fill="#fac858" id="cluster-gene-19" rowID="20" start="827710" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(180, 828.5, 32) translate(828.5, 20.75)">
+      <path class="gene" cluster="cluster" d="M0 3 L0 19.5 Q0 22.5 3 22.5 L29.93 22.5 Q32.93 22.5 34.6 20 L38.77 13.75 Q40.43 11.25 38.77 8.75 L34.6 2.5 Q32.93 0 29.93 0 L3 0 Q0 0 0 3 Z" end="830338" fill="grey" id="cluster-gene-20" rowID="21" start="827912" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 831.87, 32) translate(831.87, 20.75)">
+      <path class="gene" cluster="cluster" d="M0 3 L0 19.5 Q0 22.5 3 22.5 L8.58 22.5 Q11.58 22.5 13.25 20 L17.42 13.75 Q19.08 11.25 17.42 8.75 L13.25 2.5 Q11.58 0 8.58 0 L3 0 Q0 0 0 3 Z" end="830393" fill="#9a60b4" id="cluster-gene-21" rowID="22" start="831538" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(180, 892.3, 32) translate(892.3, 20.75)">
+<div class="cluster-tooltip" style="--tooltip-bg: #ffffff; background-color: rgb(255, 255, 255); border-radius: 4px; border: 1px solid rgb(183, 185, 190); box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; color: rgb(109, 110, 115); font-family: sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div class="geneviewer-container" id="geneviewer-legend-container-chart">
+  <svg class="geneviewer-svg-content" height="56" id="svg-container-2" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 56" width="1000">
+    <g data-component="legend" transform="translate(50, 15)">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-0" style="cursor: pointer; fill: rgb(70, 70, 70); font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="18" y="6">
+          "Activation / processing"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-0" rx="3" style="cursor: pointer; fill: rgb(252, 132, 82)" transform="translate(0, 0)" width="12" x="0" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-1" style="cursor: pointer; fill: rgb(70, 70, 70); font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="162.06" y="6">
+          "Precursor biosynthesis"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-1" rx="3" style="cursor: pointer; fill: rgb(250, 200, 88)" transform="translate(0, 0)" width="12" x="144.06" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-2" style="cursor: pointer; fill: rgb(70, 70, 70); font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="307.45" y="6">
+          "Resistance / immunity"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-2" rx="3" style="cursor: pointer; fill: rgb(154, 96, 180)" transform="translate(0, 0)" width="12" x="289.45" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-3" style="cursor: pointer; fill: rgb(70, 70, 70); font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="448.83" y="6">
+          "Scaffold biosynthesis"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-3" rx="3" style="cursor: pointer; fill: rgb(115, 192, 222)" transform="translate(0, 0)" width="12" x="430.83" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-4" style="cursor: pointer; fill: rgb(70, 70, 70); font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="585.34" y="6">
+          "Tailoring (Glycosylation)"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-4" rx="3" style="cursor: pointer; fill: rgb(238, 102, 102)" transform="translate(0, 0)" width="12" x="567.34" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-5" style="cursor: pointer; fill: rgb(70, 70, 70); font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="736.73" y="6">
+          "Tailoring (Hydroxylation)"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-5" rx="3" style="cursor: pointer; fill: rgb(145, 204, 117)" transform="translate(0, 0)" width="12" x="718.73" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-6" style="cursor: pointer; fill: rgb(70, 70, 70); font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="18" y="24">
+          "Tailoring (Methylation)"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-6" rx="3" style="cursor: pointer; fill: rgb(59, 162, 114)" transform="translate(0, 0)" width="12" x="0" y="18">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-7" style="cursor: pointer; fill: rgb(70, 70, 70); font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="159.39" y="24">
+          "Other"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-7" rx="3" style="cursor: pointer; fill: grey" transform="translate(0, 0)" width="12" x="141.39" y="18">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar" style="--gv-toolbar-color: #999999; --gv-toolbar-font: sans-serif; --gv-toolbar-hover: #3E98C5; --gv-toolbar-tip-background: #ffffff; --gv-toolbar-tip-border: 1px solid #b7b9be; --gv-toolbar-tip-color: #6d6e73; --gv-toolbar-tip-radius: 4px; --gv-toolbar-tip-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2)">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <i aria-haspopup="menu" aria-label="Save chart" class="fa-solid fa-download geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"

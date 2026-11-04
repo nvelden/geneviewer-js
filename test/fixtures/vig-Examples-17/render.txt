@@ -1,0 +1,164 @@
+<div class="geneviewer-container" id="geneviewer-title-container-chart">
+  <svg class="geneviewer-svg-content" height="50" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 50" width="1000">
+    <g data-component="title" transform="translate(50, 5)">
+      <text data-part="title" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 19px; font-style: normal; font-weight: bold" text-anchor="middle" transform="translate(0, 0)" x="450" y="22.5">
+        <tspan>
+          "Mitochondrial gene order: locust and human"
+      <text data-part="subtitle" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal; font-weight: normal; text-decoration: none" text-anchor="middle" transform="translate(0, 0)" x="450" y="42.5">
+        <tspan>
+          "Redrawn from Fig. 3 of Jameson et al. (2003), Nucleic Acids Res 31:202-206"
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <svg class="geneviewer-svg-content" data-cluster="Locusta migratoria" height="135" id="svg-container-2" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 135" width="1000">
+    <text data-component="clusterFooter" data-part="title" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal; font-weight: bold" text-anchor="start" transform="translate(0, 0)" x="50" y="120">
+      <tspan>
+        "Locusta migratoria"
+    <text data-component="clusterFooter" data-part="subtitle" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal; font-weight: normal" text-anchor="start" transform="translate(0, 0)" x="50" y="132">
+      <tspan>
+        "13 proteins; 2 rRNAs; 15,722 bp"
+    <g data-component="sequence" transform="translate(50,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: black" x1="0.7" x2="864.04" y1="62.5" y2="62.5">
+    <g data-component="genes" transform="translate(50, 5)">
+      <path class="gene" cluster="Locusta migratoria" d="M0 0 L0 18 L82.09 18 L82.09 9 L82.09 0 Z" end="1536" fill="#D9D5D2" id="Locusta_migratoria-gene-0" rowID="1" start="1" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 17.3, 71.5) translate(17.3, 62.5)">
+      <path class="gene" cluster="Locusta migratoria" d="M0 0 L0 18 L36.53 18 L36.53 9 L36.53 0 Z" end="2292" fill="#D9D5D2" id="Locusta_migratoria-gene-1" rowID="2" start="1609" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 103.29, 71.5) translate(103.29, 62.5)">
+      <path class="gene" cluster="Locusta migratoria" d="M0 0 L0 18 L8.45 18 L8.45 9 L8.45 0 Z" end="2604" fill="#D9D5D2" id="Locusta_migratoria-gene-2" rowID="3" start="2446" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 148.05, 71.5) translate(148.05, 62.5)">
+      <path class="gene" cluster="Locusta migratoria" d="M0 0 L0 18 L36.2 18 L36.2 9 L36.2 0 Z" end="3275" fill="#D9D5D2" id="Locusta_migratoria-gene-3" rowID="4" start="2598" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 156.18, 71.5) translate(156.18, 62.5)">
+      <path class="gene" cluster="Locusta migratoria" d="M0 0 L0 18 L42.3 18 L42.3 9 L42.3 0 Z" end="4071" fill="#D9D5D2" id="Locusta_migratoria-gene-4" rowID="5" start="3280" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 192.65, 71.5) translate(192.65, 62.5)">
+      <path class="gene" cluster="Locusta migratoria" d="M0 0 L0 18 L18.56 18 L18.56 9 L18.56 0 Z" end="4485" fill="#D9D5D2" id="Locusta_migratoria-gene-5" rowID="6" start="4138" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 238.54, 71.5) translate(238.54, 62.5)">
+      <path class="gene" cluster="Locusta migratoria" d="M0 0 L0 18 L91.77 18 L91.77 9 L91.77 0 Z" end="4883" fill="#F22228" id="Locusta_migratoria-gene-6" rowID="7" start="6599" strand="reverse" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(180, 370.15, 53.5) translate(370.15, 44.5)">
+      <path class="gene" cluster="Locusta migratoria" d="M0 0 L0 18 L71.34 18 L71.34 9 L71.34 0 Z" end="6681" fill="#F22228" id="Locusta_migratoria-gene-7" rowID="8" start="8015" strand="reverse" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(180, 445.87, 53.5) translate(445.87, 44.5)">
+      <path class="gene" cluster="Locusta migratoria" d="M0 0 L0 18 L15.67 18 L15.67 9 L15.67 0 Z" end="8009" fill="#F22228" id="Locusta_migratoria-gene-8" rowID="9" start="8302" strand="reverse" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(180, 461.22, 53.5) translate(461.22, 44.5)">
+      <path class="gene" cluster="Locusta migratoria" d="M0 0 L0 18 L27.86 18 L27.86 9 L27.86 0 Z" end="8959" fill="#FFF000" id="Locusta_migratoria-gene-9" rowID="10" start="8438" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 468.49, 71.5) translate(468.49, 62.5)">
+      <path class="gene" cluster="Locusta migratoria" d="M0 0 L0 18 L60.91 18 L60.91 9 L60.91 0 Z" end="10103" fill="#00AC52" id="Locusta_migratoria-gene-10" rowID="11" start="8964" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 496.62, 71.5) translate(496.62, 62.5)">
+      <path class="gene" cluster="Locusta migratoria" d="M0 0 L0 18 L50.32 18 L50.32 9 L50.32 0 Z" end="10192" fill="#36328C" id="Locusta_migratoria-gene-11" rowID="12" start="11133" strand="reverse" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(180, 612.61, 53.5) translate(612.61, 44.5)">
+      <path class="gene" cluster="Locusta migratoria" d="M0 0 L0 18 L70.22 18 L70.22 9 L70.22 0 Z" end="11204" fill="#36328C" id="Locusta_migratoria-gene-12" rowID="13" start="12517" strand="reverse" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(180, 686.63, 53.5) translate(686.63, 44.5)">
+      <path class="gene" cluster="Locusta migratoria" d="M0 0 L0 18 L44.17 18 L44.17 9 L44.17 0 Z" end="12589" fill="#36328C" id="Locusta_migratoria-gene-13" rowID="14" start="13415" strand="reverse" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(180, 734.65, 53.5) translate(734.65, 44.5)">
+      <path class="gene" cluster="Locusta migratoria" d="M0 0 L0 18 L54.97 18 L54.97 9 L54.97 0 Z" end="15518" fill="#D9D5D2" id="Locusta_migratoria-gene-14" rowID="15" start="14490" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 792.14, 71.5) translate(792.14, 62.5)">
+    <g data-component="labels" transform="translate(50,5)">
+      <g class="leader-lines" style="pointer-events: none">
+        <line style="stroke-width: 0.75; stroke: black" x1="58.35" x2="58.35" y1="82.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="121.56" x2="120.97" y1="82.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="152.28" x2="149.37" y1="82.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="174.28" x2="177.78" y1="82.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="213.8" x2="213.8" y1="82.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="247.82" x2="247.82" y1="82.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="324.26" x2="324.26" y1="64.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="410.2" x2="410.2" y1="64.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="453.38" x2="453.38" y1="64.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="482.42" x2="482.42" y1="82.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="527.08" x2="527.08" y1="82.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="587.45" x2="587.45" y1="64.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="651.52" x2="651.52" y1="64.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="712.56" x2="712.56" y1="64.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="819.62" x2="819.62" y1="82.5" y2="90.5">
+      <text class="label" dx="0em" dy="0em" id="cluster-Locusta_migratoria-label-0" rowID="1" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(-0.19, 44.25)" x="58.35" y="56.25">
+        "COX1"
+      <text class="label" dx="0em" dy="0em" id="cluster-Locusta_migratoria-label-1" rowID="2" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(-0.59, 44.25)" x="121.56" y="56.25">
+        "COX2"
+      <text class="label" dx="0em" dy="0em" id="cluster-Locusta_migratoria-label-2" rowID="3" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(-2.91, 44.25)" x="152.28" y="56.25">
+        "ATP8"
+      <text class="label" dx="0em" dy="0em" id="cluster-Locusta_migratoria-label-3" rowID="4" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(3.49, 44.25)" x="174.28" y="56.25">
+        "ATP6"
+      <text class="label" dx="0em" dy="0em" id="cluster-Locusta_migratoria-label-4" rowID="5" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(0, 44.25)" x="213.8" y="56.25">
+        "COX3"
+      <text class="label" dx="0em" dy="0em" id="cluster-Locusta_migratoria-label-5" rowID="6" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(0, 44.25)" x="247.82" y="56.25">
+        "ND3"
+      <text class="label" dx="0em" dy="0em" id="cluster-Locusta_migratoria-label-6" rowID="7" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(0, 62.25)" x="324.26" y="38.25">
+        "-ND5"
+      <text class="label" dx="0em" dy="0em" id="cluster-Locusta_migratoria-label-7" rowID="8" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(-0.19, 62.25)" x="410.2" y="38.25">
+        "-ND4"
+      <text class="label" dx="0em" dy="0em" id="cluster-Locusta_migratoria-label-8" rowID="9" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(-0.2, 62.25)" x="453.38" y="38.25">
+        "-ND4L"
+      <text class="label" dx="0em" dy="0em" id="cluster-Locusta_migratoria-label-9" rowID="10" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(0, 44.25)" x="482.42" y="56.25">
+        "ND6"
+      <text class="label" dx="0em" dy="0em" id="cluster-Locusta_migratoria-label-10" rowID="11" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(-0.19, 44.25)" x="527.08" y="56.25">
+        "CYTB"
+      <text class="label" dx="0em" dy="0em" id="cluster-Locusta_migratoria-label-11" rowID="12" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(-0.19, 62.25)" x="587.45" y="38.25">
+        "-ND1"
+      <text class="label" dx="0em" dy="0em" id="cluster-Locusta_migratoria-label-12" rowID="13" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(-0.19, 62.25)" x="651.52" y="38.25">
+        "-RNL"
+      <text class="label" dx="0em" dy="0em" id="cluster-Locusta_migratoria-label-13" rowID="14" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(-0.19, 62.25)" x="712.56" y="38.25">
+        "-RNS"
+      <text class="label" dx="0em" dy="0em" id="cluster-Locusta_migratoria-label-14" rowID="15" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(0, 44.25)" x="819.62" y="56.25">
+        "ND2"
+  <svg class="geneviewer-svg-content" data-cluster="Homo sapiens" height="135" id="svg-container-3" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 135" width="1000">
+    <text data-component="clusterFooter" data-part="title" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal; font-weight: bold" text-anchor="start" transform="translate(0, 0)" x="50" y="120">
+      <tspan>
+        "Homo sapiens"
+    <text data-component="clusterFooter" data-part="subtitle" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal; font-weight: normal" text-anchor="start" transform="translate(0, 0)" x="50" y="132">
+      <tspan>
+        "13 proteins; 2 rRNAs; 16,569 bp"
+    <g data-component="sequence" transform="translate(50,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: black" x1="0" x2="900" y1="62.5" y2="62.5">
+    <g data-component="genes" transform="translate(50, 5)">
+      <path class="gene" cluster="Homo sapiens" d="M0 0 L0 18 L82.41 18 L82.41 9 L82.41 0 Z" end="1542" fill="#D9D5D2" id="Homo_sapiens-gene-0" rowID="16" start="1" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 17.3, 71.5) translate(17.3, 62.5)">
+      <path class="gene" cluster="Homo sapiens" d="M0 0 L0 18 L36.53 18 L36.53 9 L36.53 0 Z" end="2366" fill="#D9D5D2" id="Homo_sapiens-gene-1" rowID="17" start="1683" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 107.25, 71.5) translate(107.25, 62.5)">
+      <path class="gene" cluster="Homo sapiens" d="M0 0 L0 18 L11.02 18 L11.02 9 L11.02 0 Z" end="2669" fill="#D9D5D2" id="Homo_sapiens-gene-2" rowID="18" start="2463" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 148.96, 71.5) translate(148.96, 62.5)">
+      <path class="gene" cluster="Homo sapiens" d="M0 0 L0 18 L36.36 18 L36.36 9 L36.36 0 Z" end="3304" fill="#D9D5D2" id="Homo_sapiens-gene-3" rowID="19" start="2624" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 157.57, 71.5) translate(157.57, 62.5)">
+      <path class="gene" cluster="Homo sapiens" d="M0 0 L0 18 L41.87 18 L41.87 9 L41.87 0 Z" end="4087" fill="#D9D5D2" id="Homo_sapiens-gene-4" rowID="20" start="3304" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 193.94, 71.5) translate(193.94, 62.5)">
+      <path class="gene" cluster="Homo sapiens" d="M0 0 L0 18 L18.45 18 L18.45 9 L18.45 0 Z" end="4501" fill="#D9D5D2" id="Homo_sapiens-gene-5" rowID="21" start="4156" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 239.5, 71.5) translate(239.5, 62.5)">
+      <path class="gene" cluster="Homo sapiens" d="M0 0 L0 18 L15.83 18 L15.83 9 L15.83 0 Z" end="4863" fill="#F22228" id="Homo_sapiens-gene-6" rowID="22" start="4567" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 261.48, 71.5) translate(261.48, 62.5)">
+      <path class="gene" cluster="Homo sapiens" d="M0 0 L0 18 L73.64 18 L73.64 9 L73.64 0 Z" end="6234" fill="#F22228" id="Homo_sapiens-gene-7" rowID="23" start="4857" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 276.99, 71.5) translate(276.99, 62.5)">
+      <path class="gene" cluster="Homo sapiens" d="M0 0 L0 18 L96.85 18 L96.85 9 L96.85 0 Z" end="8245" fill="#F22228" id="Homo_sapiens-gene-8" rowID="24" start="6434" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 361.32, 71.5) translate(361.32, 62.5)">
+      <path class="gene" cluster="Homo sapiens" d="M0 0 L0 18 L28.02 18 L28.02 9 L28.02 0 Z" end="8246" fill="#FFF000" id="Homo_sapiens-gene-9" rowID="25" start="8770" strand="reverse" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(180, 486.25, 53.5) translate(486.25, 44.5)">
+      <path class="gene" cluster="Homo sapiens" d="M0 0 L0 18 L60.96 18 L60.96 9 L60.96 0 Z" end="9984" fill="#00AC52" id="Homo_sapiens-gene-10" rowID="26" start="8844" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 490.2, 71.5) translate(490.2, 62.5)">
+      <path class="gene" cluster="Homo sapiens" d="M0 0 L0 18 L50.96 18 L50.96 9 L50.96 0 Z" end="12267" fill="#36328C" id="Homo_sapiens-gene-11" rowID="27" start="11314" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 622.29, 71.5) translate(622.29, 62.5)">
+      <path class="gene" cluster="Homo sapiens" d="M0 0 L0 18 L83.32 18 L83.32 9 L83.32 0 Z" end="13895" fill="#36328C" id="Homo_sapiens-gene-12" rowID="28" start="12337" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 677, 71.5) translate(677, 62.5)">
+      <path class="gene" cluster="Homo sapiens" d="M0 0 L0 18 L51.07 18 L51.07 9 L51.07 0 Z" end="14928" fill="#36328C" id="Homo_sapiens-gene-13" rowID="29" start="13973" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 764.49, 71.5) translate(764.49, 62.5)">
+      <path class="gene" cluster="Homo sapiens" d="M0 0 L0 18 L55.67 18 L55.67 9 L55.67 0 Z" end="16177" fill="#D9D5D2" id="Homo_sapiens-gene-14" rowID="30" start="15136" strand="forward" style="cursor: default; stroke-width: 0.75; stroke: black" transform="rotate(0, 826.68, 71.5) translate(826.68, 62.5)">
+    <g data-component="labels" transform="translate(50,5)">
+      <g class="leader-lines" style="pointer-events: none">
+        <line style="stroke-width: 0.75; stroke: black" x1="58.51" x2="58.51" y1="82.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="125.51" x2="123.51" y1="82.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="154.47" x2="151.91" y1="82.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="175.75" x2="180.32" y1="82.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="214.87" x2="214.87" y1="82.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="248.72" x2="246.16" y1="82.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="269.39" x2="271.96" y1="82.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="313.81" x2="313.81" y1="82.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="409.75" x2="409.75" y1="82.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="472.23" x2="472.23" y1="64.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="520.68" x2="520.68" y1="82.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="647.77" x2="647.77" y1="82.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="718.66" x2="718.66" y1="82.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="790.02" x2="790.02" y1="82.5" y2="90.5">
+        <line style="stroke-width: 0.75; stroke: black" x1="854.52" x2="854.52" y1="82.5" y2="90.5">
+      <text class="label" dx="0em" dy="0em" id="cluster-Homo_sapiens-label-0" rowID="16" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(-0.19, 44.25)" x="58.51" y="56.25">
+        "COX1"
+      <text class="label" dx="0em" dy="0em" id="cluster-Homo_sapiens-label-1" rowID="17" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(-2.01, 44.25)" x="125.51" y="56.25">
+        "COX2"
+      <text class="label" dx="0em" dy="0em" id="cluster-Homo_sapiens-label-2" rowID="18" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(-2.56, 44.25)" x="154.47" y="56.25">
+        "ATP8"
+      <text class="label" dx="0em" dy="0em" id="cluster-Homo_sapiens-label-3" rowID="19" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(4.56, 44.25)" x="175.75" y="56.25">
+        "ATP6"
+      <text class="label" dx="0em" dy="0em" id="cluster-Homo_sapiens-label-4" rowID="20" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(0, 44.25)" x="214.87" y="56.25">
+        "COX3"
+      <text class="label" dx="0em" dy="0em" id="cluster-Homo_sapiens-label-5" rowID="21" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(-2.56, 44.25)" x="248.72" y="56.25">
+        "ND3"
+      <text class="label" dx="0em" dy="0em" id="cluster-Homo_sapiens-label-6" rowID="22" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(2.37, 44.25)" x="269.39" y="56.25">
+        "ND4L"
+      <text class="label" dx="0em" dy="0em" id="cluster-Homo_sapiens-label-7" rowID="23" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(-0.2, 44.25)" x="313.81" y="56.25">
+        "ND4"
+      <text class="label" dx="0em" dy="0em" id="cluster-Homo_sapiens-label-8" rowID="24" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(0, 44.25)" x="409.75" y="56.25">
+        "ND5"
+      <text class="label" dx="0em" dy="0em" id="cluster-Homo_sapiens-label-9" rowID="25" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(0, 62.25)" x="472.23" y="38.25">
+        "-ND6"
+      <text class="label" dx="0em" dy="0em" id="cluster-Homo_sapiens-label-10" rowID="26" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(-0.19, 44.25)" x="520.68" y="56.25">
+        "CYTB"
+      <text class="label" dx="0em" dy="0em" id="cluster-Homo_sapiens-label-11" rowID="27" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(-0.2, 44.25)" x="647.77" y="56.25">
+        "RNS"
+      <text class="label" dx="0em" dy="0em" id="cluster-Homo_sapiens-label-12" rowID="28" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(-0.2, 44.25)" x="718.66" y="56.25">
+        "RNL"
+      <text class="label" dx="0em" dy="0em" id="cluster-Homo_sapiens-label-13" rowID="29" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(-0.2, 44.25)" x="790.02" y="56.25">
+        "ND1"
+      <text class="label" dx="0em" dy="0em" id="cluster-Homo_sapiens-label-14" rowID="30" style="cursor: default; fill: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; font-style: normal" text-anchor="middle" transform="translate(0, 0) translate(0, 44.25)" x="854.52" y="56.25">
+        "ND2"
+<div class="cluster-tooltip" style="--tooltip-bg: white; background-color: white; border-radius: 0px; border: 1px solid black; box-shadow: none; color: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div class="cluster-tooltip" style="--tooltip-bg: white; background-color: white; border-radius: 0px; border: 1px solid black; box-shadow: none; color: black; font-family: \"Courier New\", Courier, monospace; font-size: 9.33px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar" style="--gv-toolbar-color: #999999; --gv-toolbar-font: Courier New, Courier, monospace; --gv-toolbar-hover: black; --gv-toolbar-tip-background: white; --gv-toolbar-tip-border: 1px solid black; --gv-toolbar-tip-color: black; --gv-toolbar-tip-radius: 0; --gv-toolbar-tip-shadow: none">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <i aria-haspopup="menu" aria-label="Save chart" class="fa-solid fa-download geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"

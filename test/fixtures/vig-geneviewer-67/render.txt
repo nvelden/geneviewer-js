@@ -1,0 +1,286 @@
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <svg class="geneviewer-svg-content" data-cluster="1" height="102" id="svg-container-2" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 102" width="1000">
+    <g data-component="sequence" transform="translate(50,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="900" y1="46" y2="46">
+    <defs>
+      <pattern height="6" id="svg-container-2-gene-pattern-0" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <path d="M0,6L6,0M-1.5,1.5L1.5,-1.5M4.5,7.5L7.5,4.5" stroke="#000000" stroke-width="1">
+      <pattern height="6" id="svg-container-2-gene-pattern-1" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <circle cx="3" cy="3" fill="#000000" r="1.2">
+      <pattern height="6" id="svg-container-2-gene-pattern-2" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <path d="M0,3H6" stroke="#000000" stroke-width="1">
+      <pattern height="6" id="svg-container-2-gene-pattern-3" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <path d="M0,6L6,0M-1.5,1.5L1.5,-1.5M4.5,7.5L7.5,4.5" stroke="#000000" stroke-width="1">
+        <path d="M0,0L6,6M-1.5,4.5L1.5,7.5M4.5,-1.5L7.5,1.5" stroke="#000000" stroke-width="1">
+      <pattern height="6" id="svg-container-2-gene-pattern-4" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <path d="M3,0V6" stroke="#000000" stroke-width="1">
+      <pattern height="6" id="svg-container-2-gene-pattern-5" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <path d="M0,4.2L3,1.8L6,4.2" fill="none" stroke="#000000" stroke-width="1">
+      <pattern height="8" id="svg-container-2-gene-pattern-6" patternUnits="userSpaceOnUse" width="8">
+        <rect fill="#FFFFFF" height="8" width="8">
+        <path d="M0,0H4V4H0ZM4,4H8V8H4Z" fill="#000000">
+      <pattern height="6" id="svg-container-2-gene-pattern-7" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <rect fill="#000000" height="6" width="6">
+      <pattern height="7" id="svg-container-2-gene-pattern-8" patternUnits="userSpaceOnUse" width="7">
+        <rect fill="#FFFFFF" height="7" width="7">
+        <circle cx="3.5" cy="3.5" fill="none" r="2.19" stroke="#000000" stroke-width="0.8">
+      <pattern height="10" id="svg-container-2-gene-pattern-9" patternUnits="userSpaceOnUse" width="10">
+        <rect fill="#FFFFFF" height="10" width="10">
+        <path d="M0,0H10M0,5H10M2.5,0V5M7.5,5V10" stroke="#000000" stroke-width="1">
+      <pattern height="6" id="svg-container-2-gene-pattern-10" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <rect fill="#000000" height="6" width="6">
+        <circle cx="3" cy="3" fill="#FFFFFF" r="1.5">
+      <pattern height="6" id="svg-container-2-gene-pattern-11" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <path d="M0,3H6M3,0V6" stroke="#000000" stroke-width="1">
+      <pattern height="8" id="svg-container-2-gene-pattern-12" patternUnits="userSpaceOnUse" width="8">
+        <rect fill="#FFFFFF" height="8" width="8">
+        <path d="M0,8L8,0H4L0,4ZM8,4V8H4Z" fill="#000000">
+      <pattern height="8" id="svg-container-2-gene-pattern-13" patternUnits="userSpaceOnUse" width="8">
+        <rect fill="#FFFFFF" height="8" width="8">
+        <path d="M4,1.6V6.4M1.6,4H6.4" stroke="#000000" stroke-width="1">
+      <pattern height="6" id="svg-container-2-gene-pattern-14" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <path d="M0,0L6,6M-1.5,4.5L1.5,7.5M4.5,-1.5L7.5,1.5" stroke="#000000" stroke-width="1">
+      <pattern height="6" id="svg-container-2-gene-pattern-15" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+    <g data-component="genes" transform="translate(50, 5)">
+      <path class="gene" cluster="1" d="M0 7.5 L0 22.5 L83.67 22.5 L83.67 30 L93.67 15 L83.67 0 L83.67 7.5 Z" end="85" fill="url(#svg-container-2-gene-pattern-0)" id="1-gene-0" rowID="1" start="0" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 17.3, 46) translate(17.3, 31)">
+      <path class="gene" cluster="1" d="M0 7.5 L0 22.5 L83.67 22.5 L83.67 30 L93.67 15 L83.67 0 L83.67 7.5 Z" end="185" fill="url(#svg-container-2-gene-pattern-1)" id="1-gene-1" rowID="2" start="100" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 127.5, 46) translate(127.5, 31)">
+      <path class="gene" cluster="1" d="M0 7.5 L0 22.5 L83.67 22.5 L83.67 30 L93.67 15 L83.67 0 L83.67 7.5 Z" end="285" fill="url(#svg-container-2-gene-pattern-2)" id="1-gene-2" rowID="3" start="200" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 237.7, 46) translate(237.7, 31)">
+      <path class="gene" cluster="1" d="M0 7.5 L0 22.5 L83.67 22.5 L83.67 30 L93.67 15 L83.67 0 L83.67 7.5 Z" end="385" fill="url(#svg-container-2-gene-pattern-3)" id="1-gene-3" rowID="4" start="300" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 347.89, 46) translate(347.89, 31)">
+      <path class="gene" cluster="1" d="M0 7.5 L0 22.5 L83.67 22.5 L83.67 30 L93.67 15 L83.67 0 L83.67 7.5 Z" end="485" fill="url(#svg-container-2-gene-pattern-4)" id="1-gene-4" rowID="5" start="400" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 458.09, 46) translate(458.09, 31)">
+      <path class="gene" cluster="1" d="M0 7.5 L0 22.5 L83.67 22.5 L83.67 30 L93.67 15 L83.67 0 L83.67 7.5 Z" end="585" fill="url(#svg-container-2-gene-pattern-5)" id="1-gene-5" rowID="6" start="500" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 568.29, 46) translate(568.29, 31)">
+      <path class="gene" cluster="1" d="M0 7.5 L0 22.5 L83.67 22.5 L83.67 30 L93.67 15 L83.67 0 L83.67 7.5 Z" end="685" fill="url(#svg-container-2-gene-pattern-6)" id="1-gene-6" rowID="7" start="600" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 678.49, 46) translate(678.49, 31)">
+      <path class="gene" cluster="1" d="M0 7.5 L0 22.5 L83.67 22.5 L83.67 30 L93.67 15 L83.67 0 L83.67 7.5 Z" end="785" fill="url(#svg-container-2-gene-pattern-7)" id="1-gene-7" rowID="8" start="700" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 788.68, 46) translate(788.68, 31)">
+    <g data-component="labels" transform="translate(50,5)">
+      <text class="label" dx="0em" dy="0em" id="cluster-1-label-0" rowID="1" style="cursor: default; font-family: sans-serif; font-size: 11px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 64.14, 26.4)" x="64.14" y="26.4">
+        "diagonal"
+      <text class="label" dx="0em" dy="0em" id="cluster-1-label-1" rowID="2" style="cursor: default; font-family: sans-serif; font-size: 11px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 174.33, 26.4)" x="174.33" y="26.4">
+        "dots"
+      <text class="label" dx="0em" dy="0em" id="cluster-1-label-2" rowID="3" style="cursor: default; font-family: sans-serif; font-size: 11px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 284.53, 26.4)" x="284.53" y="26.4">
+        "horizontal"
+      <text class="label" dx="0em" dy="0em" id="cluster-1-label-3" rowID="4" style="cursor: default; font-family: sans-serif; font-size: 11px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 394.73, 26.4)" x="394.73" y="26.4">
+        "crosshatch"
+      <text class="label" dx="0em" dy="0em" id="cluster-1-label-4" rowID="5" style="cursor: default; font-family: sans-serif; font-size: 11px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 504.93, 26.4)" x="504.93" y="26.4">
+        "vertical"
+      <text class="label" dx="0em" dy="0em" id="cluster-1-label-5" rowID="6" style="cursor: default; font-family: sans-serif; font-size: 11px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 615.12, 26.4)" x="615.12" y="26.4">
+        "zigzag"
+      <text class="label" dx="0em" dy="0em" id="cluster-1-label-6" rowID="7" style="cursor: default; font-family: sans-serif; font-size: 11px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 725.32, 26.4)" x="725.32" y="26.4">
+        "checkerboard"
+      <text class="label" dx="0em" dy="0em" id="cluster-1-label-7" rowID="8" style="cursor: default; font-family: sans-serif; font-size: 11px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 835.52, 26.4)" x="835.52" y="26.4">
+        "solid"
+  <svg class="geneviewer-svg-content" data-cluster="2" height="102" id="svg-container-3" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 102" width="1000">
+    <g data-component="sequence" transform="translate(50,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="900" y1="46" y2="46">
+    <defs>
+      <pattern height="6" id="svg-container-3-gene-pattern-0" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <path d="M0,6L6,0M-1.5,1.5L1.5,-1.5M4.5,7.5L7.5,4.5" stroke="#000000" stroke-width="1">
+      <pattern height="6" id="svg-container-3-gene-pattern-1" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <circle cx="3" cy="3" fill="#000000" r="1.2">
+      <pattern height="6" id="svg-container-3-gene-pattern-2" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <path d="M0,3H6" stroke="#000000" stroke-width="1">
+      <pattern height="6" id="svg-container-3-gene-pattern-3" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <path d="M0,6L6,0M-1.5,1.5L1.5,-1.5M4.5,7.5L7.5,4.5" stroke="#000000" stroke-width="1">
+        <path d="M0,0L6,6M-1.5,4.5L1.5,7.5M4.5,-1.5L7.5,1.5" stroke="#000000" stroke-width="1">
+      <pattern height="6" id="svg-container-3-gene-pattern-4" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <path d="M3,0V6" stroke="#000000" stroke-width="1">
+      <pattern height="6" id="svg-container-3-gene-pattern-5" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <path d="M0,4.2L3,1.8L6,4.2" fill="none" stroke="#000000" stroke-width="1">
+      <pattern height="8" id="svg-container-3-gene-pattern-6" patternUnits="userSpaceOnUse" width="8">
+        <rect fill="#FFFFFF" height="8" width="8">
+        <path d="M0,0H4V4H0ZM4,4H8V8H4Z" fill="#000000">
+      <pattern height="6" id="svg-container-3-gene-pattern-7" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <rect fill="#000000" height="6" width="6">
+      <pattern height="7" id="svg-container-3-gene-pattern-8" patternUnits="userSpaceOnUse" width="7">
+        <rect fill="#FFFFFF" height="7" width="7">
+        <circle cx="3.5" cy="3.5" fill="none" r="2.19" stroke="#000000" stroke-width="0.8">
+      <pattern height="10" id="svg-container-3-gene-pattern-9" patternUnits="userSpaceOnUse" width="10">
+        <rect fill="#FFFFFF" height="10" width="10">
+        <path d="M0,0H10M0,5H10M2.5,0V5M7.5,5V10" stroke="#000000" stroke-width="1">
+      <pattern height="6" id="svg-container-3-gene-pattern-10" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <rect fill="#000000" height="6" width="6">
+        <circle cx="3" cy="3" fill="#FFFFFF" r="1.5">
+      <pattern height="6" id="svg-container-3-gene-pattern-11" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <path d="M0,3H6M3,0V6" stroke="#000000" stroke-width="1">
+      <pattern height="8" id="svg-container-3-gene-pattern-12" patternUnits="userSpaceOnUse" width="8">
+        <rect fill="#FFFFFF" height="8" width="8">
+        <path d="M0,8L8,0H4L0,4ZM8,4V8H4Z" fill="#000000">
+      <pattern height="8" id="svg-container-3-gene-pattern-13" patternUnits="userSpaceOnUse" width="8">
+        <rect fill="#FFFFFF" height="8" width="8">
+        <path d="M4,1.6V6.4M1.6,4H6.4" stroke="#000000" stroke-width="1">
+      <pattern height="6" id="svg-container-3-gene-pattern-14" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <path d="M0,0L6,6M-1.5,4.5L1.5,7.5M4.5,-1.5L7.5,1.5" stroke="#000000" stroke-width="1">
+      <pattern height="6" id="svg-container-3-gene-pattern-15" patternUnits="userSpaceOnUse" width="6">
+        <rect fill="#FFFFFF" height="6" width="6">
+    <g data-component="genes" transform="translate(50, 5)">
+      <path class="gene" cluster="2" d="M0 7.5 L0 22.5 L83.67 22.5 L83.67 30 L93.67 15 L83.67 0 L83.67 7.5 Z" end="85" fill="url(#svg-container-3-gene-pattern-8)" id="2-gene-0" rowID="9" start="0" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 17.3, 46) translate(17.3, 31)">
+      <path class="gene" cluster="2" d="M0 7.5 L0 22.5 L83.67 22.5 L83.67 30 L93.67 15 L83.67 0 L83.67 7.5 Z" end="185" fill="url(#svg-container-3-gene-pattern-9)" id="2-gene-1" rowID="10" start="100" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 127.5, 46) translate(127.5, 31)">
+      <path class="gene" cluster="2" d="M0 7.5 L0 22.5 L83.67 22.5 L83.67 30 L93.67 15 L83.67 0 L83.67 7.5 Z" end="285" fill="url(#svg-container-3-gene-pattern-10)" id="2-gene-2" rowID="11" start="200" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 237.7, 46) translate(237.7, 31)">
+      <path class="gene" cluster="2" d="M0 7.5 L0 22.5 L83.67 22.5 L83.67 30 L93.67 15 L83.67 0 L83.67 7.5 Z" end="385" fill="url(#svg-container-3-gene-pattern-11)" id="2-gene-3" rowID="12" start="300" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 347.89, 46) translate(347.89, 31)">
+      <path class="gene" cluster="2" d="M0 7.5 L0 22.5 L83.67 22.5 L83.67 30 L93.67 15 L83.67 0 L83.67 7.5 Z" end="485" fill="url(#svg-container-3-gene-pattern-12)" id="2-gene-4" rowID="13" start="400" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 458.09, 46) translate(458.09, 31)">
+      <path class="gene" cluster="2" d="M0 7.5 L0 22.5 L83.67 22.5 L83.67 30 L93.67 15 L83.67 0 L83.67 7.5 Z" end="585" fill="url(#svg-container-3-gene-pattern-13)" id="2-gene-5" rowID="14" start="500" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 568.29, 46) translate(568.29, 31)">
+      <path class="gene" cluster="2" d="M0 7.5 L0 22.5 L83.67 22.5 L83.67 30 L93.67 15 L83.67 0 L83.67 7.5 Z" end="685" fill="url(#svg-container-3-gene-pattern-14)" id="2-gene-6" rowID="15" start="600" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 678.49, 46) translate(678.49, 31)">
+      <path class="gene" cluster="2" d="M0 7.5 L0 22.5 L83.67 22.5 L83.67 30 L93.67 15 L83.67 0 L83.67 7.5 Z" end="785" fill="url(#svg-container-3-gene-pattern-15)" id="2-gene-7" rowID="16" start="700" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 788.68, 46) translate(788.68, 31)">
+    <g data-component="labels" transform="translate(50,5)">
+      <text class="label" dx="0em" dy="0em" id="cluster-2-label-0" rowID="9" style="cursor: default; font-family: sans-serif; font-size: 11px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 64.14, 26.4)" x="64.14" y="26.4">
+        "rings"
+      <text class="label" dx="0em" dy="0em" id="cluster-2-label-1" rowID="10" style="cursor: default; font-family: sans-serif; font-size: 11px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 174.33, 26.4)" x="174.33" y="26.4">
+        "bricks"
+      <text class="label" dx="0em" dy="0em" id="cluster-2-label-2" rowID="11" style="cursor: default; font-family: sans-serif; font-size: 11px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 284.53, 26.4)" x="284.53" y="26.4">
+        "inverseDots"
+      <text class="label" dx="0em" dy="0em" id="cluster-2-label-3" rowID="12" style="cursor: default; font-family: sans-serif; font-size: 11px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 394.73, 26.4)" x="394.73" y="26.4">
+        "grid"
+      <text class="label" dx="0em" dy="0em" id="cluster-2-label-4" rowID="13" style="cursor: default; font-family: sans-serif; font-size: 11px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 504.93, 26.4)" x="504.93" y="26.4">
+        "wideStripes"
+      <text class="label" dx="0em" dy="0em" id="cluster-2-label-5" rowID="14" style="cursor: default; font-family: sans-serif; font-size: 11px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 615.12, 26.4)" x="615.12" y="26.4">
+        "plus"
+      <text class="label" dx="0em" dy="0em" id="cluster-2-label-6" rowID="15" style="cursor: default; font-family: sans-serif; font-size: 11px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 725.32, 26.4)" x="725.32" y="26.4">
+        "antidiagonal"
+      <text class="label" dx="0em" dy="0em" id="cluster-2-label-7" rowID="16" style="cursor: default; font-family: sans-serif; font-size: 11px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 835.52, 26.4)" x="835.52" y="26.4">
+        "none"
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div class="geneviewer-container" id="geneviewer-legend-container-chart">
+  <svg class="geneviewer-svg-content" height="56" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 56" width="1000">
+    <defs>
+      <pattern height="6" id="svg-container-1-legend-pattern-0" patternUnits="userSpaceOnUse" width="6" x="0" y="0">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <path d="M0,6L6,0M-1.5,1.5L1.5,-1.5M4.5,7.5L7.5,4.5" stroke="#000000" stroke-width="1">
+      <pattern height="6" id="svg-container-1-legend-pattern-1" patternUnits="userSpaceOnUse" width="6" x="69.38" y="0">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <circle cx="3" cy="3" fill="#000000" r="1.2">
+      <pattern height="6" id="svg-container-1-legend-pattern-2" patternUnits="userSpaceOnUse" width="6" x="116.06" y="0">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <path d="M0,3H6" stroke="#000000" stroke-width="1">
+      <pattern height="6" id="svg-container-1-legend-pattern-3" patternUnits="userSpaceOnUse" width="6" x="192.09" y="0">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <path d="M0,6L6,0M-1.5,1.5L1.5,-1.5M4.5,7.5L7.5,4.5" stroke="#000000" stroke-width="1">
+        <path d="M0,0L6,6M-1.5,4.5L1.5,7.5M4.5,-1.5L7.5,1.5" stroke="#000000" stroke-width="1">
+      <pattern height="6" id="svg-container-1-legend-pattern-4" patternUnits="userSpaceOnUse" width="6" x="274.13" y="0">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <path d="M3,0V6" stroke="#000000" stroke-width="1">
+      <pattern height="6" id="svg-container-1-legend-pattern-5" patternUnits="userSpaceOnUse" width="6" x="336.14" y="0">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <path d="M0,4.2L3,1.8L6,4.2" fill="none" stroke="#000000" stroke-width="1">
+      <pattern height="8" id="svg-container-1-legend-pattern-6" patternUnits="userSpaceOnUse" width="8" x="394.83" y="0">
+        <rect fill="#FFFFFF" height="8" width="8">
+        <path d="M0,0H4V4H0ZM4,4H8V8H4Z" fill="#000000">
+      <pattern height="6" id="svg-container-1-legend-pattern-7" patternUnits="userSpaceOnUse" width="6" x="491.55" y="0">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <rect fill="#000000" height="6" width="6">
+      <pattern height="7" id="svg-container-1-legend-pattern-8" patternUnits="userSpaceOnUse" width="7" x="540.23" y="0">
+        <rect fill="#FFFFFF" height="7" width="7">
+        <circle cx="3.5" cy="3.5" fill="none" r="2.19" stroke="#000000" stroke-width="0.8">
+      <pattern height="10" id="svg-container-1-legend-pattern-9" patternUnits="userSpaceOnUse" width="10" x="590.25" y="0">
+        <rect fill="#FFFFFF" height="10" width="10">
+        <path d="M0,0H10M0,5H10M2.5,0V5M7.5,5V10" stroke="#000000" stroke-width="1">
+      <pattern height="6" id="svg-container-1-legend-pattern-10" patternUnits="userSpaceOnUse" width="6" x="645.59" y="0">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <rect fill="#000000" height="6" width="6">
+        <circle cx="3" cy="3" fill="#FFFFFF" r="1.5">
+      <pattern height="6" id="svg-container-1-legend-pattern-11" patternUnits="userSpaceOnUse" width="6" x="732.95" y="0">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <path d="M0,3H6M3,0V6" stroke="#000000" stroke-width="1">
+      <pattern height="8" id="svg-container-1-legend-pattern-12" patternUnits="userSpaceOnUse" width="8" x="776.97" y="0">
+        <rect fill="#FFFFFF" height="8" width="8">
+        <path d="M0,8L8,0H4L0,4ZM8,4V8H4Z" fill="#000000">
+      <pattern height="8" id="svg-container-1-legend-pattern-13" patternUnits="userSpaceOnUse" width="8" x="0" y="18">
+        <rect fill="#FFFFFF" height="8" width="8">
+        <path d="M4,1.6V6.4M1.6,4H6.4" stroke="#000000" stroke-width="1">
+      <pattern height="6" id="svg-container-1-legend-pattern-14" patternUnits="userSpaceOnUse" width="6" x="46.02" y="18">
+        <rect fill="#FFFFFF" height="6" width="6">
+        <path d="M0,0L6,6M-1.5,4.5L1.5,7.5M4.5,-1.5L7.5,1.5" stroke="#000000" stroke-width="1">
+      <pattern height="6" id="svg-container-1-legend-pattern-15" patternUnits="userSpaceOnUse" width="6" x="134.75" y="18">
+        <rect fill="#FFFFFF" height="6" width="6">
+    <g data-component="legend" transform="translate(50, 15)">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-0" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="18" y="6">
+          "diagonal"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-0" rx="0" style="cursor: pointer; fill: url(\"#svg-container-1-legend-pattern-0\"); stroke: rgb(0, 0, 0)" transform="translate(0, 0)" width="12" x="0" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-1" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="87.38" y="6">
+          "dots"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-1" rx="0" style="cursor: pointer; fill: url(\"#svg-container-1-legend-pattern-1\"); stroke: rgb(0, 0, 0)" transform="translate(0, 0)" width="12" x="69.38" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-2" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="134.06" y="6">
+          "horizontal"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-2" rx="0" style="cursor: pointer; fill: url(\"#svg-container-1-legend-pattern-2\"); stroke: rgb(0, 0, 0)" transform="translate(0, 0)" width="12" x="116.06" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-3" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="210.09" y="6">
+          "crosshatch"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-3" rx="0" style="cursor: pointer; fill: url(\"#svg-container-1-legend-pattern-3\"); stroke: rgb(0, 0, 0)" transform="translate(0, 0)" width="12" x="192.09" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-4" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="292.13" y="6">
+          "vertical"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-4" rx="0" style="cursor: pointer; fill: url(\"#svg-container-1-legend-pattern-4\"); stroke: rgb(0, 0, 0)" transform="translate(0, 0)" width="12" x="274.13" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-5" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="354.14" y="6">
+          "zigzag"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-5" rx="0" style="cursor: pointer; fill: url(\"#svg-container-1-legend-pattern-5\"); stroke: rgb(0, 0, 0)" transform="translate(0, 0)" width="12" x="336.14" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-6" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="412.83" y="6">
+          "checkerboard"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-6" rx="0" style="cursor: pointer; fill: url(\"#svg-container-1-legend-pattern-6\"); stroke: rgb(0, 0, 0)" transform="translate(0, 0)" width="12" x="394.83" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-7" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="509.55" y="6">
+          "solid"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-7" rx="0" style="cursor: pointer; fill: url(\"#svg-container-1-legend-pattern-7\"); stroke: rgb(0, 0, 0)" transform="translate(0, 0)" width="12" x="491.55" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-8" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="558.23" y="6">
+          "rings"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-8" rx="0" style="cursor: pointer; fill: url(\"#svg-container-1-legend-pattern-8\"); stroke: rgb(0, 0, 0)" transform="translate(0, 0)" width="12" x="540.23" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-9" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="608.25" y="6">
+          "bricks"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-9" rx="0" style="cursor: pointer; fill: url(\"#svg-container-1-legend-pattern-9\"); stroke: rgb(0, 0, 0)" transform="translate(0, 0)" width="12" x="590.25" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-10" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="663.59" y="6">
+          "inverseDots"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-10" rx="0" style="cursor: pointer; fill: url(\"#svg-container-1-legend-pattern-10\"); stroke: rgb(0, 0, 0)" transform="translate(0, 0)" width="12" x="645.59" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-11" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="750.95" y="6">
+          "grid"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-11" rx="0" style="cursor: pointer; fill: url(\"#svg-container-1-legend-pattern-11\"); stroke: rgb(0, 0, 0)" transform="translate(0, 0)" width="12" x="732.95" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-12" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="794.97" y="6">
+          "wideStripes"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-12" rx="0" style="cursor: pointer; fill: url(\"#svg-container-1-legend-pattern-12\"); stroke: rgb(0, 0, 0)" transform="translate(0, 0)" width="12" x="776.97" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-13" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="18" y="24">
+          "plus"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-13" rx="0" style="cursor: pointer; fill: url(\"#svg-container-1-legend-pattern-13\"); stroke: rgb(0, 0, 0)" transform="translate(0, 0)" width="12" x="0" y="18">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-14" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="64.02" y="24">
+          "antidiagonal"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-14" rx="0" style="cursor: pointer; fill: url(\"#svg-container-1-legend-pattern-14\"); stroke: rgb(0, 0, 0)" transform="translate(0, 0)" width="12" x="46.02" y="18">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-15" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="152.75" y="24">
+          "none"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-15" rx="0" style="cursor: pointer; fill: url(\"#svg-container-1-legend-pattern-15\"); stroke: rgb(0, 0, 0)" transform="translate(0, 0)" width="12" x="134.75" y="18">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <i aria-haspopup="menu" aria-label="Save chart" class="fa-solid fa-download geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"

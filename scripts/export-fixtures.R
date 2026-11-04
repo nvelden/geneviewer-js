@@ -8,8 +8,8 @@
 #
 # Every top-level expression whose value is a geneviewer chart becomes a
 # fixture in test/fixtures/<id>/: call.R (the code before it in the same
-# source, then the expression), payload.json (widget$x as htmlwidgets
-# serialises it) and meta.json. Charts identical to an earlier one are
+# source, then the expression), payload.json (the x that htmlwidgets sends to
+# the browser, after the widget's preRenderHook) and meta.json. Charts identical to an earlier one are
 # skipped. Expressions that fail (e.g. no network, MUMmer not installed) are
 # logged and the source continues.
 #
@@ -107,14 +107,15 @@ export_source <- function(name, file) {
       next
     }
     widget <- result$value
+    sent <- htmlwidgets:::createPayload(widget)
     count <- count + 1
     id <- if (!is.na(pending)) pending else paste0(slug(name), "-", count)
     pending <- NA_character_
-    if (any(unlist(htmlwidgets:::shouldEval(widget$x)))) {
+    if (length(sent$evals)) {
       note(id, ": skipped, payload contains JavaScript functions")
       next
     }
-    payload <- as.character(htmlwidgets:::toJSON(widget$x))
+    payload <- as.character(htmlwidgets:::toJSON(sent$x))
     hash <- digest_text(payload)
     if (hash %in% seen) {
       note(id, ": skipped, same chart as an earlier fixture")

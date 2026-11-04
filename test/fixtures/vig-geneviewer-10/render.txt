@@ -1,0 +1,261 @@
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <svg class="geneviewer-svg-content" data-cluster="ophA" height="131" id="svg-container-2" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 131" width="1000">
+    <text data-component="clusterLabel" data-part="title" dominant-baseline="central" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: normal; font-weight: bold" text-anchor="middle" transform="translate(0, 0)" x="50" y="58.6">
+      <tspan class="wrap-line" dy="0em" x="50" y="58.6">
+        <tspan>
+          "O."
+        <tspan>
+          "olearius"
+    <text data-component="clusterLabel" data-part="subtitle" dominant-baseline="central" style="cursor: default; font-family: sans-serif; font-size: 11px; font-style: normal; font-weight: normal" text-anchor="middle" transform="translate(0, 0)" x="50" y="72.4">
+      <tspan class="wrap-line" dy="0em" x="50" y="72.4">
+        <tspan>
+          "ophA"
+    <g data-component="sequence" transform="translate(100,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="850" y1="60.5" y2="60.5">
+    <g data-component="genes" transform="translate(100, 5)">
+      <path class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L65.57 22.5 L65.57 30 L75.57 15 L65.57 0 L65.57 7.5 Z" end="4276" fill="#1f77b4" id="ophA-gene-0" rowID="1" start="2522" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 16.34, 60.5) translate(16.34, 45.5)">
+      <path class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L14.47 22.5 L14.47 30 L24.47 15 L14.47 0 L14.47 7.5 Z" end="4718" fill="#ff7f0e" id="ophA-gene-1" rowID="2" start="5286" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(180, 135.43, 60.5) translate(135.43, 45.5)">
+      <path class="gene" cluster="ophA" d="M0 0 L0 30 L48.94 30 L58.94 15 L48.94 0 Z" end="10904" fill="#2ca02c" id="ophA-gene-2" rowID="3" start="9536" strand="forward" style="cursor: default; fill: red; stroke-width: 1; stroke: black" transform="rotate(0, 318.54, 60.5) translate(318.54, 45.5)">
+      <path class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L22.62 22.5 L22.62 30 L32.62 15 L22.62 0 L22.62 7.5 Z" end="11859" fill="#d62728" id="ophA-gene-3" rowID="4" start="12616" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(180, 451.25, 60.5) translate(451.25, 45.5)">
+      <path class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L70.27 22.5 L70.27 30 L80.27 15 L70.27 0 L70.27 7.5 Z" end="15046" fill="#1f77b4" id="ophA-gene-4" rowID="5" start="13183" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 475.68, 60.5) translate(475.68, 45.5)">
+      <path class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L133.48 22.5 L133.48 30 L143.48 15 L133.48 0 L133.48 7.5 Z" end="16016" fill="#9467bd" id="ophA-gene-5" rowID="6" start="19346" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(180, 741.22, 60.5) translate(741.22, 45.5)">
+      <path class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L46.61 22.5 L46.61 30 L56.61 15 L46.61 0 L46.61 7.5 Z" end="21484" fill="#8c564b" id="ophA-gene-6" rowID="7" start="20170" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 776.72, 60.5) translate(776.72, 45.5)">
+    <g data-component="coordinates" transform="translate(100,5)">
+      <g fill="none" font-family="sans-serif" font-size="10" text-anchor="middle" transform="translate(0,56.87)">
+        <path class="domain" d="M0.5,-6V0.5H850.5V-6" stroke="none">
+        <g class="tick" opacity="1" rowID="2" transform="translate(110.96,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="-6">
+          <text class="coordinate" dx="-0.8em" dy="0.4em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: end" transform="rotate(45)" y="-9">
+            "4,718"
+      <g fill="none" font-family="sans-serif" font-size="10" text-anchor="middle" transform="translate(0,62.92)">
+        <path class="domain" d="M0.5,6V0.5H850.5V6" stroke="none">
+        <g class="tick" opacity="1" rowID="1" transform="translate(91.91,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "4,276"
+        <g class="tick" opacity="1" rowID="2" transform="translate(135.43,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "5,286"
+        <g class="tick" opacity="1" rowID="3" transform="translate(318.54,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "9,536"
+        <g class="tick" opacity="1" rowID="3" transform="translate(377.49,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "10,904"
+        <g class="tick" opacity="1" rowID="4" transform="translate(418.63,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "11,859"
+        <g class="tick" opacity="1" rowID="4" transform="translate(451.25,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "12,616"
+        <g class="tick" opacity="1" rowID="5" transform="translate(475.68,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "13,183"
+        <g class="tick" opacity="1" rowID="5" transform="translate(555.95,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "15,046"
+        <g class="tick" opacity="1" rowID="6" transform="translate(597.74,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "16,016"
+        <g class="tick" opacity="1" rowID="6" transform="translate(741.22,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "19,346"
+        <g class="tick" opacity="1" rowID="7" transform="translate(776.72,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "20,170"
+        <g class="tick" opacity="1" rowID="7" transform="translate(833.33,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "21,484"
+    <g data-component="labels" transform="translate(100,5)">
+      <text class="label" dx="0em" dy="0em" id="cluster-ophA-label-0" rowID="1" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 54.13, 39.45)" x="54.13" y="39.45">
+        "ophB1"
+      <text class="label" dx="0em" dy="0em" id="cluster-ophA-label-1" rowID="2" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 123.19, 39.45)" x="123.19" y="39.45">
+        "ophC"
+      <text class="label" dx="0em" dy="0em" id="cluster-ophA-label-2" rowID="3" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic; font-weight: bold" text-anchor="middle" transform="translate(0, 0) rotate(0, 348.01, 39.45)" x="348.01" y="39.45">
+        "ophMA"
+      <text class="label" dx="0em" dy="0em" id="cluster-ophA-label-3" rowID="4" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 434.94, 39.45)" x="434.94" y="39.45">
+        "ophD"
+      <text class="label" dx="0em" dy="0em" id="cluster-ophA-label-4" rowID="5" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 515.81, 39.45)" x="515.81" y="39.45">
+        "ophB2"
+      <text class="label" dx="0em" dy="0em" id="cluster-ophA-label-5" rowID="6" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 669.48, 39.45)" x="669.48" y="39.45">
+        "ophP"
+      <text class="label" dx="0em" dy="0em" id="cluster-ophA-label-6" rowID="7" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 805.03, 39.45)" x="805.03" y="39.45">
+        "ophE"
+  <svg class="geneviewer-svg-content" data-cluster="dbophA" height="131" id="svg-container-3" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 131" width="1000">
+    <text data-component="clusterLabel" data-part="title" dominant-baseline="central" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: normal; font-weight: bold" text-anchor="middle" transform="translate(0, 0)" x="50" y="58.6">
+      <tspan class="wrap-line" dy="0em" x="50" y="58.6">
+        <tspan>
+          "D."
+        <tspan>
+          "bispora"
+    <text data-component="clusterLabel" data-part="subtitle" dominant-baseline="central" style="cursor: default; fill: grey; font-family: sans-serif; font-size: 11px; font-style: normal; font-weight: normal" text-anchor="middle" transform="translate(0, 0)" x="50" y="72.4">
+      <tspan class="wrap-line" dy="0em" x="50" y="72.4">
+        <tspan>
+          "dbophA"
+    <g data-component="sequence" transform="translate(100,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="850" y1="60.5" y2="60.5">
+    <g data-component="genes" transform="translate(100, 5)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L36.3 22.5 L36.3 30 L46.3 15 L36.3 0 L36.3 7.5 Z" end="20583" fill="#8c564b" id="dbophA-gene-0" rowID="17" start="19236" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 16.34, 60.5) translate(16.34, 45.5)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L104.25 22.5 L104.25 30 L114.25 15 L104.25 0 L104.25 7.5 Z" end="24607" fill="#9467bd" id="dbophA-gene-1" rowID="16" start="21283" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 86.7, 60.5) translate(86.7, 45.5)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L56.3 22.5 L56.3 30 L66.3 15 L56.3 0 L56.3 7.5 Z" end="27217" fill="#1f77b4" id="dbophA-gene-2" rowID="15" start="25288" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 224.36, 60.5) translate(224.36, 45.5)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L42.04 22.5 L42.04 30 L52.04 15 L42.04 0 L42.04 7.5 Z" end="28885" fill="#d62728" id="dbophA-gene-3" rowID="14" start="27371" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 295.96, 60.5) translate(295.96, 45.5)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L44.27 22.5 L44.27 30 L54.27 15 L44.27 0 L44.27 7.5 Z" end="30516" fill="#2ca02c" id="dbophA-gene-4" rowID="13" start="28937" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 349.78, 60.5) translate(349.78, 45.5)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L68.61 22.5 L68.61 30 L78.61 15 L68.61 0 L68.61 7.5 Z" end="34679" fill="#1f77b4" id="dbophA-gene-5" rowID="12" start="32392" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 468.54, 60.5) translate(468.54, 45.5)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L37.3 22.5 L37.3 30 L47.3 15 L37.3 0 L37.3 7.5 Z" end="36331" fill="#d62728" id="dbophA-gene-6" rowID="11" start="34955" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 556.64, 60.5) translate(556.64, 45.5)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L8.18 22.5 L8.18 30 L18.18 15 L8.18 0 L8.18 7.5 Z" end="37791" fill="#ff7f0e" id="dbophA-gene-7" rowID="10" start="37262" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 635.93, 60.5) translate(635.93, 45.5)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L71.81 22.5 L71.81 30 L81.81 15 L71.81 0 L71.81 7.5 Z" end="40469" fill="#1f77b4" id="dbophA-gene-8" rowID="9" start="38089" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 664.36, 60.5) translate(664.36, 45.5)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L66.89 22.5 L66.89 30 L76.89 15 L66.89 0 L66.89 7.5 Z" end="43005" fill="#1f77b4" id="dbophA-gene-9" rowID="8" start="40768" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 756.44, 60.5) translate(756.44, 45.5)">
+    <g data-component="coordinates" transform="translate(100,5)">
+      <g fill="none" font-family="sans-serif" font-size="10" text-anchor="middle" transform="translate(0,56.87)">
+        <path class="domain" d="M0.5,-6V0.5H850.5V-6" stroke="none">
+        <g class="tick" opacity="1" rowID="14" transform="translate(295.96,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="-6">
+          <text class="coordinate" dx="-0.8em" dy="0.4em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: end" transform="rotate(45)" y="-9">
+            "27,371"
+        <g class="tick" opacity="1" rowID="13" transform="translate(349.78,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="-6">
+          <text class="coordinate" dx="-0.8em" dy="0.4em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: end" transform="rotate(45)" y="-9">
+            "28,937"
+        <g class="tick" opacity="1" rowID="11" transform="translate(556.64,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="-6">
+          <text class="coordinate" dx="-0.8em" dy="0.4em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: end" transform="rotate(45)" y="-9">
+            "34,955"
+        <g class="tick" opacity="1" rowID="10" transform="translate(654.12,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="-6">
+          <text class="coordinate" dx="-0.8em" dy="0.4em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: end" transform="rotate(45)" y="-9">
+            "37,791"
+        <g class="tick" opacity="1" rowID="8" transform="translate(756.44,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="-6">
+          <text class="coordinate" dx="-0.8em" dy="0.4em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: end" transform="rotate(45)" y="-9">
+            "40,768"
+      <g fill="none" font-family="sans-serif" font-size="10" text-anchor="middle" transform="translate(0,62.92)">
+        <path class="domain" d="M0.5,6V0.5H850.5V6" stroke="none">
+        <g class="tick" opacity="1" rowID="17" transform="translate(16.34,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "19,236"
+        <g class="tick" opacity="1" rowID="17" transform="translate(62.64,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "20,583"
+        <g class="tick" opacity="1" rowID="16" transform="translate(86.7,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "21,283"
+        <g class="tick" opacity="1" rowID="16" transform="translate(200.95,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "24,607"
+        <g class="tick" opacity="1" rowID="15" transform="translate(224.36,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "25,288"
+        <g class="tick" opacity="1" rowID="15" transform="translate(290.66,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "27,217"
+        <g class="tick" opacity="1" rowID="14" transform="translate(348,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "28,885"
+        <g class="tick" opacity="1" rowID="13" transform="translate(404.06,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "30,516"
+        <g class="tick" opacity="1" rowID="12" transform="translate(468.54,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "32,392"
+        <g class="tick" opacity="1" rowID="12" transform="translate(547.15,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "34,679"
+        <g class="tick" opacity="1" rowID="11" transform="translate(603.93,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "36,331"
+        <g class="tick" opacity="1" rowID="10" transform="translate(635.93,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "37,262"
+        <g class="tick" opacity="1" rowID="9" transform="translate(664.36,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "38,089"
+        <g class="tick" opacity="1" rowID="9" transform="translate(746.17,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "40,469"
+        <g class="tick" opacity="1" rowID="8" transform="translate(833.33,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="6">
+          <text class="coordinate" dx="0.8em" dy="-0.15em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(45)" y="9">
+            "43,005"
+    <g data-component="labels" transform="translate(100,5)">
+      <text class="label" dx="0em" dy="0em" id="cluster-dbophA-label-0" rowID="17" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 39.49, 39.45)" x="39.49" y="39.45">
+        "dbophE"
+      <text class="label" dx="0em" dy="0em" id="cluster-dbophA-label-1" rowID="16" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 143.83, 39.45)" x="143.83" y="39.45">
+        "dbophP"
+      <text class="label" dx="0em" dy="0em" id="cluster-dbophA-label-2" rowID="15" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 257.51, 39.45)" x="257.51" y="39.45">
+        "dbophB4"
+      <text class="label" dx="0em" dy="0em" id="cluster-dbophA-label-3" rowID="14" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 321.98, 39.45)" x="321.98" y="39.45">
+        "dbophD2"
+      <text class="label" dx="0em" dy="0em" id="cluster-dbophA-label-4" rowID="13" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 376.92, 39.45)" x="376.92" y="39.45">
+        "dbophA"
+      <text class="label" dx="0em" dy="0em" id="cluster-dbophA-label-5" rowID="12" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 507.85, 39.45)" x="507.85" y="39.45">
+        "dbophB3"
+      <text class="label" dx="0em" dy="0em" id="cluster-dbophA-label-6" rowID="11" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 580.28, 39.45)" x="580.28" y="39.45">
+        "dbophD1"
+      <text class="label" dx="0em" dy="0em" id="cluster-dbophA-label-7" rowID="10" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 645.03, 39.45)" x="645.03" y="39.45">
+        "dbophC"
+      <text class="label" dx="0em" dy="0em" id="cluster-dbophA-label-8" rowID="9" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 705.26, 39.45)" x="705.26" y="39.45">
+        "dbophB2"
+      <text class="label" dx="0em" dy="0em" id="cluster-dbophA-label-9" rowID="8" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 794.89, 39.45)" x="794.89" y="39.45">
+        "dbophB1"
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div class="geneviewer-container" id="geneviewer-legend-container-chart">
+  <svg class="geneviewer-svg-content" height="38" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 38" width="1000">
+    <g data-component="legend" transform="translate(50, 15)">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-0" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="18" y="6">
+          "Monooxygenase"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-0" rx="0" style="cursor: pointer; fill: rgb(31, 119, 180)" transform="translate(0, 0)" width="12" x="0" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-1" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="130.06" y="6">
+          "NTF2-like"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-1" rx="0" style="cursor: pointer; fill: rgb(255, 127, 14)" transform="translate(0, 0)" width="12" x="112.06" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-2" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="206.08" y="6">
+          "Methyltransferase"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-2" rx="0" style="cursor: pointer; fill: rgb(44, 160, 44)" transform="translate(0, 0)" width="12" x="188.08" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-3" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="325.45" y="6">
+          "O-acyltransferase"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-3" rx="0" style="cursor: pointer; fill: rgb(214, 39, 40)" transform="translate(0, 0)" width="12" x="307.45" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-4" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="444.16" y="6">
+          "Prolyloligopeptidase"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-4" rx="0" style="cursor: pointer; fill: rgb(148, 103, 189)" transform="translate(0, 0)" width="12" x="426.16" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-5" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="575.56" y="6">
+          "F-box/RNHI-like"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-5" rx="0" style="cursor: pointer; fill: rgb(140, 86, 75)" transform="translate(0, 0)" width="12" x="557.56" y="0">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <i aria-haspopup="menu" aria-label="Save chart" class="fa-solid fa-download geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"

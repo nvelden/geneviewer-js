@@ -1,0 +1,28 @@
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <svg class="geneviewer-svg-content" data-cluster="cluster" height="400" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 400" width="1000">
+    <g data-component="clusterTitle" transform="translate(50, 5)">
+      <text data-part="title" style="cursor: default; font-family: sans-serif; font-size: 16px; font-style: normal; font-weight: bold" text-anchor="middle" transform="translate(0, 0)" x="450" y="22.5">
+        <tspan>
+          "Cluster"
+      <text data-part="subtitle" style="cursor: default; fill: grey; font-family: sans-serif; font-size: 14px; font-style: italic; font-weight: normal; text-decoration: none" text-anchor="middle" transform="translate(0, 0)" x="450" y="42.5">
+        <tspan>
+          "Subtitle"
+    <g data-component="sequence" transform="translate(50,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="900" y1="195" y2="195">
+    <g data-component="genes" transform="translate(50, 5)">
+      <path class="gene" cluster="cluster" d="M0 7.5 L0 22.5 L278.35 22.5 L278.35 30 L288.35 15 L278.35 0 L278.35 7.5 Z" end="50" fill="#1f77b4" id="cluster-gene-0" rowID="2" start="10" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 17.3, 195) translate(17.3, 180)">
+      <path class="gene" cluster="cluster" d="M0 0 L0 30 L288.35 30 L288.35 15 L288.35 0 Z" end="130" fill="#1f77b4" id="cluster-gene-1" rowID="1" start="90" strand="forward" style="cursor: default; fill: red; stroke-width: 1; stroke: black" transform="rotate(0, 594, 195) translate(594, 180)">
+    <g data-component="labels" transform="translate(50,5)">
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-0" rowID="2" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 161.48, 160.5)" x="161.48" y="160.5">
+        "a"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-1" rowID="1" style="cursor: default; font-family: sans-serif; font-size: 16px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 738.18, 160.5)" x="738.18" y="160.5">
+        "Edited"
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <i aria-haspopup="menu" aria-label="Save chart" class="fa-solid fa-download geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"

@@ -4,7 +4,9 @@
   <meta charset="utf-8">
   <title>geneviewer fixture harness</title>
   <link rel="stylesheet" href="../../dist/styles.css">
-  <style>body { margin: 0; } #chart { width: 1000px; }</style>
+  <!-- The chart starts 50px in, so the pointer, which starts at 0,0, is not over
+       it: a mouse event there would show the trackMouse tooltip at random. -->
+  <style>body { margin: 0; padding: 50px; } #chart { width: 1000px; }</style>
   <script src="../../vendor/d3-7.8.5/d3.min.js"></script>
   <script src="../../vendor/filesaver-2.0.4/FileSaver.min.js"></script>
   <script src="../../dist/geneviewer.js"></script>

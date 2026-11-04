@@ -1,0 +1,63 @@
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <svg class="geneviewer-svg-content" data-cluster="ophA" height="81" id="svg-container-2" preserveAspectRatio="xMinYMin meet" style="background-color: rgb(250, 235, 215); box-sizing: border-box; width: 100%" viewBox="0 0 998 81" width="998">
+    <g data-component="sequence" transform="translate(50,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="898" y1="35.5" y2="35.5">
+    <g data-component="genes" transform="translate(50, 5)">
+      <path class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L69.84 22.5 L69.84 30 L79.84 15 L69.84 0 L69.84 7.5 Z" end="4276" fill="#1f77b4" id="ophA-gene-0" rowID="1" start="2522" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 17.26, 35.5) translate(17.26, 20.5)">
+      <path class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L15.85 22.5 L15.85 30 L25.85 15 L15.85 0 L15.85 7.5 Z" end="4718" fill="#ff7f0e" id="ophA-gene-1" rowID="2" start="5286" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(180, 143.08, 35.5) translate(143.08, 20.5)">
+      <path class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L52.27 22.5 L52.27 30 L62.27 15 L52.27 0 L52.27 7.5 Z" end="10904" fill="#2ca02c" id="ophA-gene-2" rowID="3" start="9536" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 336.53, 35.5) translate(336.53, 20.5)">
+      <path class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L24.46 22.5 L24.46 30 L34.46 15 L24.46 0 L24.46 7.5 Z" end="11859" fill="#d62728" id="ophA-gene-3" rowID="4" start="12616" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(180, 476.73, 35.5) translate(476.73, 20.5)">
+      <path class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L74.8 22.5 L74.8 30 L84.8 15 L74.8 0 L74.8 7.5 Z" end="15046" fill="#1f77b4" id="ophA-gene-4" rowID="5" start="13183" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 502.54, 35.5) translate(502.54, 20.5)">
+      <path class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L141.58 22.5 L141.58 30 L151.58 15 L141.58 0 L141.58 7.5 Z" end="16016" fill="#9467bd" id="ophA-gene-5" rowID="6" start="19346" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(180, 783.07, 35.5) translate(783.07, 20.5)">
+      <path class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L49.81 22.5 L49.81 30 L59.81 15 L49.81 0 L49.81 7.5 Z" end="21484" fill="#8c564b" id="ophA-gene-6" rowID="7" start="20170" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 820.58, 35.5) translate(820.58, 20.5)">
+  <svg class="geneviewer-svg-content" data-cluster="dbophA" height="81" id="svg-container-3" preserveAspectRatio="xMinYMin meet" style="background-color: rgb(250, 235, 215); box-sizing: border-box; width: 100%" viewBox="0 0 998 81" width="998">
+    <g data-component="sequence" transform="translate(50,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="898" y1="35.5" y2="35.5">
+    <g data-component="genes" transform="translate(50, 5)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L38.91 22.5 L38.91 30 L48.91 15 L38.91 0 L38.91 7.5 Z" end="20583" fill="#8c564b" id="dbophA-gene-0" rowID="17" start="19236" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 17.26, 35.5) translate(17.26, 20.5)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L110.71 22.5 L110.71 30 L120.71 15 L110.71 0 L110.71 7.5 Z" end="24607" fill="#9467bd" id="dbophA-gene-1" rowID="16" start="21283" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 91.6, 35.5) translate(91.6, 20.5)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L60.05 22.5 L60.05 30 L70.05 15 L60.05 0 L60.05 7.5 Z" end="27217" fill="#1f77b4" id="dbophA-gene-2" rowID="15" start="25288" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 237.03, 35.5) translate(237.03, 20.5)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L44.98 22.5 L44.98 30 L54.98 15 L44.98 0 L44.98 7.5 Z" end="28885" fill="#d62728" id="dbophA-gene-3" rowID="14" start="27371" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 312.67, 35.5) translate(312.67, 20.5)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L47.34 22.5 L47.34 30 L57.34 15 L47.34 0 L47.34 7.5 Z" end="30516" fill="#2ca02c" id="dbophA-gene-4" rowID="13" start="28937" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 369.54, 35.5) translate(369.54, 20.5)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L73.05 22.5 L73.05 30 L83.05 15 L73.05 0 L73.05 7.5 Z" end="34679" fill="#1f77b4" id="dbophA-gene-5" rowID="12" start="32392" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 495, 35.5) translate(495, 20.5)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L39.97 22.5 L39.97 30 L49.97 15 L39.97 0 L39.97 7.5 Z" end="36331" fill="#d62728" id="dbophA-gene-6" rowID="11" start="34955" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 588.07, 35.5) translate(588.07, 20.5)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L9.21 22.5 L9.21 30 L19.21 15 L9.21 0 L9.21 7.5 Z" end="37791" fill="#ff7f0e" id="dbophA-gene-7" rowID="10" start="37262" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 671.85, 35.5) translate(671.85, 20.5)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L76.43 22.5 L76.43 30 L86.43 15 L76.43 0 L76.43 7.5 Z" end="40469" fill="#1f77b4" id="dbophA-gene-8" rowID="9" start="38089" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 701.88, 35.5) translate(701.88, 20.5)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L71.23 22.5 L71.23 30 L81.23 15 L71.23 0 L71.23 7.5 Z" end="43005" fill="#1f77b4" id="dbophA-gene-9" rowID="8" start="40768" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 799.16, 35.5) translate(799.16, 20.5)">
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div class="geneviewer-container" id="geneviewer-legend-container-chart">
+  <svg class="geneviewer-svg-content" height="38" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgb(250, 235, 215); box-sizing: border-box; width: 100%" viewBox="0 0 998 38" width="998">
+    <g data-component="legend" transform="translate(50, 15)">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-0" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="18" y="6">
+          "Monooxygenase"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-0" rx="0" style="cursor: pointer; fill: rgb(31, 119, 180)" transform="translate(0, 0)" width="12" x="0" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-1" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="130.06" y="6">
+          "NTF2-like"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-1" rx="0" style="cursor: pointer; fill: rgb(255, 127, 14)" transform="translate(0, 0)" width="12" x="112.06" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-2" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="206.08" y="6">
+          "Methyltransferase"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-2" rx="0" style="cursor: pointer; fill: rgb(44, 160, 44)" transform="translate(0, 0)" width="12" x="188.08" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-3" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="325.45" y="6">
+          "O-acyltransferase"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-3" rx="0" style="cursor: pointer; fill: rgb(214, 39, 40)" transform="translate(0, 0)" width="12" x="307.45" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-4" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="444.16" y="6">
+          "Prolyloligopeptidase"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-4" rx="0" style="cursor: pointer; fill: rgb(148, 103, 189)" transform="translate(0, 0)" width="12" x="426.16" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-5" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="575.56" y="6">
+          "F-box/RNHI-like"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-5" rx="0" style="cursor: pointer; fill: rgb(140, 86, 75)" transform="translate(0, 0)" width="12" x="557.56" y="0">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <i aria-haspopup="menu" aria-label="Save chart" class="fa-solid fa-download geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"
