@@ -145,10 +145,11 @@ var createMoveHistory = function () {
  *   that may draw it again with what they report, as in an R or Python app: a
  *   fixed pixel width in renderModel.size is applied to el, clicks are
  *   reported, and moved elements are kept by the server's redraws instead of
- *   in the chart.
+ *   in the chart. Read each time it is used.
  * @returns {Chart}
  */
 function newChart(el, renderModel, options) {
+    // Kept as given: server is read each time it is used
     options = options || {};
     var
       graphContainer,
