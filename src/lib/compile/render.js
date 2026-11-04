@@ -1,7 +1,7 @@
 // What the R package did as the chart was sent to the browser: render_theme(),
 // the widget's preRenderHook (R/theme.R).
 import { Frame } from "./frame.js";
-import themes from "../../themes.json" with { type: "json" };
+import { palettes, themeToJs } from "./theme.js";
 
 // Columns sent only when an option names them, as in a tooltip formatter
 // "{translation}": they hold long sequences the chart does not draw
@@ -63,8 +63,8 @@ function resolvePaletteNames(x) {
   }
   if (x === null || typeof x !== "object" || x instanceof Frame) return x;
   for (const [key, value] of Object.entries(x)) {
-    if (key === "colorScheme" && typeof value === "string" && themes.palettes[value]) {
-      x[key] = themes.palettes[value].slice();
+    if (key === "colorScheme" && typeof value === "string" && palettes[value]) {
+      x[key] = palettes[value].slice();
     } else if (value !== null && typeof value === "object") {
       x[key] = resolvePaletteNames(value);
     }
@@ -81,6 +81,9 @@ function resolvePaletteNames(x) {
 export function renderTheme(state) {
   const x = state.x;
   x.size = { width: state.width };
+  const theme = themeToJs(x.theme);
+  if (theme === undefined) delete x.theme;
+  else x.theme = theme;
   resolvePaletteNames(x);
   compactData(x);
   return x;
