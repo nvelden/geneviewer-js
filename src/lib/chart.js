@@ -1,8 +1,11 @@
 // The chart: draws a render model into an element and handles everything the
-// user does with it (toolbar, zoom, selection, drag, undo and redo). Defines
-// the global `geneviewer` with newChart(). Joined after geneviewer.js, whose
-// drawing functions it uses.
-(function () {
+// user does with it (toolbar, zoom, selection, drag, undo and redo).
+import { clusterLabelMargin } from "./components/clusterLabel.js";
+import { createContainer } from "./container.js";
+import { chartToPNG, chartToSVG, createSaveIcon } from "./export.js";
+import { colorBarSettings, getClusterLinks, makeColorBar, makeLinks } from "./links.js";
+import { computeSize, mergeOptions, themeTextScale, toRows } from "./util.js";
+
 var version = "0.3.0-alpha.1";
 // Shared by all chart instances, including ones removed and recreated.
 var renderSequence = 0;
@@ -1768,5 +1771,4 @@ function newChart(el, renderModel, options) {
     return chart;
 }
 
-window.geneviewer = { newChart: newChart, version: version };
-})();
+export { newChart, version };

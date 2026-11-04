@@ -6,5 +6,5 @@ import { bundleScript } from "./bundle.mjs";
 
 mkdirSync("test/harness/build", { recursive: true });
 writeFileSync("test/harness/build/internals.js",
-  await bundleScript("test/harness/internals.js", "geneviewerInternals", { exports: ["getColorScale"] }));
+  await bundleScript("test/harness/internals.js", "geneviewerInternals"));
 console.log("built test/harness/build/internals.js");

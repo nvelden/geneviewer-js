@@ -1,14 +1,8 @@
 // Files shipped in each release, by their name in dist/.
 //
-// bundle: dist/geneviewer.js, built by esbuild from src/<entry>. Until M3.2
-// the classic scripts in `scripts` are joined into one module for it, which
-// exports the functions in `exports`.
-export const bundle = {
-  name: "geneviewer.js",
-  entry: "index.js",
-  scripts: ["geneviewer.js", "chart.js"],
-  exports: ["chartToSVG", "chartToPNG"],
-};
+// bundle: dist/geneviewer.js, built by esbuild from src/<entry> and the
+// modules it imports.
+export const bundle = { name: "geneviewer.js", entry: "lib/index.js" };
 
 // Copied from src/ unchanged (several sources are joined in order)
 export const files = [
