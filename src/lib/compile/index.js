@@ -14,6 +14,7 @@ import { links } from "./links.js";
 import { transcript } from "./transcript.js";
 import { annotation, elementStyle } from "./annotations.js";
 import { theme } from "./theme.js";
+import { events, toolbar, trackMouse, zoom } from "./interaction.js";
 
 /**
  * How each spec key changes the chart. The keys of a spec are applied in
@@ -44,6 +45,10 @@ const handlers = {
   annotation,
   elementStyle,
   theme,
+  zoom,
+  toolbar,
+  events,
+  trackMouse,
 };
 
 // Keys GC_chart() itself reads

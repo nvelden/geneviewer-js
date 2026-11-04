@@ -414,7 +414,8 @@ function newChart(target, renderModel, options) {
         }
       }
       if (!detail || (detail.component === "legend" && events.legendClick === false)) return;
-      if (options.server && events.click === true) report("click", detail);
+      // Also without a server: chart.on("click") and the geneviewer:click event
+      if (events.click === true) report("click", detail);
     };
     var onDoubleClick = function (event) {
       if (performance.now() < suppressClickUntil) return;
@@ -1023,7 +1024,7 @@ function newChart(target, renderModel, options) {
 
     var wireEvents = function () {
       cancelDrag();
-      var click = !!options.server && events.click === true;
+      var click = events.click === true;
       el.removeEventListener("click", onClick);
       el.removeEventListener("dblclick", onDoubleClick);
       el.removeEventListener("keydown", onKeyDown);
