@@ -8,13 +8,14 @@ gene cluster charts with the same JavaScript.
 
 | File | What it is |
 |------|------------|
-| `src/index.js` | Entry of the bundle: what the global `geneviewer` holds |
-| `src/geneviewer.js` | Drawing functions: genes, links, labels, legends, scales, colour bars, SVG/PNG export |
-| `src/chart.js` | `geneviewer.newChart()`: the chart, with its toolbar, zoom, selection, drag and undo/redo |
+| `src/lib/index.js` | Entry of the bundle: the public API, what the global `geneviewer` holds |
+| `src/lib/chart.js` | `geneviewer.newChart()`: the chart, with its toolbar, zoom, selection, drag and undo/redo |
+| `src/lib/container.js` | The container of one chart part; `components/*.js` add a method to it for each part drawn (genes, labels, legend, ...) |
+| `src/lib/*.js` | Shared helpers: `util`, `style`, `text`, `color`, `scale`, `links` (and colour bar), `export` (SVG/PNG, save menu) |
 | `src/styles.css` | Chart styles |
 | `src/htmlwidgets/geneviewerwidget.js` | htmlwidgets binding used by the R package: calls `newChart` and sends events to Shiny |
 
-esbuild bundles the sources into `dist/geneviewer.js`, a classic browser
+The sources are ES modules. esbuild bundles them into `dist/geneviewer.js`, a classic browser
 script that defines the global `geneviewer` and needs the global `d3` (D3
 7.8.5); the binding also needs `HTMLWidgets`.
 
@@ -102,7 +103,7 @@ Set `PORT` to use a port other than 4849.
 
 ## Releases
 
-1. Bump `version` in `package.json` and `src/chart.js` (`npm run check`
+1. Bump `version` in `package.json` and `src/lib/chart.js` (`npm run check`
    compares them).
 2. Commit, then tag and push: `git tag v0.2.1 && git push origin main v0.2.1`.
 
