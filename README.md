@@ -32,7 +32,7 @@ host package ships them as separate dependencies with their own licences.
 ## Tests
 
 ```sh
-npm test               # fixture and interaction tests, in Docker
+npm test               # all tests, in Docker
 npm run test:update    # write new baselines (only when output should change)
 Rscript scripts/export-fixtures.R   # re-export fixtures from the R package
 Rscript test/coverage.R             # update test/coverage.md
@@ -45,6 +45,12 @@ Rscript test/coverage.R             # update test/coverage.md
 - **Interaction tests** (`test/interaction/`): scripted zoom, selection,
   drag and undo/redo, with the chart and its events recorded after each
   step.
+- **Two modes:** fixtures and interaction tests run twice against the same
+  baselines: through the R binding, as R draws charts, and with
+  `geneviewer.newChart()` directly (`test/harness/mount.js`).
+- **Save and two-chart tests** (`test/save.cjs`, `test/two-charts.cjs`): the
+  save menu downloads a valid SVG and PNG; two charts on a page keep their
+  own selection and undo history.
 - **Coverage** (`test/coverage.md`): every documented argument of the `GC_*`
   chart functions is used by at least one fixture.
 - **Fixed environment:** the tests run in a Docker image (`docker/`) with

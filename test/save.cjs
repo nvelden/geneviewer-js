@@ -23,12 +23,12 @@ const checks = [
   const browser = await chromium.launch({ args: ["--font-render-hinting=none", "--disable-gpu"] });
   let failed = 0;
   try {
-    for (const check of checks) {
+    for (const mode of ["binding", "direct"]) for (const check of checks) {
       const page = await browser.newPage({ viewport: { width: 1200, height: 900 }, acceptDownloads: true });
       const errors = [];
       page.on("pageerror", (error) => errors.push(error.message));
       try {
-        await page.goto(harness, { waitUntil: "load" });
+        await page.goto(harness + "?mode=" + mode, { waitUntil: "load" });
         await page.evaluate(({ payload, meta }) => mountChart(payload, meta), { payload, meta });
         // With the keyboard: the menu shows while the save icon has focus.
         // (The harness has no icon font, so the icon has no size to hover.)
@@ -44,10 +44,10 @@ const checks = [
         if (errors.length) throw new Error(errors.join("\n"));
         if (name !== check.filename) throw new Error(`file name ${name}, expected ${check.filename}`);
         if (!check.ok(bytes)) throw new Error(`unexpected content: ${JSON.stringify(bytes.subarray(0, 16).toString("latin1"))}`);
-        console.log(`pass  ${check.filename}  (${bytes.length} bytes)`);
+        console.log(`pass  ${mode}  ${check.filename}  (${bytes.length} bytes)`);
       } catch (error) {
         failed++;
-        console.log(`FAIL  ${check.filename}  ${error.message}`);
+        console.log(`FAIL  ${mode}  ${check.filename}  ${error.message}`);
       } finally {
         await page.close();
       }

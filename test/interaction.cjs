@@ -5,6 +5,8 @@
 //   node test/interaction.cjs              compare
 //   node test/interaction.cjs --update     write the .txt files
 //   node test/interaction.cjs --only <n>   one scenario
+//   node test/interaction.cjs --mode <m>   one harness mode, binding or direct
+//                                          (default both; --update: binding)
 const fs = require("node:fs");
 const path = require("node:path");
 const { pathToFileURL } = require("node:url");
@@ -14,10 +16,12 @@ const scenarios = require("./interaction/scenarios.cjs");
 const args = process.argv.slice(2);
 const update = args.includes("--update");
 const only = args.flatMap((arg, i) => (arg === "--only" ? [args[i + 1]] : []));
+const modeArgs = args.flatMap((arg, i) => (arg === "--mode" ? [args[i + 1]] : []));
+const modes = modeArgs.length ? modeArgs : update ? ["binding"] : ["binding", "direct"];
 const harness = pathToFileURL(path.join(__dirname, "harness", "index.html")).href;
 const eventNames = ["click", "dblclick", "select", "selection", "drag", "dragmove", "moves", "zoom", "rendered"];
 
-async function runScenario(browser, scenario) {
+async function runScenario(browser, scenario, mode) {
   const dir = path.join(__dirname, "fixtures", scenario.fixture);
   const payload = JSON.parse(fs.readFileSync(path.join(dir, "payload.json"), "utf8"));
   const meta = JSON.parse(fs.readFileSync(path.join(dir, "meta.json"), "utf8"));
@@ -25,14 +29,12 @@ async function runScenario(browser, scenario) {
   const errors = [];
   page.on("pageerror", (error) => errors.push(error.message));
   try {
-    await page.goto(harness, { waitUntil: "load" });
+    await page.goto(harness + "?mode=" + mode, { waitUntil: "load" });
     await page.evaluate(({ payload, meta, eventNames }) => {
-      const el = document.getElementById("chart");
       window.__events = [];
-      eventNames.forEach((name) => el.addEventListener("geneviewer:" + name, (event) => {
-        window.__events.push(name + " " + JSON.stringify(event.detail));
-      }));
-      mountChart(payload, meta);
+      mountChart(payload, meta, eventNames, (name, detail) => {
+        window.__events.push(name + " " + JSON.stringify(detail));
+      });
     }, { payload, meta, eventNames });
 
     // Pointer away from the chart, then wait out tooltip fades and redraws
@@ -97,14 +99,14 @@ async function runScenario(browser, scenario) {
   const browser = await chromium.launch({ args: ["--font-render-hinting=none", "--disable-gpu"] });
   let failed = 0;
   try {
-    for (const scenario of scenarios.filter((s) => !only.length || only.includes(s.name))) {
+    for (const mode of modes) for (const scenario of scenarios.filter((s) => !only.length || only.includes(s.name))) {
       const file = path.join(__dirname, "interaction", `${scenario.name}.txt`);
       let actual;
       try {
-        actual = await runScenario(browser, scenario);
+        actual = await runScenario(browser, scenario, mode);
       } catch (error) {
         failed++;
-        console.log(`FAIL  ${scenario.name}  (error)\n${error.message}\n`);
+        console.log(`FAIL  ${mode}  ${scenario.name}  (error)\n${error.message}\n`);
         continue;
       }
       if (update) {
@@ -114,14 +116,14 @@ async function runScenario(browser, scenario) {
       }
       const expected = fs.existsSync(file) ? fs.readFileSync(file, "utf8") : "";
       if (expected === actual) {
-        console.log(`pass  ${scenario.name}`);
+        console.log(`pass  ${mode}  ${scenario.name}`);
       } else {
         failed++;
         const a = expected.split("\n"), b = actual.split("\n");
         let i = 0;
         while (i < a.length && i < b.length && a[i] === b[i]) i++;
         const step = a.slice(0, i + 1).reverse().find((line) => line.startsWith("## ")) || "";
-        console.log(`FAIL  ${scenario.name}  at line ${i + 1} (${step})\n- ${(a[i] || "").slice(0, 300)}\n+ ${(b[i] || "").slice(0, 300)}\n`);
+        console.log(`FAIL  ${mode}  ${scenario.name}  at line ${i + 1} (${step})\n- ${(a[i] || "").slice(0, 300)}\n+ ${(b[i] || "").slice(0, 300)}\n`);
       }
     }
   } finally {

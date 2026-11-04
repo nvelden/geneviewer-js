@@ -5,6 +5,8 @@
 //   node test/run.cjs              compare
 //   node test/run.cjs --update     write render.txt instead of comparing
 //   node test/run.cjs --only <id>  one fixture (repeatable)
+//   node test/run.cjs --mode <m>   one harness mode, binding or direct
+//                                  (default both; --update: binding)
 const fs = require("node:fs");
 const path = require("node:path");
 const { chromium } = require("playwright-core");
@@ -14,6 +16,8 @@ const fixturesDir = path.join(__dirname, "fixtures");
 const args = process.argv.slice(2);
 const update = args.includes("--update");
 const only = args.flatMap((arg, i) => (arg === "--only" ? [args[i + 1]] : []));
+const modeArgs = args.flatMap((arg, i) => (arg === "--mode" ? [args[i + 1]] : []));
+const modes = modeArgs.length ? modeArgs : update ? ["binding"] : ["binding", "direct"];
 
 // The first differing line with a few lines of context from both sides
 function firstDifference(expected, actual) {
@@ -40,17 +44,17 @@ function firstDifference(expected, actual) {
   let failed = 0;
   let written = 0;
   try {
-    for (const id of ids) {
+    for (const mode of modes) for (const id of ids) {
       const dir = path.join(fixturesDir, id);
       const payload = JSON.parse(fs.readFileSync(path.join(dir, "payload.json"), "utf8"));
       const meta = JSON.parse(fs.readFileSync(path.join(dir, "meta.json"), "utf8"));
       const file = path.join(dir, "render.txt");
       let actual;
       try {
-        actual = await renderFixture(browser, payload, meta);
+        actual = await renderFixture(browser, payload, meta, mode);
       } catch (error) {
         failed++;
-        console.log(`FAIL  ${id}  (error while drawing)\n${error.message}\n`);
+        console.log(`FAIL  ${mode}  ${id}  (error while drawing)\n${error.message}\n`);
         continue;
       }
       if (update) {
@@ -64,22 +68,22 @@ function firstDifference(expected, actual) {
       }
       if (!fs.existsSync(file)) {
         failed++;
-        console.log(`FAIL  ${id}  (no render.txt; run npm run test:update)`);
+        console.log(`FAIL  ${mode}  ${id}  (no render.txt; run npm run test:update)`);
         continue;
       }
       const expected = fs.readFileSync(file, "utf8");
       if (expected === actual) {
-        console.log(`pass  ${id}`);
+        console.log(`pass  ${mode}  ${id}`);
       } else {
         failed++;
-        console.log(`FAIL  ${id}  ${firstDifference(expected, actual)}\n`);
+        console.log(`FAIL  ${mode}  ${id}  ${firstDifference(expected, actual)}\n`);
       }
     }
   } finally {
     await browser.close();
   }
   if (update) console.log(`${written} of ${ids.length} listings written`);
-  else console.log(`${ids.length - failed} passed, ${failed} failed`);
+  else console.log(`${ids.length * modes.length - failed} passed, ${failed} failed (${ids.length} fixtures; ${modes.join(" and ")})`);
   process.exit(failed ? 1 : 0);
 })().catch((error) => {
   console.error(error);
