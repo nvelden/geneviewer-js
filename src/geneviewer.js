@@ -499,6 +499,16 @@ function themeTextScale(themeOptions) {
   return typeof textScale === "number" && textScale > 0 ? textScale : 1;
 }
 
+// Warnings shown once per page: the colour and pattern scales are made for
+// every cluster and legend on every draw, which includes each zoom frame and
+// resize
+const shownWarnings = new Set();
+function warnOnce(message) {
+  if (shownWarnings.has(message)) return;
+  shownWarnings.add(message);
+  console.warn(message);
+}
+
 function getColorScale(colorScheme, customColors, uniqueGroups) {
   const schemeCategory30 = [
     "#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd",
@@ -515,18 +525,19 @@ function getColorScale(colorScheme, customColors, uniqueGroups) {
   const groups = uniqueGroups.filter(group => group !== null);
 
   // Colours of the colour scheme: a d3 scheme name or an array of colours (e.g.
-  // the palette of a theme), by default schemeCategory30
-  const schemeRange = () => {
+  // the palette of a theme), by default schemeCategory30. usesScheme tells
+  // which groups take their colour from it: a warning that colours repeat is
+  // only for those.
+  const schemeRange = (usesScheme = () => true) => {
     if (colorScheme && (Array.isArray(colorScheme) || d3[colorScheme])) {
       const scheme = Array.isArray(colorScheme) ? colorScheme : d3[colorScheme];
-      // Check if there are more groups than colors in the scheme
-      if (groups.length > scheme.length) {
-        console.warn(`Warning: More unique groups than colors. Some colors will repeat.`);
+      if (groups.some((group, index) => index >= scheme.length && usesScheme(group))) {
+        warnOnce(`Warning: More unique groups than colors. Some colors will repeat.`);
       }
       return groups.map((group, index) => scheme[index % scheme.length]);
     }
     if (colorScheme) {
-      console.warn(`Warning: The color scheme "${colorScheme}" does not exist. Defaulting to schemeCategory30.`);
+      warnOnce(`Warning: The color scheme "${colorScheme}" does not exist. Defaulting to schemeCategory30.`);
     }
     return groups.map((group, index) =>
       group === "No Hit" ? "#FFF" : schemeCategory30[index % schemeCategory30.length]
@@ -543,7 +554,7 @@ function getColorScale(colorScheme, customColors, uniqueGroups) {
   } else if (customColors && typeof customColors === 'object') {
     // Handle customColors as an object: groups it leaves out keep the colour
     // of the colour scheme
-    const scheme = schemeRange();
+    const scheme = schemeRange(group => !customColors[group]);
     range = groups.map((group, index) => customColors[group] || scheme[index]);
   } else {
     range = schemeRange();
@@ -642,7 +653,7 @@ function getPatternScale(svg, pattern, uniqueGroups, colorScale, idPrefix) {
       types[index] = defaultPatternOrder[index % defaultPatternOrder.length];
     });
     if (groups.length > defaultPatternOrder.length) {
-      console.warn(`Warning: More unique groups than patterns. Some patterns will repeat.`);
+      warnOnce(`Warning: More unique groups than patterns. Some patterns will repeat.`);
     }
   }
   const backgrounds = valuesByGroup(background, groups, null);
@@ -656,7 +667,7 @@ function getPatternScale(svg, pattern, uniqueGroups, colorScale, idPrefix) {
   groups.forEach((group, index) => {
     let type = types[index];
     if (!genePatterns[type]) {
-      console.warn(`Warning: The pattern "${type}" does not exist. Using "none".`);
+      warnOnce(`Warning: The pattern "${type}" does not exist. Using "none".`);
       type = "none";
     }
     // "No Hit" stays a plain white gene, like in the default colours
@@ -894,7 +905,7 @@ function addScalePadding(startValue, endValue, padding, to, breaks = []) {
   }
   // If padding is not in a valid format or range, log a warning and return the original value
   else {
-    console.warn('Invalid padding format. Padding should be a percentage (as a string or a number between 0 and 100). No padding applied.');
+    warnOnce('Invalid padding format. Padding should be a percentage (as a string or a number between 0 and 100). No padding applied.');
     return to === 'start' ? startValue : endValue;
   }
 
@@ -3615,7 +3626,7 @@ function getGenePath(marker, length, markerSize, options = {}) {
                     L${length} ${height}`;
             break;
         default:
-            console.warn(`Marker type '${marker}' not recognized.`);
+            warnOnce(`Marker type '${marker}' not recognized.`);
             path = "";
     }
 
@@ -4564,7 +4575,7 @@ container.prototype.createAnnotation = function (group, options) {
       this.createCurveAnnotation(group, options);
       break;
     default:
-      console.warn('Unsupported annotation type:', options.type);
+      warnOnce('Unsupported annotation type: ' + options.type);
   }
 };
 
