@@ -1444,7 +1444,7 @@ HTMLWidgets.widget({
 
       // Add Links: each set from GC_links() keeps its own options
       var linkSets = (Array.isArray(links) ? links : []).map(entry => ({
-        data: HTMLWidgets.dataframeToD3(entry.data),
+        data: toRows(entry.data),
         options: entry.options ?? {}
       }));
 
@@ -1453,7 +1453,7 @@ HTMLWidgets.widget({
         var cluster = series[clusterKey],
             containerOptions = cluster.container,
             clusterOptions = cluster.cluster,
-            clusterData = HTMLWidgets.dataframeToD3(series[clusterKey].data),
+            clusterData = toRows(series[clusterKey].data),
             scaleOptions = cluster.scale,
             clusterTitleOptions = cluster.clusterTitle,
             footerOptions = cluster.footer,
@@ -1585,11 +1585,11 @@ HTMLWidgets.widget({
     // The rows of all clusters in the columns of the chart data (dataColumns),
     // in the order of the data in R: the order of the groups sets the colours
     var chartData = function (input) {
-        if (input.data) return HTMLWidgets.dataframeToD3(input.data);
+        if (input.data) return toRows(input.data);
         var columns = input.dataColumns ?? [];
         var rows = [];
         Object.values(input.series ?? {}).forEach(function (cluster) {
-          HTMLWidgets.dataframeToD3(cluster.data).forEach(function (row) {
+          toRows(cluster.data).forEach(function (row) {
             var picked = {};
             columns.forEach(function (column) { picked[column] = row[column]; });
             rows.push(picked);

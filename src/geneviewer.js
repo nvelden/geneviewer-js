@@ -1,5 +1,27 @@
 // Utils
 
+/**
+ * Table data as an array of rows. Columns ({ a: [1, 2], b: ["x", "y"] }), as
+ * R sends a data frame, become rows ([{ a: 1, b: "x" }, { a: 2, b: "y" }]);
+ * rows are passed through. All columns have the length of the first. null or
+ * undefined gives no rows.
+ * @param {Object<string, Array>|Array<Object>|null|undefined} data
+ * @returns {Array<Object>}
+ */
+function toRows(data) {
+  if (data == null) return [];
+  if (Array.isArray(data)) return data;
+  const names = Object.keys(data);
+  const length = names.length ? data[names[0]].length : 0;
+  const rows = [];
+  for (let i = 0; i < length; i++) {
+    const row = {};
+    for (const name of names) row[name] = data[name][i];
+    rows.push(row);
+  }
+  return rows;
+}
+
 function getUniqueId(baseId) {
   var i = 1;
   while (document.getElementById(baseId + "-" + i)) {
@@ -1273,7 +1295,7 @@ function makeLinks(graphContainer, links, themeOptions = {}) {
 
         const additionalOptionsLinkStyle = extractAdditionalOptions(linkStyle, defaultOptions.linkStyle);
 
-        const linkData = HTMLWidgets.dataframeToD3(link.data)
+        const linkData = toRows(link.data)
         const coordinates = getLinkCoordinates(graphContainer, linkData);
 
       // Add svg paths
