@@ -12,6 +12,8 @@ import { asCharacter, clone, computeSize, getRelativeHeight } from "./r.js";
  * @property {number|string} height
  * @property {Object<string, *>} spec
  * @property {string[]} warnings
+ * @property {{idColumn: string, id: string|number, align: string}} [align]
+ *   The gene the clusters are aligned on (GC_align()).
  */
 
 // The tooltip of genes; protein_blast() results get their own

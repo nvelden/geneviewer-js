@@ -9,6 +9,7 @@ import { cluster } from "./cluster.js";
 import { color, coordinates, genes, labels, legend, pattern, sequence, tooltip } from "./genes.js";
 import { clusterFooter, clusterLabel, clusterTitle, grid, title } from "./layout.js";
 import { clone } from "./r.js";
+import { align, scale, scaleBar } from "./scale.js";
 
 /**
  * How each spec key changes the chart. The keys of a spec are applied in
@@ -31,6 +32,9 @@ const handlers = {
   clusterLabel,
   clusterFooter,
   grid,
+  scale,
+  scaleBar,
+  align,
 };
 
 // Keys GC_chart() itself reads
