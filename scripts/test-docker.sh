@@ -13,6 +13,7 @@ if [ "$(docker info --format '{{.Architecture}}')" != "aarch64" ]; then
   exit 1
 fi
 node scripts/build.mjs > /dev/null
+node scripts/build-test.mjs > /dev/null
 node scripts/build-site.mjs > /dev/null
 docker build --quiet -t geneviewer-js-test -f docker/Dockerfile . > /dev/null
 docker run --rm -v "$PWD":/work -w /work geneviewer-js-test \

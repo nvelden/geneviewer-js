@@ -2,9 +2,10 @@
 // src/chart.js is the one in package.json.
 import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
-import { files } from "./files.mjs";
+import { bundle, files } from "./files.mjs";
 
-for (const file of files.flatMap((f) => f.sources).filter((f) => f.endsWith(".js"))) {
+const sources = [...bundle.scripts, ...files.flatMap((f) => f.sources)].filter((f) => f.endsWith(".js"));
+for (const file of sources) {
   execFileSync(process.execPath, ["--check", `src/${file}`], { stdio: "inherit" });
   console.log(`ok  src/${file}`);
 }

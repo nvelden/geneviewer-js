@@ -3,3 +3,4 @@ node_modules/
 .DS_Store
 .try-app.env
 _site/
+test/harness/build/

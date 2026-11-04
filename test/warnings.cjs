@@ -6,6 +6,8 @@ const { pathToFileURL } = require("node:url");
 const { chromium } = require("playwright-core");
 
 const harness = pathToFileURL(path.join(__dirname, "harness", "index.html")).href;
+// getColorScale() is not public: it comes from the test build (scripts/build-test.mjs)
+const internals = path.join(__dirname, "harness", "build", "internals.js");
 
 (async () => {
   const browser = await chromium.launch({ args: ["--disable-gpu"] });
@@ -21,19 +23,20 @@ const harness = pathToFileURL(path.join(__dirname, "harness", "index.html")).hre
       const warnings = [];
       page.on("console", (message) => { if (message.type() === "warning") warnings.push(message.text()); });
       await page.goto(harness, { waitUntil: "load" });
+      await page.addScriptTag({ path: internals });
       const result = await page.evaluate(fn);
       await page.close();
       return { warnings, result };
     };
     let r = await run(() => {
-      const scale = getColorScale(["#111111", "#222222"], { a: "#ff0000", b: "#00ff00", c: "#0000ff" }, ["a", "b", "c"]);
+      const scale = geneviewerInternals.getColorScale(["#111111", "#222222"], { a: "#ff0000", b: "#00ff00", c: "#0000ff" }, ["a", "b", "c"]);
       return ["a", "b", "c"].map(scale);
     });
     expect(r.warnings.length === 0, `every group has its own colour: no warning (${r.warnings.length})`);
     expect(JSON.stringify(r.result) === JSON.stringify(["#ff0000", "#00ff00", "#0000ff"]), "and the colours are the given ones");
 
     r = await run(() => {
-      const scale = getColorScale(["#111111", "#222222"], { c: "#ff0000" }, ["a", "b", "c"]);
+      const scale = geneviewerInternals.getColorScale(["#111111", "#222222"], { c: "#ff0000" }, ["a", "b", "c"]);
       return ["a", "b", "c"].map(scale);
     });
     expect(r.warnings.length === 0, `the group past the scheme has its own colour: no warning (${r.warnings.length})`);
@@ -41,8 +44,8 @@ const harness = pathToFileURL(path.join(__dirname, "harness", "index.html")).hre
       `and the others keep the colour of their place in the scheme (${r.result})`);
 
     r = await run(() => {
-      for (let i = 0; i < 50; i++) getColorScale(["#111111", "#222222"], null, ["a", "b", "c"]);
-      return ["a", "b", "c"].map(getColorScale(["#111111", "#222222"], null, ["a", "b", "c"]));
+      for (let i = 0; i < 50; i++) geneviewerInternals.getColorScale(["#111111", "#222222"], null, ["a", "b", "c"]);
+      return ["a", "b", "c"].map(geneviewerInternals.getColorScale(["#111111", "#222222"], null, ["a", "b", "c"]));
     });
     expect(r.warnings.length === 1 && /colors will repeat/.test(r.warnings[0]),
       `colours repeat: one warning for 51 scales (${r.warnings.length})`);
