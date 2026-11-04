@@ -6,6 +6,12 @@ anything different.
 **Repo:** geneviewer-js (reads the R package; does not change it).
 **Branch:** `m1-fixtures`.
 
+> **As built (2026-11-04):** the test image runs natively on arm64 with
+> Chromium pinned by Playwright, not amd64 Chrome via puppeteer. Chrome
+> under emulation misread numbers. Baselines are `render.txt` listings, and
+> payloads are exported with `htmlwidgets:::createPayload()`. See
+> [reports/M1.md](reports/M1.md).
+
 ## Background
 
 - The R package builds a payload (`widget$x`) and the JavaScript draws it.
