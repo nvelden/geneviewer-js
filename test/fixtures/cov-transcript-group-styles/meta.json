@@ -1,0 +1,7 @@
+{
+  "id": "cov-transcript-group-styles",
+  "source": "charts",
+  "width": 1000,
+  "height": "500px",
+  "covers": ["GC_chart", "GC_transcript"]
+}

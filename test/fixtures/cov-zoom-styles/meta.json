@@ -1,0 +1,7 @@
+{
+  "id": "cov-zoom-styles",
+  "source": "charts",
+  "width": 1000,
+  "height": "300px",
+  "covers": ["GC_chart", "GC_zoom"]
+}
