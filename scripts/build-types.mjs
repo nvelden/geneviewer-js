@@ -76,6 +76,11 @@ try {
     "",
     compileMatch[0].trim(),
     "",
+    "/** The built-in themes, by name: their settings as the R package defines them. */",
+    "export declare const themes: Record<string, Record<string, any>>;",
+    "/** The geneviewer palettes: their colours, by name. */",
+    "export declare const palettes: Record<string, string[]>;",
+    "",
   ].join("\n");
   writeFileSync("dist/geneviewer.d.ts", dts);
   console.log("built dist/geneviewer.d.ts");
