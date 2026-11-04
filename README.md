@@ -29,6 +29,30 @@ The build copies the sources unchanged and unminified, so the R package can
 ship readable source, as CRAN expects. D3 and FileSaver are not bundled; each
 host package ships them as separate dependencies with their own licences.
 
+## Tests
+
+```sh
+npm test               # fixture and interaction tests, in Docker
+npm run test:update    # write new baselines (only when output should change)
+Rscript scripts/export-fixtures.R   # re-export fixtures from the R package
+Rscript test/coverage.R             # update test/coverage.md
+```
+
+- **Fixtures** (`test/fixtures/`): 206 charts exported from the R package:
+  its help-page examples, its vignettes and `test/charts.R`. Each has the
+  R code, the payload R sends to the browser, and `render.txt`, a canonical
+  listing of the drawn chart. `npm test` draws every payload and compares.
+- **Interaction tests** (`test/interaction/`): scripted zoom, selection,
+  drag and undo/redo, with the chart and its events recorded after each
+  step.
+- **Coverage** (`test/coverage.md`): every documented argument of the `GC_*`
+  chart functions is used by at least one fixture.
+- **Fixed environment:** the tests run in a Docker image (`docker/`) with
+  pinned Chromium (Playwright) and fonts, because chart layout depends on
+  text measures. The image runs natively on arm64: on Apple silicon
+  locally, and on GitHub's `ubuntu-24.04-arm` runners in CI. Chrome under
+  amd64 emulation misreads numbers, so emulation is not supported.
+
 ## Trying a change in the Shiny app
 
 ```sh
