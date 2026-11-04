@@ -1,0 +1,63 @@
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <svg class="geneviewer-svg-content" data-cluster="cluster" height="62" id="svg-container-2" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 62" width="1000">
+    <g data-component="sequence" transform="translate(50,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="900" y1="26" y2="26">
+    <g data-component="genes" transform="translate(50, 5)">
+      <path class="gene" cluster="cluster" d="M0 7 L0 22 L70 22 L70 30 L80 15 L70 0 L70 7 Z" end="4276" fill="#1f77b4" id="cluster-gene-0" rowID="1" start="2522" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 17, 26) translate(17, 11)">
+      <path class="gene" cluster="cluster" d="M0 7 L0 22 L15 22 L15 30 L25 15 L15 0 L15 7 Z" end="4718" fill="#ff7f0e" id="cluster-gene-1" rowID="2" start="5286" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(180, 143, 26) translate(143, 11)">
+      <path class="gene" cluster="cluster" d="M0 7 L0 22 L52 22 L52 30 L62 15 L52 0 L52 7 Z" end="10904" fill="#2ca02c" id="cluster-gene-2" rowID="3" start="9536" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 337, 26) translate(337, 11)">
+      <path class="gene" cluster="cluster" d="M0 7 L0 22 L24 22 L24 30 L34 15 L24 0 L24 7 Z" end="11859" fill="#d62728" id="cluster-gene-3" rowID="4" start="12616" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(180, 477, 26) translate(477, 11)">
+      <path class="gene" cluster="cluster" d="M0 7 L0 22 L74 22 L74 30 L84 15 L74 0 L74 7 Z" end="15046" fill="#1f77b4" id="cluster-gene-4" rowID="5" start="13183" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 503, 26) translate(503, 11)">
+      <path class="gene" cluster="cluster" d="M0 7 L0 22 L141 22 L141 30 L151 15 L141 0 L141 7 Z" end="16016" fill="#9467bd" id="cluster-gene-5" rowID="6" start="19346" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(180, 784, 26) translate(784, 11)">
+      <path class="gene" cluster="cluster" d="M0 7 L0 22 L49 22 L49 30 L59 15 L49 0 L49 7 Z" end="21484" fill="#8c564b" id="cluster-gene-6" rowID="7" start="20170" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 822, 26) translate(822, 11)">
+    <g data-component="labels" transform="translate(50,5)">
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-0" rowID="1" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 57, 8)" x="57" y="8">
+        "ophB1"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-1" rowID="2" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 130, 8)" x="130" y="8">
+        "ophC"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-2" rowID="3" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 368, 8)" x="368" y="8">
+        "ophA"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-3" rowID="4" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 460, 8)" x="460" y="8">
+        "ophD"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-4" rowID="5" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 546, 8)" x="546" y="8">
+        "ophB2"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-5" rowID="6" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 708, 8)" x="708" y="8">
+        "ophP"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-6" rowID="7" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 852, 8)" x="852" y="8">
+        "ophE"
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0); background-color: rgba(255, 255, 255, 0); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0); box-shadow: rgba(0, 0, 0, 0) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div class="geneviewer-container" id="geneviewer-legend-container-chart">
+  <svg class="geneviewer-svg-content" height="38" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 38" width="1000">
+    <g data-component="legend" transform="translate(50, 15)">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-0" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="18" y="6">
+          "Monooxygenase"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-0" rx="0" style="cursor: pointer; fill: rgb(31, 119, 180)" transform="translate(0, 0)" width="12" x="0" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-1" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="130" y="6">
+          "NTF2-like"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-1" rx="0" style="cursor: pointer; fill: rgb(255, 127, 14)" transform="translate(0, 0)" width="12" x="112" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-2" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="206" y="6">
+          "Methyltransferase"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-2" rx="0" style="cursor: pointer; fill: rgb(44, 160, 44)" transform="translate(0, 0)" width="12" x="188" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-3" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="325" y="6">
+          "O-acyltransferase"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-3" rx="0" style="cursor: pointer; fill: rgb(214, 39, 40)" transform="translate(0, 0)" width="12" x="307" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-4" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="443" y="6">
+          "Prolyloligopeptidase"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-4" rx="0" style="cursor: pointer; fill: rgb(148, 103, 189)" transform="translate(0, 0)" width="12" x="425" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-5" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="574" y="6">
+          "F-box/RNHI-like"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-5" rx="0" style="cursor: pointer; fill: rgb(140, 86, 75)" transform="translate(0, 0)" width="12" x="556" y="0">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <i aria-haspopup="menu" aria-label="Save chart" class="fa-solid fa-download geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"
