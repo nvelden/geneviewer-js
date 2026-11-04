@@ -1,0 +1,69 @@
+// compile(spec): the render model the chart draws, from a spec. It does what
+// the R package's GC_* functions did before the chart reached the browser:
+// split the data into clusters, apply each component's options per cluster,
+// resolve the theme. See docs/design/api.md, Decision 1.
+import { Frame } from "./frame.js";
+import { chart } from "./chart.js";
+import { renderTheme } from "./render.js";
+
+/**
+ * How each spec key changes the chart. The keys of a spec are applied in
+ * their own order (the order R recorded the calls in), and each key's
+ * entries in array order.
+ * @type {Object<string, (state: import("./chart.js").ChartState, entry: Object<string, *>) => void>}
+ */
+const handlers = {};
+
+// Keys GC_chart() itself reads
+const CHART_KEYS = new Set(["version", "data", "fields", "width", "height", "style"]);
+
+/**
+ * The entries of a component: one entry or an array of entries.
+ * @param {*} value
+ * @returns {Object<string, *>[]}
+ */
+export function entries(value) {
+  if (value === null || value === undefined) return [];
+  return Array.isArray(value) ? value : [value];
+}
+
+/**
+ * Turns a spec into the render model that newChart() draws.
+ * @param {Object<string, *>} spec A chart spec (schema/spec-v1.schema.json).
+ * @returns {Object<string, *>} The render model.
+ */
+export function compile(spec) {
+  if (!spec || typeof spec !== "object") throw new Error("compile() needs a spec object");
+  const state = chart(spec);
+  for (const [key, value] of Object.entries(spec)) {
+    if (CHART_KEYS.has(key)) continue;
+    const apply = handlers[key];
+    if (!apply) continue;
+    for (const entry of entries(value)) apply(state, entry);
+  }
+  return toModel(renderTheme(state));
+}
+
+/**
+ * The render model as plain data: series as an object, tables as objects of
+ * columns.
+ * @param {*} value
+ * @returns {*}
+ */
+function toModel(value) {
+  if (value instanceof Frame) return value.toJSON();
+  if (value instanceof Map) {
+    const out = {};
+    for (const [key, item] of value) out[key] = toModel(item);
+    return out;
+  }
+  if (Array.isArray(value)) return value.map(toModel);
+  if (value !== null && typeof value === "object") {
+    const out = {};
+    for (const [key, item] of Object.entries(value)) {
+      if (item !== undefined) out[key] = toModel(item);
+    }
+    return out;
+  }
+  return value;
+}
