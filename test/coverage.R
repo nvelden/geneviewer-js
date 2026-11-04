@@ -106,7 +106,7 @@ documented$fixtures <- vapply(key, function(k) {
 }, "")
 documented$status <- ifelse(nzchar(documented$fixtures), "covered",
                      ifelse(key %in% names(not_drawable), "not drawable", "UNCOVERED"))
-documented$note <- ifelse(key %in% names(not_drawable), unlist(not_drawable[key]), "")
+documented$note <- vapply(key, function(k) if (k %in% names(not_drawable)) not_drawable[[k]] else "", "")
 documented <- documented[order(documented$status != "UNCOVERED",
                                documented$status != "not drawable",
                                documented$fn, documented$arg), ]

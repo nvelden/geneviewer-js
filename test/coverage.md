@@ -8,11 +8,11 @@ fixtures whose code uses them. Written by `Rscript test/coverage.R`.
 
 | Function | Argument | Status | Fixtures |
 |----------|----------|--------|----------|
-| `GC_chart` | `elementId` | not drawable | Shiny only |
-| `GC_events` | `render_id` | not drawable | Shiny only |
-| `GC_events` | `rendered` | not drawable | Shiny only (GC_zoom(range = ) covers the drawing) |
-| `GC_zoom_to` | `outputId` | not drawable | Shiny only: reports a finished render |
-| `GC_zoom_to` | `range` | not drawable | Shiny only: identifies a render in input$<id>_rendered |
+| `GC_chart` | `elementId` | not drawable | the id of the HTML element, not part of the drawing |
+| `GC_events` | `render_id` | not drawable | Shiny only: identifies a render in input$<id>_rendered |
+| `GC_events` | `rendered` | not drawable | Shiny only: reports a finished render |
+| `GC_zoom_to` | `outputId` | not drawable | Shiny only |
+| `GC_zoom_to` | `range` | not drawable | Shiny only (GC_zoom(range = ) covers the drawing) |
 | `GC_zoom_to` | `session` | not drawable | Shiny only |
 | `GC_align` | `GC_chart` | covered | 8: rd-GC-align-1, vig-Examples-15, vig-Examples-16, ... |
 | `GC_align` | `align` | covered | 8: rd-GC-align-1, vig-Examples-15, vig-Examples-16, ... |
