@@ -5,6 +5,7 @@
 import { Frame } from "./frame.js";
 import { chart } from "./chart.js";
 import { renderTheme } from "./render.js";
+import { cluster } from "./cluster.js";
 
 /**
  * How each spec key changes the chart. The keys of a spec are applied in
@@ -12,7 +13,9 @@ import { renderTheme } from "./render.js";
  * entries in array order.
  * @type {Object<string, (state: import("./chart.js").ChartState, entry: Object<string, *>) => void>}
  */
-const handlers = {};
+const handlers = {
+  cluster,
+};
 
 // Keys GC_chart() itself reads
 const CHART_KEYS = new Set(["version", "data", "fields", "width", "height", "style"]);
