@@ -1,0 +1,7 @@
+{
+  "id": "cov-element-style-reset",
+  "source": "charts",
+  "width": 1000,
+  "height": "250px",
+  "covers": ["GC_chart", "GC_element_style", "GC_labels"]
+}
