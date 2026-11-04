@@ -1,0 +1,7 @@
+{
+  "id": "rd-GC-color-3",
+  "source": "rd-GC_color",
+  "width": 1000,
+  "height": "100px",
+  "covers": ["GC_chart", "GC_color"]
+}

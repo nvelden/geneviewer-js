@@ -1,0 +1,7 @@
+{
+  "id": "rd-GC-cluster-2",
+  "source": "rd-GC_cluster",
+  "width": 1000,
+  "height": "150px",
+  "covers": ["GC_chart", "GC_cluster", "GC_genes", "GC_labels"]
+}

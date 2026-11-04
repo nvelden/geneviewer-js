@@ -1,0 +1,7 @@
+{
+  "id": "rd-geneviewer-palette-1",
+  "source": "rd-geneviewer_palette",
+  "width": 1000,
+  "height": "100px",
+  "covers": ["GC_chart", "GC_genes"]
+}

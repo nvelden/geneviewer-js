@@ -1,0 +1,25 @@
+190 fixtures
+vig-BLASTP #4: error: es gibt kein Paket namens 'Biostrings'
+vig-BLASTP #5: error: es gibt kein Paket namens 'pwalign'
+vig-BLASTP #12: error: Biostrings package is not installed. Install with BiocManager::install("Biostrings").
+vig-BLASTP #13: error: Objekt 'BlastP_results' nicht gefunden
+vig-BLASTP #14: error: Objekt 'BlastP_results' nicht gefunden
+vig-BLASTP #17: error: Objekt 'BlastP_results' nicht gefunden
+vig-BLASTP #18: error: Objekt 'BlastP_results_functions' nicht gefunden
+vig-BLASTP #19: error: Objekt 'BlastP_results_functions' nicht gefunden
+vig-Examples-2: skipped, same chart as an earlier fixture
+vig-Examples-4: skipped, same chart as an earlier fixture
+vig-Examples-6: skipped, same chart as an earlier fixture
+vig-LoadFastaFiles #3: error: es gibt kein Paket namens 'UniProt.ws'
+vig-LoadFastaFiles #12: error: es gibt kein Paket namens 'UniProt.ws'
+vig-LoadFastaFiles #13: error: es gibt kein Paket namens 'UniProt.ws'
+vig-LoadFastaFiles #14: error: Objekt 'keywords' nicht gefunden
+vig-LoadFastaFiles #15: error: Objekt 'keywords' nicht gefunden
+vig-LoadFastaFiles #16: error: Objekt 'keywords_count' nicht gefunden
+vig-LoadFastaFiles #17: error: Objekt 'keywords_count' nicht gefunden
+vig-LoadFastaFiles #18: error: Objekt 'keywords_count' nicht gefunden
+vig-LoadFastaFiles #19: error: Objekt 'fasta_df_with_keywords' nicht gefunden
+vig-LoadFastaFiles #20: error: Objekt 'fasta_df_with_keywords' nicht gefunden
+vig-LoadFastaFiles #21: error: Objekt 'fasta_df_with_keywords' nicht gefunden
+vig-LoadFastaFiles-2: skipped, same chart as an earlier fixture
+vig-Tn7-CRISPR-6: skipped, same chart as an earlier fixture

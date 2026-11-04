@@ -1,0 +1,7 @@
+{
+  "id": "rd-GC-clusterTitle-1",
+  "source": "rd-GC_clusterTitle",
+  "width": 1000,
+  "height": "400px",
+  "covers": ["GC_chart", "GC_clusterTitle", "GC_labels"]
+}

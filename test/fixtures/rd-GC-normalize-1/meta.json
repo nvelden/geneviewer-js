@@ -1,0 +1,7 @@
+{
+  "id": "rd-GC-normalize-1",
+  "source": "rd-GC_normalize",
+  "width": 1000,
+  "height": "150px",
+  "covers": ["GC_chart", "GC_normalize"]
+}

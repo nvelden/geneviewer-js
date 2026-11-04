@@ -1,0 +1,7 @@
+{
+  "id": "rd-GC-clusterFooter-1",
+  "source": "rd-GC_clusterFooter",
+  "width": 1000,
+  "height": "400px",
+  "covers": ["GC_chart", "GC_clusterFooter"]
+}

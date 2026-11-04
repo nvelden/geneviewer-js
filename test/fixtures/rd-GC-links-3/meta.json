@@ -1,0 +1,7 @@
+{
+  "id": "rd-GC-links-3",
+  "source": "rd-GC_links",
+  "width": 1000,
+  "height": "220px",
+  "covers": ["GC_chart", "GC_legend", "GC_links"]
+}

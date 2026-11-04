@@ -1,0 +1,7 @@
+{
+  "id": "vig-Transcripts-1",
+  "source": "vig-Transcripts",
+  "width": 1000,
+  "height": "600px",
+  "covers": ["GC_chart", "GC_transcript"]
+}

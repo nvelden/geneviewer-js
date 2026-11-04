@@ -1,0 +1,7 @@
+{
+  "id": "vig-MUMMER-1",
+  "source": "vig-MUMMER",
+  "width": 1000,
+  "height": "400px",
+  "covers": ["GC_chart", "GC_cluster", "GC_clusterLabel", "GC_genes", "GC_legend", "GC_links", "GC_scale", "GC_theme", "GC_tooltip"]
+}

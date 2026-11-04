@@ -1,0 +1,7 @@
+{
+  "id": "rd-GC-annotation-1",
+  "source": "rd-GC_annotation",
+  "width": 1000,
+  "height": "220px",
+  "covers": ["GC_annotation", "GC_chart", "GC_trackMouse"]
+}

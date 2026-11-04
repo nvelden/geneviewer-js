@@ -1,0 +1,7 @@
+{
+  "id": "rd-GC-genes-3",
+  "source": "rd-GC_genes",
+  "width": 1000,
+  "height": "200px",
+  "covers": ["GC_chart", "GC_genes"]
+}

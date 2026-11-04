@@ -1,0 +1,7 @@
+{
+  "id": "vig-Examples-5",
+  "source": "vig-Examples",
+  "width": 1000,
+  "height": "400px",
+  "covers": ["GC_chart", "GC_clusterFooter", "GC_labels", "GC_legend", "GC_scale", "GC_scaleBar", "GC_theme"]
+}

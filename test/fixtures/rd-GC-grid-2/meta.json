@@ -1,0 +1,7 @@
+{
+  "id": "rd-GC-grid-2",
+  "source": "rd-GC_grid",
+  "width": 1000,
+  "height": "200px",
+  "covers": ["GC_chart", "GC_grid"]
+}

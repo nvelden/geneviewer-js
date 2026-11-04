@@ -1,0 +1,7 @@
+{
+  "id": "rd-GC-toolbar-1",
+  "source": "rd-GC_toolbar",
+  "width": 1000,
+  "height": "150px",
+  "covers": ["GC_chart", "GC_events", "GC_labels", "GC_toolbar"]
+}
