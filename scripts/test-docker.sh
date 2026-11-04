@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Run the fixture tests in the Docker test image (docker/Dockerfile), which
+# Build, and compile the type usage test (test/types/). Then run the fixture
+# tests in the Docker test image (docker/Dockerfile), which
 # fixes Chromium and the fonts: the fixture tests (test/run.cjs), the
 # interaction tests (test/interaction.cjs), then the save, two-chart, site
 # and warning checks (test/save.cjs, test/two-charts.cjs, test/site.cjs,
@@ -13,6 +14,8 @@ if [ "$(docker info --format '{{.Architecture}}')" != "aarch64" ]; then
   exit 1
 fi
 node scripts/build.mjs > /dev/null
+node scripts/build-types.mjs > /dev/null
+node node_modules/typescript/bin/tsc -p test/types/tsconfig.json
 node scripts/build-test.mjs > /dev/null
 node scripts/build-site.mjs > /dev/null
 docker build --quiet -t geneviewer-js-test -f docker/Dockerfile . > /dev/null

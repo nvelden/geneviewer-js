@@ -27,3 +27,4 @@ for (const [name, content] of Object.entries(outputs)) {
 }
 writeFileSync("dist/SHA256SUMS", sums.join("\n") + "\n");
 console.log("built dist/SHA256SUMS");
+// npm run build then builds the type definitions (scripts/build-types.mjs)

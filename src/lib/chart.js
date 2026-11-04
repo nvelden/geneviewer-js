@@ -114,20 +114,50 @@ var createMoveHistory = function () {
  */
 
 /**
+ * An event as chart.on() handlers get it: its name and what it reports.
+ * @typedef {Object} ChartEventObject
+ * @property {ChartEvent} type  The event's name.
+ * @property {*} detail  What it reports, as the geneviewer:<name> DOM event's detail.
+ */
+
+/**
+ * A handler of a chart event.
+ * @callback ChartEventHandler
+ * @param {ChartEventObject} event
+ * @returns {void}
+ */
+
+/**
  * A chart, as newChart() gives it.
  * @typedef {Object} Chart
- * @property {function(Object): void} update  Draw again with a new render model.
- * @property {function(): void} resize  Draw again at the element's current size.
- * @property {function(ChartEvent, function({type: ChartEvent, detail: *}): void): function(): void} on
+ * @property {(renderModel: Object) => void} update  Draw again with a new render model.
+ * @property {() => void} resize  Draw again at the element's current size.
+ * @property {(name: ChartEvent, handler: ChartEventHandler) => (() => void)} on
  *   Call a handler with each event of that name, as { type, detail }; gives
  *   the function that removes it.
- * @property {function(ChartEvent, function({type: ChartEvent, detail: *}): void): void} off
+ * @property {(name: ChartEvent, handler: ChartEventHandler) => void} off
  *   Remove a handler.
- * @property {function(?Array<number>): void} zoomTo  Set the zoom window
+ * @property {(range: ?Array<number>) => void} zoomTo  Set the zoom window
  *   (GC_zoom()): a range in the units of its mode, or null for everything.
- * @property {function(): string} toSVG  The chart as a standalone SVG.
- * @property {function(): Promise<Blob>} toPNG  The chart as a PNG.
- * @property {function(): void} destroy  Remove the chart and its listeners.
+ * @property {() => string} toSVG  The chart as a standalone SVG.
+ * @property {() => Promise<Blob>} toPNG  The chart as a PNG.
+ * @property {() => void} destroy  Remove the chart and its listeners.
+ */
+
+/**
+ * Options of newChart().
+ * @typedef {Object} ChartOptions
+ * @property {(blob: Blob, filename: string) => *} [saveAs]  Saves a file from
+ *   the save menu, given the blob and a file name. By default the browser
+ *   downloads it.
+ * @property {Partial<Record<ChartEvent, ChartEventHandler>>} [on]  Event
+ *   handlers by name, added before the first draw, so they also get its
+ *   events (rendered, zoom). Same as chart.on() for each.
+ * @property {boolean} [server=false]  The chart's events go to a server that
+ *   may draw it again with what they report, as in an R or Python app: a
+ *   fixed pixel width in renderModel.size is applied to el, clicks are
+ *   reported, and moved elements are kept by the server's redraws instead of
+ *   in the chart. Read each time it is used.
  */
 
 /**
@@ -136,29 +166,20 @@ var createMoveHistory = function () {
  * Events go to chart.on() handlers, as { type, detail }, and are dispatched
  * on el as geneviewer:<name> DOM events with the same detail, which bubble.
  *
- * @param {HTMLElement|string} el  The element to draw into, or a CSS
+ * @param {HTMLElement|string} target  The element to draw into, or a CSS
  *   selector for it; the chart takes its size.
  * @param {Object} renderModel  The chart as the R package sends it (widget$x).
- * @param {Object} [options]
- * @param {function(Blob, string): *} [options.saveAs]  Saves a file from the
- *   save menu, given the blob and a file name. By default the browser
- *   downloads it.
- * @param {Object<ChartEvent, function({type: ChartEvent, detail: *}): void>} [options.on]  Event
- *   handlers by name, added before the first draw, so they also get its
- *   events (rendered, zoom). Same as chart.on() for each.
- * @param {boolean} [options.server=false]  The chart's events go to a server
- *   that may draw it again with what they report, as in an R or Python app: a
- *   fixed pixel width in renderModel.size is applied to el, clicks are
- *   reported, and moved elements are kept by the server's redraws instead of
- *   in the chart. Read each time it is used.
+ *   From M4, the chart spec.
+ * @param {ChartOptions} [options]
  * @returns {Chart}
  */
-function newChart(el, renderModel, options) {
-    if (typeof el === "string") {
-      var found = document.querySelector(el);
-      if (!found) throw new Error("No element matches " + el);
-      el = found;
+function newChart(target, renderModel, options) {
+    if (typeof target === "string") {
+      var found = document.querySelector(target);
+      if (!found) throw new Error("No element matches " + target);
+      target = /** @type {HTMLElement} */ (found);
     }
+    var el = /** @type {HTMLElement} */ (target);
     // Kept as given: server is read each time it is used
     options = options || {};
     // The stylesheet styles charts by this class (htmlwidgets also sets it)

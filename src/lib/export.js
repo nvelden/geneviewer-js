@@ -9,8 +9,13 @@ const svgExportInheritedStyles = [
 ];
 const svgExportOwnStyles = { opacity: "1" };
 
-// Combines all SVGs of a chart (title, clusters, links, legend) into one
-// standalone SVG at their position in el and returns it as a string
+/**
+ * The chart in el as one standalone SVG document: its title, clusters, links
+ * and legend, each at its place.
+ * @param {HTMLElement} el  The chart's element.
+ * @param {?Element} [exclude]  An element of the chart whose SVGs are left out.
+ * @returns {string}
+ */
 export function chartToSVG(el, exclude = null) {
   const ns = "http://www.w3.org/2000/svg";
   const elRect = el.getBoundingClientRect();
@@ -135,6 +140,12 @@ export function chartToSVG(el, exclude = null) {
   return '<?xml version="1.0" encoding="UTF-8"?>\n' + new XMLSerializer().serializeToString(root);
 }
 
+/**
+ * The chart in el as a PNG image: chartToSVG() drawn by the browser.
+ * @param {HTMLElement} el  The chart's element.
+ * @param {?Element} [exclude]  An element of the chart whose SVGs are left out.
+ * @returns {Promise<Blob>}
+ */
 // Rasterize the same SVG as vector export. The browser resolves modern CSS
 // colors itself, without html2canvas parsing the surrounding app styles.
 export function chartToPNG(el, exclude = null) {
