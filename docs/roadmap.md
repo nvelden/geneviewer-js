@@ -239,6 +239,10 @@ Niels's approval before the milestone that introduces it closes.
 | # | Milestone | Difference | Reason | Approved |
 |---|-----------|------------|--------|----------|
 | 1 | M4 | A chart without a server reports clicks when `events.click` is on: `chart.on("click")` handlers and the `geneviewer:click` DOM event. With `events.highlight` also on, the element gets the hover highlight (`geneviewer-highlight`) in standalone R output too. | `chart.on("click")` is public API but fires only with `server: true` (Shiny), so JavaScript users never get clicks. | Niels, 2026-11-04 |
+| 2 | M4 | `GC_chart()` of GenBank files (`rd-GC-chart-2`): the render model's `params` has `cluster` and `strand`, which R sets only after reading the files. | `params` is R's copy of the call for `GC_transcript()`; the renderer does not read it. compile() takes it from the spec's `fields`. Draws the same. | proposed |
+| 3 | M4 | After `GC_normalize(cluster = )` on some clusters (`rd-GC-normalize-1`, `vig-geneviewer-26`, `vig-geneviewer-27`), the other clusters' data has `original_start` and `original_end`, all null; in R they had no such columns. | The spec's data has the columns for all rows; compile() splits it into clusters as R does. Not drawn; tooltips leave out empty fields. Draws the same. | proposed |
+| 4 | M4 | `GC_tooltip(FALSE)` (`vig-geneviewer-53` to `-62`): the tooltip's `formatter` is the default text, not `false`. | The spec records `show: false`; the formatter of a hidden tooltip is not used. Draws the same. | proposed |
+| 5 | M4 | `GC_chart(save_button = FALSE)` (`cov-chart-without-extras`): the render model has `toolbar.buttons` without "save"; R had no toolbar options. | NAMING.md case 1: the spec has no `saveButton`. The toolbar draws the same. | proposed |
 
 ## Risks
 
