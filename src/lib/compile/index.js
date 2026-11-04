@@ -51,6 +51,9 @@ const handlers = {
   trackMouse,
 };
 
+// The version of the spec this library reads
+const SPEC_VERSION = 1;
+
 // Keys GC_chart() itself reads
 const CHART_KEYS = new Set(["version", "data", "fields", "width", "height", "style"]);
 
@@ -71,6 +74,10 @@ export function entries(value) {
  */
 export function compile(spec) {
   if (!spec || typeof spec !== "object") throw new Error("compile() needs a spec object");
+  // A newer spec draws what this version knows of it
+  if (typeof spec.version === "number" && spec.version > SPEC_VERSION) {
+    console.warn(`geneviewer: spec version ${spec.version} is newer than this library's (${SPEC_VERSION}); drawing what it knows`);
+  }
   // The options of the render model are copies: drawing never changes the spec
   spec = clone(spec);
   const state = chart(spec);

@@ -1,11 +1,13 @@
-// Draws a fixture's payload into #chart, sized as in R (meta.json). Two modes:
+// Draws a fixture's payload into #chart, sized as in R (meta.json). Three modes:
 //   binding  through the R binding (geneviewerwidget.js and the htmlwidgets
 //            stand-in), as R draws it
 //   direct   with geneviewer.newChart()
+//   spec     with geneviewer.newChart() and the fixture's spec.json, which
+//            the caller passes as the payload
 // The mode is the page's ?mode= (default binding). With record(name, detail),
 // the events named in eventNames are recorded from the first draw on: as
 // geneviewer:<name> DOM events in binding mode, through newChart's options.on
-// in direct mode. Gives the binding's widget object or the chart.
+// in direct and spec mode. Gives the binding's widget object or the chart.
 function harnessMode() {
   return new URLSearchParams(location.search).get("mode") || "binding";
 }
@@ -16,7 +18,7 @@ function mountChart(payload, meta, eventNames, record) {
   el.style.width = (meta.width || 1000) + "px";
   el.style.height = meta.height || "400px";
   eventNames = record ? eventNames : [];
-  if (harnessMode() === "direct") {
+  if (harnessMode() === "direct" || harnessMode() === "spec") {
     var on = {};
     eventNames.forEach(function (name) {
       on[name] = function (event) { record(event.type, event.detail); };

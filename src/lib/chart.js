@@ -1,6 +1,8 @@
 // The chart: draws a render model into an element and handles everything the
 // user does with it (toolbar, zoom, selection, drag, undo and redo).
 import { clusterLabelMargin } from "./components/clusterLabel.js";
+import { compile } from "./compile/index.js";
+import { mergeSpec } from "./compile/merge.js";
 import { createContainer } from "./container.js";
 import { chartToPNG, chartToSVG, createSaveIcon } from "./export.js";
 import { colorBarSettings, getClusterLinks, makeColorBar, makeLinks } from "./links.js";
@@ -130,7 +132,13 @@ var createMoveHistory = function () {
 /**
  * A chart, as newChart() gives it.
  * @typedef {Object} Chart
- * @property {(renderModel: Object) => void} update  Draw again with a new render model.
+ * @property {(input: Object) => void} update  Draw again. A chart drawn from a
+ *   spec merges a partial spec into it: objects are merged, arrays and other
+ *   values replace. A chart drawn from a render model is drawn with the new
+ *   render model.
+ * @property {(spec: Object) => void} setSpec  Draw again from a new spec.
+ * @property {() => ?Object} getSpec  A copy of the chart's spec; null when it
+ *   was drawn from a render model.
  * @property {() => void} resize  Draw again at the element's current size.
  * @property {(name: ChartEvent, handler: ChartEventHandler) => (() => void)} on
  *   Call a handler with each event of that name, as { type, detail }; gives
@@ -168,8 +176,9 @@ var createMoveHistory = function () {
  *
  * @param {HTMLElement|string} target  The element to draw into, or a CSS
  *   selector for it; the chart takes its size.
- * @param {Object} renderModel  The chart as the R package sends it (widget$x).
- *   From M4, the chart spec.
+ * @param {Object} renderModel  The chart spec (schema/spec-v1.schema.json),
+ *   which has a version; or a render model, as the R package sends it
+ *   (widget$x), drawn as it is.
  * @param {ChartOptions} [options]
  * @returns {Chart}
  */
@@ -1738,9 +1747,35 @@ function newChart(target, renderModel, options) {
         }
     };
 
+    // The spec the chart was drawn from; null for a render model
+    var spec = null;
+    var drawInput = function (input) {
+      if (input && input.version !== undefined) {
+        spec = structuredClone(input);
+        renderValue(compile(spec));
+      } else {
+        spec = null;
+        renderValue(input);
+      }
+    };
+
     var chart = {
       update: function (input) {
-        if (!destroyed) renderValue(input);
+        if (destroyed) return;
+        if (spec !== null) {
+          spec = mergeSpec(spec, input);
+          renderValue(compile(spec));
+        } else {
+          drawInput(input);
+        }
+      },
+      setSpec: function (next) {
+        if (destroyed) return;
+        if (!next || next.version === undefined) throw new Error("setSpec() needs a spec with a version");
+        drawInput(next);
+      },
+      getSpec: function () {
+        return spec === null ? null : structuredClone(spec);
       },
       resize: function () {
         if (!destroyed) redraw();
@@ -1789,7 +1824,7 @@ function newChart(target, renderModel, options) {
       }
     };
     Object.keys(options.on || {}).forEach(function (name) { chart.on(name, options.on[name]); });
-    renderValue(renderModel);
+    drawInput(renderModel);
     return chart;
 }
 

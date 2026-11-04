@@ -5,8 +5,8 @@
 //   node test/interaction.cjs              compare
 //   node test/interaction.cjs --update     write the .txt files
 //   node test/interaction.cjs --only <n>   one scenario
-//   node test/interaction.cjs --mode <m>   one harness mode, binding or direct
-//                                          (default both; --update: binding)
+//   node test/interaction.cjs --mode <m>   one harness mode, binding, direct or spec
+//                                          (default all; --update: binding)
 const fs = require("node:fs");
 const path = require("node:path");
 const { pathToFileURL } = require("node:url");
@@ -17,13 +17,14 @@ const args = process.argv.slice(2);
 const update = args.includes("--update");
 const only = args.flatMap((arg, i) => (arg === "--only" ? [args[i + 1]] : []));
 const modeArgs = args.flatMap((arg, i) => (arg === "--mode" ? [args[i + 1]] : []));
-const modes = modeArgs.length ? modeArgs : update ? ["binding"] : ["binding", "direct"];
+const modes = modeArgs.length ? modeArgs : update ? ["binding"] : ["binding", "direct", "spec"];
 const harness = pathToFileURL(path.join(__dirname, "harness", "index.html")).href;
 const eventNames = ["click", "dblclick", "select", "selection", "drag", "dragmove", "moves", "zoom", "rendered"];
 
 async function runScenario(browser, scenario, mode) {
   const dir = path.join(__dirname, "fixtures", scenario.fixture);
-  const payload = JSON.parse(fs.readFileSync(path.join(dir, "payload.json"), "utf8"));
+  // In spec mode the chart is drawn from the spec R recorded
+  const payload = JSON.parse(fs.readFileSync(path.join(dir, mode === "spec" ? "spec.json" : "payload.json"), "utf8"));
   const meta = JSON.parse(fs.readFileSync(path.join(dir, "meta.json"), "utf8"));
   const page = await browser.newPage({ viewport: { width: 1200, height: 1000 }, deviceScaleFactor: 1 });
   const errors = [];
