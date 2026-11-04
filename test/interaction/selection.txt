@@ -1,0 +1,830 @@
+## drawn
+
+### events
+(none)
+
+### chart
+<div class="geneviewer-container" id="geneviewer-title-container-chart">
+  <svg class="geneviewer-svg-content" height="50" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 50" width="1000">
+    <g data-component="title" transform="translate(50, 5)">
+      <text aria-label="title: ophA gene clusters" aria-pressed="false" data-part="title" role="button" style="cursor: default; font-family: sans-serif; font-size: 16px; font-style: normal; font-weight: bold" tabindex="0" text-anchor="middle" transform="translate(0, 0)" x="450" y="22.5">
+        <tspan>
+          "ophA gene clusters"
+      <text aria-label="title: Drag me" aria-pressed="false" data-part="subtitle" role="button" style="cursor: default; font-family: sans-serif; font-size: 14px; font-style: normal; font-weight: normal; text-decoration: none" tabindex="0" text-anchor="middle" transform="translate(0, 0)" x="450" y="42.5">
+        <tspan>
+          "Drag me"
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <svg class="geneviewer-svg-content" data-cluster="ophA" height="131" id="svg-container-3" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 131" width="1000">
+    <text aria-label="clusterLabel: O. olearius" aria-pressed="false" data-component="clusterLabel" data-part="title" dominant-baseline="central" role="button" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: normal; font-weight: bold" tabindex="0" text-anchor="middle" transform="translate(0, 0)" x="50" y="65.5">
+      <tspan class="wrap-line" dy="0em" x="50" y="65.5">
+        <tspan>
+          "O."
+        <tspan>
+          "olearius"
+    <g data-component="sequence" transform="translate(100,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="850" y1="60.5" y2="60.5">
+    <g data-component="genes" transform="translate(100, 5)">
+      <path aria-label="genes: ophB1" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L65.57 22.5 L65.57 30 L75.57 15 L65.57 0 L65.57 7.5 Z" end="4276" fill="#1f77b4" id="ophA-gene-0" role="button" rowID="1" start="2522" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 16.34, 60.5) translate(16.34, 45.5)">
+      <path aria-label="genes: ophC" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L14.47 22.5 L14.47 30 L24.47 15 L14.47 0 L14.47 7.5 Z" end="4718" fill="#ff7f0e" id="ophA-gene-1" role="button" rowID="2" start="5286" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(180, 135.43, 60.5) translate(135.43, 45.5)">
+      <path aria-label="genes: ophA" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L48.94 22.5 L48.94 30 L58.94 15 L48.94 0 L48.94 7.5 Z" end="10904" fill="#2ca02c" id="ophA-gene-2" role="button" rowID="3" start="9536" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 318.54, 60.5) translate(318.54, 45.5)">
+      <path aria-label="genes: ophD" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L22.62 22.5 L22.62 30 L32.62 15 L22.62 0 L22.62 7.5 Z" end="11859" fill="#d62728" id="ophA-gene-3" role="button" rowID="4" start="12616" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(180, 451.25, 60.5) translate(451.25, 45.5)">
+      <path aria-label="genes: ophB2" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L70.27 22.5 L70.27 30 L80.27 15 L70.27 0 L70.27 7.5 Z" end="15046" fill="#1f77b4" id="ophA-gene-4" role="button" rowID="5" start="13183" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 475.68, 60.5) translate(475.68, 45.5)">
+      <path aria-label="genes: ophP" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L133.48 22.5 L133.48 30 L143.48 15 L133.48 0 L133.48 7.5 Z" end="16016" fill="#9467bd" id="ophA-gene-5" role="button" rowID="6" start="19346" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(180, 741.22, 60.5) translate(741.22, 45.5)">
+      <path aria-label="genes: ophE" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L46.61 22.5 L46.61 30 L56.61 15 L46.61 0 L46.61 7.5 Z" end="21484" fill="#8c564b" id="ophA-gene-6" role="button" rowID="7" start="20170" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 776.72, 60.5) translate(776.72, 45.5)">
+    <g data-component="labels" transform="translate(100,5)">
+      <text aria-label="labels: ophB1" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-0" role="button" rowID="1" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 54.13, 39.45)" x="54.13" y="39.45">
+        "ophB1"
+      <text aria-label="labels: ophC" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-1" role="button" rowID="2" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 123.19, 39.45)" x="123.19" y="39.45">
+        "ophC"
+      <text aria-label="labels: ophA" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-2" role="button" rowID="3" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 348.01, 39.45)" x="348.01" y="39.45">
+        "ophA"
+      <text aria-label="labels: ophD" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-3" role="button" rowID="4" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 434.94, 39.45)" x="434.94" y="39.45">
+        "ophD"
+      <text aria-label="labels: ophB2" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-4" role="button" rowID="5" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 515.81, 39.45)" x="515.81" y="39.45">
+        "ophB2"
+      <text aria-label="labels: ophP" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-5" role="button" rowID="6" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 669.48, 39.45)" x="669.48" y="39.45">
+        "ophP"
+      <text aria-label="labels: ophE" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-6" role="button" rowID="7" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 805.03, 39.45)" x="805.03" y="39.45">
+        "ophE"
+    <g aria-label="scaleBar: 1 kb" aria-pressed="false" data-component="scaleBar" role="button" tabindex="0" transform="translate(0, 0) translate(891.91, 126)">
+      <line style="stroke-width: 1; stroke: grey" x1="58.09" x2="15" y1="-10" y2="-10">
+      <line style="stroke-width: 1; stroke: grey" x1="15" x2="15" y1="-15" y2="-5">
+      <line style="stroke-width: 1; stroke: grey" x1="58.09" x2="58.09" y1="-15" y2="-5">
+      <text style="cursor: default; dominant-baseline: middle; fill: black; font-family: sans-serif; font-size: 10px; text-anchor: end" x="10" y="-10">
+        "1 kb"
+  <svg class="geneviewer-svg-content" data-cluster="dbophA" height="131" id="svg-container-4" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 131" width="1000">
+    <text aria-label="clusterLabel: D. bispora" aria-pressed="false" data-component="clusterLabel" data-part="title" dominant-baseline="central" role="button" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: normal; font-weight: bold" tabindex="0" text-anchor="middle" transform="translate(0, 0)" x="50" y="65.5">
+      <tspan class="wrap-line" dy="0em" x="50" y="65.5">
+        <tspan>
+          "D."
+        <tspan>
+          "bispora"
+    <g data-component="sequence" transform="translate(100,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="850" y1="60.5" y2="60.5">
+    <g data-component="genes" transform="translate(100, 5)">
+      <path aria-label="genes: dbophE" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L36.3 22.5 L36.3 30 L46.3 15 L36.3 0 L36.3 7.5 Z" end="20583" fill="#8c564b" id="dbophA-gene-0" role="button" rowID="17" start="19236" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 16.34, 60.5) translate(16.34, 45.5)">
+      <path aria-label="genes: dbophP" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L104.25 22.5 L104.25 30 L114.25 15 L104.25 0 L104.25 7.5 Z" end="24607" fill="#9467bd" id="dbophA-gene-1" role="button" rowID="16" start="21283" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 86.7, 60.5) translate(86.7, 45.5)">
+      <path aria-label="genes: dbophB4" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L56.3 22.5 L56.3 30 L66.3 15 L56.3 0 L56.3 7.5 Z" end="27217" fill="#1f77b4" id="dbophA-gene-2" role="button" rowID="15" start="25288" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 224.36, 60.5) translate(224.36, 45.5)">
+      <path aria-label="genes: dbophD2" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L42.04 22.5 L42.04 30 L52.04 15 L42.04 0 L42.04 7.5 Z" end="28885" fill="#d62728" id="dbophA-gene-3" role="button" rowID="14" start="27371" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 295.96, 60.5) translate(295.96, 45.5)">
+      <path aria-label="genes: dbophA" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L44.27 22.5 L44.27 30 L54.27 15 L44.27 0 L44.27 7.5 Z" end="30516" fill="#2ca02c" id="dbophA-gene-4" role="button" rowID="13" start="28937" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 349.78, 60.5) translate(349.78, 45.5)">
+      <path aria-label="genes: dbophB3" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L68.61 22.5 L68.61 30 L78.61 15 L68.61 0 L68.61 7.5 Z" end="34679" fill="#1f77b4" id="dbophA-gene-5" role="button" rowID="12" start="32392" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 468.54, 60.5) translate(468.54, 45.5)">
+      <path aria-label="genes: dbophD1" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L37.3 22.5 L37.3 30 L47.3 15 L37.3 0 L37.3 7.5 Z" end="36331" fill="#d62728" id="dbophA-gene-6" role="button" rowID="11" start="34955" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 556.64, 60.5) translate(556.64, 45.5)">
+      <path aria-label="genes: dbophC" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L8.18 22.5 L8.18 30 L18.18 15 L8.18 0 L8.18 7.5 Z" end="37791" fill="#ff7f0e" id="dbophA-gene-7" role="button" rowID="10" start="37262" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 635.93, 60.5) translate(635.93, 45.5)">
+      <path aria-label="genes: dbophB2" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L71.81 22.5 L71.81 30 L81.81 15 L71.81 0 L71.81 7.5 Z" end="40469" fill="#1f77b4" id="dbophA-gene-8" role="button" rowID="9" start="38089" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 664.36, 60.5) translate(664.36, 45.5)">
+      <path aria-label="genes: dbophB1" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L66.89 22.5 L66.89 30 L76.89 15 L66.89 0 L66.89 7.5 Z" end="43005" fill="#1f77b4" id="dbophA-gene-9" role="button" rowID="8" start="40768" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 756.44, 60.5) translate(756.44, 45.5)">
+    <g data-component="labels" transform="translate(100,5)">
+      <text aria-label="labels: dbophE" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-0" role="button" rowID="17" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 39.49, 39.45)" x="39.49" y="39.45">
+        "dbophE"
+      <text aria-label="labels: dbophP" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-1" role="button" rowID="16" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 143.83, 39.45)" x="143.83" y="39.45">
+        "dbophP"
+      <text aria-label="labels: dbophB4" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-2" role="button" rowID="15" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 257.51, 39.45)" x="257.51" y="39.45">
+        "dbophB4"
+      <text aria-label="labels: dbophD2" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-3" role="button" rowID="14" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 321.98, 39.45)" x="321.98" y="39.45">
+        "dbophD2"
+      <text aria-label="labels: dbophA" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-4" role="button" rowID="13" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 376.92, 39.45)" x="376.92" y="39.45">
+        "dbophA"
+      <text aria-label="labels: dbophB3" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-5" role="button" rowID="12" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 507.85, 39.45)" x="507.85" y="39.45">
+        "dbophB3"
+      <text aria-label="labels: dbophD1" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-6" role="button" rowID="11" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 580.28, 39.45)" x="580.28" y="39.45">
+        "dbophD1"
+      <text aria-label="labels: dbophC" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-7" role="button" rowID="10" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 645.03, 39.45)" x="645.03" y="39.45">
+        "dbophC"
+      <text aria-label="labels: dbophB2" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-8" role="button" rowID="9" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 705.26, 39.45)" x="705.26" y="39.45">
+        "dbophB2"
+      <text aria-label="labels: dbophB1" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-9" role="button" rowID="8" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 794.89, 39.45)" x="794.89" y="39.45">
+        "dbophB1"
+    <g aria-label="scaleBar: 1 kb" aria-pressed="false" data-component="scaleBar" role="button" tabindex="0" transform="translate(0, 0) translate(900.63, 126)">
+      <line style="stroke-width: 1; stroke: grey" x1="49.37" x2="15" y1="-10" y2="-10">
+      <line style="stroke-width: 1; stroke: grey" x1="15" x2="15" y1="-15" y2="-5">
+      <line style="stroke-width: 1; stroke: grey" x1="49.37" x2="49.37" y1="-15" y2="-5">
+      <text style="cursor: default; dominant-baseline: middle; fill: black; font-family: sans-serif; font-size: 10px; text-anchor: end" x="10" y="-10">
+        "1 kb"
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div class="geneviewer-container" id="geneviewer-legend-container-chart">
+  <svg class="geneviewer-svg-content" height="38" id="svg-container-2" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 38" width="1000">
+    <g data-component="legend" transform="translate(50, 15)">
+      <g class="legend">
+        <text aria-label="legend: Monooxygenase label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-0" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="18" y="6">
+          "Monooxygenase"
+        <rect aria-label="legend: Monooxygenase marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-0" role="button" rx="0" style="cursor: pointer; fill: rgb(31, 119, 180)" tabindex="0" transform="translate(0, 0)" width="12" x="0" y="0">
+      <g class="legend">
+        <text aria-label="legend: NTF2-like label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-1" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="130.06" y="6">
+          "NTF2-like"
+        <rect aria-label="legend: NTF2-like marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-1" role="button" rx="0" style="cursor: pointer; fill: rgb(255, 127, 14)" tabindex="0" transform="translate(0, 0)" width="12" x="112.06" y="0">
+      <g class="legend">
+        <text aria-label="legend: Methyltransferase label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-2" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="206.08" y="6">
+          "Methyltransferase"
+        <rect aria-label="legend: Methyltransferase marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-2" role="button" rx="0" style="cursor: pointer; fill: rgb(44, 160, 44)" tabindex="0" transform="translate(0, 0)" width="12" x="188.08" y="0">
+      <g class="legend">
+        <text aria-label="legend: O-acyltransferase label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-3" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="325.45" y="6">
+          "O-acyltransferase"
+        <rect aria-label="legend: O-acyltransferase marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-3" role="button" rx="0" style="cursor: pointer; fill: rgb(214, 39, 40)" tabindex="0" transform="translate(0, 0)" width="12" x="307.45" y="0">
+      <g class="legend">
+        <text aria-label="legend: Prolyloligopeptidase label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-4" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="444.16" y="6">
+          "Prolyloligopeptidase"
+        <rect aria-label="legend: Prolyloligopeptidase marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-4" role="button" rx="0" style="cursor: pointer; fill: rgb(148, 103, 189)" tabindex="0" transform="translate(0, 0)" width="12" x="426.16" y="0">
+      <g class="legend">
+        <text aria-label="legend: F-box/RNHI-like label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-5" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="575.56" y="6">
+          "F-box/RNHI-like"
+        <rect aria-label="legend: F-box/RNHI-like marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-5" role="button" rx="0" style="cursor: pointer; fill: rgb(140, 86, 75)" tabindex="0" transform="translate(0, 0)" width="12" x="557.56" y="0">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar">
+  <div aria-label="Positions" class="geneviewer-history" hidden="" role="group">
+    <button aria-keyshortcuts="Control+Z Meta+Z" aria-label="Undo" class="geneviewer-toolbar-button geneviewer-undo" disabled="" type="button">
+      <i aria-hidden="true" class="fa-solid fa-rotate-left">
+      <span aria-hidden="true" class="geneviewer-toolbar-tip">
+        <span>
+          "Undo"
+        <kbd>
+          "Ctrl+Z"
+    <button aria-keyshortcuts="Control+Shift+Z Meta+Shift+Z Control+Y" aria-label="Redo" class="geneviewer-toolbar-button geneviewer-redo" disabled="" type="button">
+      <i aria-hidden="true" class="fa-solid fa-rotate-right">
+      <span aria-hidden="true" class="geneviewer-toolbar-tip">
+        <span>
+          "Redo"
+        <kbd>
+          "Ctrl+Y"
+    <button aria-label="Reset positions" class="geneviewer-toolbar-button geneviewer-reset" disabled="" type="button">
+      <i aria-hidden="true" class="fa-solid fa-house">
+      <span aria-hidden="true" class="geneviewer-toolbar-tip">
+        <span>
+          "Reset positions"
+    <span class="geneviewer-toolbar-divider">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <i aria-haspopup="menu" aria-label="Save chart" class="fa-solid fa-download geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"
+
+## click a gene
+
+### events
+select {"component":"genes","cluster":"ophA","data":{"name":"ophC","start":5286,"end":4718,"class":"NTF2-like","cluster":"ophA","rowID":2,"strand":"reverse","direction":"reverse"},"style":{"fill":"#ff7f0e","opacity":1,"stroke":"#000000","strokeWidth":1,"strokeDasharray":"none","marker":"arrow","markerSize":"medium","arrowheadWidth":10,"arrowheadHeight":30,"markerHeight":15,"cornerRadius":0,"y":50}}
+selection [{"component":"genes","cluster":"ophA","data":{"name":"ophC","start":5286,"end":4718,"class":"NTF2-like","cluster":"ophA","rowID":2,"strand":"reverse","direction":"reverse"},"style":{"fill":"#ff7f0e","opacity":1,"stroke":"#000000","strokeWidth":1,"strokeDasharray":"none","marker":"arrow","markerSize":"medium","arrowheadWidth":10,"arrowheadHeight":30,"markerHeight":15,"cornerRadius":0,"y":50}}]
+
+### chart
+<div class="geneviewer-container" id="geneviewer-title-container-chart">
+  <svg class="geneviewer-svg-content" height="50" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 50" width="1000">
+    <g data-component="title" transform="translate(50, 5)">
+      <text aria-label="title: ophA gene clusters" aria-pressed="false" data-part="title" role="button" style="cursor: default; font-family: sans-serif; font-size: 16px; font-style: normal; font-weight: bold" tabindex="0" text-anchor="middle" transform="translate(0, 0)" x="450" y="22.5">
+        <tspan>
+          "ophA gene clusters"
+      <text aria-label="title: Drag me" aria-pressed="false" data-part="subtitle" role="button" style="cursor: default; font-family: sans-serif; font-size: 14px; font-style: normal; font-weight: normal; text-decoration: none" tabindex="0" text-anchor="middle" transform="translate(0, 0)" x="450" y="42.5">
+        <tspan>
+          "Drag me"
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <svg class="geneviewer-svg-content" data-cluster="ophA" height="131" id="svg-container-3" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 131" width="1000">
+    <text aria-label="clusterLabel: O. olearius" aria-pressed="false" data-component="clusterLabel" data-part="title" dominant-baseline="central" role="button" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: normal; font-weight: bold" tabindex="0" text-anchor="middle" transform="translate(0, 0)" x="50" y="65.5">
+      <tspan class="wrap-line" dy="0em" x="50" y="65.5">
+        <tspan>
+          "O."
+        <tspan>
+          "olearius"
+    <g data-component="sequence" transform="translate(100,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="850" y1="60.5" y2="60.5">
+    <g data-component="genes" transform="translate(100, 5)">
+      <path aria-label="genes: ophB1" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L65.57 22.5 L65.57 30 L75.57 15 L65.57 0 L65.57 7.5 Z" end="4276" fill="#1f77b4" id="ophA-gene-0" role="button" rowID="1" start="2522" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 16.34, 60.5) translate(16.34, 45.5)">
+      <path aria-label="genes: ophC" aria-pressed="true" class="gene geneviewer-selected" cluster="ophA" d="M0 7.5 L0 22.5 L14.47 22.5 L14.47 30 L24.47 15 L14.47 0 L14.47 7.5 Z" end="4718" fill="#ff7f0e" id="ophA-gene-1" role="button" rowID="2" start="5286" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(180, 135.43, 60.5) translate(135.43, 45.5)">
+      <path aria-label="genes: ophA" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L48.94 22.5 L48.94 30 L58.94 15 L48.94 0 L48.94 7.5 Z" end="10904" fill="#2ca02c" id="ophA-gene-2" role="button" rowID="3" start="9536" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 318.54, 60.5) translate(318.54, 45.5)">
+      <path aria-label="genes: ophD" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L22.62 22.5 L22.62 30 L32.62 15 L22.62 0 L22.62 7.5 Z" end="11859" fill="#d62728" id="ophA-gene-3" role="button" rowID="4" start="12616" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(180, 451.25, 60.5) translate(451.25, 45.5)">
+      <path aria-label="genes: ophB2" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L70.27 22.5 L70.27 30 L80.27 15 L70.27 0 L70.27 7.5 Z" end="15046" fill="#1f77b4" id="ophA-gene-4" role="button" rowID="5" start="13183" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 475.68, 60.5) translate(475.68, 45.5)">
+      <path aria-label="genes: ophP" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L133.48 22.5 L133.48 30 L143.48 15 L133.48 0 L133.48 7.5 Z" end="16016" fill="#9467bd" id="ophA-gene-5" role="button" rowID="6" start="19346" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(180, 741.22, 60.5) translate(741.22, 45.5)">
+      <path aria-label="genes: ophE" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L46.61 22.5 L46.61 30 L56.61 15 L46.61 0 L46.61 7.5 Z" end="21484" fill="#8c564b" id="ophA-gene-6" role="button" rowID="7" start="20170" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 776.72, 60.5) translate(776.72, 45.5)">
+    <g data-component="labels" transform="translate(100,5)">
+      <text aria-label="labels: ophB1" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-0" role="button" rowID="1" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 54.13, 39.45)" x="54.13" y="39.45">
+        "ophB1"
+      <text aria-label="labels: ophC" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-1" role="button" rowID="2" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 123.19, 39.45)" x="123.19" y="39.45">
+        "ophC"
+      <text aria-label="labels: ophA" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-2" role="button" rowID="3" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 348.01, 39.45)" x="348.01" y="39.45">
+        "ophA"
+      <text aria-label="labels: ophD" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-3" role="button" rowID="4" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 434.94, 39.45)" x="434.94" y="39.45">
+        "ophD"
+      <text aria-label="labels: ophB2" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-4" role="button" rowID="5" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 515.81, 39.45)" x="515.81" y="39.45">
+        "ophB2"
+      <text aria-label="labels: ophP" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-5" role="button" rowID="6" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 669.48, 39.45)" x="669.48" y="39.45">
+        "ophP"
+      <text aria-label="labels: ophE" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-6" role="button" rowID="7" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 805.03, 39.45)" x="805.03" y="39.45">
+        "ophE"
+    <g aria-label="scaleBar: 1 kb" aria-pressed="false" data-component="scaleBar" role="button" tabindex="0" transform="translate(0, 0) translate(891.91, 126)">
+      <line style="stroke-width: 1; stroke: grey" x1="58.09" x2="15" y1="-10" y2="-10">
+      <line style="stroke-width: 1; stroke: grey" x1="15" x2="15" y1="-15" y2="-5">
+      <line style="stroke-width: 1; stroke: grey" x1="58.09" x2="58.09" y1="-15" y2="-5">
+      <text style="cursor: default; dominant-baseline: middle; fill: black; font-family: sans-serif; font-size: 10px; text-anchor: end" x="10" y="-10">
+        "1 kb"
+  <svg class="geneviewer-svg-content" data-cluster="dbophA" height="131" id="svg-container-4" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 131" width="1000">
+    <text aria-label="clusterLabel: D. bispora" aria-pressed="false" data-component="clusterLabel" data-part="title" dominant-baseline="central" role="button" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: normal; font-weight: bold" tabindex="0" text-anchor="middle" transform="translate(0, 0)" x="50" y="65.5">
+      <tspan class="wrap-line" dy="0em" x="50" y="65.5">
+        <tspan>
+          "D."
+        <tspan>
+          "bispora"
+    <g data-component="sequence" transform="translate(100,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="850" y1="60.5" y2="60.5">
+    <g data-component="genes" transform="translate(100, 5)">
+      <path aria-label="genes: dbophE" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L36.3 22.5 L36.3 30 L46.3 15 L36.3 0 L36.3 7.5 Z" end="20583" fill="#8c564b" id="dbophA-gene-0" role="button" rowID="17" start="19236" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 16.34, 60.5) translate(16.34, 45.5)">
+      <path aria-label="genes: dbophP" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L104.25 22.5 L104.25 30 L114.25 15 L104.25 0 L104.25 7.5 Z" end="24607" fill="#9467bd" id="dbophA-gene-1" role="button" rowID="16" start="21283" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 86.7, 60.5) translate(86.7, 45.5)">
+      <path aria-label="genes: dbophB4" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L56.3 22.5 L56.3 30 L66.3 15 L56.3 0 L56.3 7.5 Z" end="27217" fill="#1f77b4" id="dbophA-gene-2" role="button" rowID="15" start="25288" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 224.36, 60.5) translate(224.36, 45.5)">
+      <path aria-label="genes: dbophD2" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L42.04 22.5 L42.04 30 L52.04 15 L42.04 0 L42.04 7.5 Z" end="28885" fill="#d62728" id="dbophA-gene-3" role="button" rowID="14" start="27371" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 295.96, 60.5) translate(295.96, 45.5)">
+      <path aria-label="genes: dbophA" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L44.27 22.5 L44.27 30 L54.27 15 L44.27 0 L44.27 7.5 Z" end="30516" fill="#2ca02c" id="dbophA-gene-4" role="button" rowID="13" start="28937" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 349.78, 60.5) translate(349.78, 45.5)">
+      <path aria-label="genes: dbophB3" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L68.61 22.5 L68.61 30 L78.61 15 L68.61 0 L68.61 7.5 Z" end="34679" fill="#1f77b4" id="dbophA-gene-5" role="button" rowID="12" start="32392" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 468.54, 60.5) translate(468.54, 45.5)">
+      <path aria-label="genes: dbophD1" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L37.3 22.5 L37.3 30 L47.3 15 L37.3 0 L37.3 7.5 Z" end="36331" fill="#d62728" id="dbophA-gene-6" role="button" rowID="11" start="34955" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 556.64, 60.5) translate(556.64, 45.5)">
+      <path aria-label="genes: dbophC" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L8.18 22.5 L8.18 30 L18.18 15 L8.18 0 L8.18 7.5 Z" end="37791" fill="#ff7f0e" id="dbophA-gene-7" role="button" rowID="10" start="37262" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 635.93, 60.5) translate(635.93, 45.5)">
+      <path aria-label="genes: dbophB2" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L71.81 22.5 L71.81 30 L81.81 15 L71.81 0 L71.81 7.5 Z" end="40469" fill="#1f77b4" id="dbophA-gene-8" role="button" rowID="9" start="38089" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 664.36, 60.5) translate(664.36, 45.5)">
+      <path aria-label="genes: dbophB1" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L66.89 22.5 L66.89 30 L76.89 15 L66.89 0 L66.89 7.5 Z" end="43005" fill="#1f77b4" id="dbophA-gene-9" role="button" rowID="8" start="40768" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 756.44, 60.5) translate(756.44, 45.5)">
+    <g data-component="labels" transform="translate(100,5)">
+      <text aria-label="labels: dbophE" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-0" role="button" rowID="17" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 39.49, 39.45)" x="39.49" y="39.45">
+        "dbophE"
+      <text aria-label="labels: dbophP" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-1" role="button" rowID="16" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 143.83, 39.45)" x="143.83" y="39.45">
+        "dbophP"
+      <text aria-label="labels: dbophB4" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-2" role="button" rowID="15" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 257.51, 39.45)" x="257.51" y="39.45">
+        "dbophB4"
+      <text aria-label="labels: dbophD2" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-3" role="button" rowID="14" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 321.98, 39.45)" x="321.98" y="39.45">
+        "dbophD2"
+      <text aria-label="labels: dbophA" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-4" role="button" rowID="13" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 376.92, 39.45)" x="376.92" y="39.45">
+        "dbophA"
+      <text aria-label="labels: dbophB3" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-5" role="button" rowID="12" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 507.85, 39.45)" x="507.85" y="39.45">
+        "dbophB3"
+      <text aria-label="labels: dbophD1" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-6" role="button" rowID="11" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 580.28, 39.45)" x="580.28" y="39.45">
+        "dbophD1"
+      <text aria-label="labels: dbophC" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-7" role="button" rowID="10" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 645.03, 39.45)" x="645.03" y="39.45">
+        "dbophC"
+      <text aria-label="labels: dbophB2" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-8" role="button" rowID="9" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 705.26, 39.45)" x="705.26" y="39.45">
+        "dbophB2"
+      <text aria-label="labels: dbophB1" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-9" role="button" rowID="8" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 794.89, 39.45)" x="794.89" y="39.45">
+        "dbophB1"
+    <g aria-label="scaleBar: 1 kb" aria-pressed="false" data-component="scaleBar" role="button" tabindex="0" transform="translate(0, 0) translate(900.63, 126)">
+      <line style="stroke-width: 1; stroke: grey" x1="49.37" x2="15" y1="-10" y2="-10">
+      <line style="stroke-width: 1; stroke: grey" x1="15" x2="15" y1="-15" y2="-5">
+      <line style="stroke-width: 1; stroke: grey" x1="49.37" x2="49.37" y1="-15" y2="-5">
+      <text style="cursor: default; dominant-baseline: middle; fill: black; font-family: sans-serif; font-size: 10px; text-anchor: end" x="10" y="-10">
+        "1 kb"
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; left: 181.5px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; top: 46px; z-index: 1000">
+  <b>
+    "Start:"
+  "5,286"
+  <br>
+  <b>
+    "End:"
+  "4,718"
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div class="geneviewer-container" id="geneviewer-legend-container-chart">
+  <svg class="geneviewer-svg-content" height="38" id="svg-container-2" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 38" width="1000">
+    <g data-component="legend" transform="translate(50, 15)">
+      <g class="legend">
+        <text aria-label="legend: Monooxygenase label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-0" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="18" y="6">
+          "Monooxygenase"
+        <rect aria-label="legend: Monooxygenase marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-0" role="button" rx="0" style="cursor: pointer; fill: rgb(31, 119, 180)" tabindex="0" transform="translate(0, 0)" width="12" x="0" y="0">
+      <g class="legend">
+        <text aria-label="legend: NTF2-like label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-1" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="130.06" y="6">
+          "NTF2-like"
+        <rect aria-label="legend: NTF2-like marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-1" role="button" rx="0" style="cursor: pointer; fill: rgb(255, 127, 14)" tabindex="0" transform="translate(0, 0)" width="12" x="112.06" y="0">
+      <g class="legend">
+        <text aria-label="legend: Methyltransferase label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-2" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="206.08" y="6">
+          "Methyltransferase"
+        <rect aria-label="legend: Methyltransferase marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-2" role="button" rx="0" style="cursor: pointer; fill: rgb(44, 160, 44)" tabindex="0" transform="translate(0, 0)" width="12" x="188.08" y="0">
+      <g class="legend">
+        <text aria-label="legend: O-acyltransferase label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-3" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="325.45" y="6">
+          "O-acyltransferase"
+        <rect aria-label="legend: O-acyltransferase marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-3" role="button" rx="0" style="cursor: pointer; fill: rgb(214, 39, 40)" tabindex="0" transform="translate(0, 0)" width="12" x="307.45" y="0">
+      <g class="legend">
+        <text aria-label="legend: Prolyloligopeptidase label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-4" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="444.16" y="6">
+          "Prolyloligopeptidase"
+        <rect aria-label="legend: Prolyloligopeptidase marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-4" role="button" rx="0" style="cursor: pointer; fill: rgb(148, 103, 189)" tabindex="0" transform="translate(0, 0)" width="12" x="426.16" y="0">
+      <g class="legend">
+        <text aria-label="legend: F-box/RNHI-like label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-5" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="575.56" y="6">
+          "F-box/RNHI-like"
+        <rect aria-label="legend: F-box/RNHI-like marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-5" role="button" rx="0" style="cursor: pointer; fill: rgb(140, 86, 75)" tabindex="0" transform="translate(0, 0)" width="12" x="557.56" y="0">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar">
+  <div aria-label="Positions" class="geneviewer-history" hidden="" role="group">
+    <button aria-keyshortcuts="Control+Z Meta+Z" aria-label="Undo" class="geneviewer-toolbar-button geneviewer-undo" disabled="" type="button">
+      <i aria-hidden="true" class="fa-solid fa-rotate-left">
+      <span aria-hidden="true" class="geneviewer-toolbar-tip">
+        <span>
+          "Undo"
+        <kbd>
+          "Ctrl+Z"
+    <button aria-keyshortcuts="Control+Shift+Z Meta+Shift+Z Control+Y" aria-label="Redo" class="geneviewer-toolbar-button geneviewer-redo" disabled="" type="button">
+      <i aria-hidden="true" class="fa-solid fa-rotate-right">
+      <span aria-hidden="true" class="geneviewer-toolbar-tip">
+        <span>
+          "Redo"
+        <kbd>
+          "Ctrl+Y"
+    <button aria-label="Reset positions" class="geneviewer-toolbar-button geneviewer-reset" disabled="" type="button">
+      <i aria-hidden="true" class="fa-solid fa-house">
+      <span aria-hidden="true" class="geneviewer-toolbar-tip">
+        <span>
+          "Reset positions"
+    <span class="geneviewer-toolbar-divider">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <i aria-haspopup="menu" aria-label="Save chart" class="fa-solid fa-download geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"
+
+## shift-click a second gene
+
+### events
+select {"component":"genes","cluster":"ophA","data":{"name":"ophD","start":12616,"end":11859,"class":"O-acyltransferase","cluster":"ophA","rowID":4,"strand":"reverse","direction":"reverse"},"style":{"fill":"#d62728","opacity":1,"stroke":"#000000","strokeWidth":1,"strokeDasharray":"none","marker":"arrow","markerSize":"medium","arrowheadWidth":10,"arrowheadHeight":30,"markerHeight":15,"cornerRadius":0,"y":50}}
+selection [{"component":"genes","cluster":"ophA","data":{"name":"ophC","start":5286,"end":4718,"class":"NTF2-like","cluster":"ophA","rowID":2,"strand":"reverse","direction":"reverse"},"style":{"fill":"#ff7f0e","opacity":1,"stroke":"#000000","strokeWidth":1,"strokeDasharray":"none","marker":"arrow","markerSize":"medium","arrowheadWidth":10,"arrowheadHeight":30,"markerHeight":15,"cornerRadius":0,"y":50}},{"component":"genes","cluster":"ophA","data":{"name":"ophD","start":12616,"end":11859,"class":"O-acyltransferase","cluster":"ophA","rowID":4,"strand":"reverse","direction":"reverse"},"style":{"fill":"#d62728","opacity":1,"stroke":"#000000","strokeWidth":1,"strokeDasharray":"none","marker":"arrow","markerSize":"medium","arrowheadWidth":10,"arrowheadHeight":30,"markerHeight":15,"cornerRadius":0,"y":50}}]
+
+### chart
+<div class="geneviewer-container" id="geneviewer-title-container-chart">
+  <svg class="geneviewer-svg-content" height="50" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 50" width="1000">
+    <g data-component="title" transform="translate(50, 5)">
+      <text aria-label="title: ophA gene clusters" aria-pressed="false" data-part="title" role="button" style="cursor: default; font-family: sans-serif; font-size: 16px; font-style: normal; font-weight: bold" tabindex="0" text-anchor="middle" transform="translate(0, 0)" x="450" y="22.5">
+        <tspan>
+          "ophA gene clusters"
+      <text aria-label="title: Drag me" aria-pressed="false" data-part="subtitle" role="button" style="cursor: default; font-family: sans-serif; font-size: 14px; font-style: normal; font-weight: normal; text-decoration: none" tabindex="0" text-anchor="middle" transform="translate(0, 0)" x="450" y="42.5">
+        <tspan>
+          "Drag me"
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <svg class="geneviewer-svg-content" data-cluster="ophA" height="131" id="svg-container-3" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 131" width="1000">
+    <text aria-label="clusterLabel: O. olearius" aria-pressed="false" data-component="clusterLabel" data-part="title" dominant-baseline="central" role="button" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: normal; font-weight: bold" tabindex="0" text-anchor="middle" transform="translate(0, 0)" x="50" y="65.5">
+      <tspan class="wrap-line" dy="0em" x="50" y="65.5">
+        <tspan>
+          "O."
+        <tspan>
+          "olearius"
+    <g data-component="sequence" transform="translate(100,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="850" y1="60.5" y2="60.5">
+    <g data-component="genes" transform="translate(100, 5)">
+      <path aria-label="genes: ophB1" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L65.57 22.5 L65.57 30 L75.57 15 L65.57 0 L65.57 7.5 Z" end="4276" fill="#1f77b4" id="ophA-gene-0" role="button" rowID="1" start="2522" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 16.34, 60.5) translate(16.34, 45.5)">
+      <path aria-label="genes: ophC" aria-pressed="true" class="gene geneviewer-selected" cluster="ophA" d="M0 7.5 L0 22.5 L14.47 22.5 L14.47 30 L24.47 15 L14.47 0 L14.47 7.5 Z" end="4718" fill="#ff7f0e" id="ophA-gene-1" role="button" rowID="2" start="5286" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(180, 135.43, 60.5) translate(135.43, 45.5)">
+      <path aria-label="genes: ophA" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L48.94 22.5 L48.94 30 L58.94 15 L48.94 0 L48.94 7.5 Z" end="10904" fill="#2ca02c" id="ophA-gene-2" role="button" rowID="3" start="9536" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 318.54, 60.5) translate(318.54, 45.5)">
+      <path aria-label="genes: ophD" aria-pressed="true" class="gene geneviewer-selected" cluster="ophA" d="M0 7.5 L0 22.5 L22.62 22.5 L22.62 30 L32.62 15 L22.62 0 L22.62 7.5 Z" end="11859" fill="#d62728" id="ophA-gene-3" role="button" rowID="4" start="12616" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(180, 451.25, 60.5) translate(451.25, 45.5)">
+      <path aria-label="genes: ophB2" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L70.27 22.5 L70.27 30 L80.27 15 L70.27 0 L70.27 7.5 Z" end="15046" fill="#1f77b4" id="ophA-gene-4" role="button" rowID="5" start="13183" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 475.68, 60.5) translate(475.68, 45.5)">
+      <path aria-label="genes: ophP" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L133.48 22.5 L133.48 30 L143.48 15 L133.48 0 L133.48 7.5 Z" end="16016" fill="#9467bd" id="ophA-gene-5" role="button" rowID="6" start="19346" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(180, 741.22, 60.5) translate(741.22, 45.5)">
+      <path aria-label="genes: ophE" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L46.61 22.5 L46.61 30 L56.61 15 L46.61 0 L46.61 7.5 Z" end="21484" fill="#8c564b" id="ophA-gene-6" role="button" rowID="7" start="20170" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 776.72, 60.5) translate(776.72, 45.5)">
+    <g data-component="labels" transform="translate(100,5)">
+      <text aria-label="labels: ophB1" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-0" role="button" rowID="1" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 54.13, 39.45)" x="54.13" y="39.45">
+        "ophB1"
+      <text aria-label="labels: ophC" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-1" role="button" rowID="2" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 123.19, 39.45)" x="123.19" y="39.45">
+        "ophC"
+      <text aria-label="labels: ophA" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-2" role="button" rowID="3" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 348.01, 39.45)" x="348.01" y="39.45">
+        "ophA"
+      <text aria-label="labels: ophD" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-3" role="button" rowID="4" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 434.94, 39.45)" x="434.94" y="39.45">
+        "ophD"
+      <text aria-label="labels: ophB2" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-4" role="button" rowID="5" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 515.81, 39.45)" x="515.81" y="39.45">
+        "ophB2"
+      <text aria-label="labels: ophP" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-5" role="button" rowID="6" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 669.48, 39.45)" x="669.48" y="39.45">
+        "ophP"
+      <text aria-label="labels: ophE" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-6" role="button" rowID="7" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 805.03, 39.45)" x="805.03" y="39.45">
+        "ophE"
+    <g aria-label="scaleBar: 1 kb" aria-pressed="false" data-component="scaleBar" role="button" tabindex="0" transform="translate(0, 0) translate(891.91, 126)">
+      <line style="stroke-width: 1; stroke: grey" x1="58.09" x2="15" y1="-10" y2="-10">
+      <line style="stroke-width: 1; stroke: grey" x1="15" x2="15" y1="-15" y2="-5">
+      <line style="stroke-width: 1; stroke: grey" x1="58.09" x2="58.09" y1="-15" y2="-5">
+      <text style="cursor: default; dominant-baseline: middle; fill: black; font-family: sans-serif; font-size: 10px; text-anchor: end" x="10" y="-10">
+        "1 kb"
+  <svg class="geneviewer-svg-content" data-cluster="dbophA" height="131" id="svg-container-4" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 131" width="1000">
+    <text aria-label="clusterLabel: D. bispora" aria-pressed="false" data-component="clusterLabel" data-part="title" dominant-baseline="central" role="button" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: normal; font-weight: bold" tabindex="0" text-anchor="middle" transform="translate(0, 0)" x="50" y="65.5">
+      <tspan class="wrap-line" dy="0em" x="50" y="65.5">
+        <tspan>
+          "D."
+        <tspan>
+          "bispora"
+    <g data-component="sequence" transform="translate(100,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="850" y1="60.5" y2="60.5">
+    <g data-component="genes" transform="translate(100, 5)">
+      <path aria-label="genes: dbophE" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L36.3 22.5 L36.3 30 L46.3 15 L36.3 0 L36.3 7.5 Z" end="20583" fill="#8c564b" id="dbophA-gene-0" role="button" rowID="17" start="19236" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 16.34, 60.5) translate(16.34, 45.5)">
+      <path aria-label="genes: dbophP" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L104.25 22.5 L104.25 30 L114.25 15 L104.25 0 L104.25 7.5 Z" end="24607" fill="#9467bd" id="dbophA-gene-1" role="button" rowID="16" start="21283" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 86.7, 60.5) translate(86.7, 45.5)">
+      <path aria-label="genes: dbophB4" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L56.3 22.5 L56.3 30 L66.3 15 L56.3 0 L56.3 7.5 Z" end="27217" fill="#1f77b4" id="dbophA-gene-2" role="button" rowID="15" start="25288" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 224.36, 60.5) translate(224.36, 45.5)">
+      <path aria-label="genes: dbophD2" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L42.04 22.5 L42.04 30 L52.04 15 L42.04 0 L42.04 7.5 Z" end="28885" fill="#d62728" id="dbophA-gene-3" role="button" rowID="14" start="27371" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 295.96, 60.5) translate(295.96, 45.5)">
+      <path aria-label="genes: dbophA" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L44.27 22.5 L44.27 30 L54.27 15 L44.27 0 L44.27 7.5 Z" end="30516" fill="#2ca02c" id="dbophA-gene-4" role="button" rowID="13" start="28937" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 349.78, 60.5) translate(349.78, 45.5)">
+      <path aria-label="genes: dbophB3" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L68.61 22.5 L68.61 30 L78.61 15 L68.61 0 L68.61 7.5 Z" end="34679" fill="#1f77b4" id="dbophA-gene-5" role="button" rowID="12" start="32392" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 468.54, 60.5) translate(468.54, 45.5)">
+      <path aria-label="genes: dbophD1" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L37.3 22.5 L37.3 30 L47.3 15 L37.3 0 L37.3 7.5 Z" end="36331" fill="#d62728" id="dbophA-gene-6" role="button" rowID="11" start="34955" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 556.64, 60.5) translate(556.64, 45.5)">
+      <path aria-label="genes: dbophC" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L8.18 22.5 L8.18 30 L18.18 15 L8.18 0 L8.18 7.5 Z" end="37791" fill="#ff7f0e" id="dbophA-gene-7" role="button" rowID="10" start="37262" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 635.93, 60.5) translate(635.93, 45.5)">
+      <path aria-label="genes: dbophB2" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L71.81 22.5 L71.81 30 L81.81 15 L71.81 0 L71.81 7.5 Z" end="40469" fill="#1f77b4" id="dbophA-gene-8" role="button" rowID="9" start="38089" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 664.36, 60.5) translate(664.36, 45.5)">
+      <path aria-label="genes: dbophB1" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L66.89 22.5 L66.89 30 L76.89 15 L66.89 0 L66.89 7.5 Z" end="43005" fill="#1f77b4" id="dbophA-gene-9" role="button" rowID="8" start="40768" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 756.44, 60.5) translate(756.44, 45.5)">
+    <g data-component="labels" transform="translate(100,5)">
+      <text aria-label="labels: dbophE" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-0" role="button" rowID="17" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 39.49, 39.45)" x="39.49" y="39.45">
+        "dbophE"
+      <text aria-label="labels: dbophP" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-1" role="button" rowID="16" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 143.83, 39.45)" x="143.83" y="39.45">
+        "dbophP"
+      <text aria-label="labels: dbophB4" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-2" role="button" rowID="15" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 257.51, 39.45)" x="257.51" y="39.45">
+        "dbophB4"
+      <text aria-label="labels: dbophD2" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-3" role="button" rowID="14" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 321.98, 39.45)" x="321.98" y="39.45">
+        "dbophD2"
+      <text aria-label="labels: dbophA" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-4" role="button" rowID="13" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 376.92, 39.45)" x="376.92" y="39.45">
+        "dbophA"
+      <text aria-label="labels: dbophB3" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-5" role="button" rowID="12" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 507.85, 39.45)" x="507.85" y="39.45">
+        "dbophB3"
+      <text aria-label="labels: dbophD1" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-6" role="button" rowID="11" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 580.28, 39.45)" x="580.28" y="39.45">
+        "dbophD1"
+      <text aria-label="labels: dbophC" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-7" role="button" rowID="10" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 645.03, 39.45)" x="645.03" y="39.45">
+        "dbophC"
+      <text aria-label="labels: dbophB2" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-8" role="button" rowID="9" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 705.26, 39.45)" x="705.26" y="39.45">
+        "dbophB2"
+      <text aria-label="labels: dbophB1" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-9" role="button" rowID="8" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 794.89, 39.45)" x="794.89" y="39.45">
+        "dbophB1"
+    <g aria-label="scaleBar: 1 kb" aria-pressed="false" data-component="scaleBar" role="button" tabindex="0" transform="translate(0, 0) translate(900.63, 126)">
+      <line style="stroke-width: 1; stroke: grey" x1="49.37" x2="15" y1="-10" y2="-10">
+      <line style="stroke-width: 1; stroke: grey" x1="15" x2="15" y1="-15" y2="-5">
+      <line style="stroke-width: 1; stroke: grey" x1="49.37" x2="49.37" y1="-15" y2="-5">
+      <text style="cursor: default; dominant-baseline: middle; fill: black; font-family: sans-serif; font-size: 10px; text-anchor: end" x="10" y="-10">
+        "1 kb"
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; left: 489.5px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; top: 46px; z-index: 1000">
+  <b>
+    "Start:"
+  "12,616"
+  <br>
+  <b>
+    "End:"
+  "11,859"
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div class="geneviewer-container" id="geneviewer-legend-container-chart">
+  <svg class="geneviewer-svg-content" height="38" id="svg-container-2" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 38" width="1000">
+    <g data-component="legend" transform="translate(50, 15)">
+      <g class="legend">
+        <text aria-label="legend: Monooxygenase label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-0" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="18" y="6">
+          "Monooxygenase"
+        <rect aria-label="legend: Monooxygenase marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-0" role="button" rx="0" style="cursor: pointer; fill: rgb(31, 119, 180)" tabindex="0" transform="translate(0, 0)" width="12" x="0" y="0">
+      <g class="legend">
+        <text aria-label="legend: NTF2-like label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-1" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="130.06" y="6">
+          "NTF2-like"
+        <rect aria-label="legend: NTF2-like marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-1" role="button" rx="0" style="cursor: pointer; fill: rgb(255, 127, 14)" tabindex="0" transform="translate(0, 0)" width="12" x="112.06" y="0">
+      <g class="legend">
+        <text aria-label="legend: Methyltransferase label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-2" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="206.08" y="6">
+          "Methyltransferase"
+        <rect aria-label="legend: Methyltransferase marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-2" role="button" rx="0" style="cursor: pointer; fill: rgb(44, 160, 44)" tabindex="0" transform="translate(0, 0)" width="12" x="188.08" y="0">
+      <g class="legend">
+        <text aria-label="legend: O-acyltransferase label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-3" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="325.45" y="6">
+          "O-acyltransferase"
+        <rect aria-label="legend: O-acyltransferase marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-3" role="button" rx="0" style="cursor: pointer; fill: rgb(214, 39, 40)" tabindex="0" transform="translate(0, 0)" width="12" x="307.45" y="0">
+      <g class="legend">
+        <text aria-label="legend: Prolyloligopeptidase label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-4" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="444.16" y="6">
+          "Prolyloligopeptidase"
+        <rect aria-label="legend: Prolyloligopeptidase marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-4" role="button" rx="0" style="cursor: pointer; fill: rgb(148, 103, 189)" tabindex="0" transform="translate(0, 0)" width="12" x="426.16" y="0">
+      <g class="legend">
+        <text aria-label="legend: F-box/RNHI-like label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-5" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="575.56" y="6">
+          "F-box/RNHI-like"
+        <rect aria-label="legend: F-box/RNHI-like marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-5" role="button" rx="0" style="cursor: pointer; fill: rgb(140, 86, 75)" tabindex="0" transform="translate(0, 0)" width="12" x="557.56" y="0">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar">
+  <div aria-label="Positions" class="geneviewer-history" hidden="" role="group">
+    <button aria-keyshortcuts="Control+Z Meta+Z" aria-label="Undo" class="geneviewer-toolbar-button geneviewer-undo" disabled="" type="button">
+      <i aria-hidden="true" class="fa-solid fa-rotate-left">
+      <span aria-hidden="true" class="geneviewer-toolbar-tip">
+        <span>
+          "Undo"
+        <kbd>
+          "Ctrl+Z"
+    <button aria-keyshortcuts="Control+Shift+Z Meta+Shift+Z Control+Y" aria-label="Redo" class="geneviewer-toolbar-button geneviewer-redo" disabled="" type="button">
+      <i aria-hidden="true" class="fa-solid fa-rotate-right">
+      <span aria-hidden="true" class="geneviewer-toolbar-tip">
+        <span>
+          "Redo"
+        <kbd>
+          "Ctrl+Y"
+    <button aria-label="Reset positions" class="geneviewer-toolbar-button geneviewer-reset" disabled="" type="button">
+      <i aria-hidden="true" class="fa-solid fa-house">
+      <span aria-hidden="true" class="geneviewer-toolbar-tip">
+        <span>
+          "Reset positions"
+    <span class="geneviewer-toolbar-divider">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <i aria-haspopup="menu" aria-label="Save chart" class="fa-solid fa-download geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"
+
+## box select on empty space
+
+### events
+select {"component":"labels","cluster":"ophA","data":{"name":"ophC","start":5286,"end":4718,"class":"NTF2-like","cluster":"ophA","rowID":2,"strand":"reverse","direction":"reverse"},"style":{"fill":"#000000","opacity":1,"text":"ophC","fontSize":12,"fontWeight":"400","fontStyle":"italic","fontFamily":"sans-serif","dx":0,"dy":0,"rotate":0,"moveX":0,"moveY":0}}
+selection [{"component":"clusterLabel","cluster":"ophA","data":null,"part":"title","style":{"fill":"#000000","opacity":1,"text":"O. olearius","fontSize":12,"fontWeight":"700","fontStyle":"normal","fontFamily":"sans-serif","moveX":0,"moveY":0}},{"component":"genes","cluster":"ophA","data":{"name":"ophB1","start":2522,"end":4276,"class":"Monooxygenase","cluster":"ophA","rowID":1,"strand":"forward","direction":"forward"},"style":{"fill":"#1f77b4","opacity":1,"stroke":"#000000","strokeWidth":1,"strokeDasharray":"none","marker":"arrow","markerSize":"medium","arrowheadWidth":10,"arrowheadHeight":30,"markerHeight":15,"cornerRadius":0,"y":50}},{"component":"genes","cluster":"ophA","data":{"name":"ophC","start":5286,"end":4718,"class":"NTF2-like","cluster":"ophA","rowID":2,"strand":"reverse","direction":"reverse"},"style":{"fill":"#ff7f0e","opacity":1,"stroke":"#000000","strokeWidth":1,"strokeDasharray":"none","marker":"arrow","markerSize":"medium","arrowheadWidth":10,"arrowheadHeight":30,"markerHeight":15,"cornerRadius":0,"y":50}},{"component":"labels","cluster":"ophA","data":{"name":"ophB1","start":2522,"end":4276,"class":"Monooxygenase","cluster":"ophA","rowID":1,"strand":"forward","direction":"forward"},"style":{"fill":"#000000","opacity":1,"text":"ophB1","fontSize":12,"fontWeight":"400","fontStyle":"italic","fontFamily":"sans-serif","dx":0,"dy":0,"rotate":0,"moveX":0,"moveY":0}},{"component":"labels","cluster":"ophA","data":{"name":"ophC","start":5286,"end":4718,"class":"NTF2-like","cluster":"ophA","rowID":2,"strand":"reverse","direction":"reverse"},"style":{"fill":"#000000","opacity":1,"text":"ophC","fontSize":12,"fontWeight":"400","fontStyle":"italic","fontFamily":"sans-serif","dx":0,"dy":0,"rotate":0,"moveX":0,"moveY":0}}]
+
+### chart
+<div class="geneviewer-container" id="geneviewer-title-container-chart">
+  <svg class="geneviewer-svg-content" height="50" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 50" width="1000">
+    <g data-component="title" transform="translate(50, 5)">
+      <text aria-label="title: ophA gene clusters" aria-pressed="false" data-part="title" role="button" style="cursor: default; font-family: sans-serif; font-size: 16px; font-style: normal; font-weight: bold" tabindex="0" text-anchor="middle" transform="translate(0, 0)" x="450" y="22.5">
+        <tspan>
+          "ophA gene clusters"
+      <text aria-label="title: Drag me" aria-pressed="false" data-part="subtitle" role="button" style="cursor: default; font-family: sans-serif; font-size: 14px; font-style: normal; font-weight: normal; text-decoration: none" tabindex="0" text-anchor="middle" transform="translate(0, 0)" x="450" y="42.5">
+        <tspan>
+          "Drag me"
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <svg class="geneviewer-svg-content" data-cluster="ophA" height="131" id="svg-container-3" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 131" width="1000">
+    <text aria-label="clusterLabel: O. olearius" aria-pressed="true" class="geneviewer-selected" data-component="clusterLabel" data-part="title" dominant-baseline="central" role="button" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: normal; font-weight: bold" tabindex="0" text-anchor="middle" transform="translate(0, 0)" x="50" y="65.5">
+      <tspan class="wrap-line" dy="0em" x="50" y="65.5">
+        <tspan>
+          "O."
+        <tspan>
+          "olearius"
+    <g data-component="sequence" transform="translate(100,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="850" y1="60.5" y2="60.5">
+    <g data-component="genes" transform="translate(100, 5)">
+      <path aria-label="genes: ophB1" aria-pressed="true" class="gene geneviewer-selected" cluster="ophA" d="M0 7.5 L0 22.5 L65.57 22.5 L65.57 30 L75.57 15 L65.57 0 L65.57 7.5 Z" end="4276" fill="#1f77b4" id="ophA-gene-0" role="button" rowID="1" start="2522" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 16.34, 60.5) translate(16.34, 45.5)">
+      <path aria-label="genes: ophC" aria-pressed="true" class="gene geneviewer-selected" cluster="ophA" d="M0 7.5 L0 22.5 L14.47 22.5 L14.47 30 L24.47 15 L14.47 0 L14.47 7.5 Z" end="4718" fill="#ff7f0e" id="ophA-gene-1" role="button" rowID="2" start="5286" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(180, 135.43, 60.5) translate(135.43, 45.5)">
+      <path aria-label="genes: ophA" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L48.94 22.5 L48.94 30 L58.94 15 L48.94 0 L48.94 7.5 Z" end="10904" fill="#2ca02c" id="ophA-gene-2" role="button" rowID="3" start="9536" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 318.54, 60.5) translate(318.54, 45.5)">
+      <path aria-label="genes: ophD" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L22.62 22.5 L22.62 30 L32.62 15 L22.62 0 L22.62 7.5 Z" end="11859" fill="#d62728" id="ophA-gene-3" role="button" rowID="4" start="12616" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(180, 451.25, 60.5) translate(451.25, 45.5)">
+      <path aria-label="genes: ophB2" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L70.27 22.5 L70.27 30 L80.27 15 L70.27 0 L70.27 7.5 Z" end="15046" fill="#1f77b4" id="ophA-gene-4" role="button" rowID="5" start="13183" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 475.68, 60.5) translate(475.68, 45.5)">
+      <path aria-label="genes: ophP" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L133.48 22.5 L133.48 30 L143.48 15 L133.48 0 L133.48 7.5 Z" end="16016" fill="#9467bd" id="ophA-gene-5" role="button" rowID="6" start="19346" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(180, 741.22, 60.5) translate(741.22, 45.5)">
+      <path aria-label="genes: ophE" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L46.61 22.5 L46.61 30 L56.61 15 L46.61 0 L46.61 7.5 Z" end="21484" fill="#8c564b" id="ophA-gene-6" role="button" rowID="7" start="20170" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 776.72, 60.5) translate(776.72, 45.5)">
+    <g data-component="labels" transform="translate(100,5)">
+      <text aria-label="labels: ophB1" aria-pressed="true" class="label geneviewer-selected" dx="0em" dy="0em" id="cluster-ophA-label-0" role="button" rowID="1" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 54.13, 39.45)" x="54.13" y="39.45">
+        "ophB1"
+      <text aria-label="labels: ophC" aria-pressed="true" class="label geneviewer-selected" dx="0em" dy="0em" id="cluster-ophA-label-1" role="button" rowID="2" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 123.19, 39.45)" x="123.19" y="39.45">
+        "ophC"
+      <text aria-label="labels: ophA" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-2" role="button" rowID="3" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 348.01, 39.45)" x="348.01" y="39.45">
+        "ophA"
+      <text aria-label="labels: ophD" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-3" role="button" rowID="4" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 434.94, 39.45)" x="434.94" y="39.45">
+        "ophD"
+      <text aria-label="labels: ophB2" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-4" role="button" rowID="5" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 515.81, 39.45)" x="515.81" y="39.45">
+        "ophB2"
+      <text aria-label="labels: ophP" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-5" role="button" rowID="6" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 669.48, 39.45)" x="669.48" y="39.45">
+        "ophP"
+      <text aria-label="labels: ophE" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-6" role="button" rowID="7" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 805.03, 39.45)" x="805.03" y="39.45">
+        "ophE"
+    <g aria-label="scaleBar: 1 kb" aria-pressed="false" data-component="scaleBar" role="button" tabindex="0" transform="translate(0, 0) translate(891.91, 126)">
+      <line style="stroke-width: 1; stroke: grey" x1="58.09" x2="15" y1="-10" y2="-10">
+      <line style="stroke-width: 1; stroke: grey" x1="15" x2="15" y1="-15" y2="-5">
+      <line style="stroke-width: 1; stroke: grey" x1="58.09" x2="58.09" y1="-15" y2="-5">
+      <text style="cursor: default; dominant-baseline: middle; fill: black; font-family: sans-serif; font-size: 10px; text-anchor: end" x="10" y="-10">
+        "1 kb"
+  <svg class="geneviewer-svg-content" data-cluster="dbophA" height="131" id="svg-container-4" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 131" width="1000">
+    <text aria-label="clusterLabel: D. bispora" aria-pressed="false" data-component="clusterLabel" data-part="title" dominant-baseline="central" role="button" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: normal; font-weight: bold" tabindex="0" text-anchor="middle" transform="translate(0, 0)" x="50" y="65.5">
+      <tspan class="wrap-line" dy="0em" x="50" y="65.5">
+        <tspan>
+          "D."
+        <tspan>
+          "bispora"
+    <g data-component="sequence" transform="translate(100,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="850" y1="60.5" y2="60.5">
+    <g data-component="genes" transform="translate(100, 5)">
+      <path aria-label="genes: dbophE" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L36.3 22.5 L36.3 30 L46.3 15 L36.3 0 L36.3 7.5 Z" end="20583" fill="#8c564b" id="dbophA-gene-0" role="button" rowID="17" start="19236" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 16.34, 60.5) translate(16.34, 45.5)">
+      <path aria-label="genes: dbophP" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L104.25 22.5 L104.25 30 L114.25 15 L104.25 0 L104.25 7.5 Z" end="24607" fill="#9467bd" id="dbophA-gene-1" role="button" rowID="16" start="21283" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 86.7, 60.5) translate(86.7, 45.5)">
+      <path aria-label="genes: dbophB4" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L56.3 22.5 L56.3 30 L66.3 15 L56.3 0 L56.3 7.5 Z" end="27217" fill="#1f77b4" id="dbophA-gene-2" role="button" rowID="15" start="25288" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 224.36, 60.5) translate(224.36, 45.5)">
+      <path aria-label="genes: dbophD2" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L42.04 22.5 L42.04 30 L52.04 15 L42.04 0 L42.04 7.5 Z" end="28885" fill="#d62728" id="dbophA-gene-3" role="button" rowID="14" start="27371" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 295.96, 60.5) translate(295.96, 45.5)">
+      <path aria-label="genes: dbophA" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L44.27 22.5 L44.27 30 L54.27 15 L44.27 0 L44.27 7.5 Z" end="30516" fill="#2ca02c" id="dbophA-gene-4" role="button" rowID="13" start="28937" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 349.78, 60.5) translate(349.78, 45.5)">
+      <path aria-label="genes: dbophB3" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L68.61 22.5 L68.61 30 L78.61 15 L68.61 0 L68.61 7.5 Z" end="34679" fill="#1f77b4" id="dbophA-gene-5" role="button" rowID="12" start="32392" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 468.54, 60.5) translate(468.54, 45.5)">
+      <path aria-label="genes: dbophD1" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L37.3 22.5 L37.3 30 L47.3 15 L37.3 0 L37.3 7.5 Z" end="36331" fill="#d62728" id="dbophA-gene-6" role="button" rowID="11" start="34955" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 556.64, 60.5) translate(556.64, 45.5)">
+      <path aria-label="genes: dbophC" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L8.18 22.5 L8.18 30 L18.18 15 L8.18 0 L8.18 7.5 Z" end="37791" fill="#ff7f0e" id="dbophA-gene-7" role="button" rowID="10" start="37262" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 635.93, 60.5) translate(635.93, 45.5)">
+      <path aria-label="genes: dbophB2" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L71.81 22.5 L71.81 30 L81.81 15 L71.81 0 L71.81 7.5 Z" end="40469" fill="#1f77b4" id="dbophA-gene-8" role="button" rowID="9" start="38089" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 664.36, 60.5) translate(664.36, 45.5)">
+      <path aria-label="genes: dbophB1" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L66.89 22.5 L66.89 30 L76.89 15 L66.89 0 L66.89 7.5 Z" end="43005" fill="#1f77b4" id="dbophA-gene-9" role="button" rowID="8" start="40768" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 756.44, 60.5) translate(756.44, 45.5)">
+    <g data-component="labels" transform="translate(100,5)">
+      <text aria-label="labels: dbophE" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-0" role="button" rowID="17" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 39.49, 39.45)" x="39.49" y="39.45">
+        "dbophE"
+      <text aria-label="labels: dbophP" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-1" role="button" rowID="16" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 143.83, 39.45)" x="143.83" y="39.45">
+        "dbophP"
+      <text aria-label="labels: dbophB4" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-2" role="button" rowID="15" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 257.51, 39.45)" x="257.51" y="39.45">
+        "dbophB4"
+      <text aria-label="labels: dbophD2" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-3" role="button" rowID="14" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 321.98, 39.45)" x="321.98" y="39.45">
+        "dbophD2"
+      <text aria-label="labels: dbophA" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-4" role="button" rowID="13" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 376.92, 39.45)" x="376.92" y="39.45">
+        "dbophA"
+      <text aria-label="labels: dbophB3" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-5" role="button" rowID="12" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 507.85, 39.45)" x="507.85" y="39.45">
+        "dbophB3"
+      <text aria-label="labels: dbophD1" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-6" role="button" rowID="11" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 580.28, 39.45)" x="580.28" y="39.45">
+        "dbophD1"
+      <text aria-label="labels: dbophC" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-7" role="button" rowID="10" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 645.03, 39.45)" x="645.03" y="39.45">
+        "dbophC"
+      <text aria-label="labels: dbophB2" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-8" role="button" rowID="9" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 705.26, 39.45)" x="705.26" y="39.45">
+        "dbophB2"
+      <text aria-label="labels: dbophB1" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-9" role="button" rowID="8" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 794.89, 39.45)" x="794.89" y="39.45">
+        "dbophB1"
+    <g aria-label="scaleBar: 1 kb" aria-pressed="false" data-component="scaleBar" role="button" tabindex="0" transform="translate(0, 0) translate(900.63, 126)">
+      <line style="stroke-width: 1; stroke: grey" x1="49.37" x2="15" y1="-10" y2="-10">
+      <line style="stroke-width: 1; stroke: grey" x1="15" x2="15" y1="-15" y2="-5">
+      <line style="stroke-width: 1; stroke: grey" x1="49.37" x2="49.37" y1="-15" y2="-5">
+      <text style="cursor: default; dominant-baseline: middle; fill: black; font-family: sans-serif; font-size: 10px; text-anchor: end" x="10" y="-10">
+        "1 kb"
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; left: 489.5px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; top: 46px; z-index: 1000">
+  <b>
+    "Start:"
+  "12,616"
+  <br>
+  <b>
+    "End:"
+  "11,859"
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div class="geneviewer-container" id="geneviewer-legend-container-chart">
+  <svg class="geneviewer-svg-content" height="38" id="svg-container-2" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 38" width="1000">
+    <g data-component="legend" transform="translate(50, 15)">
+      <g class="legend">
+        <text aria-label="legend: Monooxygenase label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-0" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="18" y="6">
+          "Monooxygenase"
+        <rect aria-label="legend: Monooxygenase marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-0" role="button" rx="0" style="cursor: pointer; fill: rgb(31, 119, 180)" tabindex="0" transform="translate(0, 0)" width="12" x="0" y="0">
+      <g class="legend">
+        <text aria-label="legend: NTF2-like label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-1" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="130.06" y="6">
+          "NTF2-like"
+        <rect aria-label="legend: NTF2-like marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-1" role="button" rx="0" style="cursor: pointer; fill: rgb(255, 127, 14)" tabindex="0" transform="translate(0, 0)" width="12" x="112.06" y="0">
+      <g class="legend">
+        <text aria-label="legend: Methyltransferase label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-2" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="206.08" y="6">
+          "Methyltransferase"
+        <rect aria-label="legend: Methyltransferase marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-2" role="button" rx="0" style="cursor: pointer; fill: rgb(44, 160, 44)" tabindex="0" transform="translate(0, 0)" width="12" x="188.08" y="0">
+      <g class="legend">
+        <text aria-label="legend: O-acyltransferase label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-3" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="325.45" y="6">
+          "O-acyltransferase"
+        <rect aria-label="legend: O-acyltransferase marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-3" role="button" rx="0" style="cursor: pointer; fill: rgb(214, 39, 40)" tabindex="0" transform="translate(0, 0)" width="12" x="307.45" y="0">
+      <g class="legend">
+        <text aria-label="legend: Prolyloligopeptidase label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-4" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="444.16" y="6">
+          "Prolyloligopeptidase"
+        <rect aria-label="legend: Prolyloligopeptidase marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-4" role="button" rx="0" style="cursor: pointer; fill: rgb(148, 103, 189)" tabindex="0" transform="translate(0, 0)" width="12" x="426.16" y="0">
+      <g class="legend">
+        <text aria-label="legend: F-box/RNHI-like label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-5" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="575.56" y="6">
+          "F-box/RNHI-like"
+        <rect aria-label="legend: F-box/RNHI-like marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-5" role="button" rx="0" style="cursor: pointer; fill: rgb(140, 86, 75)" tabindex="0" transform="translate(0, 0)" width="12" x="557.56" y="0">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar">
+  <div aria-label="Positions" class="geneviewer-history" hidden="" role="group">
+    <button aria-keyshortcuts="Control+Z Meta+Z" aria-label="Undo" class="geneviewer-toolbar-button geneviewer-undo" disabled="" type="button">
+      <i aria-hidden="true" class="fa-solid fa-rotate-left">
+      <span aria-hidden="true" class="geneviewer-toolbar-tip">
+        <span>
+          "Undo"
+        <kbd>
+          "Ctrl+Z"
+    <button aria-keyshortcuts="Control+Shift+Z Meta+Shift+Z Control+Y" aria-label="Redo" class="geneviewer-toolbar-button geneviewer-redo" disabled="" type="button">
+      <i aria-hidden="true" class="fa-solid fa-rotate-right">
+      <span aria-hidden="true" class="geneviewer-toolbar-tip">
+        <span>
+          "Redo"
+        <kbd>
+          "Ctrl+Y"
+    <button aria-label="Reset positions" class="geneviewer-toolbar-button geneviewer-reset" disabled="" type="button">
+      <i aria-hidden="true" class="fa-solid fa-house">
+      <span aria-hidden="true" class="geneviewer-toolbar-tip">
+        <span>
+          "Reset positions"
+    <span class="geneviewer-toolbar-divider">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <i aria-haspopup="menu" aria-label="Save chart" class="fa-solid fa-download geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"
+
+## Escape clears
+
+### events
+(none)
+
+### chart
+<div class="geneviewer-container" id="geneviewer-title-container-chart">
+  <svg class="geneviewer-svg-content" height="50" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 50" width="1000">
+    <g data-component="title" transform="translate(50, 5)">
+      <text aria-label="title: ophA gene clusters" aria-pressed="false" data-part="title" role="button" style="cursor: default; font-family: sans-serif; font-size: 16px; font-style: normal; font-weight: bold" tabindex="0" text-anchor="middle" transform="translate(0, 0)" x="450" y="22.5">
+        <tspan>
+          "ophA gene clusters"
+      <text aria-label="title: Drag me" aria-pressed="false" data-part="subtitle" role="button" style="cursor: default; font-family: sans-serif; font-size: 14px; font-style: normal; font-weight: normal; text-decoration: none" tabindex="0" text-anchor="middle" transform="translate(0, 0)" x="450" y="42.5">
+        <tspan>
+          "Drag me"
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <svg class="geneviewer-svg-content" data-cluster="ophA" height="131" id="svg-container-3" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 131" width="1000">
+    <text aria-label="clusterLabel: O. olearius" aria-pressed="true" class="geneviewer-selected" data-component="clusterLabel" data-part="title" dominant-baseline="central" role="button" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: normal; font-weight: bold" tabindex="0" text-anchor="middle" transform="translate(0, 0)" x="50" y="65.5">
+      <tspan class="wrap-line" dy="0em" x="50" y="65.5">
+        <tspan>
+          "O."
+        <tspan>
+          "olearius"
+    <g data-component="sequence" transform="translate(100,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="850" y1="60.5" y2="60.5">
+    <g data-component="genes" transform="translate(100, 5)">
+      <path aria-label="genes: ophB1" aria-pressed="true" class="gene geneviewer-selected" cluster="ophA" d="M0 7.5 L0 22.5 L65.57 22.5 L65.57 30 L75.57 15 L65.57 0 L65.57 7.5 Z" end="4276" fill="#1f77b4" id="ophA-gene-0" role="button" rowID="1" start="2522" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 16.34, 60.5) translate(16.34, 45.5)">
+      <path aria-label="genes: ophC" aria-pressed="true" class="gene geneviewer-selected" cluster="ophA" d="M0 7.5 L0 22.5 L14.47 22.5 L14.47 30 L24.47 15 L14.47 0 L14.47 7.5 Z" end="4718" fill="#ff7f0e" id="ophA-gene-1" role="button" rowID="2" start="5286" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(180, 135.43, 60.5) translate(135.43, 45.5)">
+      <path aria-label="genes: ophA" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L48.94 22.5 L48.94 30 L58.94 15 L48.94 0 L48.94 7.5 Z" end="10904" fill="#2ca02c" id="ophA-gene-2" role="button" rowID="3" start="9536" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 318.54, 60.5) translate(318.54, 45.5)">
+      <path aria-label="genes: ophD" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L22.62 22.5 L22.62 30 L32.62 15 L22.62 0 L22.62 7.5 Z" end="11859" fill="#d62728" id="ophA-gene-3" role="button" rowID="4" start="12616" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(180, 451.25, 60.5) translate(451.25, 45.5)">
+      <path aria-label="genes: ophB2" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L70.27 22.5 L70.27 30 L80.27 15 L70.27 0 L70.27 7.5 Z" end="15046" fill="#1f77b4" id="ophA-gene-4" role="button" rowID="5" start="13183" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 475.68, 60.5) translate(475.68, 45.5)">
+      <path aria-label="genes: ophP" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L133.48 22.5 L133.48 30 L143.48 15 L133.48 0 L133.48 7.5 Z" end="16016" fill="#9467bd" id="ophA-gene-5" role="button" rowID="6" start="19346" strand="reverse" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(180, 741.22, 60.5) translate(741.22, 45.5)">
+      <path aria-label="genes: ophE" aria-pressed="false" class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L46.61 22.5 L46.61 30 L56.61 15 L46.61 0 L46.61 7.5 Z" end="21484" fill="#8c564b" id="ophA-gene-6" role="button" rowID="7" start="20170" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 776.72, 60.5) translate(776.72, 45.5)">
+    <g data-component="labels" transform="translate(100,5)">
+      <text aria-label="labels: ophB1" aria-pressed="true" class="label geneviewer-selected" dx="0em" dy="0em" id="cluster-ophA-label-0" role="button" rowID="1" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 54.13, 39.45)" x="54.13" y="39.45">
+        "ophB1"
+      <text aria-label="labels: ophC" aria-pressed="true" class="label geneviewer-selected" dx="0em" dy="0em" id="cluster-ophA-label-1" role="button" rowID="2" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 123.19, 39.45)" x="123.19" y="39.45">
+        "ophC"
+      <text aria-label="labels: ophA" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-2" role="button" rowID="3" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 348.01, 39.45)" x="348.01" y="39.45">
+        "ophA"
+      <text aria-label="labels: ophD" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-3" role="button" rowID="4" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 434.94, 39.45)" x="434.94" y="39.45">
+        "ophD"
+      <text aria-label="labels: ophB2" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-4" role="button" rowID="5" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 515.81, 39.45)" x="515.81" y="39.45">
+        "ophB2"
+      <text aria-label="labels: ophP" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-5" role="button" rowID="6" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 669.48, 39.45)" x="669.48" y="39.45">
+        "ophP"
+      <text aria-label="labels: ophE" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-ophA-label-6" role="button" rowID="7" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 805.03, 39.45)" x="805.03" y="39.45">
+        "ophE"
+    <g aria-label="scaleBar: 1 kb" aria-pressed="false" data-component="scaleBar" role="button" tabindex="0" transform="translate(0, 0) translate(891.91, 126)">
+      <line style="stroke-width: 1; stroke: grey" x1="58.09" x2="15" y1="-10" y2="-10">
+      <line style="stroke-width: 1; stroke: grey" x1="15" x2="15" y1="-15" y2="-5">
+      <line style="stroke-width: 1; stroke: grey" x1="58.09" x2="58.09" y1="-15" y2="-5">
+      <text style="cursor: default; dominant-baseline: middle; fill: black; font-family: sans-serif; font-size: 10px; text-anchor: end" x="10" y="-10">
+        "1 kb"
+  <svg class="geneviewer-svg-content" data-cluster="dbophA" height="131" id="svg-container-4" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 131" width="1000">
+    <text aria-label="clusterLabel: D. bispora" aria-pressed="false" data-component="clusterLabel" data-part="title" dominant-baseline="central" role="button" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: normal; font-weight: bold" tabindex="0" text-anchor="middle" transform="translate(0, 0)" x="50" y="65.5">
+      <tspan class="wrap-line" dy="0em" x="50" y="65.5">
+        <tspan>
+          "D."
+        <tspan>
+          "bispora"
+    <g data-component="sequence" transform="translate(100,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="850" y1="60.5" y2="60.5">
+    <g data-component="genes" transform="translate(100, 5)">
+      <path aria-label="genes: dbophE" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L36.3 22.5 L36.3 30 L46.3 15 L36.3 0 L36.3 7.5 Z" end="20583" fill="#8c564b" id="dbophA-gene-0" role="button" rowID="17" start="19236" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 16.34, 60.5) translate(16.34, 45.5)">
+      <path aria-label="genes: dbophP" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L104.25 22.5 L104.25 30 L114.25 15 L104.25 0 L104.25 7.5 Z" end="24607" fill="#9467bd" id="dbophA-gene-1" role="button" rowID="16" start="21283" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 86.7, 60.5) translate(86.7, 45.5)">
+      <path aria-label="genes: dbophB4" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L56.3 22.5 L56.3 30 L66.3 15 L56.3 0 L56.3 7.5 Z" end="27217" fill="#1f77b4" id="dbophA-gene-2" role="button" rowID="15" start="25288" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 224.36, 60.5) translate(224.36, 45.5)">
+      <path aria-label="genes: dbophD2" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L42.04 22.5 L42.04 30 L52.04 15 L42.04 0 L42.04 7.5 Z" end="28885" fill="#d62728" id="dbophA-gene-3" role="button" rowID="14" start="27371" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 295.96, 60.5) translate(295.96, 45.5)">
+      <path aria-label="genes: dbophA" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L44.27 22.5 L44.27 30 L54.27 15 L44.27 0 L44.27 7.5 Z" end="30516" fill="#2ca02c" id="dbophA-gene-4" role="button" rowID="13" start="28937" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 349.78, 60.5) translate(349.78, 45.5)">
+      <path aria-label="genes: dbophB3" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L68.61 22.5 L68.61 30 L78.61 15 L68.61 0 L68.61 7.5 Z" end="34679" fill="#1f77b4" id="dbophA-gene-5" role="button" rowID="12" start="32392" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 468.54, 60.5) translate(468.54, 45.5)">
+      <path aria-label="genes: dbophD1" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L37.3 22.5 L37.3 30 L47.3 15 L37.3 0 L37.3 7.5 Z" end="36331" fill="#d62728" id="dbophA-gene-6" role="button" rowID="11" start="34955" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 556.64, 60.5) translate(556.64, 45.5)">
+      <path aria-label="genes: dbophC" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L8.18 22.5 L8.18 30 L18.18 15 L8.18 0 L8.18 7.5 Z" end="37791" fill="#ff7f0e" id="dbophA-gene-7" role="button" rowID="10" start="37262" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 635.93, 60.5) translate(635.93, 45.5)">
+      <path aria-label="genes: dbophB2" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L71.81 22.5 L71.81 30 L81.81 15 L71.81 0 L71.81 7.5 Z" end="40469" fill="#1f77b4" id="dbophA-gene-8" role="button" rowID="9" start="38089" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 664.36, 60.5) translate(664.36, 45.5)">
+      <path aria-label="genes: dbophB1" aria-pressed="false" class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L66.89 22.5 L66.89 30 L76.89 15 L66.89 0 L66.89 7.5 Z" end="43005" fill="#1f77b4" id="dbophA-gene-9" role="button" rowID="8" start="40768" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" tabindex="0" transform="rotate(0, 756.44, 60.5) translate(756.44, 45.5)">
+    <g data-component="labels" transform="translate(100,5)">
+      <text aria-label="labels: dbophE" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-0" role="button" rowID="17" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 39.49, 39.45)" x="39.49" y="39.45">
+        "dbophE"
+      <text aria-label="labels: dbophP" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-1" role="button" rowID="16" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 143.83, 39.45)" x="143.83" y="39.45">
+        "dbophP"
+      <text aria-label="labels: dbophB4" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-2" role="button" rowID="15" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 257.51, 39.45)" x="257.51" y="39.45">
+        "dbophB4"
+      <text aria-label="labels: dbophD2" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-3" role="button" rowID="14" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 321.98, 39.45)" x="321.98" y="39.45">
+        "dbophD2"
+      <text aria-label="labels: dbophA" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-4" role="button" rowID="13" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 376.92, 39.45)" x="376.92" y="39.45">
+        "dbophA"
+      <text aria-label="labels: dbophB3" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-5" role="button" rowID="12" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 507.85, 39.45)" x="507.85" y="39.45">
+        "dbophB3"
+      <text aria-label="labels: dbophD1" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-6" role="button" rowID="11" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 580.28, 39.45)" x="580.28" y="39.45">
+        "dbophD1"
+      <text aria-label="labels: dbophC" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-7" role="button" rowID="10" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 645.03, 39.45)" x="645.03" y="39.45">
+        "dbophC"
+      <text aria-label="labels: dbophB2" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-8" role="button" rowID="9" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 705.26, 39.45)" x="705.26" y="39.45">
+        "dbophB2"
+      <text aria-label="labels: dbophB1" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-dbophA-label-9" role="button" rowID="8" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 794.89, 39.45)" x="794.89" y="39.45">
+        "dbophB1"
+    <g aria-label="scaleBar: 1 kb" aria-pressed="false" data-component="scaleBar" role="button" tabindex="0" transform="translate(0, 0) translate(900.63, 126)">
+      <line style="stroke-width: 1; stroke: grey" x1="49.37" x2="15" y1="-10" y2="-10">
+      <line style="stroke-width: 1; stroke: grey" x1="15" x2="15" y1="-15" y2="-5">
+      <line style="stroke-width: 1; stroke: grey" x1="49.37" x2="49.37" y1="-15" y2="-5">
+      <text style="cursor: default; dominant-baseline: middle; fill: black; font-family: sans-serif; font-size: 10px; text-anchor: end" x="10" y="-10">
+        "1 kb"
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; left: 489.5px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; top: 46px; z-index: 1000">
+  <b>
+    "Start:"
+  "12,616"
+  <br>
+  <b>
+    "End:"
+  "11,859"
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div class="geneviewer-container" id="geneviewer-legend-container-chart">
+  <svg class="geneviewer-svg-content" height="38" id="svg-container-2" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 38" width="1000">
+    <g data-component="legend" transform="translate(50, 15)">
+      <g class="legend">
+        <text aria-label="legend: Monooxygenase label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-0" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="18" y="6">
+          "Monooxygenase"
+        <rect aria-label="legend: Monooxygenase marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-0" role="button" rx="0" style="cursor: pointer; fill: rgb(31, 119, 180)" tabindex="0" transform="translate(0, 0)" width="12" x="0" y="0">
+      <g class="legend">
+        <text aria-label="legend: NTF2-like label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-1" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="130.06" y="6">
+          "NTF2-like"
+        <rect aria-label="legend: NTF2-like marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-1" role="button" rx="0" style="cursor: pointer; fill: rgb(255, 127, 14)" tabindex="0" transform="translate(0, 0)" width="12" x="112.06" y="0">
+      <g class="legend">
+        <text aria-label="legend: Methyltransferase label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-2" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="206.08" y="6">
+          "Methyltransferase"
+        <rect aria-label="legend: Methyltransferase marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-2" role="button" rx="0" style="cursor: pointer; fill: rgb(44, 160, 44)" tabindex="0" transform="translate(0, 0)" width="12" x="188.08" y="0">
+      <g class="legend">
+        <text aria-label="legend: O-acyltransferase label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-3" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="325.45" y="6">
+          "O-acyltransferase"
+        <rect aria-label="legend: O-acyltransferase marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-3" role="button" rx="0" style="cursor: pointer; fill: rgb(214, 39, 40)" tabindex="0" transform="translate(0, 0)" width="12" x="307.45" y="0">
+      <g class="legend">
+        <text aria-label="legend: Prolyloligopeptidase label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-4" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="444.16" y="6">
+          "Prolyloligopeptidase"
+        <rect aria-label="legend: Prolyloligopeptidase marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-4" role="button" rx="0" style="cursor: pointer; fill: rgb(148, 103, 189)" tabindex="0" transform="translate(0, 0)" width="12" x="426.16" y="0">
+      <g class="legend">
+        <text aria-label="legend: F-box/RNHI-like label" aria-pressed="false" class="legend-label" data-part="label" dy=".35em" id="legend-label-5" role="button" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" tabindex="0" transform="translate(0, 0)" x="575.56" y="6">
+          "F-box/RNHI-like"
+        <rect aria-label="legend: F-box/RNHI-like marker" aria-pressed="false" class="legend-marker" data-part="marker" height="12" id="legend-marker-5" role="button" rx="0" style="cursor: pointer; fill: rgb(140, 86, 75)" tabindex="0" transform="translate(0, 0)" width="12" x="557.56" y="0">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar">
+  <div aria-label="Positions" class="geneviewer-history" hidden="" role="group">
+    <button aria-keyshortcuts="Control+Z Meta+Z" aria-label="Undo" class="geneviewer-toolbar-button geneviewer-undo" disabled="" type="button">
+      <i aria-hidden="true" class="fa-solid fa-rotate-left">
+      <span aria-hidden="true" class="geneviewer-toolbar-tip">
+        <span>
+          "Undo"
+        <kbd>
+          "Ctrl+Z"
+    <button aria-keyshortcuts="Control+Shift+Z Meta+Shift+Z Control+Y" aria-label="Redo" class="geneviewer-toolbar-button geneviewer-redo" disabled="" type="button">
+      <i aria-hidden="true" class="fa-solid fa-rotate-right">
+      <span aria-hidden="true" class="geneviewer-toolbar-tip">
+        <span>
+          "Redo"
+        <kbd>
+          "Ctrl+Y"
+    <button aria-label="Reset positions" class="geneviewer-toolbar-button geneviewer-reset" disabled="" type="button">
+      <i aria-hidden="true" class="fa-solid fa-house">
+      <span aria-hidden="true" class="geneviewer-toolbar-tip">
+        <span>
+          "Reset positions"
+    <span class="geneviewer-toolbar-divider">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <i aria-haspopup="menu" aria-label="Save chart" class="fa-solid fa-download geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"

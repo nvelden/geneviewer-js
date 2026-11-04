@@ -1,4 +1,4 @@
-205 fixtures
+206 fixtures
 vig-BLASTP #4: error: es gibt kein Paket namens 'Biostrings'
 vig-BLASTP #5: error: es gibt kein Paket namens 'pwalign'
 vig-BLASTP #12: error: Biostrings package is not installed. Install with BiocManager::install("Biostrings").
