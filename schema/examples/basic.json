@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "data": {
+    "name": ["ophB1", "ophC", "ophD", "ophB2"],
+    "start": [2522, 5286, 9536, 1],
+    "end": [4166, 5592, 10196, 1500],
+    "strand": ["forward", "forward", "reverse", "forward"],
+    "cluster": ["ophA", "ophA", "ophA", "dbophA"],
+    "class": ["Monooxygenase", "Other", "Methyltransferase", "Monooxygenase"]
+  },
+  "fields": { "cluster": "cluster", "group": "class", "strand": "strand" },
+  "height": "300px",
+  "title": { "title": "OphA clusters", "subtitle": "two species" },
+  "labels": [
+    { "label": "name" },
+    { "clusters": ["dbophA"], "show": false }
+  ],
+  "clusterLabel": { "title": ["Omphalotus olearius", "Dendrothele bispora"], "fontStyle": "italic" },
+  "color": { "customColors": { "Other": "grey" } },
+  "scale": { "clusters": [1], "breaks": [{ "start": 5600, "end": 9400 }] },
+  "links": { "data": [{ "cluster1": "ophA", "cluster2": "dbophA", "start1": 2522, "end1": 4166, "start2": 1, "end2": 1500, "identity": 64 }] },
+  "annotation": [{ "type": "text", "clusters": ["ophA"], "x": 3000, "y": 70, "text": "start" }],
+  "zoom": { "range": [0.25, 0.75] },
+  "events": { "select": true },
+  "theme": "publication"
+}

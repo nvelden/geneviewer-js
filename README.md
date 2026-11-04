@@ -41,6 +41,17 @@ minified, so the R package can ship readable source, as CRAN expects;
 esbuild does drop the comments. D3 is not bundled; each host package
 ships it as a separate dependency with its own licence.
 
+## Chart spec schema
+
+`schema/spec-v1.schema.json` (JSON Schema 2020-12) defines the chart spec:
+one top-level key per `GC_*` function of the R package, one property per
+argument, in camelCase. `schema/NAMING.md` lists every R argument and its
+spec name. The schema is a draft until the names are approved.
+
+```sh
+npm run schema:check   # validate the schema, NAMING.md and schema/examples/
+```
+
 ## Tests
 
 ```sh
