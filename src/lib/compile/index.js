@@ -12,6 +12,7 @@ import { clone } from "./r.js";
 import { align, scale, scaleBar } from "./scale.js";
 import { links } from "./links.js";
 import { transcript } from "./transcript.js";
+import { annotation, elementStyle } from "./annotations.js";
 
 /**
  * How each spec key changes the chart. The keys of a spec are applied in
@@ -39,6 +40,8 @@ const handlers = {
   align,
   links,
   transcript,
+  annotation,
+  elementStyle,
 };
 
 // Keys GC_chart() itself reads
