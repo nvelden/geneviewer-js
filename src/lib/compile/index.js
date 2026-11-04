@@ -6,6 +6,7 @@ import { Frame } from "./frame.js";
 import { chart } from "./chart.js";
 import { renderTheme } from "./render.js";
 import { cluster } from "./cluster.js";
+import { color, coordinates, genes, labels, legend, pattern, sequence, tooltip } from "./genes.js";
 
 /**
  * How each spec key changes the chart. The keys of a spec are applied in
@@ -15,6 +16,14 @@ import { cluster } from "./cluster.js";
  */
 const handlers = {
   cluster,
+  labels,
+  genes,
+  color,
+  pattern,
+  legend,
+  sequence,
+  coordinates,
+  tooltip,
 };
 
 // Keys GC_chart() itself reads

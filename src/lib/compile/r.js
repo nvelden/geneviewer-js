@@ -75,6 +75,18 @@ export function recycleAt(x, i) {
 }
 
 /**
+ * An argument of an entry, or its default when it is not given. A null given
+ * is kept: it replaces the default, as NULL does in R.
+ * @param {Object<string, *>} entry
+ * @param {string} name
+ * @param {*} fallback
+ * @returns {*}
+ */
+export function arg(entry, name, fallback) {
+  return Object.prototype.hasOwnProperty.call(entry, name) ? entry[name] : fallback;
+}
+
+/**
  * Whether a value is an object, not an array (an R named list).
  * @param {*} x
  * @returns {boolean}

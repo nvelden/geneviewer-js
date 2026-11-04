@@ -39,16 +39,20 @@ try {
   execFileSync(process.execPath, ["node_modules/typescript/bin/tsc",
     "src/lib/index.js", "types/globals.d.ts", "--allowJs", "--declaration", "--emitDeclarationOnly",
     "--skipLibCheck", "--target", "es2020", "--module", "esnext", "--moduleResolution", "bundler",
-    "--lib", "es2020,dom", "--outDir", out], { stdio: "inherit" });
+    "--lib", "es2020,dom", "--resolveJsonModule", "--rootDir", "src", "--outDir", out], { stdio: "inherit" });
 
   // chart.d.ts without the JSDoc blocks tsc copies after the types it made of them
-  const chart = readFileSync(path.join(out, "chart.d.ts"), "utf8")
+  const chart = readFileSync(path.join(out, "lib", "chart.d.ts"), "utf8")
     .replace(/\/\*\*(?:(?!\*\/)[\s\S])*@(?:typedef|callback)(?:(?!\*\/)[\s\S])*\*\/\n/g, "")
     .replace(/^declare var version: string;\n/m, "")
     .replace(/^export \{ newChart, version \};\n/m, "")
     .replace(/^declare function newChart/m, "export declare function newChart");
   // chartToSVG and chartToPNG, with their JSDoc
-  const exportsDts = readFileSync(path.join(out, "export.d.ts"), "utf8");
+  const exportsDts = readFileSync(path.join(out, "lib", "export.d.ts"), "utf8");
+  // compile(), with its JSDoc
+  const compileDts = readFileSync(path.join(out, "lib", "compile", "index.d.ts"), "utf8");
+  const compileMatch = /\/\*\*(?:(?!\*\/)[\s\S])*\*\/\nexport declare function compile\(.*\n/.exec(compileDts);
+  if (!compileMatch) throw new Error("compile/index.d.ts has no compile");
   const pick = (name) => {
     const match = new RegExp(`/\\*\\*(?:(?!\\*/)[\\s\\S])*\\*/\\n export declare function ${name}\\(.*\\n`.replace(" export", "export")).exec(exportsDts);
     if (!match) throw new Error(`export.d.ts has no ${name}`);
@@ -69,6 +73,8 @@ try {
     "",
     pick("chartToSVG").trim(),
     pick("chartToPNG").trim(),
+    "",
+    compileMatch[0].trim(),
     "",
   ].join("\n");
   writeFileSync("dist/geneviewer.d.ts", dts);
