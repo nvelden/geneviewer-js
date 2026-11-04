@@ -103,20 +103,20 @@ function maps to one top-level key; arguments become camelCase fields.
             group: "class", strand: "strand" },
 
   width: "100%", height: "400px",
-  theme: "dark",                       // a name, or an object of options
+  theme: "dark",                       // a name, or { base: "dark", ... }
 
   title: { title: "OphA clusters" },
   genes: {}, sequence: {}, transcript: {}, labels: { label: "name" },
   coordinates: {}, scale: {}, scaleBar: {}, grid: {},
   clusterTitle: {}, clusterLabel: {}, clusterFooter: {},
-  annotations: [...], tooltip: {}, legend: { group: "class" },
-  colors: { Monooxygenase: "#1f77b4" },
-  patterns: {},
-  elementStyles: [...],
+  annotation: [...], tooltip: {}, legend: { group: "class" },
+  color: { customColors: { Monooxygenase: "#1f77b4" } },
+  pattern: {},
+  elementStyle: [...],
 
   links: { data: [...], measure: "identity" },  // pairs made by R or Python
 
-  zoom: { show: true, window: [2000, 9000] },
+  zoom: { show: true, range: [2000, 9000] },
   toolbar: {}, events: { select: true }, trackMouse: {},
 }
 ```
@@ -136,7 +136,9 @@ labels: [
 version. A renderer that sees a newer major version than it knows warns and
 draws what it can. Breaking spec changes bump the major version.
 
-**Schema.** The spec is defined once as a JSON Schema in this repo. The
+**Schema.** The spec is defined once as a JSON Schema in this repo
+(`schema/spec-v1.schema.json`; names approved 2026-11-04, see
+`schema/NAMING.md`). The
 TypeScript types, the reference docs and Python's input validation are
 generated from it.
 

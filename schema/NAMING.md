@@ -1,8 +1,8 @@
 # Spec v1 names
 
 Each R function and argument, and its name in the chart spec
-(`spec-v1.schema.json`). These names become public. Every case marked
-**⚑** needs a decision. Each one has a proposal; "keep" means the name the
+(`spec-v1.schema.json`). These names become public. Niels decided every
+case marked **⚑** and points A–C on 2026-11-04; "keep" means the name the
 rules give.
 
 ## Rules applied
@@ -40,7 +40,7 @@ These are decisions about the whole spec, not one name.
   | `GC_pattern` | `pattern` | `patterns` |
   | `GC_color` | `color` | `colors` |
 
-  Proposed: R's names, singular, as in this draft. Someone who knows
+  Decided: R's names, singular. Someone who knows
   `GC_annotation()` looks for `annotation`. Python's methods will mirror R
   (`.annotation()`). The theme already uses `pattern`. The design
   document's example is changed to match.
@@ -49,9 +49,9 @@ These are decisions about the whole spec, not one name.
   options to JavaScript through `...` (`GC_labels(adjustLabels = "spread")`,
   `GC_trackMouse(backgroundColor = )`, the options of each annotation
   type). They already have JavaScript names. This draft allows them
-  (`additionalProperties`) but does not list them. Proposed: list them in
-  M4, as each component's resolution is ported and its options are known
-  exactly. Spec v1 is frozen only at 1.0.0 (M8), so adding them later is
+  (`additionalProperties`) but does not list them. Decided: list them in
+  M4, and review their names, as each component's resolution is ported
+  and its options are known exactly. Spec v1 is frozen only at 1.0.0 (M8), so adding them later is
   not a breaking change.
 
 - **C. Data processing is not in the spec.** `GC_align`, `GC_normalize`
@@ -62,27 +62,27 @@ These are decisions about the whole spec, not one name.
 
 ## Marked cases
 
-1. **`GC_chart` `save_button`**: It is a toolbar setting. Proposed: no `saveButton`; `toolbar.buttons` without "save" does the same, and R maps `save_button = FALSE` onto it.
+1. **`GC_chart` `save_button`**: It is a toolbar setting. Decided: no `saveButton`; `toolbar.buttons` without "save" does the same, and R maps `save_button = FALSE` onto it.
 2. **`GC_annotation`**: The design document calls it `annotations` (plural). R's name is singular. See the note on plurals.
-3. **`GC_cluster`**: `cluster` (GC_cluster) sits next to `fields.cluster` (a column) and `clusters` (which clusters an entry applies to). Proposed: keep `cluster`; themes already use this name for the same options.
-4. **`GC_color`**: The design document shows `colors: { Monooxygenase: "#1f77b4" }`, a map of colours by group. The rules give `color: { colorScheme, customColors }`. Proposed: follow the rules, so both R arguments have a place, and change the design document's example to `color: { customColors: { ... } }`.
+3. **`GC_cluster`**: `cluster` (GC_cluster) sits next to `fields.cluster` (a column) and `clusters` (which clusters an entry applies to). Decided: keep `cluster`; themes already use this name for the same options.
+4. **`GC_color`**: The design document shows `colors: { Monooxygenase: "#1f77b4" }`, a map of colours by group. The rules give `color: { colorScheme, customColors }`. Decided: follow the rules, so both R arguments have a place, and change the design document's example to `color: { customColors: { ... } }`.
 5. **`GC_element_style`**: The design document calls it `elementStyles` (plural). R's name is singular. See the note on plurals.
-6. **`GC_element_style` `row_id`**: The rule gives `rowId`. The data and the events call this field `rowID`. Proposed: `rowID`, so it matches the events.
-7. **`GC_element_style` `cluster`**: The rule gives `clusters`, an array. Here the argument names the one cluster that holds the element. Proposed: `cluster`, a single name or position.
-8. **`GC_element_style` `reset`**: Proposed: not in the spec. R's `reset = TRUE` removes the entry from the spec it builds.
-9. **`GC_legend` `legendOptions`**: Repeats the component name: `legend.legendOptions`. Its styles go to the legend markers. Proposed: `markerStyle`. (R also stores the colour scheme, custom colours and patterns there; in the spec they come from `color`, `genes` and `pattern`.)
-10. **`GC_legend` `legendTextOptions`**: Repeats the component name: `legend.legendTextOptions`. Proposed: `textStyle`, as in coordinates and scale.
-11. **`GC_links` `show_links`**: Every other component calls this `show`. Proposed: `show`.
-12. **`GC_pattern`**: The design document calls it `patterns`. R's name is `GC_pattern`, and `GC_theme(pattern = )` uses the singular too. Proposed: `pattern`.
-13. **`GC_scale` `scale_breaks`**: Repeats the component: `scale.scaleBreaks`, next to `scale.breaks`. Proposed: `autoBreaks`.
-14. **`GC_scale` `scale_break_threshold`**: Proposed: `autoBreakThreshold`, to go with `autoBreaks`.
-15. **`GC_scale` `scale_break_padding`**: Proposed: `breakPadding`; it applies to every break.
-16. **`GC_scaleBar` `scaleBarLineStyle`**: Repeats the component: `scaleBar.scaleBarLineStyle`. Proposed: `lineStyle`, as in scale.
-17. **`GC_scaleBar` `scaleBarTickStyle`**: Proposed: `tickStyle`, as in scale.
-18. **`GC_sequence` `sequenceStyle`**: Repeats the component: `sequence.sequenceStyle`. Proposed: `lineStyle`, as in scale.
-19. **`GC_theme` `theme`**: Inside the object form this reads `theme: { theme: "dark", textScale: 1.2 }`. Proposed: `base`.
-20. **`GC_transcript` `transcript`**: Reads `transcript.transcript`. Proposed: keep it, or `transcriptColumn`. The other column arguments (type, strand, group) read well.
-21. **`GC_zoom` `range`**: The design document's example calls this `window`. R calls it `range`, and so does the zoom event. Proposed: `range`.
+6. **`GC_element_style` `row_id`**: The rule gives `rowId`. The data and the events call this field `rowID`. Decided: `rowID`, so it matches the events.
+7. **`GC_element_style` `cluster`**: The rule gives `clusters`, an array. Here the argument names the one cluster that holds the element. Decided: `cluster`, a single name or position.
+8. **`GC_element_style` `reset`**: Decided: not in the spec. R's `reset = TRUE` removes the entry from the spec it builds.
+9. **`GC_legend` `legendOptions`**: Repeats the component name: `legend.legendOptions`. Its styles go to the legend markers. Decided: `markerStyle`. (R also stores the colour scheme, custom colours and patterns there; in the spec they come from `color`, `genes` and `pattern`.)
+10. **`GC_legend` `legendTextOptions`**: Repeats the component name: `legend.legendTextOptions`. Decided: `textStyle`, as in coordinates and scale.
+11. **`GC_links` `show_links`**: Every other component calls this `show`. Decided: `show`.
+12. **`GC_pattern`**: The design document calls it `patterns`. R's name is `GC_pattern`, and `GC_theme(pattern = )` uses the singular too. Decided: `pattern`.
+13. **`GC_scale` `scale_breaks`**: Repeats the component: `scale.scaleBreaks`, next to `scale.breaks`. Decided: `autoBreaks`.
+14. **`GC_scale` `scale_break_threshold`**: Decided: `autoBreakThreshold`, to go with `autoBreaks`.
+15. **`GC_scale` `scale_break_padding`**: Decided: `breakPadding`; it applies to every break.
+16. **`GC_scaleBar` `scaleBarLineStyle`**: Repeats the component: `scaleBar.scaleBarLineStyle`. Decided: `lineStyle`, as in scale.
+17. **`GC_scaleBar` `scaleBarTickStyle`**: Decided: `tickStyle`, as in scale.
+18. **`GC_sequence` `sequenceStyle`**: Repeats the component: `sequence.sequenceStyle`. Decided: `lineStyle`, as in scale.
+19. **`GC_theme` `theme`**: Inside the object form this reads `theme: { theme: "dark", textScale: 1.2 }`. Decided: `base`.
+20. **`GC_transcript` `transcript`**: Reads `transcript.transcript`. Decided: keep it. The other column arguments (type, strand, group) read well.
+21. **`GC_zoom` `range`**: The design document's example calls this `window`. R calls it `range`, and so does the zoom event. Decided: `range`.
 
 ## All arguments
 
@@ -102,7 +102,7 @@ element overrides). `.*` stands for the options passed through `...`
 | `GC_chart` | `height` | `height` |  |
 | `GC_chart` | `style` | `style` |  |
 | `GC_chart` | `elementId` | not in spec | The element is the first argument of newChart(), not part of the spec. |
-| `GC_chart` | `save_button` | `saveButton` | **⚑ 1** |
+| `GC_chart` | `save_button` | not in spec | A toolbar setting: R maps save_button = FALSE onto toolbar.buttons without "save". **⚑ 1** |
 | `GC_annotation` | (function) | `annotation` | **⚑ 2** |
 | `GC_annotation` | `type` | `annotation[].type` |  |
 | `GC_annotation` | `cluster` | `annotation[].clusters` |  |
@@ -218,8 +218,8 @@ element overrides). `.*` stands for the options passed through `...`
 | `GC_legend` | `position` | `legend.position` |  |
 | `GC_legend` | `align` | `legend.align` |  |
 | `GC_legend` | `style` | `legend.style` |  |
-| `GC_legend` | `legendOptions` | `legend.legendOptions` | **⚑ 9** |
-| `GC_legend` | `legendTextOptions` | `legend.legendTextOptions` | **⚑ 10** |
+| `GC_legend` | `legendOptions` | `legend.markerStyle` | **⚑ 9** |
+| `GC_legend` | `legendTextOptions` | `legend.textStyle` | **⚑ 10** |
 | `GC_legend` | `corner_radius` | `legend.cornerRadius` |  |
 | `GC_legend` | `groupStyle` | `legend.groupStyle` |  |
 | `GC_legend` | `...` | `legend.*` | other options under their JavaScript names |
@@ -231,7 +231,7 @@ element overrides). `.*` stands for the options passed through `...`
 | `GC_links` | `cluster` | `links.clusters` |  |
 | `GC_links` | `curve` | `links.curve` |  |
 | `GC_links` | `measure` | `links.measure` |  |
-| `GC_links` | `show_links` | `links.showLinks` | **⚑ 11** |
+| `GC_links` | `show_links` | `links.show` | **⚑ 11** |
 | `GC_links` | `label` | `links.label` |  |
 | `GC_links` | `label_position` | `links.labelPosition` |  |
 | `GC_links` | `normal_color` | `links.normalColor` |  |
@@ -264,9 +264,9 @@ element overrides). `.*` stands for the options passed through `...`
 | `GC_scale` | `axis_position` | `scale.axisPosition` |  |
 | `GC_scale` | `axis_type` | `scale.axisType` |  |
 | `GC_scale` | `y` | `scale.y` |  |
-| `GC_scale` | `scale_breaks` | `scale.scaleBreaks` | **⚑ 13** |
-| `GC_scale` | `scale_break_threshold` | `scale.scaleBreakThreshold` | **⚑ 14** |
-| `GC_scale` | `scale_break_padding` | `scale.scaleBreakPadding` | **⚑ 15** |
+| `GC_scale` | `scale_breaks` | `scale.autoBreaks` | **⚑ 13** |
+| `GC_scale` | `scale_break_threshold` | `scale.autoBreakThreshold` | **⚑ 14** |
+| `GC_scale` | `scale_break_padding` | `scale.breakPadding` | **⚑ 15** |
 | `GC_scale` | `ticksCount` | `scale.ticksCount` |  |
 | `GC_scale` | `ticksFormat` | `scale.ticksFormat` |  |
 | `GC_scale` | `tickStyle` | `scale.tickStyle` |  |
@@ -276,19 +276,19 @@ element overrides). `.*` stands for the options passed through `...`
 | `GC_scaleBar` | (function) | `scaleBar` | |
 | `GC_scaleBar` | `show` | `scaleBar.show` |  |
 | `GC_scaleBar` | `cluster` | `scaleBar.clusters` |  |
-| `GC_scaleBar` | `scaleBarLineStyle` | `scaleBar.scaleBarLineStyle` | **⚑ 16** |
-| `GC_scaleBar` | `scaleBarTickStyle` | `scaleBar.scaleBarTickStyle` | **⚑ 17** |
+| `GC_scaleBar` | `scaleBarLineStyle` | `scaleBar.lineStyle` | **⚑ 16** |
+| `GC_scaleBar` | `scaleBarTickStyle` | `scaleBar.tickStyle` | **⚑ 17** |
 | `GC_scaleBar` | `labelStyle` | `scaleBar.labelStyle` |  |
 | `GC_scaleBar` | `...` | `scaleBar.*` | other options under their JavaScript names |
 | `GC_sequence` | (function) | `sequence` | |
 | `GC_sequence` | `show` | `sequence.show` |  |
 | `GC_sequence` | `cluster` | `sequence.clusters` |  |
 | `GC_sequence` | `y` | `sequence.y` |  |
-| `GC_sequence` | `sequenceStyle` | `sequence.sequenceStyle` | **⚑ 18** |
+| `GC_sequence` | `sequenceStyle` | `sequence.lineStyle` | **⚑ 18** |
 | `GC_sequence` | `markerStyle` | `sequence.markerStyle` |  |
 | `GC_sequence` | `...` | `sequence.*` | other options under their JavaScript names |
 | `GC_theme` | (function) | `theme` | |
-| `GC_theme` | `theme` | `theme.theme` | **⚑ 19** |
+| `GC_theme` | `theme` | `theme.base` | **⚑ 19** |
 | `GC_theme` | `textScale` | `theme.textScale` |  |
 | `GC_theme` | `fontFamily` | `theme.fontFamily` |  |
 | `GC_theme` | `textColor` | `theme.textColor` |  |

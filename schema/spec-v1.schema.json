@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/nvelden/geneviewer-js/schema/spec-v1.schema.json",
   "title": "geneviewer chart spec, version 1",
-  "description": "What newChart() draws. Each top-level key is a GC_* function of the R package, each property one of its arguments in camelCase. Draft for review; see schema/NAMING.md.",
+  "description": "What newChart() draws. Each top-level key is a GC_* function of the R package, each property one of its arguments in camelCase; see schema/NAMING.md.",
   "type": "object",
   "required": [
     "version",
@@ -66,11 +66,6 @@
     "style": {
       "$ref": "#/$defs/style",
       "description": "CSS styles of the chart's element, e.g. { backgroundColor: \"white\" }."
-    },
-    "saveButton": {
-      "type": "boolean",
-      "description": "Whether the toolbar has the save button.",
-      "default": true
     },
     "cluster": {
       "description": "Layout of the genes in a cluster: strands on separate rows, overlapping genes on separate tracks, and the cluster's style. An array of entries applies them in order; an entry with clusters only to those clusters.",
@@ -1206,11 +1201,11 @@
           "$ref": "#/$defs/style",
           "description": "CSS styles of the legend's element."
         },
-        "legendOptions": {
+        "markerStyle": {
           "$ref": "#/$defs/style",
           "description": "Options of the legend items (markers), such as cursor."
         },
-        "legendTextOptions": {
+        "textStyle": {
           "$ref": "#/$defs/style",
           "description": "Options of the legend text, such as fontSize."
         },
@@ -1250,7 +1245,7 @@
           "description": "The measure that sets the links' colour.",
           "default": "identity"
         },
-        "showLinks": {
+        "show": {
           "type": "boolean",
           "description": "Whether to show the links.",
           "default": true
@@ -1452,17 +1447,17 @@
           "type": "number",
           "description": "Vertical position of the axis, from 1 to 100."
         },
-        "scaleBreaks": {
+        "autoBreaks": {
           "type": "boolean",
           "description": "Whether to add scale breaks at large gaps between genes.",
           "default": false
         },
-        "scaleBreakThreshold": {
+        "autoBreakThreshold": {
           "type": "number",
-          "description": "Gaps larger than this percentage of the cluster become scale breaks, with scaleBreaks.",
+          "description": "Gaps larger than this percentage of the cluster become scale breaks, with autoBreaks.",
           "default": 20
         },
-        "scaleBreakPadding": {
+        "breakPadding": {
           "type": [
             "number",
             "string"
@@ -1506,11 +1501,11 @@
           "$ref": "#/$defs/clusters",
           "description": "The clusters this entry applies to, by name or 1-based position. Default: all clusters."
         },
-        "scaleBarLineStyle": {
+        "lineStyle": {
           "$ref": "#/$defs/style",
           "description": "Styles of the bar's line."
         },
-        "scaleBarTickStyle": {
+        "tickStyle": {
           "$ref": "#/$defs/style",
           "description": "Styles of the bar's ticks."
         },
@@ -1538,7 +1533,7 @@
           "type": "number",
           "description": "Vertical position of the line. Default: the theme's, otherwise 50."
         },
-        "sequenceStyle": {
+        "lineStyle": {
           "$ref": "#/$defs/style",
           "description": "Styles of the line."
         },
@@ -1553,16 +1548,9 @@
     "themeEntry": {
       "type": "object",
       "properties": {
-        "theme": {
-          "oneOf": [
-            {
-              "$ref": "#/$defs/themeName"
-            },
-            {
-              "type": "object"
-            }
-          ],
-          "description": "The theme to start from: a built-in theme's name or an object of theme settings. Default: the current theme."
+        "base": {
+          "$ref": "#/$defs/themeName",
+          "description": "The built-in theme to start from; R's list of theme settings is the theme object itself. Default: the current theme."
         },
         "textScale": {
           "type": "number",
