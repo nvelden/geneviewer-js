@@ -14,13 +14,16 @@
   },
   "scripts": {
     "check": "node scripts/check.mjs",
-    "build": "node scripts/build.mjs",
+    "build": "node scripts/build.mjs && node scripts/build-types.mjs",
     "try-app": "bash scripts/try-app.sh",
     "site": "node scripts/build.mjs && node scripts/build-site.mjs",
     "serve": "npm run -s site && python3 -m http.server 8484 --bind 127.0.0.1 --directory _site",
     "test": "bash scripts/test-docker.sh",
     "test:update": "bash scripts/test-docker.sh --update",
-    "schema:check": "node scripts/schema-check.mjs"
+    "schema:check": "node scripts/schema-check.mjs",
+    "types": "node scripts/build-types.mjs",
+    "types:test": "tsc -p test/types/tsconfig.json",
+    "types:src": "tsc -p jsconfig.json"
   },
   "peerDependencies": {
     "d3": "7.8.5"
@@ -28,6 +31,8 @@
   "devDependencies": {
     "ajv": "8.20.0",
     "esbuild": "0.28.2",
-    "playwright-core": "1.64.1"
+    "json-schema-to-typescript": "16.0.0",
+    "playwright-core": "1.64.1",
+    "typescript": "7.0.2"
   }
 }

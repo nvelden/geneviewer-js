@@ -52,6 +52,17 @@ spec name. The schema is a draft until the names are approved.
 npm run schema:check   # validate the schema, NAMING.md and schema/examples/
 ```
 
+## Types
+
+`npm run build` also writes `dist/geneviewer.d.ts`, from the JSDoc in
+`src/lib/`, and `dist/spec.d.ts`, from the schema. The source stays plain
+JavaScript.
+
+```sh
+npm run types:test   # compile test/types/ against the .d.ts files (in npm test)
+npm run types:src    # type-check src/lib/ (jsconfig.json); some errors remain
+```
+
 ## Tests
 
 ```sh
