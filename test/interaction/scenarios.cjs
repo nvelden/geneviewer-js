@@ -91,6 +91,9 @@ module.exports = [
       } },
       { name: "nudge the selected label (arrow keys)", run: async (page, h) => {
         await h.click(await h.center("#chart text.label", 4));
+        // Off the chart: the label moves from under the pointer, and whether
+        // Chrome has updated :hover (opacity 0.7) by the next event varies
+        await page.mouse.move(10, 10);
         await h.press("ArrowUp");
         await h.press("Shift+ArrowRight");
       } },
