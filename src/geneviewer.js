@@ -1081,10 +1081,30 @@ function chartToPNG(el, exclude = null) {
   });
 }
 
+/**
+ * Save a file in the browser: a link to the blob, with download, is clicked.
+ * The blob's URL is revoked after 40 seconds, when the download has long
+ * started.
+ * @param {Blob} blob
+ * @param {string} filename
+ */
+function downloadBlob(blob, filename) {
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  link.style.display = "none";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 40000);
+}
+
 // The save icon and its formats, in the chart's toolbar (container), which
 // shows and places it. Its colours are those of the stylesheet, set with
-// GC_toolbar() and GC_theme(toolbar = ...).
-function createSaveIcon(widgetId, el, container, iconClass = "fa-solid fa-download") {
+// GC_toolbar() and GC_theme(toolbar = ...). save(blob, filename) saves the
+// file; by default the browser downloads it.
+function createSaveIcon(widgetId, el, container, iconClass = "fa-solid fa-download", save = downloadBlob) {
   var saveMenu = d3.select(container).append("div")
       .attr("id", `saveMenu-${widgetId}`)
       .style("position", "relative")
@@ -1121,13 +1141,13 @@ function createSaveIcon(widgetId, el, container, iconClass = "fa-solid fa-downlo
       label: "Save as SVG",
       save: function () {
         var svg = chartToSVG(el, container);
-        saveAs(new Blob([svg], { type: "image/svg+xml;charset=utf-8" }), "graph.svg");
+        save(new Blob([svg], { type: "image/svg+xml;charset=utf-8" }), "graph.svg");
       }
     },
     {
       label: "Save as PNG",
       save: function () {
-        return chartToPNG(el, container).then(blob => saveAs(blob, "graph.png"));
+        return chartToPNG(el, container).then(blob => save(blob, "graph.png"));
       }
     }
   ];
