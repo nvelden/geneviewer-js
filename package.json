@@ -21,6 +21,7 @@
     "test": "bash scripts/test-docker.sh",
     "test:update": "bash scripts/test-docker.sh --update",
     "schema:check": "node scripts/schema-check.mjs",
+    "spec:check": "node scripts/spec-check.mjs",
     "types": "node scripts/build-types.mjs",
     "types:test": "tsc -p test/types/tsconfig.json",
     "types:src": "tsc -p jsconfig.json"

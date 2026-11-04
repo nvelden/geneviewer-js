@@ -1,0 +1,1 @@
+{"version":1,"data":{"start":[10,90,130,170,210],"end":[40,120,160,200,240],"name":["Gene 1","Gene 2","Gene 3","Gene 4","Gene 5"],"group":["A","B","B","A","C"]},"fields":{"group":"group"},"height":"200px","tooltip":{"formatter":" <b>Start:<\/b> {start}<br><b>end:<\/b> {end}"}}
