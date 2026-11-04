@@ -1,0 +1,164 @@
+:root {
+  --text: #1d2433;
+  --muted: #5b6475;
+  --line: #e3e6ec;
+  --surface: #f6f7f9;
+  --accent: #0f6e66;
+  --accent-soft: #e6f2f0;
+  --planned: #8a5a00;
+  --planned-soft: #fff4dc;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: #fff;
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+a { color: var(--accent); }
+a:hover { text-decoration-thickness: 2px; }
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.site-header .inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  height: 56px;
+}
+.brand {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--text);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.brand span { color: var(--accent); }
+.site-header nav { display: flex; gap: 20px; flex: 1; }
+.site-header nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 15px;
+}
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] { color: var(--text); }
+.site-header nav a[aria-current="page"] { font-weight: 600; }
+.site-header .github { font-size: 15px; color: var(--muted); text-decoration: none; }
+.site-header .github:hover { color: var(--text); }
+
+.inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+main { padding: 40px 0 72px; }
+
+/* Text */
+h1 { font-size: 36px; line-height: 1.2; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 24px; line-height: 1.3; margin: 48px 0 12px; }
+h3 { font-size: 18px; margin: 28px 0 8px; }
+p, ul, ol { margin: 0 0 14px; }
+li { margin-bottom: 4px; }
+.lead { font-size: 19px; color: var(--muted); max-width: 720px; margin-bottom: 24px; }
+
+code {
+  font-family: var(--mono);
+  font-size: 0.88em;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.05em 0.35em;
+}
+pre {
+  background: #1d2433;
+  color: #e8ebf1;
+  border-radius: 8px;
+  padding: 16px 18px;
+  overflow-x: auto;
+  font: 13.5px/1.55 var(--mono);
+  margin: 0 0 16px;
+}
+pre code { background: none; border: 0; padding: 0; font-size: inherit; color: inherit; }
+
+table { border-collapse: collapse; width: 100%; margin: 0 0 18px; font-size: 15px; }
+th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-weight: 600; background: var(--surface); }
+td code { white-space: nowrap; }
+
+/* Notices */
+.notice {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 0 0 24px;
+}
+.notice.planned { border-color: var(--planned); background: var(--planned-soft); }
+.notice p:last-child { margin-bottom: 0; }
+
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--planned);
+  background: var(--planned-soft);
+  border-radius: 999px;
+  padding: 1px 9px;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+.badge.available { color: var(--accent); background: var(--accent-soft); }
+
+/* Charts */
+.chart-card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 20px 20px 8px;
+  margin: 0 0 32px;
+}
+.chart-card h2 { margin-top: 0; }
+.chart-card > p { color: var(--muted); }
+.chart { margin: 8px 0 12px; }
+.chart-error { color: #a4161a; }
+
+details { margin: 4px 0 12px; }
+summary { cursor: pointer; color: var(--accent); font-weight: 500; margin-bottom: 8px; }
+
+.event-log {
+  font: 13px/1.5 var(--mono);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 14px;
+  height: 132px;
+  overflow-y: auto;
+  margin-bottom: 12px;
+  white-space: pre-wrap;
+}
+.event-log:empty::before { content: "Interact with the chart to see its events here."; color: var(--muted); }
+
+/* Index page */
+.features { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin: 0 0 8px; }
+.feature { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.feature h3 { margin: 0 0 4px; font-size: 16px; }
+.feature p { margin: 0; color: var(--muted); font-size: 15px; }
+
+.toc { columns: 2; padding-left: 18px; margin-bottom: 24px; }
+
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; padding: 24px 0; }
+
+@media (max-width: 700px) {
+  .site-header nav { gap: 14px; }
+  .site-header .github { display: none; }
+  h1 { font-size: 28px; }
+  .toc { columns: 1; }
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>geneviewer-js: interactive gene cluster charts</title>
+  <meta name="description" content="geneviewer-js draws interactive gene cluster, transcript and genome alignment charts in the browser with D3.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="lib/styles.css">
+  <script src="lib/d3.min.js"></script>
+  <script src="lib/FileSaver.min.js"></script>
+  <script src="lib/geneviewer.js"></script>
+  <script src="assets/embed.js"></script>
+  <script src="lib/geneviewerwidget.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="./">geneviewer<span>-js</span></a>
+      <nav>
+        <a href="./" aria-current="page">Overview</a>
+        <a href="examples.html">Examples</a>
+        <a href="api.html">API</a>
+      </nav>
+      <a class="github" href="https://github.com/nvelden/geneviewer-js">GitHub</a>
+    </div>
+  </header>
+
+  <main class="inner">
+    <h1>Gene cluster charts for the web</h1>
+    <p class="lead">
+      geneviewer-js draws interactive gene clusters, transcripts and genome
+      alignments in the browser with D3. It is the drawing engine of the
+      <a href="https://nvelden.github.io/geneviewer/">geneviewer R package</a>,
+      being made into a standalone JavaScript library.
+    </p>
+
+    <div class="chart" id="hero-chart"></div>
+
+    <div class="notice planned">
+      <p>
+        <strong>Pre-release.</strong> The charts on this site are drawn by
+        geneviewer-js v0.2.0, the code in the development version of the R package. Today the
+        library is used through the R package and the
+        <a href="https://nvelden.github.io/geneviewer-shinylive/">Gene Cluster Dashboard</a>.
+        The standalone JavaScript API, <code>geneviewer.newChart()</code>, is
+        designed but not built yet; the <a href="api.html">API page</a> shows
+        the plan.
+      </p>
+    </div>
+
+    <h2>What it draws</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Genes</h3>
+        <p>Arrows, boxes or rounded boxes on a sequence line, coloured by group, with patterns, labels and tooltips.</p>
+      </div>
+      <div class="feature">
+        <h3>Transcripts</h3>
+        <p>Exons, introns and UTRs for splice variants.</p>
+      </div>
+      <div class="feature">
+        <h3>Links</h3>
+        <p>Connections between homologous genes or alignment blocks, shaded by identity, with inversions marked.</p>
+      </div>
+      <div class="feature">
+        <h3>Layout</h3>
+        <p>Titles, cluster labels, legends, coordinates, scale bars, scale breaks and annotations.</p>
+      </div>
+      <div class="feature">
+        <h3>Themes</h3>
+        <p>Built-in themes and colour palettes, or your own colours per group.</p>
+      </div>
+      <div class="feature">
+        <h3>Interaction</h3>
+        <p>Zoom slider, selection, dragging labels and titles, undo and redo, and SVG or PNG export.</p>
+      </div>
+    </div>
+
+    <h2>Using it today</h2>
+    <h3>From R <span class="badge available">Available</span></h3>
+    <p>
+      The <a href="https://cran.r-project.org/package=geneviewer">geneviewer</a>
+      package on CRAN builds charts from data frames and GenBank, GFF, FASTA
+      and BED files, and draws them with this library.
+    </p>
+<pre><code>install.packages("geneviewer")
+
+library(geneviewer)
+GC_chart(ophA_clusters, group = "class", cluster = "cluster") %&gt;%
+  GC_labels("name") %&gt;%
+  GC_links("class", measure = "identity")</code></pre>
+    <p>See the <a href="https://nvelden.github.io/geneviewer/">R package documentation</a>.</p>
+
+    <h3>In the browser, without code <span class="badge available">Available</span></h3>
+    <p>
+      The <a href="https://nvelden.github.io/geneviewer-shinylive/">Gene Cluster Dashboard</a>
+      loads CSV, GenBank and FASTA files and lets you design a chart by point
+      and click. It runs entirely in your browser.
+    </p>
+
+    <h3>From JavaScript <span class="badge">Planned</span></h3>
+    <p>
+      A script tag or <code>npm install geneviewer</code>, then one call:
+    </p>
+<pre><code>const chart = geneviewer.newChart("#chart", {
+  data: genes,
+  fields: { cluster: "cluster", start: "start", end: "end", group: "class" },
+  labels: { label: "name" },
+  links: { group: "class", measure: "identity" },
+});</code></pre>
+    <p>See the <a href="api.html">planned API</a>.</p>
+
+    <h3>From Python <span class="badge">Planned</span></h3>
+    <p>
+      A <code>geneviewer</code> Python package for Jupyter and Shiny for
+      Python, built on the same JavaScript API, so charts look and behave the
+      same in every language.
+    </p>
+
+    <h2>Roadmap</h2>
+    <ol>
+      <li><strong>Regression tests:</strong> reference charts exported from R, checked on every change.</li>
+      <li><strong>Library core:</strong> rendering and interaction moved out of the R binding into <code>newChart()</code>.</li>
+      <li><strong>Chart spec in JavaScript:</strong> splitting clusters, links, alignment and themes resolved by the library instead of R.</li>
+      <li><strong>First npm release:</strong> builds for script tags, bundlers and Python; TypeScript types; full API reference.</li>
+      <li><strong>R package</strong> switched to the library.</li>
+      <li><strong>Python package.</strong></li>
+    </ol>
+    <p>
+      Follow progress on
+      <a href="https://github.com/nvelden/geneviewer-js">GitHub</a>. Releases
+      are listed on the
+      <a href="https://github.com/nvelden/geneviewer-js/releases">releases page</a>.
+    </p>
+  </main>
+
+  <footer>
+    <div class="inner">
+      geneviewer-js is MIT licensed. Charts are drawn with <a href="https://d3js.org">D3</a>.
+    </div>
+  </footer>
+
+  <script>
+    geneviewerSite.load("interactive").then(function (payload) {
+      geneviewerSite.render(document.getElementById("hero-chart"), payload);
+    }).catch(function (error) {
+      var el = document.getElementById("hero-chart");
+      el.className = "chart-error";
+      el.textContent = "The chart could not be drawn: " + error.message;
+    });
+  </script>
+</body>
+</html>

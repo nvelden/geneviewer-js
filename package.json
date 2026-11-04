@@ -14,7 +14,9 @@
   },
   "scripts": {
     "check": "node scripts/check.mjs",
-    "build": "node scripts/build.mjs"
+    "build": "node scripts/build.mjs",
+    "site": "node scripts/build.mjs && node scripts/build-site.mjs",
+    "serve": "npm run -s site && python3 -m http.server 8484 --bind 127.0.0.1 --directory _site"
   },
   "peerDependencies": {
     "d3": "7.8.5"
