@@ -1,6 +1,7 @@
 // What the R package did as the chart was sent to the browser: render_theme(),
 // the widget's preRenderHook (R/theme.R).
 import { Frame } from "./frame.js";
+import themes from "../../themes.json" with { type: "json" };
 
 // Columns sent only when an option names them, as in a tooltip formatter
 // "{translation}": they hold long sequences the chart does not draw
@@ -50,6 +51,28 @@ function compactData(x) {
 }
 
 /**
+ * R's resolve_palette_names(): each colorScheme that names a geneviewer
+ * palette becomes its colours; D3 scheme names are left for the browser.
+ * @param {*} x
+ * @returns {*}
+ */
+function resolvePaletteNames(x) {
+  if (x instanceof Map) {
+    for (const [key, value] of x) x.set(key, resolvePaletteNames(value));
+    return x;
+  }
+  if (x === null || typeof x !== "object" || x instanceof Frame) return x;
+  for (const [key, value] of Object.entries(x)) {
+    if (key === "colorScheme" && typeof value === "string" && themes.palettes[value]) {
+      x[key] = themes.palettes[value].slice();
+    } else if (value !== null && typeof value === "object") {
+      x[key] = resolvePaletteNames(value);
+    }
+  }
+  return x;
+}
+
+/**
  * R's render_theme(): the widget's width, the theme in its form for the
  * browser, palette names as colours, and the data sent once.
  * @param {import("./chart.js").ChartState} state
@@ -58,6 +81,7 @@ function compactData(x) {
 export function renderTheme(state) {
   const x = state.x;
   x.size = { width: state.width };
+  resolvePaletteNames(x);
   compactData(x);
   return x;
 }
