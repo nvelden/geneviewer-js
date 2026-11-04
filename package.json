@@ -1,6 +1,6 @@
 {
   "name": "geneviewer-js",
-  "version": "0.2.0",
+  "version": "0.3.0-alpha.1",
   "description": "D3 rendering library shared by the geneviewer R and Python packages",
   "license": "MIT",
   "private": true,

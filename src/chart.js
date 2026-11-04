@@ -3,7 +3,7 @@
 // the global `geneviewer` with newChart(). Joined after geneviewer.js, whose
 // drawing functions it uses.
 (function () {
-var version = "0.2.0";
+var version = "0.3.0-alpha.1";
 // Shared by all chart instances, including ones removed and recreated.
 var renderSequence = 0;
 // Charts on elements without an id get one of their own for their parts' ids

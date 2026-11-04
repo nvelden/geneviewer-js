@@ -30,7 +30,10 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "${GITHUB_REF_NAME}" \
+          # A version such as 0.3.0-alpha.1 is a prerelease, not the latest
+          prerelease=""
+          case "${GITHUB_REF_NAME}" in *-*) prerelease="--prerelease" ;; esac
+          gh release create "${GITHUB_REF_NAME}" $prerelease \
             --title "${GITHUB_REF_NAME}" \
             --notes "Unminified geneviewer JavaScript. Verify downloads with SHA256SUMS." \
             dist/geneviewer.js \
