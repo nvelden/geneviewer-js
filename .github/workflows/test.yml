@@ -1,0 +1,21 @@
+name: Tests
+
+# Fixture and interaction tests in the Docker test image. The image runs
+# natively on arm64 (see docker/Dockerfile), hence the arm64 runner.
+on:
+  push:
+    branches: [main, "m*-*"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm test
