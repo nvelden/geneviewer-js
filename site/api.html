@@ -30,8 +30,9 @@
     <div class="notice planned">
       <p>
         <strong>Not available yet.</strong> Nothing on this page can be used
-        today. Names may still change before the first release, 0.1.0; after
-        that, changes follow semantic versioning. Track progress on
+        today. Names may still change until 1.0, which follows once the R and Python
+        packages are released on the library; from 1.0, changes follow
+        semantic versioning. Track progress on
         <a href="https://github.com/nvelden/geneviewer-js">GitHub</a>.
       </p>
     </div>
@@ -95,7 +96,7 @@
     <p>Other top-level functions:</p>
     <table>
       <tr><th>Name</th><th>Description</th></tr>
-      <tr><td><code>geneviewer.compile(spec)</code></td><td>Resolves a spec into what the renderer draws: clusters split, per-cluster settings, alignment and links applied, theme expanded. For tests and debugging.</td></tr>
+      <tr><td><code>geneviewer.compile(spec)</code></td><td>Resolves a spec into what the renderer draws: clusters split, per-cluster settings applied, theme expanded. For tests and debugging.</td></tr>
       <tr><td><code>geneviewer.themes</code></td><td>The built-in themes and their options.</td></tr>
       <tr><td><code>geneviewer.palettes</code></td><td>The built-in colour palettes.</td></tr>
       <tr><td><code>geneviewer.version</code></td><td>The library version.</td></tr>
@@ -120,7 +121,7 @@
   labels: { label: "name" },
   legend: { group: "class", position: "top" },
   colors: { Monooxygenase: "#1f77b4" },
-  links: { group: "class", measure: "identity" },
+  links: { data: homologs, measure: "identity" },
   zoom: { show: true },
   events: { select: true },
 }</code></pre>
@@ -168,9 +169,7 @@
       <tr><td><code>colors</code></td><td><code>GC_color</code></td><td>Colour per group, or a palette</td></tr>
       <tr><td><code>patterns</code></td><td><code>GC_pattern</code></td><td>Fill patterns per group</td></tr>
       <tr><td><code>elementStyles</code></td><td><code>GC_element_style</code></td><td>Styles for single genes, labels or legend entries</td></tr>
-      <tr><td><code>align</code></td><td><code>GC_align</code></td><td>Line clusters up on one gene</td></tr>
-      <tr><td><code>normalize</code></td><td><code>GC_normalize</code></td><td>Even out gene spacing</td></tr>
-      <tr><td><code>links</code></td><td><code>GC_links</code></td><td>Links between matching genes, or alignment blocks given as <code>links.data</code></td></tr>
+      <tr><td><code>links</code></td><td><code>GC_links</code></td><td>Links drawn from a table of pairs in <code>links.data</code>: matched genes or alignment blocks, made by R or Python</td></tr>
       <tr><td><code>zoom</code></td><td><code>GC_zoom</code>, <code>GC_zoom_to</code></td><td>Zoom slider and window</td></tr>
       <tr><td><code>toolbar</code></td><td><code>GC_toolbar</code></td><td>Toolbar buttons</td></tr>
       <tr><td><code>events</code></td><td><code>GC_events</code></td><td>Which interactions are on: click, select, highlight</td></tr>
@@ -259,9 +258,11 @@
     <p>
       The R and Python packages build a spec and call <code>newChart</code>,
       so a chart looks and behaves the same in R, Python and JavaScript. They
-      keep what needs a data-analysis language: reading GenBank, GFF, FASTA
-      and BED files, protein alignment and MUMmer. The results are gene and
-      link tables that go into the spec.
+      keep all loading and processing of data: reading GenBank, GFF, FASTA
+      and BED files, protein alignment and MUMmer, matching genes for links,
+      deriving introns, and aligning or normalising cluster positions. The
+      results are gene and link tables that go into the spec; the library
+      only draws them.
     </p>
   </main>
 

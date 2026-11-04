@@ -29,6 +29,34 @@ The build copies the sources unchanged and unminified, so the R package can
 ship readable source, as CRAN expects. D3 and FileSaver are not bundled; each
 host package ships them as separate dependencies with their own licences.
 
+## Trying a change in the Shiny app
+
+```sh
+npm run try-app               # build, start the app, run the app's tests
+npm run try-app -- --no-tests # build and start the app only
+```
+
+This runs the [geneviewer Shiny app](https://github.com/nvelden/geneviewer-shinylive)
+with the JavaScript from this repo:
+
+- **Isolated:** the R package is copied to a temporary folder and the built
+  files replace its JavaScript there, so neither the R repo nor your R library
+  changes.
+- **Tests:** the app starts at <http://127.0.0.1:4849/> and the app's
+  `tests/testthat` and `tests/browser` suites run against it. The browser
+  tests need `puppeteer`.
+- **Left running:** the app stays up afterwards so you can try it by hand; the
+  script prints the command that stops it.
+
+Set the two repo locations in a `.try-app.env` file (ignored by git):
+
+```sh
+GENEVIEWER_R_DIR="/path/to/geneviewer"
+GENEVIEWER_APP_DIR="/path/to/geneviewer-shinylive"
+```
+
+Set `PORT` to use a port other than 4849.
+
 ## Releases
 
 1. Bump `version` in `package.json`.
