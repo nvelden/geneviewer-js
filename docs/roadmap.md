@@ -238,7 +238,7 @@ Niels's approval before the milestone that introduces it closes.
 
 | # | Milestone | Difference | Reason | Approved |
 |---|-----------|------------|--------|----------|
-| | | | | |
+| 1 | M4 | A chart without a server reports clicks when `events.click` is on: `chart.on("click")` handlers and the `geneviewer:click` DOM event. With `events.highlight` also on, the element gets the hover highlight (`geneviewer-highlight`) in standalone R output too. | `chart.on("click")` is public API but fires only with `server: true` (Shiny), so JavaScript users never get clicks. | Niels, 2026-11-04 |
 
 ## Risks
 
