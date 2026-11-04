@@ -8,14 +8,15 @@ gene cluster charts with the same JavaScript.
 
 | File | What it is |
 |------|------------|
+| `src/index.js` | Entry of the bundle: what the global `geneviewer` holds |
 | `src/geneviewer.js` | Drawing functions: genes, links, labels, legends, scales, colour bars, SVG/PNG export |
 | `src/chart.js` | `geneviewer.newChart()`: the chart, with its toolbar, zoom, selection, drag and undo/redo |
 | `src/styles.css` | Chart styles |
 | `src/htmlwidgets/geneviewerwidget.js` | htmlwidgets binding used by the R package: calls `newChart` and sends events to Shiny |
 
-The build joins `geneviewer.js` and `chart.js` into `dist/geneviewer.js`. The
-files run as classic browser scripts and need the global `d3` (D3 7.8.5);
-the binding also needs `HTMLWidgets`.
+esbuild bundles the sources into `dist/geneviewer.js`, a classic browser
+script that defines the global `geneviewer` and needs the global `d3` (D3
+7.8.5); the binding also needs `HTMLWidgets`.
 
 ```js
 const chart = geneviewer.newChart(el, renderModel, { on: { select: (e) => console.log(e.detail) } });
@@ -34,8 +35,9 @@ npm run check   # syntax-check the sources
 npm run build   # write dist/ and dist/SHA256SUMS
 ```
 
-The build copies the sources unchanged and unminified, so the R package can
-ship readable source, as CRAN expects. D3 is not bundled; each host package
+`npm run build` needs the dev dependencies (`npm ci`). The bundle is not
+minified, so the R package can ship readable source, as CRAN expects;
+esbuild does drop the comments. D3 is not bundled; each host package
 ships it as a separate dependency with its own licence.
 
 ## Tests
