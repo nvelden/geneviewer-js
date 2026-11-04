@@ -1,0 +1,7 @@
+{
+  "id": "interaction-zoom-events",
+  "source": "charts",
+  "width": 1000,
+  "height": "300px",
+  "covers": ["GC_chart", "GC_events", "GC_labels", "GC_zoom"]
+}

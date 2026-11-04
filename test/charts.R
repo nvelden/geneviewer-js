@@ -115,3 +115,11 @@ GC_chart(ophA_clusters, group = "class", cluster = "cluster", height = "300px") 
 ## fixture: cov-zoom-no-overview
 GC_chart(ophA_clusters, group = "class", cluster = "cluster", height = "300px") %>%
   GC_zoom(range = c(0.3, 0.7), overview = FALSE)
+
+# Interaction tests (test/interaction/scenarios.cjs)
+
+## fixture: interaction-zoom-events
+GC_chart(ophA_clusters, group = "class", cluster = "cluster", height = "300px") %>%
+  GC_labels("name") %>%
+  GC_zoom() %>%
+  GC_events(zoom = TRUE)
