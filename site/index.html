@@ -109,7 +109,7 @@ GC_chart(ophA_clusters, group = "class", cluster = "cluster") %&gt;%
   data: genes,
   fields: { cluster: "cluster", start: "start", end: "end", group: "class" },
   labels: { label: "name" },
-  links: { group: "class", measure: "identity" },
+  links: { data: homologs, measure: "identity" },  // pairs of genes
 });</code></pre>
     <p>See the <a href="api.html">planned API</a>.</p>
 
@@ -122,12 +122,14 @@ GC_chart(ophA_clusters, group = "class", cluster = "cluster") %&gt;%
 
     <h2>Roadmap</h2>
     <ol>
-      <li><strong>Regression tests:</strong> reference charts exported from R, checked on every change.</li>
+      <li><strong>Reference fixtures:</strong> every R chart feature recorded as a test, checked on every change.</li>
       <li><strong>Library core:</strong> rendering and interaction moved out of the R binding into <code>newChart()</code>.</li>
-      <li><strong>Chart spec in JavaScript:</strong> splitting clusters, links, alignment and themes resolved by the library instead of R.</li>
-      <li><strong>First npm release:</strong> builds for script tags, bundlers and Python; TypeScript types; full API reference.</li>
-      <li><strong>R package</strong> switched to the library.</li>
-      <li><strong>Python package.</strong></li>
+      <li><strong>Modules and schema:</strong> the code split into modules; the chart spec defined as a JSON Schema.</li>
+      <li><strong>Chart spec in JavaScript:</strong> splitting clusters, per-cluster settings, layout and themes resolved by the library instead of R, matching R exactly. Data processing stays in R and Python.</li>
+      <li><strong>npm 0.3.0:</strong> builds for script tags and bundlers, TypeScript types and a full API reference.</li>
+      <li><strong>R package 0.3.0</strong> on the library, and the Gene Cluster Dashboard with it.</li>
+      <li><strong>Python package 0.1.0</strong> for Shiny for Python, with file readers and alignment.</li>
+      <li><strong>1.0.0</strong> once R and Python both use the library.</li>
     </ol>
     <p>
       Follow progress on
