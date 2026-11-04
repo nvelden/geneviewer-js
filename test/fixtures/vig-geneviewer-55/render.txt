@@ -1,0 +1,19 @@
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <svg class="geneviewer-svg-content" data-cluster="cluster" height="30" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 300 30" width="300">
+    <g data-component="genes" transform="translate(50, 5)">
+      <path class="gene" cluster="cluster" d="M0 0 L0 30 L21.9 30 L21.9 15 L21.9 0 Z" end="10" fill="#1b9e77" id="cluster-gene-0" rowID="1" start="1" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 3.84, 10) translate(3.84, -5)">
+      <path class="gene" cluster="cluster" d="M0 0 L0 30 L21.9 30 L21.9 15 L21.9 0 Z" end="20" fill="#d95f02" id="cluster-gene-1" rowID="2" start="11" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 28.18, 10) translate(28.18, -5)">
+      <path class="gene" cluster="cluster" d="M0 0 L0 30 L21.9 30 L21.9 15 L21.9 0 Z" end="30" fill="#7570b3" id="cluster-gene-2" rowID="3" start="21" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 52.51, 10) translate(52.51, -5)">
+      <path class="gene" cluster="cluster" d="M0 0 L0 30 L21.9 30 L21.9 15 L21.9 0 Z" end="40" fill="#e7298a" id="cluster-gene-3" rowID="4" start="31" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 76.84, 10) translate(76.84, -5)">
+      <path class="gene" cluster="cluster" d="M0 0 L0 30 L21.9 30 L21.9 15 L21.9 0 Z" end="50" fill="#66a61e" id="cluster-gene-4" rowID="5" start="41" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 101.18, 10) translate(101.18, -5)">
+      <path class="gene" cluster="cluster" d="M0 0 L0 30 L21.9 30 L21.9 15 L21.9 0 Z" end="60" fill="#e6ab02" id="cluster-gene-5" rowID="6" start="51" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 125.51, 10) translate(125.51, -5)">
+      <path class="gene" cluster="cluster" d="M0 0 L0 30 L21.9 30 L21.9 15 L21.9 0 Z" end="70" fill="#a6761d" id="cluster-gene-6" rowID="7" start="61" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 149.84, 10) translate(149.84, -5)">
+      <path class="gene" cluster="cluster" d="M0 0 L0 30 L21.9 30 L21.9 15 L21.9 0 Z" end="80" fill="#666666" id="cluster-gene-7" rowID="8" start="71" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 174.18, 10) translate(174.18, -5)">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <i aria-haspopup="menu" aria-label="Save chart" class="fa-solid fa-download geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"

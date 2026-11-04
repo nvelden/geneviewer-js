@@ -1,0 +1,51 @@
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <svg class="geneviewer-svg-content" data-cluster="cluster" height="140" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 140" width="1000">
+    <text data-component="clusterFooter" data-part="subtitle" style="cursor: default; font-family: sans-serif; font-size: 10px; font-style: normal; font-weight: normal" text-anchor="middle" transform="translate(0, 0)" x="500" y="97">
+      <tspan style="font-style: italic">
+        "Escherichia coli"
+      <tspan>
+        "str. K-12 substr. MG1655"
+    <g data-component="sequence" transform="translate(50,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="900" y1="65" y2="65">
+    <g data-component="genes" transform="translate(50, 5)">
+      <path class="gene" cluster="cluster" d="M0 7.5 L0 22.5 L74.42 22.5 L74.42 30 L84.42 15 L74.42 0 L74.42 7.5 Z" end="361860" fill="#1f77b4" id="cluster-gene-0" rowID="1" start="361249" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 17.3, 65) translate(17.3, 50)">
+      <path class="gene" cluster="cluster" d="M0 7.5 L0 22.5 L163.12 22.5 L163.12 30 L173.12 15 L163.12 0 L163.12 7.5 Z" end="363179" fill="#ff7f0e" id="cluster-gene-1" rowID="2" start="361926" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 110.84, 65) translate(110.84, 50)">
+      <path class="gene" cluster="cluster" d="M0 7.5 L0 22.5 L414.72 22.5 L414.72 30 L424.72 15 L414.72 0 L414.72 7.5 Z" end="366305" fill="#2ca02c" id="cluster-gene-2" rowID="3" start="363231" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 291.14, 65) translate(291.14, 50)">
+      <path class="gene" cluster="cluster" d="M0 7.5 L0 22.5 L139.49 22.5 L139.49 30 L149.49 15 L139.49 0 L139.49 7.5 Z" end="367510" fill="#d62728" id="cluster-gene-3" rowID="4" start="366428" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 732.86, 65) translate(732.86, 50)">
+    <g data-component="coordinates" transform="translate(50,5)">
+      <g fill="none" font-family="sans-serif" font-size="10" text-anchor="middle" transform="translate(0,61.1)">
+        <path class="domain" d="M0.5,-6V0.5H900.5V-6" stroke="none">
+      <g fill="none" font-family="sans-serif" font-size="10" text-anchor="middle" transform="translate(0,67.6)">
+        <path class="domain" d="M0.5,6V0.5H900.5V6" stroke="none">
+        <g class="tick" opacity="1" transform="translate(17.3,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="10">
+          <text class="coordinate" dx="-1.4em" dy="1.05em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(0)" y="9">
+            "361,249"
+        <g class="tick" opacity="1" transform="translate(882.35,0)">
+          <line stroke="currentColor" style="stroke-width: 1; stroke: black" y2="10">
+          <text class="coordinate" dx="-1.4em" dy="1.05em" fill="currentColor" style="cursor: default; fill: black; font-family: Arial; font-size: 10px; text-anchor: start" transform="rotate(0)" y="9">
+            "367,510"
+    <g data-component="labels" transform="translate(50,5)">
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-0" rowID="1" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 59.51, 43.5)" x="59.51" y="43.5">
+        "lacA"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-1" rowID="2" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 197.4, 43.5)" x="197.4" y="43.5">
+        "lacY"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-2" rowID="3" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 503.5, 43.5)" x="503.5" y="43.5">
+        "lacZ"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-3" rowID="4" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 807.61, 43.5)" x="807.61" y="43.5">
+        "lacI"
+    <g data-component="scaleBar" transform="translate(0, 0) translate(907.37, 135)">
+      <line style="stroke-width: 1; stroke: grey" x1="42.63" x2="15" y1="-30" y2="-30">
+      <line style="stroke-width: 1; stroke: grey" x1="15" x2="15" y1="-35" y2="-25">
+      <line style="stroke-width: 1; stroke: grey" x1="42.63" x2="42.63" y1="-35" y2="-25">
+      <text style="cursor: default; dominant-baseline: middle; fill: black; font-family: sans-serif; font-size: 10px; text-anchor: end" x="10" y="-30">
+        "0.2 kb"
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <i aria-haspopup="menu" aria-label="Save chart" class="fa-solid fa-download geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"

@@ -5,22 +5,24 @@ const { pathToFileURL } = require("node:url");
 const harness = pathToFileURL(path.join(__dirname, "index.html")).href;
 
 /**
- * @param {import("puppeteer").Browser} browser
+ * @param {import("playwright-core").Browser} browser
  * @param {object} payload  widget$x as exported from R
  * @param {{ width?: number, height: string }} meta
  * @returns {Promise<string>} canonical listing of the drawn chart
  */
 async function renderFixture(browser, payload, meta) {
-  const page = await browser.newPage();
+  const page = await browser.newPage({
+    viewport: { width: 1200, height: 900 },
+    deviceScaleFactor: 1,
+  });
   const errors = [];
   page.on("pageerror", (error) => errors.push(error.message));
   page.on("console", (message) => {
     if (message.type() === "error") errors.push("console: " + message.text());
   });
   try {
-    await page.setViewport({ width: 1200, height: 900, deviceScaleFactor: 1 });
     await page.goto(harness, { waitUntil: "load" });
-    const listing = await page.evaluate(async (payload, meta) => {
+    const listing = await page.evaluate(async ({ payload, meta }) => {
       const el = document.getElementById("chart");
       el.classList.add("html-widget", "geneviewer");
       el.style.width = (meta.width || 1000) + "px";
@@ -31,7 +33,7 @@ async function renderFixture(browser, payload, meta) {
       await document.fonts.ready;
       await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
       return normalizeChart(el);
-    }, payload, meta);
+    }, { payload, meta });
     if (errors.length) throw new Error(errors.join("\n"));
     return listing;
   } finally {

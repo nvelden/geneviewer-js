@@ -1,0 +1,166 @@
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <svg class="geneviewer-svg-content" data-cluster="HOXA" height="100" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 100" width="1000">
+    <text data-component="clusterLabel" data-part="title" dominant-baseline="central" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 12px; font-style: normal; font-weight: bold" text-anchor="middle" transform="translate(0, 0)" x="50" y="50">
+      <tspan class="wrap-line" dy="0em" x="50" y="50">
+        <tspan>
+          "HOXA"
+    <g data-component="sequence" transform="translate(100,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: rgb(238, 238, 238)" x1="0" x2="850" y1="45" y2="45">
+    <g data-component="genes" transform="translate(100, 5)">
+      <path class="gene" cluster="HOXA" d="M0 3 L0 7 Q0 10 3 10 L13.94 10 Q16.94 10 19.24 8.08 L20.63 6.92 Q22.94 5 20.63 3.08 L19.24 1.92 Q16.94 0 13.94 0 L3 0 Q0 0 0 3 Z" end="27092993" fill="#dd6b66" id="HOXA-gene-0" rowID="1" start="27096000" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 810.72, 45) translate(810.72, 40)">
+      <path class="gene" cluster="HOXA" d="M0 3 L0 7 Q0 10 3 10 L8.79 10 Q11.79 10 14.09 8.08 L15.48 6.92 Q17.79 5 15.48 3.08 L14.09 1.92 Q11.79 0 8.79 0 L3 0 Q0 0 0 3 Z" end="27100354" fill="#dd6b66" id="HOXA-gene-1" rowID="5" start="27102686" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 759.72, 45) translate(759.72, 40)">
+      <path class="gene" cluster="HOXA" d="M0 3 L0 7 Q0 10 3 10 L344.95 10 Q347.95 10 350.26 8.08 L351.65 6.92 Q353.95 5 351.65 3.08 L350.26 1.92 Q347.95 0 344.95 0 L3 0 Q0 0 0 3 Z" end="27106184" fill="#dd6b66" id="HOXA-gene-2" rowID="6" start="27152583" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 379.08, 45) translate(379.08, 40)">
+      <path class="gene" cluster="HOXA" d="M0 3 L0 7 Q0 10 3 10 L8.34 10 Q11.34 10 13.64 8.08 L15.03 6.92 Q17.34 5 15.03 3.08 L13.64 1.92 Q11.34 0 8.34 0 L3 0 Q0 0 0 3 Z" end="27128507" fill="#dd6b66" id="HOXA-gene-3" rowID="7" start="27130780" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 545.4, 60) translate(545.4, 55)">
+      <path class="gene" cluster="HOXA" d="M0 3 L0 7 Q0 10 3 10 L11.06 10 Q14.06 10 16.36 8.08 L17.75 6.92 Q20.06 5 17.75 3.08 L16.36 1.92 Q14.06 0 11.06 0 L3 0 Q0 0 0 3 Z" end="27141052" fill="#dd6b66" id="HOXA-gene-4" rowID="8" start="27143681" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 446.99, 60) translate(446.99, 55)">
+      <path class="gene" cluster="HOXA" d="M0 3 L0 7 Q0 10 3 10 L30.72 10 Q33.72 10 36.03 8.08 L37.42 6.92 Q39.72 5 37.42 3.08 L36.03 1.92 Q33.72 0 30.72 0 L3 0 Q0 0 0 3 Z" end="27145396" fill="#dd6b66" id="HOXA-gene-5" rowID="9" start="27150603" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 394.18, 60) translate(394.18, 55)">
+      <path class="gene" cluster="HOXA" d="M0 3 L0 7 Q0 10 3 10 L23.19 10 Q26.19 10 28.5 8.08 L29.89 6.92 Q32.19 5 29.89 3.08 L28.5 1.92 Q26.19 0 23.19 0 L3 0 Q0 0 0 3 Z" end="27153716" fill="#dd6b66" id="HOXA-gene-6" rowID="10" start="27157936" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 338.24, 45) translate(338.24, 40)">
+      <path class="gene" cluster="HOXA" d="M0 3 L0 7 Q0 10 3 10 L88.2 10 Q91.2 10 93.51 8.08 L94.9 6.92 Q97.2 5 94.9 3.08 L93.51 1.92 Q91.2 0 88.2 0 L3 0 Q0 0 0 3 Z" end="27162438" fill="#dd6b66" id="HOXA-gene-7" rowID="11" start="27175180" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 206.7, 60) translate(206.7, 55)">
+      <path class="gene" cluster="HOXA" d="M0 3 L0 7 Q0 10 3 10 L64.66 10 Q67.66 10 69.97 8.08 L71.36 6.92 Q73.66 5 71.36 3.08 L69.97 1.92 Q67.66 0 64.66 0 L3 0 Q0 0 0 3 Z" end="27170605" fill="#dd6b66" id="HOXA-gene-8" rowID="2" start="27180261" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 167.94, 45) translate(167.94, 40)">
+      <path class="gene" cluster="HOXA" d="M0 3 L0 7 Q0 10 3 10 L22.09 10 Q25.09 10 27.39 8.08 L28.78 6.92 Q31.09 5 28.78 3.08 L27.39 1.92 Q25.09 0 22.09 0 L3 0 Q0 0 0 3 Z" end="27181157" fill="#dd6b66" id="HOXA-gene-9" rowID="3" start="27185232" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 130.02, 45) translate(130.02, 40)">
+      <path class="gene" cluster="HOXA" d="M0 3 L0 7 Q0 10 3 10 L41.26 10 Q44.26 10 46.56 8.08 L47.95 6.92 Q50.26 5 47.95 3.08 L46.56 1.92 Q44.26 0 41.26 0 L3 0 Q0 0 0 3 Z" end="27193503" fill="#dd6b66" id="HOXA-gene-10" rowID="4" start="27200091" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 16.67, 45) translate(16.67, 40)">
+    <g data-component="labels" transform="translate(100,5)">
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXA-label-0" rowID="1" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 822.19, 35.5)" x="822.19" y="35.5">
+        "HOX1"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXA-label-1" rowID="5" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 768.61, 35.5)" x="768.61" y="35.5">
+        "HOX2"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXA-label-2" rowID="6" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 556.06, 35.5)" x="556.06" y="35.5">
+        "HOX3"
+      <text class="label" dominant-baseline="hanging" dx="0em" dy="0em" id="cluster-HOXA-label-3" rowID="7" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 554.07, 69.5)" x="554.07" y="69.5">
+        "HOX4"
+      <text class="label" dominant-baseline="hanging" dx="0em" dy="0em" id="cluster-HOXA-label-4" rowID="8" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 457.02, 69.5)" x="457.02" y="69.5">
+        "HOX5"
+      <text class="label" dominant-baseline="hanging" dx="0em" dy="0em" id="cluster-HOXA-label-5" rowID="9" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 414.04, 69.5)" x="414.04" y="69.5">
+        "HOX6"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXA-label-6" rowID="10" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 354.34, 35.5)" x="354.34" y="35.5">
+        "HOX7"
+      <text class="label" dominant-baseline="hanging" dx="0em" dy="0em" id="cluster-HOXA-label-7" rowID="11" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 255.3, 69.5)" x="255.3" y="69.5">
+        "HOX9"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXA-label-8" rowID="2" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 204.77, 35.5)" x="204.77" y="35.5">
+        "HOX10"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXA-label-9" rowID="3" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 145.56, 35.5)" x="145.56" y="35.5">
+        "HOX11"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXA-label-10" rowID="4" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 41.79, 35.5)" x="41.79" y="35.5">
+        "HOX13"
+  <svg class="geneviewer-svg-content" data-cluster="HOXB" height="100" id="svg-container-2" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 100" width="1000">
+    <text data-component="clusterLabel" data-part="title" dominant-baseline="central" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 12px; font-style: normal; font-weight: bold" text-anchor="middle" transform="translate(0, 0)" x="50" y="50">
+      <tspan class="wrap-line" dy="0em" x="50" y="50">
+        <tspan>
+          "HOXB"
+    <g data-component="sequence" transform="translate(100,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: rgb(238, 238, 238)" x1="0" x2="850" y1="45" y2="45">
+    <g data-component="genes" transform="translate(100, 5)">
+      <path class="gene" cluster="HOXB" d="M0 2.07 L0 7.93 Q0 10 2.07 10 L2.07 10 Q4.14 10 5.73 8.67 L7.84 6.92 Q10.14 5 7.84 3.08 L5.73 1.33 Q4.14 0 2.07 0 L2.07 0 Q0 0 0 2.07 Z" end="48528526" fill="#759aa0" id="HOXB-gene-0" rowID="12" start="48531011" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 823.52, 45) translate(823.52, 40)">
+      <path class="gene" cluster="HOXB" d="M0 3 L0 7 Q0 10 3 10 L8.2 10 Q11.2 10 13.5 8.08 L14.89 6.92 Q17.2 5 14.89 3.08 L13.5 1.92 Q11.2 0 8.2 0 L3 0 Q0 0 0 3 Z" end="48540894" fill="#759aa0" id="HOXB-gene-1" rowID="14" start="48545109" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 765.99, 45) translate(765.99, 40)">
+      <path class="gene" cluster="HOXB" d="M0 3 L0 7 Q0 10 3 10 L219.67 10 Q222.67 10 224.98 8.08 L226.37 6.92 Q228.67 5 226.37 3.08 L224.98 1.92 Q222.67 0 219.67 0 L3 0 Q0 0 0 3 Z" end="48548870" fill="#759aa0" id="HOXB-gene-2" rowID="15" start="48604912" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 521.97, 60) translate(521.97, 55)">
+      <path class="gene" cluster="HOXB" d="M0 2.8 L0 7.2 Q0 10 2.8 10 L2.8 10 Q5.6 10 7.75 8.21 L9.3 6.92 Q11.6 5 9.3 3.08 L7.75 1.79 Q5.6 0 2.8 0 L2.8 0 Q0 0 0 2.8 Z" end="48575507" fill="#759aa0" id="HOXB-gene-3" rowID="16" start="48578350" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 630.36, 45) translate(630.36, 40)">
+      <path class="gene" cluster="HOXB" d="M0 2.15 L0 7.85 Q0 10 2.15 10 L2.15 10 Q4.29 10 5.94 8.63 L7.99 6.92 Q10.29 5 7.99 3.08 L5.94 1.37 Q4.29 0 2.15 0 L2.15 0 Q0 0 0 2.15 Z" end="48591257" fill="#759aa0" id="HOXB-gene-4" rowID="17" start="48593779" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 567.4, 45) translate(567.4, 40)">
+      <path class="gene" cluster="HOXB" d="M0 3 L0 7 Q0 10 3 10 L28.71 10 Q31.71 10 34.01 8.08 L35.4 6.92 Q37.71 5 35.4 3.08 L34.01 1.92 Q31.71 0 28.71 0 L3 0 Q0 0 0 3 Z" end="48595751" fill="#759aa0" id="HOXB-gene-5" rowID="18" start="48604992" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 521.65, 45) translate(521.65, 40)">
+      <path class="gene" cluster="HOXB" d="M0 3 L0 7 Q0 10 3 10 L98.48 10 Q101.48 10 103.78 8.08 L105.17 6.92 Q107.48 5 105.17 3.08 L103.78 1.92 Q101.48 0 98.48 0 L3 0 Q0 0 0 3 Z" end="48607232" fill="#759aa0" id="HOXB-gene-6" rowID="19" start="48633572" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 405.03, 45) translate(405.03, 40)">
+      <path class="gene" cluster="HOXB" d="M0 3 L0 7 Q0 10 3 10 L6.97 10 Q9.97 10 12.28 8.08 L13.67 6.92 Q15.97 5 13.67 3.08 L12.28 1.92 Q9.97 0 6.97 0 L3 0 Q0 0 0 3 Z" end="48611377" fill="#759aa0" id="HOXB-gene-7" rowID="20" start="48615292" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 479.62, 60) translate(479.62, 55)">
+      <path class="gene" cluster="HOXB" d="M0 3 L0 7 Q0 10 3 10 L12.23 10 Q15.23 10 17.53 8.08 L18.92 6.92 Q21.23 5 18.92 3.08 L17.53 1.92 Q15.23 0 12.23 0 L3 0 Q0 0 0 3 Z" end="48621156" fill="#759aa0" id="HOXB-gene-8" rowID="21" start="48626358" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 434.47, 60) translate(434.47, 55)">
+      <path class="gene" cluster="HOXB" d="M0 3 L0 7 Q0 10 3 10 L7.27 10 Q10.27 10 12.57 8.08 L13.96 6.92 Q16.27 5 13.96 3.08 L12.57 1.92 Q10.27 0 7.27 0 L3 0 Q0 0 0 3 Z" end="48724763" fill="#759aa0" id="HOXB-gene-9" rowID="13" start="48728750" strand="reverse" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 16.67, 45) translate(16.67, 40)">
+    <g data-component="labels" transform="translate(100,5)">
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXB-label-0" rowID="12" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 828.59, 35.5)" x="828.59" y="35.5">
+        "HOX1"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXB-label-1" rowID="14" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 774.59, 35.5)" x="774.59" y="35.5">
+        "HOX2"
+      <text class="label" dominant-baseline="hanging" dx="0em" dy="0em" id="cluster-HOXB-label-2" rowID="15" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 636.31, 69.5)" x="636.31" y="69.5">
+        "HOX3"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXB-label-3" rowID="16" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 636.16, 35.5)" x="636.16" y="35.5">
+        "HOX4"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXB-label-4" rowID="17" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 572.55, 35.5)" x="572.55" y="35.5">
+        "HOX5"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXB-label-5" rowID="18" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 540.5, 35.5)" x="540.5" y="35.5">
+        "HOX6"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXB-label-6" rowID="19" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 458.77, 35.5)" x="458.77" y="35.5">
+        "HOX7"
+      <text class="label" dominant-baseline="hanging" dx="0em" dy="0em" id="cluster-HOXB-label-7" rowID="20" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 487.61, 69.5)" x="487.61" y="69.5">
+        "HOX8"
+      <text class="label" dominant-baseline="hanging" dx="0em" dy="0em" id="cluster-HOXB-label-8" rowID="21" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 445.08, 69.5)" x="445.08" y="69.5">
+        "HOX9"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXB-label-9" rowID="13" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 24.8, 35.5)" x="24.8" y="35.5">
+        "HOX13"
+  <svg class="geneviewer-svg-content" data-cluster="HOXC" height="100" id="svg-container-3" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 100" width="1000">
+    <text data-component="clusterLabel" data-part="title" dominant-baseline="central" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 12px; font-style: normal; font-weight: bold" text-anchor="middle" transform="translate(0, 0)" x="50" y="50">
+      <tspan class="wrap-line" dy="0em" x="50" y="50">
+        <tspan>
+          "HOXC"
+    <g data-component="sequence" transform="translate(100,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: rgb(238, 238, 238)" x1="0" x2="850" y1="45" y2="45">
+    <g data-component="genes" transform="translate(100, 5)">
+      <path class="gene" cluster="HOXC" d="M0 3 L0 7 Q0 10 3 10 L44.77 10 Q47.77 10 50.07 8.08 L51.46 6.92 Q53.77 5 51.46 3.08 L50.07 1.92 Q47.77 0 44.77 0 L3 0 Q0 0 0 3 Z" end="53946544" fill="#e69d87" id="HOXC-gene-0" rowID="25" start="53938831" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 16.34, 45) translate(16.34, 40)">
+      <path class="gene" cluster="HOXC" d="M0 3 L0 7 Q0 10 3 10 L19.25 10 Q22.25 10 24.56 8.08 L25.95 6.92 Q28.25 5 25.95 3.08 L24.56 1.92 Q22.25 0 19.25 0 L3 0 Q0 0 0 3 Z" end="53958956" fill="#e69d87" id="HOXC-gene-1" rowID="24" start="53954903" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 128.38, 45) translate(128.38, 40)">
+      <path class="gene" cluster="HOXC" d="M0 3 L0 7 Q0 10 3 10 L22.49 10 Q25.49 10 27.79 8.08 L29.18 6.92 Q31.49 5 29.18 3.08 L27.79 1.92 Q25.49 0 22.49 0 L3 0 Q0 0 0 3 Z" end="53977643" fill="#e69d87" id="HOXC-gene-2" rowID="23" start="53973126" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 255.41, 45) translate(255.41, 40)">
+      <path class="gene" cluster="HOXC" d="M0 3 L0 7 Q0 10 3 10 L27.35 10 Q30.35 10 32.65 8.08 L34.04 6.92 Q36.35 5 34.04 3.08 L32.65 1.92 Q30.35 0 27.35 0 L3 0 Q0 0 0 3 Z" end="53990279" fill="#e69d87" id="HOXC-gene-3" rowID="22" start="53985065" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 338.64, 45) translate(338.64, 40)">
+      <path class="gene" cluster="HOXC" d="M0 3 L0 7 Q0 10 3 10 L271.23 10 Q274.23 10 276.53 8.08 L277.92 6.92 Q280.23 5 277.92 3.08 L276.53 1.92 Q274.23 0 271.23 0 L3 0 Q0 0 0 3 Z" end="54030823" fill="#e69d87" id="HOXC-gene-4" rowID="28" start="53990624" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 377.39, 60) translate(377.39, 55)">
+      <path class="gene" cluster="HOXC" d="M0 3 L0 7 Q0 10 3 10 L49.85 10 Q52.85 10 55.15 8.08 L56.54 6.92 Q58.85 5 56.54 3.08 L55.15 1.92 Q52.85 0 49.85 0 L3 0 Q0 0 0 3 Z" end="54003337" fill="#e69d87" id="HOXC-gene-5" rowID="30" start="53994895" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 407.16, 45) translate(407.16, 40)">
+      <path class="gene" cluster="HOXC" d="M0 3 L0 7 Q0 10 3 10 L17.38 10 Q20.38 10 22.68 8.08 L24.07 6.92 Q26.38 5 24.07 3.08 L22.68 1.92 Q20.38 0 17.38 0 L3 0 Q0 0 0 3 Z" end="54012769" fill="#e69d87" id="HOXC-gene-6" rowID="29" start="54008985" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 505.38, 45) translate(505.38, 40)">
+      <path class="gene" cluster="HOXC" d="M0 3 L0 7 Q0 10 3 10 L263.56 10 Q266.56 10 268.86 8.08 L270.25 6.92 Q272.56 5 270.25 3.08 L268.86 1.92 Q266.56 0 263.56 0 L3 0 Q0 0 0 3 Z" end="54056030" fill="#e69d87" id="HOXC-gene-7" rowID="26" start="54016931" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 560.77, 45) translate(560.77, 40)">
+      <path class="gene" cluster="HOXC" d="M0 3 L0 7 Q0 10 3 10 L7.11 10 Q10.11 10 12.41 8.08 L13.81 6.92 Q16.11 5 13.81 3.08 L12.41 1.92 Q10.11 0 7.11 0 L3 0 Q0 0 0 3 Z" end="54035361" fill="#e69d87" id="HOXC-gene-8" rowID="27" start="54033050" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 673.14, 60) translate(673.14, 55)">
+    <g data-component="labels" transform="translate(100,5)">
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXC-label-0" rowID="25" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 43.22, 35.5)" x="43.22" y="35.5">
+        "HOX13"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXC-label-1" rowID="24" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 142.5, 35.5)" x="142.5" y="35.5">
+        "HOX12"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXC-label-2" rowID="23" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 271.15, 35.5)" x="271.15" y="35.5">
+        "HOX11"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXC-label-3" rowID="22" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 356.81, 35.5)" x="356.81" y="35.5">
+        "HOX10"
+      <text class="label" dominant-baseline="hanging" dx="0em" dy="0em" id="cluster-HOXC-label-4" rowID="28" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 517.5, 69.5)" x="517.5" y="69.5">
+        "HOX6"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXC-label-5" rowID="30" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 436.59, 35.5)" x="436.59" y="35.5">
+        "HOX9"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXC-label-6" rowID="29" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 518.57, 35.5)" x="518.57" y="35.5">
+        "HOX8"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXC-label-7" rowID="26" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 697.05, 35.5)" x="697.05" y="35.5">
+        "HOX4"
+      <text class="label" dominant-baseline="hanging" dx="0em" dy="0em" id="cluster-HOXC-label-8" rowID="27" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 681.19, 69.5)" x="681.19" y="69.5">
+        "HOX5"
+  <svg class="geneviewer-svg-content" data-cluster="HOXD" height="100" id="svg-container-4" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 100" width="1000">
+    <text data-component="clusterLabel" data-part="title" dominant-baseline="central" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 12px; font-style: normal; font-weight: bold" text-anchor="middle" transform="translate(0, 0)" x="50" y="50">
+      <tspan class="wrap-line" dy="0em" x="50" y="50">
+        <tspan>
+          "HOXD"
+    <g data-component="sequence" transform="translate(100,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: rgb(238, 238, 238)" x1="0" x2="850" y1="45" y2="45">
+    <g data-component="genes" transform="translate(100, 5)">
+      <path class="gene" cluster="HOXD" d="M0 3 L0 7 Q0 10 3 10 L17.82 10 Q20.82 10 23.12 8.08 L24.51 6.92 Q26.82 5 24.51 3.08 L23.12 1.92 Q20.82 0 17.82 0 L3 0 Q0 0 0 3 Z" end="176095944" fill="#8dc1a9" id="HOXD-gene-0" rowID="35" start="176092721" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 16.34, 45) translate(16.34, 40)">
+      <path class="gene" cluster="HOXD" d="M0 3 L0 7 Q0 10 3 10 L13.42 10 Q16.42 10 18.72 8.08 L20.11 6.92 Q22.42 5 20.11 3.08 L18.72 1.92 Q16.42 0 13.42 0 L3 0 Q0 0 0 3 Z" end="176102489" fill="#8dc1a9" id="HOXD-gene-1" rowID="34" start="176099795" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 75.2, 45) translate(75.2, 40)">
+      <path class="gene" cluster="HOXD" d="M0 3 L0 7 Q0 10 3 10 L37.08 10 Q40.08 10 42.39 8.08 L43.78 6.92 Q46.08 5 43.78 3.08 L42.39 1.92 Q40.08 0 37.08 0 L3 0 Q0 0 0 3 Z" end="176109754" fill="#8dc1a9" id="HOXD-gene-2" rowID="33" start="176104216" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 111.99, 60) translate(111.99, 55)">
+      <path class="gene" cluster="HOXD" d="M0 3 L0 7 Q0 10 3 10 L83.75 10 Q86.75 10 89.06 8.08 L90.45 6.92 Q92.75 5 90.45 3.08 L89.06 1.92 Q86.75 0 83.75 0 L3 0 Q0 0 0 3 Z" end="176119937" fill="#8dc1a9" id="HOXD-gene-3" rowID="32" start="176108790" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 150.05, 45) translate(150.05, 40)">
+      <path class="gene" cluster="HOXD" d="M0 3 L0 7 Q0 10 3 10 L9.46 10 Q12.46 10 14.76 8.08 L16.15 6.92 Q18.46 5 16.15 3.08 L14.76 1.92 Q12.46 0 9.46 0 L3 0 Q0 0 0 3 Z" end="176124937" fill="#8dc1a9" id="HOXD-gene-4" rowID="39" start="176122719" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 265.95, 45) translate(265.95, 40)">
+      <path class="gene" cluster="HOXD" d="M0 3 L0 7 Q0 10 3 10 L15.97 10 Q18.97 10 21.28 8.08 L22.67 6.92 Q24.97 5 22.67 3.08 L21.28 1.92 Q18.97 0 15.97 0 L3 0 Q0 0 0 3 Z" end="176132695" fill="#8dc1a9" id="HOXD-gene-5" rowID="38" start="176129694" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 323.99, 45) translate(323.99, 40)">
+      <path class="gene" cluster="HOXD" d="M0 3 L0 7 Q0 10 3 10 L294.63 10 Q297.63 10 299.93 8.08 L301.32 6.92 Q303.63 5 301.32 3.08 L299.93 1.92 Q297.63 0 294.63 0 L3 0 Q0 0 0 3 Z" end="176173102" fill="#8dc1a9" id="HOXD-gene-6" rowID="36" start="176136612" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 381.55, 45) translate(381.55, 40)">
+      <path class="gene" cluster="HOXD" d="M0 3 L0 7 Q0 10 3 10 L4.95 10 Q7.95 10 10.25 8.08 L11.64 6.92 Q13.95 5 11.64 3.08 L10.25 1.92 Q7.95 0 4.95 0 L3 0 Q0 0 0 3 Z" end="176153226" fill="#8dc1a9" id="HOXD-gene-7" rowID="37" start="176151550" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 505.85, 60) translate(505.85, 55)">
+      <path class="gene" cluster="HOXD" d="M0 3 L0 7 Q0 10 3 10 L9.63 10 Q12.63 10 14.94 8.08 L16.33 6.92 Q18.63 5 16.33 3.08 L14.94 1.92 Q12.63 0 9.63 0 L3 0 Q0 0 0 3 Z" end="176190907" fill="#8dc1a9" id="HOXD-gene-8" rowID="31" start="176188668" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" transform="rotate(0, 814.7, 45) translate(814.7, 40)">
+    <g data-component="labels" transform="translate(100,5)">
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXD-label-0" rowID="35" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 29.75, 35.5)" x="29.75" y="35.5">
+        "HOX13"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXD-label-1" rowID="34" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 86.41, 35.5)" x="86.41" y="35.5">
+        "HOX12"
+      <text class="label" dominant-baseline="hanging" dx="0em" dy="0em" id="cluster-HOXD-label-2" rowID="33" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 135.03, 69.5)" x="135.03" y="69.5">
+        "HOX11"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXD-label-3" rowID="32" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 196.42, 35.5)" x="196.42" y="35.5">
+        "HOX10"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXD-label-4" rowID="39" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 275.18, 35.5)" x="275.18" y="35.5">
+        "HOX9"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXD-label-5" rowID="38" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 336.47, 35.5)" x="336.47" y="35.5">
+        "HOX8"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXD-label-6" rowID="36" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 533.37, 35.5)" x="533.37" y="35.5">
+        "HOX3"
+      <text class="label" dominant-baseline="hanging" dx="0em" dy="0em" id="cluster-HOXD-label-7" rowID="37" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 512.82, 69.5)" x="512.82" y="69.5">
+        "HOX4"
+      <text class="label" dx="0em" dy="0em" id="cluster-HOXD-label-8" rowID="31" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 10px; font-style: normal" text-anchor="middle" transform="translate(0, 0) rotate(0, 824.02, 35.5)" x="824.02" y="35.5">
+        "HOX1"
+<div class="cluster-tooltip" style="--tooltip-bg: #ffffff; background-color: rgb(255, 255, 255); border-radius: 4px; border: 1px solid rgb(183, 185, 190); box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; color: rgb(109, 110, 115); font-family: sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div class="cluster-tooltip" style="--tooltip-bg: #ffffff; background-color: rgb(255, 255, 255); border-radius: 4px; border: 1px solid rgb(183, 185, 190); box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; color: rgb(109, 110, 115); font-family: sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div class="cluster-tooltip" style="--tooltip-bg: #ffffff; background-color: rgb(255, 255, 255); border-radius: 4px; border: 1px solid rgb(183, 185, 190); box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; color: rgb(109, 110, 115); font-family: sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div class="cluster-tooltip" style="--tooltip-bg: #ffffff; background-color: rgb(255, 255, 255); border-radius: 4px; border: 1px solid rgb(183, 185, 190); box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; color: rgb(109, 110, 115); font-family: sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar" style="--gv-toolbar-color: #999999; --gv-toolbar-font: sans-serif; --gv-toolbar-hover: #eeeeee; --gv-toolbar-tip-background: #ffffff; --gv-toolbar-tip-border: 1px solid #b7b9be; --gv-toolbar-tip-color: #6d6e73; --gv-toolbar-tip-radius: 4px; --gv-toolbar-tip-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2)">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <i aria-haspopup="menu" aria-label="Save chart" class="fa-solid fa-download geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"

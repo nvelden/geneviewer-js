@@ -187,20 +187,23 @@ dir.create("site/examples", recursive = TRUE, showWarnings = FALSE)
 for (example in examples) {
   code <- trimws(example$code)
   widget <- eval(parse(text = code))
-  if (any(unlist(htmlwidgets:::shouldEval(widget$x)))) {
+  # What htmlwidgets sends to the browser, after the widget's preRenderHook
+  sent <- htmlwidgets:::createPayload(widget)
+  if (length(sent$evals)) {
     stop(example$id, ": JavaScript functions in the payload are not supported.")
   }
   height <- widget$height
   if (is.numeric(height)) height <- paste0(height, "px")
-  out <- list(
+  meta <- list(
     id = example$id,
     title = example$title,
     description = example$description,
     code = code,
-    height = if (is.null(height)) "400px" else height,
-    x = widget$x
+    height = if (is.null(height)) "400px" else height
   )
-  json <- htmlwidgets:::toJSON(out)
+  # x is serialised on its own so htmlwidgets' JSON settings for it apply
+  json <- sub("}$", paste0(',"x":', htmlwidgets:::toJSON(sent$x), "}"),
+              jsonlite::toJSON(meta, auto_unbox = TRUE))
   writeLines(json, file.path("site/examples", paste0(example$id, ".json")), useBytes = TRUE)
   cat("wrote site/examples/", example$id, ".json\n", sep = "")
 }

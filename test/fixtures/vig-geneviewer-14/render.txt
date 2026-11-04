@@ -1,0 +1,146 @@
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <svg class="geneviewer-svg-content" data-cluster="SARS-CoV-2" height="160" id="svg-container-2" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 160" width="1000">
+    <svg class="geneviewer-zoom-clip" height="160" overflow="hidden" preserveAspectRatio="none" viewBox="50 0 900 160" width="900" x="50" y="0">
+      <g data-component="sequence" transform="translate(50,5)">
+        <line class="baseline" style="stroke-width: 1; stroke: grey" x1="-4394.12" x2="900" y1="75" y2="75">
+      <g data-component="genes" transform="translate(50, 5)">
+        <path class="gene" cluster="SARS-CoV-2" d="M0 7.5 L0 22.5 L34.93 22.5 L34.93 30 L44.93 15 L34.93 0 L34.93 7.5 Z" end="265" fill="#1f77b4" id="SARS-CoV-2-gene-0" rowID="1" start="1" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, -4292.35, 75) translate(-4292.35, 60)">
+        <path class="gene" cluster="SARS-CoV-2" d="M0 7.5 L0 22.5 L2236.64 22.5 L2236.64 30 L2246.64 15 L2236.64 0 L2236.64 7.5 Z" end="13468" fill="#ff7f0e" id="SARS-CoV-2-gene-1" rowID="2" start="266" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, -4247.25, 75) translate(-4247.25, 60)">
+        <path class="gene" cluster="SARS-CoV-2" d="M0 7.5 L0 22.5 L1366.2 22.5 L1366.2 30 L1376.2 15 L1366.2 0 L1366.2 7.5 Z" end="21555" fill="#2ca02c" id="SARS-CoV-2-gene-2" rowID="3" start="13468" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, -2000.61, 75) translate(-2000.61, 60)">
+        <path class="gene" cluster="SARS-CoV-2" d="M0 7.5 L0 22.5 L640.23 22.5 L640.23 30 L650.23 15 L640.23 0 L640.23 7.5 Z" end="25384" fill="#d62728" id="SARS-CoV-2-gene-3" rowID="4" start="21563" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, -623.06, 75) translate(-623.06, 60)">
+        <path class="gene" cluster="SARS-CoV-2" d="M0 7.5 L0 22.5 L130.73 22.5 L130.73 30 L140.73 15 L130.73 0 L130.73 7.5 Z" end="26220" fill="#9467bd" id="SARS-CoV-2-gene-4" rowID="5" start="25393" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 28.71, 75) translate(28.71, 60)">
+        <path class="gene" cluster="SARS-CoV-2" d="M0 0 L0 8 L11.27 8 L21.27 4 L11.27 0 Z" end="25582" fill="#9467bd" id="SARS-CoV-2-gene-5" rowID="6" start="25457" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 39.6, 145) translate(39.6, 141)">
+        <path class="gene" cluster="SARS-CoV-2" d="M0 0 L0 8 L19.44 8 L29.44 4 L19.44 0 Z" end="25697" fill="#9467bd" id="SARS-CoV-2-gene-6" rowID="7" start="25524" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 51, 110) translate(51, 106)">
+        <path class="gene" cluster="SARS-CoV-2" d="M0 0 L0 8 L1.57 8 L11.57 4 L1.57 0 Z" end="25882" fill="#9467bd" id="SARS-CoV-2-gene-7" rowID="8" start="25814" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 100.35, 110) translate(100.35, 106)">
+        <path class="gene" cluster="SARS-CoV-2" d="M0 7.5 L0 22.5 L28.63 22.5 L28.63 30 L38.63 15 L28.63 0 L28.63 7.5 Z" end="26472" fill="#8c564b" id="SARS-CoV-2-gene-8" rowID="9" start="26245" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 173.7, 75) translate(173.7, 60)">
+        <path class="gene" cluster="SARS-CoV-2" d="M0 7.5 L0 22.5 L103.68 22.5 L103.68 30 L113.68 15 L103.68 0 L103.68 7.5 Z" end="27191" fill="#e377c2" id="SARS-CoV-2-gene-9" rowID="10" start="26523" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 221.01, 75) translate(221.01, 60)">
+        <path class="gene" cluster="SARS-CoV-2" d="M0 7.5 L0 22.5 L21.48 22.5 L21.48 30 L31.48 15 L21.48 0 L21.48 7.5 Z" end="27387" fill="#9467bd" id="SARS-CoV-2-gene-10" rowID="11" start="27202" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 336.55, 75) translate(336.55, 60)">
+        <path class="gene" cluster="SARS-CoV-2" d="M0 7.5 L0 22.5 L52.11 22.5 L52.11 30 L62.11 15 L52.11 0 L52.11 7.5 Z" end="27759" fill="#9467bd" id="SARS-CoV-2-gene-11" rowID="12" start="27394" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 369.23, 75) translate(369.23, 60)">
+        <path class="gene" cluster="SARS-CoV-2" d="M0 7.5 L0 22.5 L12.29 22.5 L12.29 30 L22.29 15 L12.29 0 L12.29 7.5 Z" end="27887" fill="#9467bd" id="SARS-CoV-2-gene-12" rowID="13" start="27756" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 430.83, 75) translate(430.83, 60)">
+        <path class="gene" cluster="SARS-CoV-2" d="M0 7.5 L0 22.5 L52.11 22.5 L52.11 30 L62.11 15 L52.11 0 L52.11 7.5 Z" end="28259" fill="#9467bd" id="SARS-CoV-2-gene-13" rowID="14" start="27894" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 454.31, 75) translate(454.31, 60)">
+        <path class="gene" cluster="SARS-CoV-2" d="M0 7.5 L0 22.5 L204.25 22.5 L204.25 30 L214.25 15 L204.25 0 L204.25 7.5 Z" end="29533" fill="#7f7f7f" id="SARS-CoV-2-gene-14" rowID="15" start="28274" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 518.98, 75) translate(518.98, 60)">
+        <path class="gene" cluster="SARS-CoV-2" d="M0 0 L0 8 L39.86 8 L49.86 4 L39.86 0 Z" end="28577" fill="#9467bd" id="SARS-CoV-2-gene-15" rowID="16" start="28284" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 520.68, 110) translate(520.68, 106)">
+        <path class="gene" cluster="SARS-CoV-2" d="M0 0 L0 8 L27.61 8 L37.61 4 L27.61 0 Z" end="28955" fill="#9467bd" id="SARS-CoV-2-gene-16" rowID="17" start="28734" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 597.26, 110) translate(597.26, 106)">
+        <path class="gene" cluster="SARS-CoV-2" d="M0 7.5 L0 22.5 L9.74 22.5 L9.74 30 L19.74 15 L9.74 0 L9.74 7.5 Z" end="29674" fill="#9467bd" id="SARS-CoV-2-gene-17" rowID="18" start="29558" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 737.48, 75) translate(737.48, 60)">
+        <path class="gene" cluster="SARS-CoV-2" d="M0 7.5 L0 22.5 L28.8 22.5 L28.8 30 L38.8 15 L28.8 0 L28.8 7.5 Z" end="29903" fill="#bcbd22" id="SARS-CoV-2-gene-18" rowID="19" start="29675" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 757.39, 75) translate(757.39, 60)">
+      <g data-component="labels" transform="translate(50,5)">
+        <text class="label" dx="0em" dy="0em" id="cluster-SARS-CoV-2-label-0" rowID="1" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, -4269.88, 52.5)" x="-4269.88" y="52.5">
+          "L"
+        <text class="label" dx="0em" dy="0em" id="cluster-SARS-CoV-2-label-1" rowID="2" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, -3123.93, 52.5)" x="-3123.93" y="52.5">
+          "ORF1a"
+        <text class="label" dx="0em" dy="0em" id="cluster-SARS-CoV-2-label-2" rowID="3" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, -1312.52, 52.5)" x="-1312.52" y="52.5">
+          "ORF1b"
+        <text class="label" dx="0em" dy="0em" id="cluster-SARS-CoV-2-label-3" rowID="4" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, -297.94, 52.5)" x="-297.94" y="52.5">
+          "S"
+        <text class="label" dx="0em" dy="0em" id="cluster-SARS-CoV-2-label-4" rowID="5" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 99.08, 52.5)" x="99.08" y="52.5">
+          "3a"
+        <text class="label" dominant-baseline="hanging" dx="0em" dy="0em" id="cluster-SARS-CoV-2-label-5" rowID="6" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 50.24, 167.5)" x="50.24" y="167.5">
+          "3c"
+        <text class="label" dominant-baseline="hanging" dx="0em" dy="0em" id="cluster-SARS-CoV-2-label-6" rowID="7" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 65.72, 132.5)" x="65.72" y="132.5">
+          "3d"
+        <text class="label" dominant-baseline="hanging" dx="0em" dy="0em" id="cluster-SARS-CoV-2-label-7" rowID="8" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 106.14, 132.5)" x="106.14" y="132.5">
+          "3b"
+        <text class="label" dx="0em" dy="0em" id="cluster-SARS-CoV-2-label-8" rowID="9" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 193.01, 52.5)" x="193.01" y="52.5">
+          "E"
+        <text class="label" dx="0em" dy="0em" id="cluster-SARS-CoV-2-label-9" rowID="10" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 277.84, 52.5)" x="277.84" y="52.5">
+          "M"
+        <text class="label" dx="0em" dy="0em" id="cluster-SARS-CoV-2-label-10" rowID="11" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 352.3, 52.5)" x="352.3" y="52.5">
+          "6"
+        <text class="label" dx="0em" dy="0em" id="cluster-SARS-CoV-2-label-11" rowID="12" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 400.28, 52.5)" x="400.28" y="52.5">
+          "7a"
+        <text class="label" dx="0em" dy="0em" id="cluster-SARS-CoV-2-label-12" rowID="13" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 441.98, 52.5)" x="441.98" y="52.5">
+          "7b"
+        <text class="label" dx="0em" dy="0em" id="cluster-SARS-CoV-2-label-13" rowID="14" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 485.37, 52.5)" x="485.37" y="52.5">
+          "8"
+        <text class="label" dx="0em" dy="0em" id="cluster-SARS-CoV-2-label-14" rowID="15" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 626.1, 52.5)" x="626.1" y="52.5">
+          "N"
+        <text class="label" dominant-baseline="hanging" dx="0em" dy="0em" id="cluster-SARS-CoV-2-label-15" rowID="16" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 545.61, 132.5)" x="545.61" y="132.5">
+          "9b"
+        <text class="label" dominant-baseline="hanging" dx="0em" dy="0em" id="cluster-SARS-CoV-2-label-16" rowID="17" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 616.06, 132.5)" x="616.06" y="132.5">
+          "9c"
+        <text class="label" dx="0em" dy="0em" id="cluster-SARS-CoV-2-label-17" rowID="18" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 747.35, 52.5)" x="747.35" y="52.5">
+          "10"
+        <text class="label" dx="0em" dy="0em" id="cluster-SARS-CoV-2-label-18" rowID="19" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 776.79, 52.5)" x="776.79" y="52.5">
+          "3'UTR"
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div class="geneviewer-zoom-row" style="height: 24px">
+  <div aria-label="Zoom" class="geneviewer-zoom-slider" role="group" style="left: 50px; width: 900px">
+    <svg aria-hidden="true" class="geneviewer-zoom-overview" preserveAspectRatio="none" viewBox="0 0 1000 24">
+      <rect fill="#1f77b4" height="8" width="8.49" x="19.22" y="8">
+      <rect fill="#ff7f0e" height="8" width="424.36" x="27.74" y="8">
+      <rect fill="#2ca02c" height="8" width="259.95" x="452.11" y="8">
+      <rect fill="#d62728" height="8" width="122.82" x="712.31" y="8">
+      <rect fill="#9467bd" height="8" width="26.58" x="835.42" y="8">
+      <rect fill="#9467bd" height="8" width="4.02" x="837.48" y="8">
+      <rect fill="#9467bd" height="8" width="5.56" x="839.63" y="8">
+      <rect fill="#9467bd" height="8" width="2.19" x="848.96" y="8">
+      <rect fill="#8c564b" height="8" width="7.3" x="862.81" y="8">
+      <rect fill="#e377c2" height="8" width="21.47" x="871.75" y="8">
+      <rect fill="#9467bd" height="8" width="5.95" x="893.57" y="8">
+      <rect fill="#9467bd" height="8" width="11.73" x="899.74" y="8">
+      <rect fill="#9467bd" height="8" width="4.21" x="911.38" y="8">
+      <rect fill="#9467bd" height="8" width="11.73" x="915.81" y="8">
+      <rect fill="#7f7f7f" height="8" width="40.47" x="928.03" y="8">
+      <rect fill="#9467bd" height="8" width="9.42" x="928.35" y="8">
+      <rect fill="#9467bd" height="8" width="7.1" x="942.82" y="8">
+      <rect fill="#9467bd" height="8" width="3.73" x="969.3" y="8">
+      <rect fill="#bcbd22" height="8" width="7.33" x="973.06" y="8">
+    <div class="geneviewer-zoom-shade" data-side="start" style="width: 83%">
+    <div class="geneviewer-zoom-shade" data-side="end" style="left: 100%">
+    <div aria-label="Zoom window" aria-valuemax="100" aria-valuemin="0" aria-valuenow="83" aria-valuetext="83% to 100%" class="geneviewer-zoom-window" data-zoom-part="window" role="slider" style="left: 83%; width: 17%" tabindex="0">
+    <div aria-label="Zoom start" aria-valuemax="100" aria-valuemin="0" aria-valuenow="83" aria-valuetext="83%" class="geneviewer-zoom-handle" data-zoom-part="start" role="slider" style="left: 83%" tabindex="0">
+    <div aria-label="Zoom end" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" aria-valuetext="100%" class="geneviewer-zoom-handle" data-zoom-part="end" role="slider" style="left: 100%" tabindex="0">
+<div class="geneviewer-container" id="geneviewer-legend-container-chart">
+  <svg class="geneviewer-svg-content" height="38" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 38" width="1000">
+    <g data-component="legend" transform="translate(50, 15)">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-0" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="18" y="6">
+          "5' UTR"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-0" rx="0" style="cursor: pointer; fill: rgb(31, 119, 180)" transform="translate(0, 0)" width="12" x="0" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-1" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="78.97" y="6">
+          "ORF1a"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-1" rx="0" style="cursor: pointer; fill: rgb(255, 127, 14)" transform="translate(0, 0)" width="12" x="60.97" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-2" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="141.66" y="6">
+          "ORF1b"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-2" rx="0" style="cursor: pointer; fill: rgb(44, 160, 44)" transform="translate(0, 0)" width="12" x="123.66" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-3" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="204.34" y="6">
+          "spike"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-3" rx="0" style="cursor: pointer; fill: rgb(214, 39, 40)" transform="translate(0, 0)" width="12" x="186.34" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-4" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="256.36" y="6">
+          "accessory"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-4" rx="0" style="cursor: pointer; fill: rgb(148, 103, 189)" transform="translate(0, 0)" width="12" x="238.36" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-5" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="334.39" y="6">
+          "envelope"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-5" rx="0" style="cursor: pointer; fill: rgb(140, 86, 75)" transform="translate(0, 0)" width="12" x="316.39" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-6" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="407.11" y="6">
+          "membrane"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-6" rx="0" style="cursor: pointer; fill: rgb(227, 119, 194)" transform="translate(0, 0)" width="12" x="389.11" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-7" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="488.47" y="6">
+          "nucleocapsid"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-7" rx="0" style="cursor: pointer; fill: rgb(127, 127, 127)" transform="translate(0, 0)" width="12" x="470.47" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-8" style="cursor: pointer; font-family: sans-serif; font-size: 12px; text-anchor: start" transform="translate(0, 0)" x="582.53" y="6">
+          "3' UTR"
+        <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-8" rx="0" style="cursor: pointer; fill: rgb(188, 189, 34)" transform="translate(0, 0)" width="12" x="564.53" y="0">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar">
+  <div aria-label="Zoom" class="geneviewer-history geneviewer-zoom-buttons" role="group">
+    <button aria-label="Reset zoom" class="geneviewer-toolbar-button geneviewer-zoom" type="button">
+      <i aria-hidden="true" class="fa-solid fa-magnifying-glass-minus">
+      <span aria-hidden="true" class="geneviewer-toolbar-tip">
+        <span>
+          "Reset zoom"
+    <span class="geneviewer-toolbar-divider">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <i aria-haspopup="menu" aria-label="Save chart" class="fa-solid fa-download geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"

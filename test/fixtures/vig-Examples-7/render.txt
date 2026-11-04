@@ -1,0 +1,176 @@
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <div style="height: 100%; position: relative; width: 100%">
+    <svg class="GeneLink" height="259" style="position: absolute; z-index: 1" width="1000">
+      <path class="GeneLink" d="M710.28,88.75C710.28,153.5,125.66,153.5,125.66,218.25L132.74,218.25C132.74,153.5,718.94,153.5,718.94,88.75Z" data-component="links" style="fill-opacity: 0.8; fill: rgb(150, 150, 150); stroke: none">
+      <path class="GeneLink" d="M621.93,88.75C621.93,153.5,200.25,153.5,200.25,218.25L217.72,218.25C217.72,153.5,599.98,153.5,599.98,88.75Z" data-component="links" style="fill-opacity: 0.8; fill: rgb(150, 150, 150); stroke: none">
+      <path class="GeneLink" d="M134.61,88.75C134.61,153.5,290.85,153.5,290.85,218.25L300.99,218.25C300.99,153.5,146.17,153.5,146.17,88.75Z" data-component="links" style="fill-opacity: 0.8; fill: rgb(150, 150, 150); stroke: none">
+      <path class="GeneLink" d="M487.31,88.75C487.31,153.5,290.85,153.5,290.85,218.25L300.99,218.25C300.99,153.5,499.58,153.5,499.58,88.75Z" data-component="links" style="fill-opacity: 0.8; fill: rgb(150, 150, 150); stroke: none">
+      <path class="GeneLink" d="M434.1,88.75C434.1,153.5,341.24,153.5,341.24,218.25L349.2,218.25C349.2,153.5,429.11,153.5,429.11,88.75Z" data-component="links" style="fill-opacity: 0.8; fill: rgb(150, 150, 150); stroke: none">
+      <path class="GeneLink" d="M360.62,88.75C360.62,153.5,383.08,153.5,383.08,218.25L391.38,218.25C391.38,153.5,369.64,153.5,369.64,88.75Z" data-component="links" style="fill-opacity: 0.8; fill: rgb(150, 150, 150); stroke: none">
+      <path class="GeneLink" d="M134.61,88.75C134.61,153.5,481.34,153.5,481.34,218.25L493.36,218.25C493.36,153.5,146.17,153.5,146.17,88.75Z" data-component="links" style="fill-opacity: 0.8; fill: rgb(150, 150, 150); stroke: none">
+      <path class="GeneLink" d="M487.31,88.75C487.31,153.5,481.34,153.5,481.34,218.25L493.36,218.25C493.36,153.5,499.58,153.5,499.58,88.75Z" data-component="links" style="fill-opacity: 0.8; fill: rgb(150, 150, 150); stroke: none">
+      <path class="GeneLink" d="M434.1,88.75C434.1,153.5,539.13,153.5,539.13,218.25L546.36,218.25C546.36,153.5,429.11,153.5,429.11,88.75Z" data-component="links" style="fill-opacity: 0.8; fill: rgb(150, 150, 150); stroke: none">
+      <path class="GeneLink" d="M195.08,88.75C195.08,153.5,590.86,153.5,590.86,218.25L593.64,218.25C593.64,153.5,191.33,153.5,191.33,88.75Z" data-component="links" style="fill-opacity: 0.8; fill: rgb(150, 150, 150); stroke: none">
+      <path class="GeneLink" d="M134.61,88.75C134.61,153.5,632.06,153.5,632.06,218.25L644.57,218.25C644.57,153.5,146.17,153.5,146.17,88.75Z" data-component="links" style="fill-opacity: 0.8; fill: rgb(150, 150, 150); stroke: none">
+      <path class="GeneLink" d="M487.31,88.75C487.31,153.5,632.06,153.5,632.06,218.25L644.57,218.25C644.57,153.5,499.58,153.5,499.58,88.75Z" data-component="links" style="fill-opacity: 0.8; fill: rgb(150, 150, 150); stroke: none">
+      <path class="GeneLink" d="M134.61,88.75C134.61,153.5,700.98,153.5,700.98,218.25L712.74,218.25C712.74,153.5,146.17,153.5,146.17,88.75Z" data-component="links" style="fill-opacity: 0.8; fill: rgb(150, 150, 150); stroke: none">
+      <path class="GeneLink" d="M487.31,88.75C487.31,153.5,700.98,153.5,700.98,218.25L712.74,218.25C712.74,153.5,499.58,153.5,499.58,88.75Z" data-component="links" style="fill-opacity: 0.8; fill: rgb(150, 150, 150); stroke: none">
+      <path class="GeneLink" d="M342.59,88.75C342.59,153.5,366.48,153.5,366.48,218.25L407.99,218.25C407.99,153.5,387.67,153.5,387.67,88.75Z" data-component="links" style="fill-opacity: 0.8; fill: rgb(44, 160, 44); stroke-width: 2; stroke: black">
+      <g class="link-measure-labels">
+  <svg class="geneviewer-svg-content" data-cluster="ophA" height="179.5" id="svg-container-2" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; cursor: crosshair; width: 100%" viewBox="0 0 800 179.5" width="800">
+    <text data-component="clusterLabel" data-part="title" dominant-baseline="central" style="cursor: crosshair !important; font-family: sans-serif; font-size: 12px; font-style: normal; font-weight: bold" text-anchor="middle" transform="translate(0, 0)" x="50" y="89.75">
+      <tspan style="cursor: crosshair !important; font-style: italic; font-weight: bold">
+        "O."
+      <tspan style="cursor: crosshair !important; font-style: normal; font-weight: bold">
+      <tspan style="cursor: crosshair !important; font-style: italic; font-weight: bold">
+        "olearius"
+    <g data-component="sequence" style="cursor: crosshair !important" transform="translate(100,5)">
+      <line class="baseline" style="cursor: crosshair !important; stroke-width: 1; stroke: grey" x1="0" x2="650" y1="84.75" y2="84.75">
+    <g data-component="genes" style="cursor: crosshair !important" transform="translate(100, 5)">
+      <path class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L47.79 22.5 L47.79 30 L57.79 15 L47.79 0 L47.79 7.5 Z" end="4276" fill="#1f77b4" id="ophA-gene-0" rowID="1" start="2522" strand="forward" style="cursor: crosshair !important; stroke-width: 1; stroke: black" transform="rotate(0, 12.5, 84.75) translate(12.5, 69.75)">
+      <path class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L8.71 22.5 L8.71 30 L18.71 15 L8.71 0 L8.71 7.5 Z" end="4718" fill="#ff7f0e" id="ophA-gene-1" rowID="2" start="5286" strand="reverse" style="cursor: crosshair !important; stroke-width: 1; stroke: black" transform="rotate(180, 103.56, 84.75) translate(103.56, 69.75)">
+      <path class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L35.07 22.5 L35.07 30 L45.07 15 L35.07 0 L35.07 7.5 Z" end="10904" fill="#2ca02c" id="ophA-gene-2" rowID="3" start="9536" strand="forward" style="cursor: crosshair !important; stroke-width: 1; stroke: black" transform="rotate(0, 243.59, 84.75) translate(243.59, 69.75)">
+      <path class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L14.94 22.5 L14.94 30 L24.94 15 L14.94 0 L14.94 7.5 Z" end="11859" fill="#d62728" id="ophA-gene-3" rowID="4" start="12616" strand="reverse" style="cursor: crosshair !important; stroke-width: 1; stroke: black" transform="rotate(180, 345.07, 84.75) translate(345.07, 69.75)">
+      <path class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L51.38 22.5 L51.38 30 L61.38 15 L51.38 0 L51.38 7.5 Z" end="15046" fill="#1f77b4" id="ophA-gene-4" rowID="5" start="13183" strand="forward" style="cursor: crosshair !important; stroke-width: 1; stroke: black" transform="rotate(0, 363.75, 84.75) translate(363.75, 69.75)">
+      <path class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L99.72 22.5 L99.72 30 L109.72 15 L99.72 0 L99.72 7.5 Z" end="16016" fill="#9467bd" id="ophA-gene-5" rowID="6" start="19346" strand="reverse" style="cursor: crosshair !important; stroke-width: 1; stroke: black" transform="rotate(180, 566.81, 84.75) translate(566.81, 69.75)">
+      <path class="gene" cluster="ophA" d="M0 7.5 L0 22.5 L33.29 22.5 L33.29 30 L43.29 15 L33.29 0 L33.29 7.5 Z" end="21484" fill="#8c564b" id="ophA-gene-6" rowID="7" start="20170" strand="forward" style="cursor: crosshair !important; stroke-width: 1; stroke: black" transform="rotate(0, 593.96, 84.75) translate(593.96, 69.75)">
+    <g data-component="links" style="cursor: crosshair !important" transform="translate(100, 5)">
+      <circle class="link-marker" cluster="ophA" cx="611.28" cy="84.75" groupColor="#8c564b" linkID="0-1" position="20170" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="619.94" cy="84.75" groupColor="#8c564b" linkID="0-1" position="21484" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="522.93" cy="84.75" groupColor="#9467bd" linkID="0-2" position="19346" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="500.98" cy="84.75" groupColor="#9467bd" linkID="0-2" position="16016" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="35.61" cy="84.75" groupColor="#1f77b4" linkID="0-3" position="2522" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="47.17" cy="84.75" groupColor="#1f77b4" linkID="0-3" position="4276" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="388.31" cy="84.75" groupColor="#1f77b4" linkID="0-4" position="13183" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="400.58" cy="84.75" groupColor="#1f77b4" linkID="0-4" position="15046" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="335.1" cy="84.75" groupColor="#d62728" linkID="0-5" position="12616" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="330.11" cy="84.75" groupColor="#d62728" linkID="0-5" position="11859" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="261.62" cy="84.75" groupColor="#2ca02c" linkID="0-6" position="9536" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="270.64" cy="84.75" groupColor="#2ca02c" linkID="0-6" position="10904" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="35.61" cy="84.75" groupColor="#1f77b4" linkID="0-7" position="2522" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="47.17" cy="84.75" groupColor="#1f77b4" linkID="0-7" position="4276" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="388.31" cy="84.75" groupColor="#1f77b4" linkID="0-8" position="13183" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="400.58" cy="84.75" groupColor="#1f77b4" linkID="0-8" position="15046" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="335.1" cy="84.75" groupColor="#d62728" linkID="0-9" position="12616" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="330.11" cy="84.75" groupColor="#d62728" linkID="0-9" position="11859" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="96.08" cy="84.75" groupColor="#ff7f0e" linkID="0-10" position="5286" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="92.33" cy="84.75" groupColor="#ff7f0e" linkID="0-10" position="4718" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="35.61" cy="84.75" groupColor="#1f77b4" linkID="0-11" position="2522" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="47.17" cy="84.75" groupColor="#1f77b4" linkID="0-11" position="4276" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="388.31" cy="84.75" groupColor="#1f77b4" linkID="0-12" position="13183" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="400.58" cy="84.75" groupColor="#1f77b4" linkID="0-12" position="15046" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="35.61" cy="84.75" groupColor="#1f77b4" linkID="0-13" position="2522" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="47.17" cy="84.75" groupColor="#1f77b4" linkID="0-13" position="4276" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="388.31" cy="84.75" groupColor="#1f77b4" linkID="0-14" position="13183" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="400.58" cy="84.75" groupColor="#1f77b4" linkID="0-14" position="15046" r="1" style="cursor: crosshair !important" visibility="hidden">
+    <g data-component="links" style="cursor: crosshair !important" transform="translate(100, 5)">
+      <circle class="link-marker" cluster="ophA" cx="243.59" cy="84.75" groupColor="#2ca02c" linkID="1-1" position="9536" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="ophA" cx="288.67" cy="84.75" groupColor="#2ca02c" linkID="1-1" position="10904" r="1" style="cursor: crosshair !important" visibility="hidden">
+    <g data-component="labels" style="cursor: crosshair !important" transform="translate(100,5)">
+      <text class="label" dx="0em" dy="0em" id="cluster-ophA-label-0" rowID="1" style="cursor: crosshair !important; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 41.39, 61.27)" x="41.39" y="61.27">
+        "ophB1"
+      <text class="label" dx="0em" dy="0em" id="cluster-ophA-label-1" rowID="2" style="cursor: crosshair !important; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 94.21, 61.27)" x="94.21" y="61.27">
+        "ophC"
+      <text class="label" dx="0em" dy="0em" id="cluster-ophA-label-2" rowID="3" style="cursor: crosshair !important; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 266.13, 61.27)" x="266.13" y="61.27">
+        "ophA"
+      <text class="label" dx="0em" dy="0em" id="cluster-ophA-label-3" rowID="4" style="cursor: crosshair !important; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 332.6, 61.27)" x="332.6" y="61.27">
+        "ophD"
+      <text class="label" dx="0em" dy="0em" id="cluster-ophA-label-4" rowID="5" style="cursor: crosshair !important; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 394.44, 61.27)" x="394.44" y="61.27">
+        "ophB2"
+      <text class="label" dx="0em" dy="0em" id="cluster-ophA-label-5" rowID="6" style="cursor: crosshair !important; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 511.95, 61.27)" x="511.95" y="61.27">
+        "ophP"
+      <text class="label" dx="0em" dy="0em" id="cluster-ophA-label-6" rowID="7" style="cursor: crosshair !important; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 615.61, 61.27)" x="615.61" y="61.27">
+        "ophE"
+    <g data-component="annotations" style="cursor: crosshair !important" transform="translate(100, 5)">
+    <g data-component="annotations" style="cursor: crosshair !important" transform="translate(100, 5)">
+      <text style="cursor: crosshair !important; fill: rgb(28, 100, 28); font-family: sans-serif; font-size: 16px; font-style: normal; font-weight: normal; text-decoration: none" x="288.01" y="150.85">
+        <tspan style="cursor: crosshair !important">
+          "90%"
+  <svg class="geneviewer-svg-content" data-cluster="dbophA" height="79.5" id="svg-container-3" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; cursor: crosshair; width: 100%" viewBox="0 0 800 79.5" width="800">
+    <text data-component="clusterLabel" data-part="title" dominant-baseline="central" style="cursor: crosshair !important; font-family: sans-serif; font-size: 12px; font-style: normal; font-weight: bold" text-anchor="middle" transform="translate(0, 0)" x="50" y="39.75">
+      <tspan style="cursor: crosshair !important; font-style: italic; font-weight: bold">
+        "D. bispora"
+    <g data-component="sequence" style="cursor: crosshair !important" transform="translate(100,5)">
+      <line class="baseline" style="cursor: crosshair !important; stroke-width: 1; stroke: grey" x1="0" x2="650" y1="34.75" y2="34.75">
+    <g data-component="genes" style="cursor: crosshair !important" transform="translate(100, 5)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L25.41 22.5 L25.41 30 L35.41 15 L25.41 0 L25.41 7.5 Z" end="20583" fill="#8c564b" id="dbophA-gene-0" rowID="17" start="19236" strand="forward" style="cursor: crosshair !important; stroke-width: 1; stroke: black" transform="rotate(0, 12.5, 34.75) translate(12.5, 19.75)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L77.37 22.5 L77.37 30 L87.37 15 L77.37 0 L77.37 7.5 Z" end="24607" fill="#9467bd" id="dbophA-gene-1" rowID="16" start="21283" strand="forward" style="cursor: crosshair !important; stroke-width: 1; stroke: black" transform="rotate(0, 66.3, 34.75) translate(66.3, 19.75)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L40.7 22.5 L40.7 30 L50.7 15 L40.7 0 L40.7 7.5 Z" end="27217" fill="#1f77b4" id="dbophA-gene-2" rowID="15" start="25288" strand="forward" style="cursor: crosshair !important; stroke-width: 1; stroke: black" transform="rotate(0, 171.57, 34.75) translate(171.57, 19.75)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L29.79 22.5 L29.79 30 L39.79 15 L29.79 0 L29.79 7.5 Z" end="28885" fill="#d62728" id="dbophA-gene-3" rowID="14" start="27371" strand="forward" style="cursor: crosshair !important; stroke-width: 1; stroke: black" transform="rotate(0, 226.32, 34.75) translate(226.32, 19.75)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L31.5 22.5 L31.5 30 L41.5 15 L31.5 0 L31.5 7.5 Z" end="30516" fill="#2ca02c" id="dbophA-gene-4" rowID="13" start="28937" strand="forward" style="cursor: crosshair !important; stroke-width: 1; stroke: black" transform="rotate(0, 267.48, 34.75) translate(267.48, 19.75)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L50.11 22.5 L50.11 30 L60.11 15 L50.11 0 L50.11 7.5 Z" end="34679" fill="#1f77b4" id="dbophA-gene-5" rowID="12" start="32392" strand="forward" style="cursor: crosshair !important; stroke-width: 1; stroke: black" transform="rotate(0, 358.3, 34.75) translate(358.3, 19.75)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L26.17 22.5 L26.17 30 L36.17 15 L26.17 0 L26.17 7.5 Z" end="36331" fill="#d62728" id="dbophA-gene-6" rowID="11" start="34955" strand="forward" style="cursor: crosshair !important; stroke-width: 1; stroke: black" transform="rotate(0, 425.66, 34.75) translate(425.66, 19.75)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L3.9 22.5 L3.9 30 L13.9 15 L3.9 0 L3.9 7.5 Z" end="37791" fill="#ff7f0e" id="dbophA-gene-7" rowID="10" start="37262" strand="forward" style="cursor: crosshair !important; stroke-width: 1; stroke: black" transform="rotate(0, 486.3, 34.75) translate(486.3, 19.75)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L52.56 22.5 L52.56 30 L62.56 15 L52.56 0 L52.56 7.5 Z" end="40469" fill="#1f77b4" id="dbophA-gene-8" rowID="9" start="38089" strand="forward" style="cursor: crosshair !important; stroke-width: 1; stroke: black" transform="rotate(0, 508.04, 34.75) translate(508.04, 19.75)">
+      <path class="gene" cluster="dbophA" d="M0 7.5 L0 22.5 L48.8 22.5 L48.8 30 L58.8 15 L48.8 0 L48.8 7.5 Z" end="43005" fill="#1f77b4" id="dbophA-gene-9" rowID="8" start="40768" strand="forward" style="cursor: crosshair !important; stroke-width: 1; stroke: black" transform="rotate(0, 578.46, 34.75) translate(578.46, 19.75)">
+    <g data-component="links" style="cursor: crosshair !important" transform="translate(100, 5)">
+      <circle class="link-marker" cluster="dbophA" cx="26.66" cy="34.75" groupColor="#1f77b4" linkID="0-1" position="19236" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="33.74" cy="34.75" groupColor="#1f77b4" linkID="0-1" position="20583" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="101.25" cy="34.75" groupColor="#1f77b4" linkID="0-2" position="21283" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="118.72" cy="34.75" groupColor="#1f77b4" linkID="0-2" position="24607" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="191.85" cy="34.75" groupColor="#1f77b4" linkID="0-3" position="25288" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="201.99" cy="34.75" groupColor="#1f77b4" linkID="0-3" position="27217" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="191.85" cy="34.75" groupColor="#1f77b4" linkID="0-4" position="25288" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="201.99" cy="34.75" groupColor="#1f77b4" linkID="0-4" position="27217" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="242.24" cy="34.75" groupColor="#1f77b4" linkID="0-5" position="27371" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="250.2" cy="34.75" groupColor="#1f77b4" linkID="0-5" position="28885" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="284.08" cy="34.75" groupColor="#1f77b4" linkID="0-6" position="28937" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="292.38" cy="34.75" groupColor="#1f77b4" linkID="0-6" position="30516" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="382.34" cy="34.75" groupColor="#1f77b4" linkID="0-7" position="32392" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="394.36" cy="34.75" groupColor="#1f77b4" linkID="0-7" position="34679" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="382.34" cy="34.75" groupColor="#1f77b4" linkID="0-8" position="32392" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="394.36" cy="34.75" groupColor="#1f77b4" linkID="0-8" position="34679" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="440.13" cy="34.75" groupColor="#1f77b4" linkID="0-9" position="34955" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="447.36" cy="34.75" groupColor="#1f77b4" linkID="0-9" position="36331" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="491.86" cy="34.75" groupColor="#1f77b4" linkID="0-10" position="37262" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="494.64" cy="34.75" groupColor="#1f77b4" linkID="0-10" position="37791" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="533.06" cy="34.75" groupColor="#1f77b4" linkID="0-11" position="38089" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="545.57" cy="34.75" groupColor="#1f77b4" linkID="0-11" position="40469" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="533.06" cy="34.75" groupColor="#1f77b4" linkID="0-12" position="38089" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="545.57" cy="34.75" groupColor="#1f77b4" linkID="0-12" position="40469" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="601.98" cy="34.75" groupColor="#1f77b4" linkID="0-13" position="40768" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="613.74" cy="34.75" groupColor="#1f77b4" linkID="0-13" position="43005" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="601.98" cy="34.75" groupColor="#1f77b4" linkID="0-14" position="40768" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="613.74" cy="34.75" groupColor="#1f77b4" linkID="0-14" position="43005" r="1" style="cursor: crosshair !important" visibility="hidden">
+    <g data-component="links" style="cursor: crosshair !important" transform="translate(100, 5)">
+      <circle class="link-marker" cluster="dbophA" cx="267.48" cy="34.75" groupColor="#2ca02c" linkID="1-1" position="28937" r="1" style="cursor: crosshair !important" visibility="hidden">
+      <circle class="link-marker" cluster="dbophA" cx="308.99" cy="34.75" groupColor="#2ca02c" linkID="1-1" position="30516" r="1" style="cursor: crosshair !important" visibility="hidden">
+<div class="coordinate-tooltip" style="background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; padding: 8px; pointer-events: none; position: absolute; visibility: hidden; z-index: 1000">
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div class="coordinate-tooltip" style="background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; padding: 8px; pointer-events: none; position: absolute; visibility: hidden; z-index: 1000">
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div class="geneviewer-container" id="geneviewer-legend-container-chart">
+  <svg class="geneviewer-svg-content" height="41" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 41" width="1000">
+    <g data-component="legend" transform="translate(50, 15)">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-0" style="cursor: pointer; font-family: sans-serif; font-size: 14px; text-anchor: start" transform="translate(0, 0)" x="21" y="7">
+          "Monooxygenase"
+        <rect class="legend-marker" data-part="marker" height="14" id="legend-marker-0" rx="0" style="cursor: pointer; fill: rgb(31, 119, 180)" transform="translate(0, 0)" width="14" x="0" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-1" style="cursor: pointer; font-family: sans-serif; font-size: 14px; text-anchor: start" transform="translate(0, 0)" x="151.75" y="7">
+          "NTF2-like"
+        <rect class="legend-marker" data-part="marker" height="14" id="legend-marker-1" rx="0" style="cursor: pointer; fill: rgb(255, 127, 14)" transform="translate(0, 0)" width="14" x="130.75" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-2" style="cursor: pointer; font-family: sans-serif; font-size: 14px; text-anchor: start" transform="translate(0, 0)" x="240.42" y="7">
+          "Methyltransferase"
+        <rect class="legend-marker" data-part="marker" height="14" id="legend-marker-2" rx="0" style="cursor: pointer; fill: rgb(44, 160, 44)" transform="translate(0, 0)" width="14" x="219.42" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-3" style="cursor: pointer; font-family: sans-serif; font-size: 14px; text-anchor: start" transform="translate(0, 0)" x="379.7" y="7">
+          "O-acyltransferase"
+        <rect class="legend-marker" data-part="marker" height="14" id="legend-marker-3" rx="0" style="cursor: pointer; fill: rgb(214, 39, 40)" transform="translate(0, 0)" width="14" x="358.7" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-4" style="cursor: pointer; font-family: sans-serif; font-size: 14px; text-anchor: start" transform="translate(0, 0)" x="518.19" y="7">
+          "Prolyloligopeptidase"
+        <rect class="legend-marker" data-part="marker" height="14" id="legend-marker-4" rx="0" style="cursor: pointer; fill: rgb(148, 103, 189)" transform="translate(0, 0)" width="14" x="497.19" y="0">
+      <g class="legend">
+        <text class="legend-label" data-part="label" dy=".35em" id="legend-label-5" style="cursor: pointer; font-family: sans-serif; font-size: 14px; text-anchor: start" transform="translate(0, 0)" x="671.5" y="7">
+          "F-box/RNHI-like"
+        <rect class="legend-marker" data-part="marker" height="14" id="legend-marker-5" rx="0" style="cursor: pointer; fill: rgb(140, 86, 75)" transform="translate(0, 0)" width="14" x="650.5" y="0">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <i aria-haspopup="menu" aria-label="Save chart" class="fa-solid fa-download geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"

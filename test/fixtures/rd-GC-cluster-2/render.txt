@@ -1,0 +1,27 @@
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <svg class="geneviewer-svg-content" data-cluster="cluster" height="150" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 150" width="1000">
+    <g data-component="sequence" transform="translate(50,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="900" y1="70" y2="70">
+    <g data-component="genes" transform="translate(50, 5)">
+      <path class="gene" cluster="cluster" d="M0 7.5 L0 22.5 L169.08 22.5 L169.08 30 L179.08 15 L169.08 0 L169.08 7.5 Z" end="125" fill="#1f77b4" id="cluster-gene-0" rowID="1" start="1" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 17.3, 70) translate(17.3, 55)">
+      <path class="gene" cluster="cluster" d="M0 7.5 L0 22.5 L394.36 22.5 L394.36 30 L404.36 15 L394.36 0 L394.36 7.5 Z" end="400" fill="#1f77b4" id="cluster-gene-1" rowID="2" start="120" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 189.16, 70) translate(189.16, 55)">
+      <path class="gene" cluster="cluster" d="M0 0 L0 8 L105.53 8 L115.53 4 L105.53 0 Z" end="380" fill="#1f77b4" id="cluster-gene-2" rowID="3" start="300" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 449.1, 105) translate(449.1, 101)">
+      <path class="gene" cluster="cluster" d="M0 7.5 L0 22.5 L365.48 22.5 L365.48 30 L375.48 15 L365.48 0 L365.48 7.5 Z" end="600" fill="#1f77b4" id="cluster-gene-3" rowID="4" start="340" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 506.87, 70) translate(506.87, 55)">
+    <g data-component="labels" transform="translate(50,5)">
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-0" rowID="1" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 106.84, 48)" x="106.84" y="48">
+        "A"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-1" rowID="2" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 391.34, 48)" x="391.34" y="48">
+        "B"
+      <text class="label" dominant-baseline="hanging" dx="0em" dy="0em" id="cluster-cluster-label-2" rowID="3" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 506.87, 127)" x="506.87" y="127">
+        "B2"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-3" rowID="4" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 694.61, 48)" x="694.61" y="48">
+        "C"
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <i aria-haspopup="menu" aria-label="Save chart" class="fa-solid fa-download geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"
