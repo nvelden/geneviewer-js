@@ -1,7 +1,7 @@
 // The chart and its clusters: GC_chart() of the R package (R/geneviewer.R),
 // add_strand() and getUpdatedClusters() (R/utils.R).
 import { Frame } from "./frame.js";
-import { asCharacter, computeSize, getRelativeHeight } from "./r.js";
+import { asCharacter, clone, computeSize, getRelativeHeight } from "./r.js";
 
 /**
  * The state compile() works on, as R's chart object: the render model `x`
@@ -116,7 +116,7 @@ export function chart(spec) {
   if (strand !== null) x.params.strand = strand;
   x.params.width = width;
   x.params.height = height;
-  if (Object.keys(style).length) x.params.style = style;
+  if (Object.keys(style).length) x.params.style = clone(style);
   x.params.save_button = saveButton;
 
   let data = Frame.from(spec.data);
