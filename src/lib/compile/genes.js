@@ -112,7 +112,7 @@ export function labels(state, entry) {
  * @param {Object<string, *>|undefined} old
  * @returns {Object<string, *>}
  */
-function keepColorOptions(options, old) {
+export function keepColorOptions(options, old) {
   if (options.colorScheme == null && options.customColors == null) {
     setPath(options, ["colorScheme"], old?.colorScheme);
     setPath(options, ["customColors"], old?.customColors);
@@ -127,7 +127,7 @@ function keepColorOptions(options, old) {
  * @param {*} colorScheme
  * @param {*} customColors
  */
-function setLegendColors(state, colorScheme, customColors) {
+export function setLegendColors(state, colorScheme, customColors) {
   if (colorScheme == null && customColors == null) return;
   setPath(state.x, ["legend", "legendOptions", "colorScheme"], colorScheme);
   setPath(state.x, ["legend", "legendOptions", "customColors"], customColors);
