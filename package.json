@@ -1,0 +1,22 @@
+{
+  "name": "geneviewer-js",
+  "version": "0.2.0",
+  "description": "D3 rendering library shared by the geneviewer R and Python packages",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nvelden/geneviewer-js.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "build": "node scripts/build.mjs"
+  },
+  "peerDependencies": {
+    "d3": "7.8.5"
+  }
+}
