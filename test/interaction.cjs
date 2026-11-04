@@ -28,14 +28,11 @@ async function runScenario(browser, scenario) {
     await page.goto(harness, { waitUntil: "load" });
     await page.evaluate(({ payload, meta, eventNames }) => {
       const el = document.getElementById("chart");
-      el.classList.add("html-widget", "geneviewer");
-      el.style.width = (meta.width || 1000) + "px";
-      el.style.height = meta.height || "400px";
       window.__events = [];
       eventNames.forEach((name) => el.addEventListener("geneviewer:" + name, (event) => {
         window.__events.push(name + " " + JSON.stringify(event.detail));
       }));
-      HTMLWidgets.bindings.geneviewer.factory(el, el.clientWidth, el.clientHeight).renderValue(payload);
+      mountChart(payload, meta);
     }, { payload, meta, eventNames });
 
     // Pointer away from the chart, then wait out tooltip fades and redraws

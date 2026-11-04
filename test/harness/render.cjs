@@ -23,16 +23,10 @@ async function renderFixture(browser, payload, meta) {
   try {
     await page.goto(harness, { waitUntil: "load" });
     const listing = await page.evaluate(async ({ payload, meta }) => {
-      const el = document.getElementById("chart");
-      el.classList.add("html-widget", "geneviewer");
-      el.style.width = (meta.width || 1000) + "px";
-      el.style.height = meta.height || "400px";
-      const binding = HTMLWidgets.bindings.geneviewer;
-      const chart = binding.factory(el, el.clientWidth, el.clientHeight);
-      chart.renderValue(payload);
+      mountChart(payload, meta);
       await document.fonts.ready;
       await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
-      return normalizeChart(el);
+      return normalizeChart(document.getElementById("chart"));
     }, { payload, meta });
     if (errors.length) throw new Error(errors.join("\n"));
     return listing;
