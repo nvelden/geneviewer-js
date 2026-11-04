@@ -28,8 +28,9 @@ HTMLWidgets.widget({
     // tests draw a chart, then switch shinyMode on and draw it again
     var on = {};
     shinyEvents.forEach(function (name) {
-      on[name] = function (detail) {
+      on[name] = function (event) {
         if (!HTMLWidgets.shinyMode) return;
+        var detail = event.detail;
         // A list of elements keeps its elements in R (see geneviewer-shiny.R).
         // Priority "event": the same event twice still reaches the server.
         var type = Array.isArray(detail) ? ":geneviewer.list" : "";
