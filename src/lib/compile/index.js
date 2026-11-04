@@ -11,6 +11,7 @@ import { clusterFooter, clusterLabel, clusterTitle, grid, title } from "./layout
 import { clone } from "./r.js";
 import { align, scale, scaleBar } from "./scale.js";
 import { links } from "./links.js";
+import { transcript } from "./transcript.js";
 
 /**
  * How each spec key changes the chart. The keys of a spec are applied in
@@ -37,6 +38,7 @@ const handlers = {
   scaleBar,
   align,
   links,
+  transcript,
 };
 
 // Keys GC_chart() itself reads
