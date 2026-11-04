@@ -9,7 +9,9 @@
 # Every top-level expression whose value is a geneviewer chart becomes a
 # fixture in test/fixtures/<id>/: call.R (the code before it in the same
 # source, then the expression), payload.json (the x that htmlwidgets sends to
-# the browser, after the widget's preRenderHook) and meta.json. Charts identical to an earlier one are
+# the browser, after the widget's preRenderHook), spec.json (the chart spec R
+# records with options(geneviewer.record_spec = TRUE), taken out of x) and
+# meta.json. Charts identical to an earlier one are
 # skipped. Expressions that fail (e.g. no network, MUMmer not installed) are
 # logged and the source continues.
 #
@@ -25,6 +27,8 @@ if (!dir.exists(r_dir)) stop("Set GENEVIEWER_R_DIR to the geneviewer R package r
 
 suppressMessages(pkgload::load_all(r_dir, quiet = TRUE))
 suppressMessages(library(magrittr))
+# R records the spec of each chart in x$spec; it does not change the chart
+options(geneviewer.record_spec = TRUE)
 
 out_dir <- "test/fixtures"
 log_lines <- character()
@@ -108,6 +112,8 @@ export_source <- function(name, file) {
     }
     widget <- result$value
     sent <- htmlwidgets:::createPayload(widget)
+    spec <- sent$x$spec
+    sent$x$spec <- NULL
     count <- count + 1
     id <- if (!is.na(pending)) pending else paste0(slug(name), "-", count)
     pending <- NA_character_
@@ -131,6 +137,12 @@ export_source <- function(name, file) {
     dir.create(dir, recursive = TRUE, showWarnings = FALSE)
     writeLines(c(setup, code), file.path(dir, "call.R"), useBytes = TRUE)
     writeLines(payload, file.path(dir, "payload.json"), useBytes = TRUE)
+    if (is.null(spec)) {
+      note(id, ": no spec recorded")
+    } else {
+      writeLines(as.character(htmlwidgets:::toJSON(spec)), file.path(dir, "spec.json"),
+                 useBytes = TRUE)
+    }
     meta <- list(id = id, source = name, width = 1000, height = height, covers = covers)
     writeLines(jsonlite::toJSON(meta, auto_unbox = TRUE, pretty = TRUE),
                file.path(dir, "meta.json"))

@@ -1,0 +1,1 @@
+{"version":1,"data":{"start":[1,120,300,340],"end":[125,400,380,600],"name":["A","B","B2","C"]},"height":"150px","cluster":{"preventGeneOverlap":"nested"},"genes":{"groupStyle":{"2":{"markerHeight":8,"arrowheadHeight":8}},"styleBy":"geneTrack"},"labels":{"label":"name"}}

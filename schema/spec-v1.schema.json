@@ -330,10 +330,16 @@
       ]
     },
     "transcript": {
-      "description": "Transcripts: exons, introns and UTRs.",
-      "allOf": [
+      "description": "Transcripts: exons, introns and UTRs. An array of entries applies them in order; an entry with selection only to those transcripts.",
+      "oneOf": [
         {
           "$ref": "#/$defs/transcriptEntry"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/transcriptEntry"
+          }
         }
       ]
     },
@@ -351,6 +357,14 @@
       "items": {
         "$ref": "#/$defs/annotationEntry"
       }
+    },
+    "align": {
+      "description": "Aligns the clusters on one gene: each cluster's scale is set so the gene is at the same place in every cluster.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/alignEntry"
+        }
+      ]
     }
   },
   "$defs": {
@@ -558,12 +572,18 @@
         "title": {
           "oneOf": [
             {
-              "type": "string"
+              "type": [
+                "string",
+                "number"
+              ]
             },
             {
               "type": "array",
               "items": {
-                "type": "string"
+                "type": [
+                  "string",
+                  "number"
+                ]
               }
             }
           ],
@@ -572,12 +592,18 @@
         "subtitle": {
           "oneOf": [
             {
-              "type": "string"
+              "type": [
+                "string",
+                "number"
+              ]
             },
             {
               "type": "array",
               "items": {
-                "type": "string"
+                "type": [
+                  "string",
+                  "number"
+                ]
               }
             }
           ],
@@ -653,12 +679,18 @@
         "title": {
           "oneOf": [
             {
-              "type": "string"
+              "type": [
+                "string",
+                "number"
+              ]
             },
             {
               "type": "array",
               "items": {
-                "type": "string"
+                "type": [
+                  "string",
+                  "number"
+                ]
               }
             }
           ],
@@ -720,12 +752,18 @@
         "subtitle": {
           "oneOf": [
             {
-              "type": "string"
+              "type": [
+                "string",
+                "number"
+              ]
             },
             {
               "type": "array",
               "items": {
-                "type": "string"
+                "type": [
+                  "string",
+                  "number"
+                ]
               }
             }
           ],
@@ -759,12 +797,18 @@
         "title": {
           "oneOf": [
             {
-              "type": "string"
+              "type": [
+                "string",
+                "number"
+              ]
             },
             {
               "type": "array",
               "items": {
-                "type": "string"
+                "type": [
+                  "string",
+                  "number"
+                ]
               }
             }
           ],
@@ -773,12 +817,18 @@
         "subtitle": {
           "oneOf": [
             {
-              "type": "string"
+              "type": [
+                "string",
+                "number"
+              ]
             },
             {
               "type": "array",
               "items": {
-                "type": "string"
+                "type": [
+                  "string",
+                  "number"
+                ]
               }
             }
           ],
@@ -1227,6 +1277,50 @@
         "data": {
           "$ref": "#/$defs/data",
           "description": "The links: one row per pair, made by R or Python (get_links) or by hand."
+        },
+        "group": {
+          "$ref": "#/$defs/column",
+          "description": "The column the genes were matched on (R and Python: get_links). Its values pick the genes labelled with the measure; without it, links.data was given and labelPosition \"gene\" draws no labels."
+        },
+        "value1": {
+          "oneOf": [
+            {
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": [
+                  "string",
+                  "number"
+                ]
+              }
+            }
+          ],
+          "description": "Values of group matched in the first cluster of each pair; only their genes are labelled with the measure."
+        },
+        "value2": {
+          "oneOf": [
+            {
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": [
+                  "string",
+                  "number"
+                ]
+              }
+            }
+          ],
+          "description": "Values of group matched in the second cluster of each pair; only their genes are labelled with the measure."
         },
         "clusters": {
           "$ref": "#/$defs/clusters",
@@ -1968,6 +2062,36 @@
         "type"
       ],
       "description": "One annotation. The other properties are the options of its type, under their JavaScript names (x, y, text, ...)."
+    },
+    "alignEntry": {
+      "type": "object",
+      "properties": {
+        "idColumn": {
+          "$ref": "#/$defs/column",
+          "description": "Column that identifies the gene to align on."
+        },
+        "id": {
+          "type": [
+            "string",
+            "number"
+          ],
+          "description": "The value of idColumn of the gene to align on; one gene per cluster."
+        },
+        "align": {
+          "enum": [
+            "left",
+            "center",
+            "right"
+          ],
+          "description": "The side of the gene the clusters align on.",
+          "default": "left"
+        }
+      },
+      "required": [
+        "idColumn",
+        "id"
+      ],
+      "additionalProperties": false
     }
   }
 }

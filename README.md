@@ -50,6 +50,7 @@ spec name. The schema is a draft until the names are approved.
 
 ```sh
 npm run schema:check   # validate the schema, NAMING.md and schema/examples/
+npm run spec:check     # validate the spec.json R recorded for each fixture
 ```
 
 ## Types
