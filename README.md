@@ -125,6 +125,7 @@ npm run types:src    # type-check src/lib/ (jsconfig.json); some errors remain
 ```sh
 npm test               # all tests, in Docker
 npm run test:update    # write new baselines (only when output should change)
+npm run test:smoke     # the packed package in a plain page, a Vite project and TypeScript
 Rscript scripts/export-fixtures.R   # re-export fixtures from the R package
 Rscript test/coverage.R             # update test/coverage.md
 ```
