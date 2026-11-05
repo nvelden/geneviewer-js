@@ -6,9 +6,9 @@ import { mergeSpec } from "./compile/merge.js";
 import { injectStyles } from "./styles.js";
 import { appendIcon } from "./icons.js";
 import { createContainer } from "./container.js";
-import { chartToPNG, chartToSVG, createSaveIcon } from "./export.js";
+import { chartToPNG, chartToSVG, createSaveIcon, downloadBlob } from "./export.js";
 import { colorBarSettings, getClusterLinks, makeColorBar, makeLinks } from "./links.js";
-import { computeSize, mergeOptions, themeTextScale, toRows } from "./util.js";
+import { computeSize, mergeOptions, themeTextScale, toRows, warnOnce } from "./util.js";
 
 var version = "0.3.0";
 // Shared by all chart instances, including ones removed and recreated.
@@ -132,6 +132,21 @@ var createMoveHistory = function () {
  */
 
 /**
+ * A selectable element, as the select and selection events report it, or as
+ * chart.select() takes it: there only component is needed.
+ * @typedef {Object} SelectionItem
+ * @property {string} component  The part of the chart: "genes", "labels",
+ *   "coordinates", "clusterTitle", "clusterFooter", "clusterLabel", "legend",
+ *   "title", "scaleBar" or "scale".
+ * @property {?string} [cluster]  The cluster's name.
+ * @property {string} [part]  The title or subtitle of a cluster title, footer
+ *   or label; label or marker in the legend.
+ * @property {*} [data]  The element's row (genes, labels, coordinates; in
+ *   select(), any of its fields, such as { rowID: 3 }), or the legend's group.
+ * @property {Object} [style]  The element's drawn style (reported only).
+ */
+
+/**
  * A chart, as newChart() gives it.
  * @typedef {Object} Chart
  * @property {(input: Object) => void} update  Draw again. A chart drawn from a
@@ -149,6 +164,21 @@ var createMoveHistory = function () {
  *   Remove a handler.
  * @property {(range: ?Array<number>) => void} zoomTo  Set the zoom window
  *   (GC_zoom()): a range in the units of its mode, or null for everything.
+ * @property {(items: SelectionItem|Array<SelectionItem>|null) => void} select
+ *   Select the elements the items name, as a click does, and report select
+ *   and selection when that changes it; an empty array or null clears it.
+ *   An item names every drawn element whose fields match each field it
+ *   gives, so the items of getSelection() select their elements again.
+ *   Needs events: { select: true }.
+ * @property {() => Array<SelectionItem>} getSelection  The selected elements,
+ *   as the selection event reports them; the last is the one select reports.
+ * @property {() => void} undo  Undo the last move, as the toolbar's undo
+ *   button does (events: { drag: true }); nothing when there is none.
+ * @property {() => void} redo  Redo the last move undone; nothing when there
+ *   is none.
+ * @property {(format: "svg"|"png", filename?: string) => Promise<void>} download
+ *   Save the chart as the save menu does: with the saveAs option, or as a
+ *   browser download. The file name defaults to graph.svg or graph.png.
  * @property {() => string} toSVG  The chart as a standalone SVG.
  * @property {() => Promise<Blob>} toPNG  The chart as a PNG.
  * @property {() => void} destroy  Remove the chart and its listeners.
@@ -412,6 +442,37 @@ function newChart(target, renderModel, options) {
     };
     var selectElement = function (detail) {
       changeSelection(detail ? [detail] : [], "replace");
+    };
+    // chart.select(): the drawn elements each item names. An item matches an
+    // element when every field it gives is the element's: component, cluster,
+    // part, and data (a value, or an object of row fields such as rowID), so
+    // an item of getSelection() matches its element again. In the order of
+    // the items, each element once.
+    var sameValue = function (given, drawn) {
+      if (given === null || typeof given !== "object") return given === drawn;
+      if (drawn === null || typeof drawn !== "object") return false;
+      return Object.keys(given).every(function (name) { return sameValue(given[name], drawn[name]); });
+    };
+    var matchItems = function (items) {
+      var drawn = [];
+      el.querySelectorAll(selectableNodes).forEach(function (node) {
+        var detail = eventData({ target: node });
+        if (keyOf(detail) !== null) drawn.push(detail);
+      });
+      var found = [];
+      items.forEach(function (item) {
+        if (!item || typeof item !== "object" || typeof item.component !== "string") {
+          throw new Error("select() needs items with a component, as getSelection() gives them");
+        }
+        drawn.forEach(function (detail) {
+          var matches = detail.component === item.component &&
+            (item.cluster == null || String(item.cluster) === detail.cluster) &&
+            (item.part == null || item.part === detail.part) &&
+            (item.data === undefined || sameValue(item.data, detail.data));
+          if (matches) found.push(detail);
+        });
+      });
+      return found;
     };
     var suppressClickUntil = 0;
     var onClick = function (event) {
@@ -1804,6 +1865,34 @@ function newChart(target, renderModel, options) {
         if (at >= 0) list.splice(at, 1);
       },
       zoomTo: zoomTo,
+      select: function (items) {
+        if (destroyed) return;
+        if (events.select !== true) {
+          warnOnce("chart.select() needs events: { select: true }; nothing was selected.");
+          return;
+        }
+        changeSelection(matchItems(items == null ? [] : Array.isArray(items) ? items : [items]), "replace");
+      },
+      getSelection: function () {
+        return selection.slice();
+      },
+      undo: function () {
+        if (!destroyed) step(true);
+      },
+      redo: function () {
+        if (!destroyed) step(false);
+      },
+      download: function (format, filename) {
+        if (format !== "svg" && format !== "png") {
+          return Promise.reject(new Error('download() needs the format "svg" or "png"'));
+        }
+        var name = filename ?? "graph." + format;
+        var save = options.saveAs || downloadBlob;
+        return Promise.resolve().then(function () {
+          return format === "svg" ?
+            new Blob([chart.toSVG()], { type: "image/svg+xml;charset=utf-8" }) : chart.toPNG();
+        }).then(function (blob) { return save(blob, name); }).then(function () {});
+      },
       // Without the toolbar, as the save menu does
       toSVG: function () {
         return chartToSVG(el, toolbar ? toolbar.node() : null);

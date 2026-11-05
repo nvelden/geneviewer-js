@@ -145,6 +145,8 @@ Rscript test/coverage.R             # update test/coverage.md
   baselines through the R binding, as R draws charts, with
   `geneviewer.newChart()` and R's payload, and with `newChart()` and the
   spec (`test/harness/mount.js`); the fixtures also with the min build.
+- **Chart methods** (`test/methods.mjs`): `select()`, `getSelection()`,
+  `undo()`, `redo()` and `download()`.
 - **Save, two-chart and site checks** (`test/save.cjs`,
   `test/two-charts.cjs`, `test/site.cjs`): the save menu downloads a valid
   SVG and PNG; two charts on a page keep their own selection and undo

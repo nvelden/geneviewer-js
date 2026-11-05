@@ -1,7 +1,7 @@
 // Compiles against dist/geneviewer.d.ts and dist/spec.d.ts (npm run types:test).
 // Not run: a type error here means the published types changed shape.
 import * as geneviewer from "../../dist/geneviewer";
-import type { Chart, ChartEventObject, Spec } from "../../dist/geneviewer";
+import type { Chart, ChartEventObject, SelectionItem, Spec } from "../../dist/geneviewer";
 
 const spec: Spec = {
   version: 1,
@@ -29,6 +29,13 @@ const png: Promise<Blob> = chart.toPNG();
 chart.update({ title: { title: "Clusters" } });
 chart.setSpec({ ...spec, align: { idColumn: "class", id: "x" } });
 const current: Object | null = chart.getSpec();
+chart.select([{ component: "genes", data: { rowID: 3 } }]);
+chart.select(null);
+const selected: SelectionItem[] = chart.getSelection();
+chart.select(selected);
+chart.undo();
+chart.redo();
+const saved: Promise<void> = chart.download("png", "clusters.png");
 const model: Record<string, any> = geneviewer.compile(spec);
 const dark: Record<string, any> = geneviewer.themes.dark;
 const colors: string[] = geneviewer.palettes.okabeIto;
@@ -38,6 +45,8 @@ chart.destroy();
 
 // @ts-expect-error: not an event
 chart.on("hover", () => {});
+// @ts-expect-error: download() saves SVG or PNG
+chart.download("pdf");
 // @ts-expect-error: the spec version is 1
 const wrongVersion: Spec = { version: 2, data: [] };
 // @ts-expect-error: unknown top-level key
@@ -45,4 +54,4 @@ const unknownKey: Spec = { version: 1, data: [], colors: {} };
 // @ts-expect-error: zoom takes no other options (R's GC_zoom() has no ...)
 const oldName: Spec = { version: 1, data: [], zoom: { window: [0, 1] } };
 
-export { svg, png, exported, version, wrongVersion, unknownKey, oldName };
+export { svg, png, saved, exported, version, wrongVersion, unknownKey, oldName };
