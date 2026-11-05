@@ -58,7 +58,7 @@
     "check": "node scripts/check.mjs",
     "build": "node scripts/build.mjs && node scripts/build-types.mjs && node scripts/sums.mjs",
     "try-app": "bash scripts/try-app.sh",
-    "site": "node scripts/build.mjs && node scripts/build-site.mjs",
+    "site": "npm run -s build && node scripts/build-site.mjs",
     "serve": "npm run -s site && python3 -m http.server 8484 --bind 127.0.0.1 --directory _site",
     "test": "bash scripts/test-docker.sh",
     "test:update": "bash scripts/test-docker.sh --update",

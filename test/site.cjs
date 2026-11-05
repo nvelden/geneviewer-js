@@ -1,6 +1,8 @@
 // Site check: serves _site/ (npm run site) and loads its pages. Every chart
-// draws, nothing shows an error, the console has no errors, and the event
-// log of the interactive example logs a selection. Run through `npm test`.
+// draws, nothing shows an error, the console has no errors, the event log
+// of the interactive example logs a selection, each example has JavaScript
+// and R code, and the API reference lists every option of the schema. Run
+// through `npm test`.
 const fs = require("node:fs");
 const http = require("node:http");
 const path = require("node:path");
@@ -31,7 +33,7 @@ const types = { ".html": "text/html", ".js": "text/javascript", ".css": "text/cs
     if (!ok) failures.push(message);
   };
   try {
-    for (const name of ["index.html", "examples.html"]) {
+    for (const name of ["index.html", "getting-started.html", "examples.html"]) {
       const page = await browser.newPage({ viewport: { width: 1200, height: 900 } });
       const errors = [];
       page.on("pageerror", (error) => errors.push(error.message));
@@ -62,10 +64,58 @@ const types = { ".html": "text/html", ".js": "text/javascript", ".css": "text/cs
         const log = await page.locator("#interactive .event-log").textContent();
         expect(/^select\s/m.test(log) && /^selection\s/m.test(log),
           `${name}: the event log shows a selection (${JSON.stringify(log.slice(0, 80))})`);
+        const tabs = await page.evaluate(() => [...document.querySelectorAll(".chart-card")].map((card) => ({
+          id: card.id,
+          tabs: [...card.querySelectorAll(".tab")].map((tab) => tab.textContent),
+          code: [...card.querySelectorAll("pre code")].map((code) => code.textContent),
+        })));
+        tabs.forEach((card) => expect(card.tabs.join(",") === "JavaScript,R" &&
+          card.code[0].includes("geneviewer.newChart(") && /GC_chart\(/.test(card.code[1]),
+          `${name}: ${card.id} shows its JavaScript and R code`));
+        // The data files the JavaScript loads are there
+        for (const card of tabs) {
+          const file = /fetch\("([^"]+)"\)/.exec(card.code[0])?.[1];
+          const response = file ? await page.request.get(base + file) : null;
+          expect(response && response.ok(), `${name}: ${card.id} loads ${file}`);
+        }
       }
       expect(errors.length === 0, `${name}: no console errors` + (errors.length ? ": " + errors.join("; ") : ""));
       await page.close();
     }
+    // The API reference lists every option of every component
+    const schema = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "schema", "spec-v1.schema.json"), "utf8"));
+    const page = await browser.newPage();
+    const errors = [];
+    page.on("pageerror", (error) => errors.push(error.message));
+    await page.goto(base + "api.html", { waitUntil: "load" });
+    const listed = await page.evaluate(() => {
+      const out = {};
+      document.querySelectorAll("h3[id]").forEach((heading) => {
+        let table = heading.nextElementSibling;
+        while (table && table.tagName !== "TABLE" && !/^H[23]$/.test(table.tagName)) table = table.nextElementSibling;
+        if (table && table.tagName !== "TABLE") table = null;
+        out[heading.id] = table ? [...table.querySelectorAll("tr td:first-child code")].map((c) => c.textContent) : [];
+      });
+      return out;
+    });
+    const resolve = (node) => (node && node.$ref ? schema.$defs[node.$ref.split("/").pop()] : node);
+    const entryOf = (node) => {
+      const alternatives = node.oneOf || node.allOf || [node];
+      return alternatives.map(resolve).find((alt) => alt && alt.properties) ||
+        resolve(alternatives.find((alt) => alt.type === "array")?.items);
+    };
+    const missing = [];
+    for (const [key, node] of Object.entries(schema.properties)) {
+      const entry = entryOf(node);
+      if (!entry || !entry.properties || ["version", "data", "width", "height", "style"].includes(key)) continue;
+      for (const option of Object.keys(entry.properties)) {
+        if (!(listed[key] || []).includes(option)) missing.push(`${key}.${option}`);
+      }
+    }
+    expect(missing.length === 0, `api.html: every option of the schema is listed` +
+      (missing.length ? ` (missing: ${missing.slice(0, 10).join(", ")})` : ""));
+    expect(errors.length === 0, `api.html: no page errors`);
+    await page.close();
   } finally {
     await browser.close();
     server.close();
