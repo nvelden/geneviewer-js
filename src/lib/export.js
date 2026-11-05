@@ -182,7 +182,7 @@ export function chartToPNG(el, exclude = null) {
  * @param {Blob} blob
  * @param {string} filename
  */
-function downloadBlob(blob, filename) {
+export function downloadBlob(blob, filename) {
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
