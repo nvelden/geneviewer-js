@@ -4,6 +4,8 @@
 //   direct   with geneviewer.newChart()
 //   spec     with geneviewer.newChart() and the fixture's spec.json, which
 //            the caller passes as the payload
+//   rspec    through the R binding with { spec: <spec.json> }, as the R
+//            package draws it from 0.3.0 on; the caller passes the spec
 // The mode is the page's ?mode= (default binding). With record(name, detail),
 // the events named in eventNames are recorded from the first draw on: as
 // geneviewer:<name> DOM events in binding mode, through newChart's options.on
@@ -29,6 +31,6 @@ function mountChart(payload, meta, eventNames, record) {
     el.addEventListener("geneviewer:" + name, function (event) { record(name, event.detail); });
   });
   var widget = HTMLWidgets.bindings.geneviewer.factory(el, el.clientWidth, el.clientHeight);
-  widget.renderValue(payload);
+  widget.renderValue(harnessMode() === "rspec" ? { spec: payload } : payload);
   return widget;
 }

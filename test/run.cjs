@@ -7,7 +7,7 @@
 //   node test/run.cjs --only <id>  one fixture (repeatable)
 //   node test/run.cjs --build min  with dist/geneviewer.min.js (default:
 //                                  geneviewer.core.js, as in R)
-//   node test/run.cjs --mode <m>   one harness mode, binding, direct or spec
+//   node test/run.cjs --mode <m>   one harness mode, binding, direct, spec or rspec
 //                                  (default all; --update: binding)
 const fs = require("node:fs");
 const path = require("node:path");
@@ -20,7 +20,7 @@ const update = args.includes("--update");
 const only = args.flatMap((arg, i) => (arg === "--only" ? [args[i + 1]] : []));
 const modeArgs = args.flatMap((arg, i) => (arg === "--mode" ? [args[i + 1]] : []));
 const build = args.includes("--build") ? args[args.indexOf("--build") + 1] : "core";
-const modes = modeArgs.length ? modeArgs : update ? ["binding"] : ["binding", "direct", "spec"];
+const modes = modeArgs.length ? modeArgs : update ? ["binding"] : ["binding", "direct", "spec", "rspec"];
 
 // The first differing line with a few lines of context from both sides
 function firstDifference(expected, actual) {
@@ -49,8 +49,8 @@ function firstDifference(expected, actual) {
   try {
     for (const mode of modes) for (const id of ids) {
       const dir = path.join(fixturesDir, id);
-      // In spec mode the chart is drawn from the spec R recorded
-      const input = mode === "spec" ? "spec.json" : "payload.json";
+      // In spec and rspec mode the chart is drawn from the spec R recorded
+      const input = mode === "spec" || mode === "rspec" ? "spec.json" : "payload.json";
       const payload = JSON.parse(fs.readFileSync(path.join(dir, input), "utf8"));
       const meta = JSON.parse(fs.readFileSync(path.join(dir, "meta.json"), "utf8"));
       const file = path.join(dir, "render.txt");
