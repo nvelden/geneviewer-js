@@ -1,8 +1,10 @@
 # Export the documentation examples from the geneviewer R package.
 #
 # For each example this writes site/examples/<id>.json with the R code, the
-# chart height and the payload the R package sends to the browser. The site
-# draws the charts from these files with the JavaScript in this repo.
+# chart height and the chart spec R records (options(geneviewer.record_spec =
+# TRUE)). The site draws the charts from the specs with the JavaScript in
+# this repo, and shows each example's JavaScript, made from its spec by
+# scripts/build-site.mjs.
 #
 # Run from the repo root, with GENEVIEWER_R_DIR set (or in .try-app.env):
 #   Rscript scripts/export-examples.R
@@ -16,6 +18,7 @@ if (!dir.exists(r_dir)) stop("Set GENEVIEWER_R_DIR to the geneviewer R package r
 
 suppressMessages(pkgload::load_all(r_dir, quiet = TRUE))
 library(magrittr)
+options(geneviewer.record_spec = TRUE)
 
 examples <- list(
   list(
@@ -201,8 +204,8 @@ for (example in examples) {
     code = code,
     height = if (is.null(height)) "400px" else height
   )
-  # x is serialised on its own so htmlwidgets' JSON settings for it apply
-  json <- sub("}$", paste0(',"x":', htmlwidgets:::toJSON(sent$x), "}"),
+  # The spec is serialised on its own so htmlwidgets' JSON settings apply
+  json <- sub("}$", paste0(',"spec":', htmlwidgets:::toJSON(sent$x$spec), "}"),
               jsonlite::toJSON(meta, auto_unbox = TRUE))
   writeLines(json, file.path("site/examples", paste0(example$id, ".json")), useBytes = TRUE)
   cat("wrote site/examples/", example$id, ".json\n", sep = "")
