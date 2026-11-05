@@ -1,5 +1,5 @@
 // Compiled by the types smoke test against the installed package.
-import { newChart, compile, type Spec, type Chart } from "geneviewer";
+import { newChart, compile, type Spec, type Chart } from "geneviewer-js";
 
 const spec: Spec = {
   version: 1,

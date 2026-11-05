@@ -41,8 +41,8 @@ jobs:
       - name: Publish to npm
         run: |
           version=$(node -p "require('./package.json').version")
-          if npm view "geneviewer@${version}" version > /dev/null 2>&1; then
-            echo "geneviewer ${version} is already on npm; not publishing it again"
+          if npm view "geneviewer-js@${version}" version > /dev/null 2>&1; then
+            echo "geneviewer-js ${version} is already on npm; not publishing it again"
             exit 0
           fi
           tag=latest
@@ -56,5 +56,5 @@ jobs:
           case "${GITHUB_REF_NAME}" in *-*) prerelease="--prerelease" ;; esac
           gh release create "${GITHUB_REF_NAME}" $prerelease \
             --title "${GITHUB_REF_NAME}" \
-            --notes "geneviewer ${GITHUB_REF_NAME#v}: npm install geneviewer@${GITHUB_REF_NAME#v}. Verify downloads with SHA256SUMS." \
+            --notes "geneviewer ${GITHUB_REF_NAME#v}: npm install geneviewer-js@${GITHUB_REF_NAME#v}. Verify downloads with SHA256SUMS." \
             dist/*

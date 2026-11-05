@@ -194,8 +194,8 @@ ${componentSections}
     <table>
       <tr><th>File</th><th>Format</th><th>D3</th><th>For</th></tr>
       <tr><td><code>geneviewer.min.js</code></td><td>Script tag, global <code>geneviewer</code>; minified, source map</td><td>included</td><td>CDNs and plain HTML pages</td></tr>
-      <tr><td><code>geneviewer.mjs</code></td><td>ES module (<code>import ... from "geneviewer"</code>)</td><td>imported from npm</td><td>Bundlers</td></tr>
-      <tr><td><code>geneviewer.standalone.mjs</code></td><td>ES module (<code>geneviewer/standalone</code>), minified</td><td>included</td><td>Browser <code>import</code>, Jupyter</td></tr>
+      <tr><td><code>geneviewer.mjs</code></td><td>ES module (<code>import ... from "geneviewer-js"</code>)</td><td>imported from npm</td><td>Bundlers</td></tr>
+      <tr><td><code>geneviewer.standalone.mjs</code></td><td>ES module (<code>geneviewer-js/standalone</code>), minified</td><td>included</td><td>Browser <code>import</code>, Jupyter</td></tr>
       <tr><td><code>geneviewer.core.js</code></td><td>Script tag, not minified</td><td>the page's <code>d3</code></td><td>The R package</td></tr>
       <tr><td><code>geneviewer.css</code></td><td>Stylesheet</td><td></td><td>Pages that turn off <code>injectStyles</code></td></tr>
       <tr><td><code>geneviewer.d.ts</code>, <code>spec.d.ts</code></td><td>TypeScript types</td><td></td><td>Editors and TypeScript</td></tr>
