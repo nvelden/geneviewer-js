@@ -204,7 +204,7 @@ repo and shipped inside the package, so users never download JavaScript
 separately. A maintainer pulls a new release with:
 
 ```sh
-curl -sSLO https://github.com/nvelden/geneviewer-js/releases/download/v0.3.0/{geneviewer.core.js,geneviewer.css,themes.json,geneviewerwidget.js,SHA256SUMS}
+curl -sSLO https://github.com/nvelden/geneviewer-js/releases/download/v0.3.1/{geneviewer.core.js,geneviewer.css,themes.json,geneviewerwidget.js,SHA256SUMS}
 shasum -a 256 -c SHA256SUMS --ignore-missing
 ```
 
