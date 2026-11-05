@@ -133,8 +133,8 @@ var createMoveHistory = function () {
  * A chart, as newChart() gives it.
  * @typedef {Object} Chart
  * @property {(input: Object) => void} update  Draw again. A chart drawn from a
- *   spec merges a partial spec into it: objects are merged, arrays and other
- *   values replace. A chart drawn from a render model is drawn with the new
+ *   spec merges a partial spec into it: objects are merged, arrays, other
+ *   values and tables (data, links.data) replace. A chart drawn from a render model is drawn with the new
  *   render model.
  * @property {(spec: Object) => void} setSpec  Draw again from a new spec.
  * @property {() => ?Object} getSpec  A copy of the chart's spec; null when it

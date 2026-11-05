@@ -84,10 +84,10 @@ These are decisions about the whole spec, not one name.
 20. **`GC_transcript` `transcript`**: Reads `transcript.transcript`. Decided: keep it. The other column arguments (type, strand, group) read well.
 21. **`GC_zoom` `range`**: The design document's example calls this `window`. R calls it `range`, and so does the zoom event. Decided: `range`.
 
-### Added in M4 (names to review)
+### Added in M4
 
-Niels decided the two points below on 2026-11-04 in M4.1; the names still
-need his review.
+Niels decided the two points below on 2026-11-04 in M4.1 and approved the
+names on 2026-11-04.
 
 22. **`GC_links` `group`, `value1`, `value2`**: The renderer uses them to pick the genes that get the measure as a label (`labelPosition = "gene"`), so they are drawing options too. Decided: keep them in the spec as `links.group`, `links.value1`, `links.value2`, next to `links.data`. Without `group`, `links.data` was given by hand: R then draws no labels at the genes.
 23. **`GC_align`**: It does not shift positions. It sets the start and end of each cluster's scale from that cluster's breaks and direction, which compile() works out (`autoBreaks`), and R does it again after each `GC_scale()`. Decided: a spec key `align: { idColumn, id, align }`, resolved by compile(). This replaces point C for `GC_align`; Python does not need its own.

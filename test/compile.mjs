@@ -43,7 +43,18 @@ const verbose = args.includes("--verbose");
 
 // Approved differences from R (docs/roadmap.md, exceptions list), by fixture
 // and component: { "<fixture>": ["<component>", ...] }
-const EXCEPTIONS = {};
+const EXCEPTIONS = {
+  // 2: params of GenBank input have cluster and strand (from fields)
+  "rd-GC-chart-2": ["data"],
+  // 3: clusters not normalised get the original_* columns, all null
+  "rd-GC-normalize-1": ["data"],
+  "vig-geneviewer-26": ["data"],
+  "vig-geneviewer-27": ["data"],
+  // 4: GC_tooltip(FALSE): the hidden tooltip has the default formatter
+  ...Object.fromEntries(Array.from({ length: 10 }, (_, i) => [`vig-geneviewer-${53 + i}`, ["tooltip"]])),
+  // 5: save_button = FALSE is toolbar.buttons without "save"
+  "cov-chart-without-extras": ["toolbar"],
+};
 
 // The components of the render model, in the order of the port
 export const COMPONENTS = [
