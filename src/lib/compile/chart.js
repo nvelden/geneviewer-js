@@ -154,12 +154,22 @@ export function chart(spec) {
   x.legend.style = { width: "100%", backgroundColor: style.backgroundColor ?? null };
   x.saveButton = saveButton;
 
-  const clusters = cluster === null ? ["cluster"] : [...new Set(data.get(cluster))];
+  // The rows of each cluster, in the order of the data
+  /** @type {Map<*, number[]>} */
+  const clusterRows = new Map();
+  if (cluster !== null) {
+    data.get(cluster).forEach((name, i) => {
+      const rows = clusterRows.get(name);
+      if (rows) rows.push(i);
+      else clusterRows.set(name, [i]);
+    });
+  }
+  const clusters = cluster === null ? ["cluster"] : [...clusterRows.keys()];
   const blast = columnNames.includes("BlastP") && columnNames.includes("protein_id");
   /** @type {Map<string, Object<string, *>>} */
   const series = new Map();
   for (const name of clusters) {
-    const subset = cluster === null ? data.copy() : data.filter((i) => data.get(cluster)[i] === name);
+    const subset = cluster === null ? data.copy() : data.rows(clusterRows.get(name));
     subset.set("cluster", name);
     const clusterHeight = typeof height === "string" && /%$/.test(height)
       ? computeSize(height, clusters.length)
