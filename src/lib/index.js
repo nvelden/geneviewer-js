@@ -24,7 +24,6 @@ export { newChart, version } from "./chart.js";
 export { compile } from "./compile/index.js";
 // The built-in themes and the palettes (design/api.md), from src/themes.json
 export { builtinThemes as themes, palettes } from "./compile/theme.js";
-// The chart as one SVG document or PNG image. The R binding also makes them
-// the globals chartToSVG() and chartToPNG(), which tests in the R package and
-// the app use (until M6).
+// The chart as one SVG document or PNG image (chart.toSVG() and toPNG()
+// leave out the toolbar).
 export { chartToSVG, chartToPNG } from "./export.js";
