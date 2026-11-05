@@ -1,14 +1,53 @@
 {
-  "name": "geneviewer-js",
-  "version": "0.3.0-alpha.1",
-  "description": "D3 rendering library shared by the geneviewer R and Python packages",
+  "name": "geneviewer",
+  "version": "0.3.0",
+  "description": "Interactive gene cluster, transcript and genome alignment charts in the browser, drawn with D3",
+  "keywords": [
+    "gene cluster",
+    "genome",
+    "synteny",
+    "transcript",
+    "bioinformatics",
+    "visualization",
+    "d3",
+    "chart"
+  ],
+  "homepage": "https://nvelden.github.io/geneviewer-js/",
+  "bugs": {
+    "url": "https://github.com/nvelden/geneviewer-js/issues"
+  },
   "license": "MIT",
-  "private": true,
+  "author": "Niels van der Velden",
   "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/nvelden/geneviewer-js.git"
   },
+  "module": "./dist/geneviewer.mjs",
+  "types": "./dist/geneviewer.d.ts",
+  "unpkg": "./dist/geneviewer.min.js",
+  "jsdelivr": "./dist/geneviewer.min.js",
+  "exports": {
+    ".": {
+      "types": "./dist/geneviewer.d.ts",
+      "import": "./dist/geneviewer.mjs"
+    },
+    "./standalone": {
+      "types": "./dist/geneviewer.d.ts",
+      "import": "./dist/geneviewer.standalone.mjs"
+    },
+    "./geneviewer.css": "./dist/geneviewer.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE.md",
+    "LICENSE-THIRD-PARTY.md"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
   "engines": {
     "node": ">=18"
   },
