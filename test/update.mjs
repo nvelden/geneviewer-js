@@ -119,6 +119,26 @@ try {
     "a redraw through the binding replaces the spec (a key left out goes)");
   await bindingPage.close();
 
+  // A redraw keeps the scroll position of a container the chart is in
+  const kept = await page.evaluate((spec) => {
+    const box = document.createElement("div");
+    box.style.cssText = "height: 150px; overflow: auto";
+    const inner = document.createElement("div");
+    inner.style.cssText = "height: 400px";
+    const above = document.createElement("div");
+    above.style.cssText = "height: 300px";
+    box.append(above, inner);
+    document.body.appendChild(box);
+    const chart = geneviewer.newChart(inner, spec);
+    box.scrollTop = 250;
+    chart.update({ title: { title: "Scrolled" } });
+    const top = box.scrollTop;
+    chart.destroy();
+    box.remove();
+    return top;
+  }, spec);
+  expect(kept === 250, `a redraw keeps the scroll position of a scrolled container (${kept})`);
+
   // A newer spec version warns and draws
   const warnings = [];
   page.on("console", (message) => { if (message.type() === "warning") warnings.push(message.text()); });
