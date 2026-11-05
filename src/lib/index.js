@@ -20,6 +20,10 @@ import "./components/zoom.js";
 import "./components/annotations.js";
 
 export { newChart, version } from "./chart.js";
+// The render model of a spec, for tests and debugging (design/api.md)
+export { compile } from "./compile/index.js";
+// The built-in themes and the palettes (design/api.md), from src/themes.json
+export { builtinThemes as themes, palettes } from "./compile/theme.js";
 // The chart as one SVG document or PNG image. The R binding also makes them
 // the globals chartToSVG() and chartToPNG(), which tests in the R package and
 // the app use (until M6).

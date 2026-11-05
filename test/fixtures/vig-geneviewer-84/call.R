@@ -137,6 +137,6 @@ GC_chart(ophA_cluster, group = "class", height = "100px") %>%
   GC_scale(
     padding = 2,
     hidden = FALSE,
-    axisType = "bottom",
+    axis_position = "bottom",
     y = NULL) %>%
    GC_legend(FALSE)

@@ -54,8 +54,8 @@ These are decisions about the whole spec, not one name.
   and its options are known exactly. Spec v1 is frozen only at 1.0.0 (M8), so adding them later is
   not a breaking change.
 
-- **C. Data processing is not in the spec.** `GC_align`, `GC_normalize`
-  and the gene matching of `GC_links(group, value1, value2)` stay in R and
+- **C. Data processing is not in the spec.** `GC_normalize` and the gene
+  matching of `GC_links(group, value1, value2)` stay in R and
   Python (roadmap, "Chart building only"). The spec gets their results:
   shifted positions in `data`, pairs in `links.data`. `GC_zoom_to` is a
   Shiny command; JavaScript calls `chart.zoomTo()`.
@@ -83,6 +83,14 @@ These are decisions about the whole spec, not one name.
 19. **`GC_theme` `theme`**: Inside the object form this reads `theme: { theme: "dark", textScale: 1.2 }`. Decided: `base`.
 20. **`GC_transcript` `transcript`**: Reads `transcript.transcript`. Decided: keep it. The other column arguments (type, strand, group) read well.
 21. **`GC_zoom` `range`**: The design document's example calls this `window`. R calls it `range`, and so does the zoom event. Decided: `range`.
+
+### Added in M4
+
+Niels decided the two points below on 2026-11-04 in M4.1 and approved the
+names on 2026-11-04.
+
+22. **`GC_links` `group`, `value1`, `value2`**: The renderer uses them to pick the genes that get the measure as a label (`labelPosition = "gene"`), so they are drawing options too. Decided: keep them in the spec as `links.group`, `links.value1`, `links.value2`, next to `links.data`. Without `group`, `links.data` was given by hand: R then draws no labels at the genes.
+23. **`GC_align`**: It does not shift positions. It sets the start and end of each cluster's scale from that cluster's breaks and direction, which compile() works out (`autoBreaks`), and R does it again after each `GC_scale()`. Decided: a spec key `align: { idColumn, id, align }`, resolved by compile(). This replaces point C for `GC_align`; Python does not need its own.
 
 ## All arguments
 
@@ -224,10 +232,10 @@ element overrides). `.*` stands for the options passed through `...`
 | `GC_legend` | `groupStyle` | `legend.groupStyle` |  |
 | `GC_legend` | `...` | `legend.*` | other options under their JavaScript names |
 | `GC_links` | (function) | `links` | |
-| `GC_links` | `group` | not in spec | Matching genes for links stays in R and Python (`get_links`); the spec carries the pairs in `links.data`. |
+| `GC_links` | `group` | `links.group` | Matching genes stays in R and Python (`get_links`); the spec carries the pairs in `links.data`. The column also picks the genes labelled with the measure. **⚑ 22** |
 | `GC_links` | `data` | `links.data` |  |
-| `GC_links` | `value1` | not in spec | Part of matching genes for links, in R and Python. |
-| `GC_links` | `value2` | not in spec | Part of matching genes for links, in R and Python. |
+| `GC_links` | `value1` | `links.value1` | Matched in R and Python; also picks the genes labelled with the measure. **⚑ 22** |
+| `GC_links` | `value2` | `links.value2` | Matched in R and Python; also picks the genes labelled with the measure. **⚑ 22** |
 | `GC_links` | `cluster` | `links.clusters` |  |
 | `GC_links` | `curve` | `links.curve` |  |
 | `GC_links` | `measure` | `links.measure` |  |
@@ -364,10 +372,10 @@ element overrides). `.*` stands for the options passed through `...`
 | `GC_zoom` | `style` | `zoom.style` |  |
 | `GC_zoom` | `windowStyle` | `zoom.windowStyle` |  |
 | `GC_zoom` | `handleStyle` | `zoom.handleStyle` |  |
-| `GC_align` | (function) | not in spec | Shifting coordinates stays in R and Python; the spec gets the shifted data. |
-| `GC_align` | `id_column` | not in spec | |
-| `GC_align` | `id` | not in spec | |
-| `GC_align` | `align` | not in spec | |
+| `GC_align` | (function) | `align` | Sets each cluster's scale from the drawn layout, so compile() does it. **⚑ 23** |
+| `GC_align` | `id_column` | `align.idColumn` | **⚑ 23** |
+| `GC_align` | `id` | `align.id` | **⚑ 23** |
+| `GC_align` | `align` | `align.align` | **⚑ 23** |
 | `GC_normalize` | (function) | not in spec | Shifting coordinates stays in R and Python; the spec gets the normalised data. |
 | `GC_normalize` | `group` | not in spec | |
 | `GC_normalize` | `cluster` | not in spec | |
