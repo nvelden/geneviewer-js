@@ -1473,24 +1473,27 @@ function newChart(target, renderModel, options) {
 
     // A redraw empties the chart first, so the page is shorter while it is
     // drawn and the browser scrolls containers back up. Keep where the
-    // chart's scrolled ancestors (and the page) were scrolled to.
-    var draw = function () {
+    // chart's scrolled ancestors and the page were scrolled to.
+    var keepScroll = function (drawing) {
       var scrolled = [];
       for (var node = el.parentElement; node; node = node.parentElement) {
         if (node.scrollTop || node.scrollLeft) scrolled.push([node, node.scrollTop, node.scrollLeft]);
       }
       var page = el.ownerDocument.scrollingElement;
-      if (page && (page.scrollTop || page.scrollLeft) && !scrolled.some(function (s) { return s[0] === page; })) {
+      if (page && !scrolled.some(function (item) { return item[0] === page; })) {
         scrolled.push([page, page.scrollTop, page.scrollLeft]);
       }
       try {
-        drawChart();
+        drawing();
       } finally {
-        scrolled.forEach(function (s) {
-          if (s[0].scrollTop !== s[1]) s[0].scrollTop = s[1];
-          if (s[0].scrollLeft !== s[2]) s[0].scrollLeft = s[2];
+        scrolled.forEach(function (item) {
+          if (item[0].scrollTop !== item[1]) item[0].scrollTop = item[1];
+          if (item[0].scrollLeft !== item[2]) item[0].scrollLeft = item[2];
         });
       }
+    };
+    var draw = function () {
+      keepScroll(drawChart);
     };
 
     var drawChart = function () {
@@ -1732,27 +1735,8 @@ function newChart(target, renderModel, options) {
       makeColorBar(graphContainer, links, theme, legendColorBar !== null);
       clipZoomLinks();
     };
-    // A redraw empties the chart for a moment, so a page or panel that
-    // scrolls it would jump back: keep where they are scrolled to
-    var keepScroll = function (drawing) {
-      var scrolled = [];
-      for (var node = el.parentElement; node; node = node.parentElement) {
-        if (node.scrollTop || node.scrollLeft) scrolled.push([node, node.scrollTop, node.scrollLeft]);
-      }
-      var page = document.scrollingElement;
-      if (page && !scrolled.some(function (item) { return item[0] === page; })) {
-        scrolled.push([page, page.scrollTop, page.scrollLeft]);
-      }
-      try {
-        drawing();
-      } finally {
-        scrolled.forEach(function (item) {
-          if (item[0].scrollTop !== item[1]) item[0].scrollTop = item[1];
-          if (item[0].scrollLeft !== item[2]) item[0].scrollLeft = item[2];
-        });
-      }
-    };
-    // Draw again with the same settings, as on resize: moves kept here stay
+    // Draw again with the same settings, as on resize: moves kept here stay.
+    // Adding the links and restoring moves are part of what keeps the scroll.
     var redraw = function () {
       // A slider handle with keyboard focus keeps it
       var focused = zoomBar && zoomBar.contains(document.activeElement)
