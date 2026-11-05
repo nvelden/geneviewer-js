@@ -35,4 +35,4 @@ M5 workflow).
 
 ## Done when
 
-`geneviewer` 1.0.0 is on npm, and the docs state what stability covers.
+`geneviewer-js` 1.0.0 is on npm, and the docs state what stability covers.

@@ -2,7 +2,7 @@
 // npm pack, as users install the package:
 //   plain-html  a page loading dist/geneviewer.min.js draws a chart
 //   vite        a new Vite project (vanilla) imports { newChart } from
-//               "geneviewer", vite build, and its page draws a chart
+//               "geneviewer-js", vite build, and its page draws a chart
 //   types       a .ts file using newChart and Spec compiles (tsc --noEmit)
 // Each chart is the spec in test/smoke/spec.json; headless Chrome checks
 // that its genes are drawn. Needs the network (npm) and Chrome: the
@@ -97,7 +97,7 @@ try {
 <body><div id="chart" style="width: 800px; height: 300px"></div>
 <script type="module" src="/main.js"></script></body></html>
 `);
-    writeFileSync(path.join(dir, "main.js"), `import { newChart } from "geneviewer";\n\nnewChart(document.getElementById("chart"), ${spec});\n`);
+    writeFileSync(path.join(dir, "main.js"), `import { newChart } from "geneviewer-js";\n\nnewChart(document.getElementById("chart"), ${spec});\n`);
     run("npx", ["vite", "build", "--logLevel", "error"], dir);
     const server = await serve(path.join(dir, "dist"));
     const { genes, errors } = await genesDrawn(browser, server.url);

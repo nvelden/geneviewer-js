@@ -8,7 +8,7 @@ Make geneviewer a standalone JavaScript charting library, used the way
 people use plotly.js:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/geneviewer/dist/geneviewer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/geneviewer-js/dist/geneviewer.min.js"></script>
 <div id="chart"></div>
 <script>
   const chart = geneviewer.newChart("#chart", {
@@ -203,7 +203,9 @@ host gets them.
 - **No host dependencies:** `HTMLWidgets`, FileSaver and Font Awesome go.
   Downloads use the browser's own `<a download>`; the toolbar icons become
   inline SVG.
-- **npm:** published as `geneviewer` (free on npm as of 2026-11-04).
+- **npm:** published as `geneviewer-js`. npm refused `geneviewer` as too
+  similar to the existing `gene-viewer` (2026-11-05); the global name stays
+  `geneviewer`.
   jsDelivr and unpkg serve it automatically.
 
 ## Not in scope for 1.0

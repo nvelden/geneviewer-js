@@ -169,7 +169,7 @@ approved exceptions; SVG baselines identical.
 
 **Niels, once:** create the npm account with two-factor sign-in and link the
 repository for trusted publishing.
-**Exit:** `npm install geneviewer` and the jsDelivr URL work in a fresh
+**Exit:** `npm install geneviewer-js` and the jsDelivr URL work in a fresh
 project; docs site live.
 
 ## M6: R package 0.3.0
