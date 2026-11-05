@@ -54,6 +54,20 @@ These are decisions about the whole spec, not one name.
   and its options are known exactly. Spec v1 is frozen only at 1.0.0 (M8), so adding them later is
   not a breaking change.
 
+  **Listed in M5 (Niels, 2026-11-05):** the options each component's
+  renderer reads are now properties of the schema, under their JavaScript
+  names, with two renames: `scaleBar.unit` (the renderer's `scaleBarUnit`,
+  as case 16) and `labels.labelAdjustment` / `links.labelAdjustment` (the
+  renderer's `labelAdjustmentOptions`); compile() maps them. Other options
+  stay allowed, unlisted, and are passed to the renderer as they are.
+
+- **Theme options (Niels, 2026-11-05).** Inside a theme object, a
+  component's options have the component's spec names:
+  `theme.legend.textStyle`, `theme.sequence.lineStyle`,
+  `theme.scaleBar.lineStyle`, `theme.links.show`, `theme.scale.autoBreaks`.
+  compile() maps them to the renderer's names. `src/themes.json` keeps R's
+  names, for R to read.
+
 - **C. Data processing is not in the spec.** `GC_normalize` and the gene
   matching of `GC_links(group, value1, value2)` stay in R and
   Python (roadmap, "Chart building only"). The spec gets their results:

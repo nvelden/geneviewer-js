@@ -561,10 +561,28 @@
         "style": {
           "$ref": "#/$defs/style",
           "description": "CSS styles of the cluster's element."
+        },
+        "margin": {
+          "$ref": "#/$defs/margin",
+          "description": "Margins of the cluster, in pixels."
+        },
+        "width": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "description": "Width of the cluster."
+        },
+        "height": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "description": "Height of the cluster."
         }
       },
       "additionalProperties": true,
-      "description": "The other properties are further options under their JavaScript names, as R passes them through `...`."
+      "description": "Other properties are passed to the renderer as they are."
     },
     "clusterTitleEntry": {
       "type": "object",
@@ -668,10 +686,18 @@
             }
           ],
           "description": "Pixels between the title and subtitle. Default: the theme's, otherwise 20."
+        },
+        "x": {
+          "type": "number",
+          "description": "Horizontal offset of the title, in pixels."
+        },
+        "y": {
+          "type": "number",
+          "description": "Vertical offset of the title, in pixels."
         }
       },
       "additionalProperties": true,
-      "description": "The other properties are further options under their JavaScript names, as R passes them through `...`."
+      "description": "Other properties are passed to the renderer as they are."
     },
     "clusterLabelEntry": {
       "type": "object",
@@ -786,10 +812,44 @@
             }
           ],
           "description": "Pixels between the middle of the title's last line and the subtitle. Default: the theme's, otherwise 1.2 times the mean font size of the two."
+        },
+        "x": {
+          "type": "number",
+          "description": "Horizontal offset of the label, in pixels."
+        },
+        "y": {
+          "type": "number",
+          "description": "Vertical offset of the label, in pixels."
+        },
+        "fontSize": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "description": "Font size, e.g. \"12px\"."
+        },
+        "fontStyle": {
+          "type": "string",
+          "description": "Font style, e.g. \"italic\"."
+        },
+        "fontWeight": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "description": "Font weight, e.g. \"bold\"."
+        },
+        "fontFamily": {
+          "type": "string",
+          "description": "Font family."
+        },
+        "cursor": {
+          "type": "string",
+          "description": "Mouse cursor over it."
         }
       },
       "additionalProperties": true,
-      "description": "The other properties are further options under their JavaScript names, as R passes them through `...`."
+      "description": "Other properties are passed to the renderer as they are."
     },
     "clusterFooterEntry": {
       "type": "object",
@@ -896,10 +956,18 @@
             }
           ],
           "description": "Pixels between the title and subtitle. Default: the theme's, otherwise 12."
+        },
+        "x": {
+          "type": "number",
+          "description": "Horizontal offset of the footer, in pixels."
+        },
+        "y": {
+          "type": "number",
+          "description": "Vertical offset of the footer, in pixels."
         }
       },
       "additionalProperties": true,
-      "description": "The other properties are further options under their JavaScript names, as R passes them through `...`."
+      "description": "Other properties are passed to the renderer as they are."
     },
     "colorEntry": {
       "type": "object",
@@ -970,10 +1038,30 @@
         "styleBy": {
           "$ref": "#/$defs/column",
           "description": "Column whose values groupStyle matches. Default: fields.group."
+        },
+        "rotate": {
+          "type": "number",
+          "description": "Rotation of the coordinates, in degrees.",
+          "default": -45
+        },
+        "yPositionTop": {
+          "type": "number",
+          "description": "Vertical position of the coordinates above the genes, from 1 (bottom) to 100 (top) of the cluster.",
+          "default": 53
+        },
+        "yPositionBottom": {
+          "type": "number",
+          "description": "Vertical position of the coordinates below the genes, from 1 (bottom) to 100 (top) of the cluster.",
+          "default": 48
+        },
+        "overlapThreshold": {
+          "type": "number",
+          "description": "Distance in pixels below which coordinates of neighbouring genes go on the other side.",
+          "default": 20
         }
       },
       "additionalProperties": true,
-      "description": "The other properties are further options under their JavaScript names, as R passes them through `...`."
+      "description": "Other properties are passed to the renderer as they are."
     },
     "elementStyleEntry": {
       "type": "object",
@@ -1136,10 +1224,45 @@
         "cornerRadius": {
           "type": "number",
           "description": "Radius in pixels of the markers' corners. Default: sharp, and 5 for \"rbox\"."
+        },
+        "x": {
+          "type": "number",
+          "description": "Horizontal offset of the genes, in pixels."
+        },
+        "y": {
+          "type": "number",
+          "description": "Vertical position of the genes, from 1 (bottom) to 100 (top) of the cluster.",
+          "default": 50
+        },
+        "stroke": {
+          "$ref": "#/$defs/color",
+          "description": "Outline colour of the genes."
+        },
+        "strokeWidth": {
+          "type": "number",
+          "description": "Outline width of the genes, in pixels.",
+          "default": 1
+        },
+        "cursor": {
+          "type": "string",
+          "description": "Mouse cursor over a gene.",
+          "default": "default"
+        },
+        "arrowheadWidth": {
+          "type": "number",
+          "description": "Width of the arrowhead, in pixels. Default: from markerSize."
+        },
+        "arrowheadHeight": {
+          "type": "number",
+          "description": "Height of the arrowhead, in pixels. Default: from markerSize."
+        },
+        "markerHeight": {
+          "type": "number",
+          "description": "Height of the gene body, in pixels. Default: from markerSize."
         }
       },
       "additionalProperties": true,
-      "description": "The other properties are further options under their JavaScript names, as R passes them through `...`."
+      "description": "Other properties are passed to the renderer as they are."
     },
     "gridEntry": {
       "type": "object",
@@ -1204,10 +1327,119 @@
         "styleBy": {
           "$ref": "#/$defs/column",
           "description": "Column whose values groupStyle matches, e.g. the label column, or \"geneTrack\". Default: fields.group."
+        },
+        "x": {
+          "type": "number",
+          "description": "Horizontal offset of the labels, in pixels."
+        },
+        "y": {
+          "type": "number",
+          "description": "Vertical position of the labels, from 1 (bottom) to 100 (top) of the cluster.",
+          "default": 55
+        },
+        "dx": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "description": "Horizontal shift of each label, e.g. \"0.5em\"."
+        },
+        "dy": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "description": "Vertical shift of each label, e.g. \"-1em\"."
+        },
+        "rotate": {
+          "type": "number",
+          "description": "Rotation of the labels, in degrees.",
+          "default": 0
+        },
+        "start": {
+          "type": "number",
+          "description": "Position where the labels start; labels of genes before it are not drawn."
+        },
+        "end": {
+          "type": "number",
+          "description": "Position where the labels end; labels of genes after it are not drawn."
+        },
+        "adjustLabels": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "enum": [
+                "hide",
+                "spread"
+              ]
+            }
+          ],
+          "description": "Overlapping labels: true moves them apart, \"hide\" hides them, \"spread\" spreads them out with leader lines, false leaves them.",
+          "default": true
+        },
+        "spreadPosition": {
+          "enum": [
+            "bottom",
+            "top"
+          ],
+          "description": "With adjustLabels \"spread\": the side of the genes the labels go to.",
+          "default": "bottom"
+        },
+        "leaderLine": {
+          "oneOf": [
+            {
+              "const": false
+            },
+            {
+              "$ref": "#/$defs/style"
+            }
+          ],
+          "description": "Style of the lines to spread labels (stroke, strokeWidth, length in pixels); false draws none."
+        },
+        "textAnchor": {
+          "enum": [
+            "start",
+            "middle",
+            "end"
+          ],
+          "description": "Text alignment of each label at its gene.",
+          "default": "middle"
+        },
+        "labelAdjustment": {
+          "$ref": "#/$defs/style",
+          "description": "How overlapping labels are moved: rotation, offsetX, offsetY, dx, dy."
+        },
+        "fontSize": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "description": "Font size, e.g. \"12px\"."
+        },
+        "fontStyle": {
+          "type": "string",
+          "description": "Font style, e.g. \"italic\"."
+        },
+        "fontWeight": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "description": "Font weight, e.g. \"bold\"."
+        },
+        "fontFamily": {
+          "type": "string",
+          "description": "Font family."
+        },
+        "cursor": {
+          "type": "string",
+          "description": "Mouse cursor over it."
         }
       },
       "additionalProperties": true,
-      "description": "The other properties are further options under their JavaScript names, as R passes them through `...`."
+      "description": "Other properties are passed to the renderer as they are."
     },
     "legendEntry": {
       "type": "object",
@@ -1266,10 +1498,38 @@
         "groupStyle": {
           "$ref": "#/$defs/groupStyle",
           "description": "Styles by group for the text of that group's entry; styles under marker go to its marker."
+        },
+        "x": {
+          "type": "number",
+          "description": "Horizontal offset of the legend, in pixels."
+        },
+        "y": {
+          "type": "number",
+          "description": "Vertical offset of the legend, in pixels."
+        },
+        "width": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "description": "Width of the legend. Default: the chart's width."
+        },
+        "orientation": {
+          "enum": [
+            "horizontal",
+            "vertical"
+          ],
+          "description": "Entries side by side or below each other.",
+          "default": "horizontal"
+        },
+        "adjustHeight": {
+          "type": "boolean",
+          "description": "Whether the legend's height follows its entries.",
+          "default": true
         }
       },
       "additionalProperties": true,
-      "description": "The other properties are further options under their JavaScript names, as R passes them through `...`."
+      "description": "Other properties are passed to the renderer as they are."
     },
     "linksEntry": {
       "type": "object",
@@ -1401,10 +1661,19 @@
         "labelStyle": {
           "$ref": "#/$defs/style",
           "description": "CSS styles of the measure labels."
+        },
+        "y": {
+          "type": "number",
+          "description": "Vertical position of the links, from 1 (bottom) to 100 (top) of the cluster.",
+          "default": 50
+        },
+        "labelAdjustment": {
+          "$ref": "#/$defs/style",
+          "description": "How overlapping measures on the links are moved: rotation, offsetX, offsetY, dx, dy."
         }
       },
       "additionalProperties": true,
-      "description": "The other properties are further options under their JavaScript names, as R passes them through `...`."
+      "description": "Other properties are passed to the renderer as they are."
     },
     "patternEntry": {
       "type": "object",
@@ -1606,10 +1875,33 @@
         "labelStyle": {
           "$ref": "#/$defs/style",
           "description": "Styles of the bar's label."
+        },
+        "title": {
+          "type": "string",
+          "description": "Text of the scale bar.",
+          "default": "1 kb"
+        },
+        "unit": {
+          "type": "number",
+          "description": "Length of the scale bar, in base pairs.",
+          "default": 1000
+        },
+        "x": {
+          "type": "number",
+          "description": "Horizontal offset of the scale bar, in pixels."
+        },
+        "y": {
+          "type": "number",
+          "description": "Vertical offset of the scale bar, in pixels."
+        },
+        "textPadding": {
+          "type": "number",
+          "description": "Space between the text and the bar, in pixels.",
+          "default": 0
         }
       },
       "additionalProperties": true,
-      "description": "The other properties are further options under their JavaScript names, as R passes them through `...`."
+      "description": "Other properties are passed to the renderer as they are."
     },
     "sequenceEntry": {
       "type": "object",
@@ -1634,10 +1926,18 @@
         "markerStyle": {
           "$ref": "#/$defs/style",
           "description": "Styles of the break marks, plus markerHeight, tiltAmount and gap."
+        },
+        "start": {
+          "type": "number",
+          "description": "Position where the line starts. Default: the scale's start."
+        },
+        "end": {
+          "type": "number",
+          "description": "Position where the line ends. Default: the scale's end."
         }
       },
       "additionalProperties": true,
-      "description": "The other properties are further options under their JavaScript names, as R passes them through `...`."
+      "description": "Other properties are passed to the renderer as they are."
     },
     "themeEntry": {
       "type": "object",
@@ -1693,7 +1993,7 @@
         }
       },
       "additionalProperties": true,
-      "description": "Theme settings. The other properties are options per component, named after the component (e.g. labels: { fontSize: \"10px\" })."
+      "description": "Theme settings. The other properties are options per component, named after the component and with the component's option names (e.g. labels: { fontSize: \"10px\" }, legend: { textStyle: { fill: \"grey\" } })."
     },
     "titleEntry": {
       "type": "object",
@@ -1741,10 +2041,18 @@
         "spacing": {
           "type": "number",
           "description": "Pixels between the title and subtitle. Default: the theme's, otherwise 20."
+        },
+        "x": {
+          "type": "number",
+          "description": "Horizontal offset of the title, in pixels."
+        },
+        "y": {
+          "type": "number",
+          "description": "Vertical offset of the title, in pixels."
         }
       },
       "additionalProperties": true,
-      "description": "The other properties are further options under their JavaScript names, as R passes them through `...`."
+      "description": "Other properties are passed to the renderer as they are."
     },
     "toolbarEntry": {
       "type": "object",
@@ -1844,10 +2152,90 @@
         "clusters": {
           "$ref": "#/$defs/clusters",
           "description": "The clusters this entry applies to, by name or 1-based position. Default: all clusters."
+        },
+        "triggers": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "markers",
+              "genes",
+              "labels",
+              "exons",
+              "introns",
+              "utrs"
+            ]
+          },
+          "description": "The parts that show the tooltip.",
+          "default": [
+            "markers",
+            "genes",
+            "labels",
+            "exons",
+            "introns",
+            "utrs"
+          ]
+        },
+        "opacity": {
+          "type": "number",
+          "description": "Opacity of the tooltip when hidden.",
+          "default": 0
+        },
+        "position": {
+          "type": "string",
+          "description": "CSS position of the tooltip.",
+          "default": "absolute"
+        },
+        "pointerEvents": {
+          "type": "string",
+          "description": "CSS pointer-events of the tooltip.",
+          "default": "none"
+        },
+        "backgroundColor": {
+          "$ref": "#/$defs/color",
+          "description": "Background colour."
+        },
+        "color": {
+          "$ref": "#/$defs/color",
+          "description": "Text colour."
+        },
+        "padding": {
+          "type": "string",
+          "description": "Padding, as CSS."
+        },
+        "borderRadius": {
+          "type": "string",
+          "description": "Corner radius, as CSS."
+        },
+        "border": {
+          "type": "string",
+          "description": "Border, as CSS."
+        },
+        "boxShadow": {
+          "type": "string",
+          "description": "Shadow, as CSS."
+        },
+        "fontFamily": {
+          "type": "string",
+          "description": "Font family."
+        },
+        "fontSize": {
+          "type": "string",
+          "description": "Font size, as CSS."
+        },
+        "lineHeight": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "description": "Line height, as CSS."
+        },
+        "zIndex": {
+          "type": "number",
+          "description": "Stacking order, as CSS."
         }
       },
       "additionalProperties": true,
-      "description": "The other properties are further options under their JavaScript names, as R passes them through `...`."
+      "description": "Other properties are passed to the renderer as they are."
     },
     "trackMouseEntry": {
       "type": "object",
@@ -1860,10 +2248,58 @@
         "clusters": {
           "$ref": "#/$defs/clusters",
           "description": "The clusters this entry applies to, by name or 1-based position. Default: all clusters."
+        },
+        "cursor": {
+          "type": "string",
+          "description": "Mouse cursor over the clusters.",
+          "default": "crosshair"
+        },
+        "backgroundColor": {
+          "$ref": "#/$defs/color",
+          "description": "Background colour."
+        },
+        "color": {
+          "$ref": "#/$defs/color",
+          "description": "Text colour."
+        },
+        "padding": {
+          "type": "string",
+          "description": "Padding, as CSS."
+        },
+        "borderRadius": {
+          "type": "string",
+          "description": "Corner radius, as CSS."
+        },
+        "border": {
+          "type": "string",
+          "description": "Border, as CSS."
+        },
+        "boxShadow": {
+          "type": "string",
+          "description": "Shadow, as CSS."
+        },
+        "fontFamily": {
+          "type": "string",
+          "description": "Font family."
+        },
+        "fontSize": {
+          "type": "string",
+          "description": "Font size, as CSS."
+        },
+        "lineHeight": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "description": "Line height, as CSS."
+        },
+        "zIndex": {
+          "type": "number",
+          "description": "Stacking order, as CSS."
         }
       },
       "additionalProperties": true,
-      "description": "The other properties are further options under their JavaScript names, as R passes them through `...`."
+      "description": "Other properties are passed to the renderer as they are."
     },
     "transcriptEntry": {
       "type": "object",
@@ -1960,10 +2396,19 @@
         "labelOptions": {
           "$ref": "#/$defs/style",
           "description": "Options of the transcript labels."
+        },
+        "x": {
+          "type": "number",
+          "description": "Horizontal offset of the transcripts, in pixels."
+        },
+        "y": {
+          "type": "number",
+          "description": "Vertical position of the transcripts, from 1 (bottom) to 100 (top) of the cluster.",
+          "default": 50
         }
       },
       "additionalProperties": true,
-      "description": "The other properties are further options under their JavaScript names, as R passes them through `...`."
+      "description": "Other properties are passed to the renderer as they are."
     },
     "zoomEntry": {
       "type": "object",
@@ -2055,6 +2500,280 @@
         "clusters": {
           "$ref": "#/$defs/clusters",
           "description": "The clusters this entry applies to, by name or 1-based position. Default: all clusters."
+        },
+        "x": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          ],
+          "description": "Position along the scale (text, symbol, promoter, terminator); an array draws one per position; an array draws one per value."
+        },
+        "y": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          ],
+          "description": "Vertical position, from 1 to 100 (text, symbol, promoter, terminator); an array draws one per value."
+        },
+        "text": {
+          "oneOf": [
+            {
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": [
+                  "string",
+                  "number"
+                ]
+              }
+            }
+          ],
+          "description": "The text (text, textMarker, arc); an array draws one per value."
+        },
+        "x1": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          ],
+          "description": "Start position along the scale (line, arrow, textMarker, arc); an array draws one per value."
+        },
+        "x2": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          ],
+          "description": "End position along the scale (line, arrow, textMarker, arc); an array draws one per value."
+        },
+        "y1": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          ],
+          "description": "Start height, from 1 to 100 (line, arrow, textMarker, arc); an array draws one per value."
+        },
+        "y2": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          ],
+          "description": "End height, from 1 to 100 (line, arrow, textMarker, arc); an array draws one per value."
+        },
+        "position": {
+          "description": "textMarker: the position along the scale; rectangle: corners [[x1, y1], [x2, y2]], or an array of them."
+        },
+        "labelX": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          ],
+          "description": "Horizontal offset of the text, in pixels (textMarker, arc); an array draws one per value."
+        },
+        "labelY": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          ],
+          "description": "Vertical offset of the text, in pixels (textMarker, arc); an array draws one per value."
+        },
+        "showArrow": {
+          "type": "boolean",
+          "description": "Whether the textMarker has an arrowhead."
+        },
+        "arrowSize": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          ],
+          "description": "Size of the arrowhead, in pixels (arrow, textMarker); an array draws one per value."
+        },
+        "symbol": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          ],
+          "description": "Symbol: circle, cross, diamond, square, star, triangle or wye."
+        },
+        "size": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          ],
+          "description": "Size of the symbol, in square pixels; an array draws one per value."
+        },
+        "rotation": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          ],
+          "description": "Rotation, in degrees (symbol, rectangle, promoter, terminator); an array draws one per value."
+        },
+        "direction": {
+          "enum": [
+            "forward",
+            "reverse"
+          ],
+          "description": "Direction of a promoter or terminator."
+        },
+        "scale": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          ],
+          "description": "Size factor of a promoter or terminator; an array draws one per value."
+        },
+        "midY": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          ],
+          "description": "Height of the arc's middle, from 1 to 100; an array draws one per value."
+        },
+        "stroke": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          ],
+          "description": "Line colour of an arc."
+        },
+        "strokeWidth": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          ],
+          "description": "Line width of an arc, in pixels; an array draws one per value."
+        },
+        "style": {
+          "$ref": "#/$defs/style",
+          "description": "Style of the annotation (text, line, symbol, rectangle, promoter, terminator)."
+        },
+        "textStyle": {
+          "$ref": "#/$defs/style",
+          "description": "Style of the text (textMarker, arc)."
+        },
+        "arrowStyle": {
+          "$ref": "#/$defs/style",
+          "description": "Style of the arrowhead (arrow, textMarker)."
+        },
+        "lineStyle": {
+          "$ref": "#/$defs/style",
+          "description": "Style of the line (arrow, textMarker, arc)."
         }
       },
       "additionalProperties": true,
