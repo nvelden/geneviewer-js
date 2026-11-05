@@ -36,8 +36,15 @@ jobs:
       - run: npm test
       - run: npm run build
       - run: cd dist && sha256sum -c SHA256SUMS
+      # A version published by hand (the first one, before the trusted
+      # publisher could be added) is not published again; the release still is
       - name: Publish to npm
         run: |
+          version=$(node -p "require('./package.json').version")
+          if npm view "geneviewer@${version}" version > /dev/null 2>&1; then
+            echo "geneviewer ${version} is already on npm; not publishing it again"
+            exit 0
+          fi
           tag=latest
           case "${GITHUB_REF_NAME}" in *-*) tag=next ;; esac
           npm publish --provenance --access public --tag "$tag"

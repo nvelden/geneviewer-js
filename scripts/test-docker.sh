@@ -3,7 +3,7 @@
 # tests in the Docker test image (docker/Dockerfile), which
 # fixes Chromium and the fonts: the fixture tests (test/run.cjs), the
 # interaction tests (test/interaction.cjs), the spec updates
-# (test/update.mjs), then the save, two-chart, site and warning checks
+# (test/update.mjs), the chart methods (test/methods.mjs), then the save, two-chart, site and warning checks
 # (test/save.cjs, test/two-charts.cjs, test/site.cjs, test/warnings.cjs). Arguments go to the first two, e.g. --update. The
 # image is arm64: Apple silicon or an arm64 CI runner.
 set -euo pipefail
@@ -21,4 +21,4 @@ node scripts/build-site.mjs > /dev/null
 node test/compile.mjs > /dev/null || node test/compile.mjs --verbose
 docker build --quiet -t geneviewer-js-test -f docker/Dockerfile . > /dev/null
 docker run --rm -v "$PWD":/work -w /work geneviewer-js-test \
-  sh -c 'node test/run.cjs "$@" && node test/run.cjs --build min --mode direct && node test/interaction.cjs "$@" && node test/update.mjs && node test/icons.cjs && node test/save.cjs && node test/two-charts.cjs && node test/site.cjs && node test/warnings.cjs' sh "$@"
+  sh -c 'node test/run.cjs "$@" && node test/run.cjs --build min --mode direct && node test/interaction.cjs "$@" && node test/update.mjs && node test/methods.mjs && node test/icons.cjs && node test/save.cjs && node test/two-charts.cjs && node test/site.cjs && node test/warnings.cjs' sh "$@"

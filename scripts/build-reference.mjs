@@ -161,6 +161,10 @@ ${componentSections}
       <tr><td><code>on(name, handler)</code></td><td>Call <code>handler({ type, detail })</code> on each <a href="#events">event</a> of that name. Returns a function that stops it.</td></tr>
       <tr><td><code>off(name, handler)</code></td><td>Stop calling a handler.</td></tr>
       <tr><td><code>zoomTo([start, end])</code></td><td>Set the zoom window, in the units of <code>zoom.mode</code>; <code>zoomTo(null)</code> shows everything.</td></tr>
+      <tr><td><code>select(items)</code></td><td>Select elements, as a click does, and report <code>select</code> and <code>selection</code> when that changes the selection. An item gives a <code>component</code> and any of <code>cluster</code>, <code>part</code> and <code>data</code>; it selects every drawn element that matches all it gives, so <code>{ component: "genes", data: { rowID: 3 } }</code> selects gene row 3, and the items of <code>getSelection()</code> select their elements again. <code>select(null)</code> or <code>select([])</code> clears it. Needs <code>events: { select: true }</code>.</td></tr>
+      <tr><td><code>getSelection()</code></td><td>The selected elements, as the <code>selection</code> event reports them.</td></tr>
+      <tr><td><code>undo()</code>, <code>redo()</code></td><td>Undo or redo the last move, as the toolbar does (<code>events: { drag: true }</code>).</td></tr>
+      <tr><td><code>download(format, filename)</code></td><td>Save the chart as <code>"svg"</code> or <code>"png"</code>, as the save menu does: through the <code>saveAs</code> option, or as a browser download. The name defaults to <code>graph.svg</code> or <code>graph.png</code>. A Promise.</td></tr>
       <tr><td><code>toSVG()</code></td><td>The chart as SVG text.</td></tr>
       <tr><td><code>toPNG()</code></td><td>The chart as a PNG <code>Blob</code> (a Promise).</td></tr>
       <tr><td><code>resize()</code></td><td>Draw again at the element's size.</td></tr>

@@ -27,10 +27,6 @@
     <h1>Getting started</h1>
 
     <h2 id="install">Install</h2>
-    <div class="notice planned" data-release-notice>
-      <p><strong>0.3.0 is being released.</strong> The <code>npm install</code>
-        and jsDelivr instructions work once it is on npm.</p>
-    </div>
     <p>With a script tag, which defines the global <code>geneviewer</code> and includes D3:</p>
 <pre><code>&lt;script src="https://cdn.jsdelivr.net/npm/geneviewer@0.3/dist/geneviewer.min.js"&gt;&lt;/script&gt;</code></pre>
     <p>Or from npm, for a bundler such as Vite or webpack; this build imports
@@ -111,11 +107,18 @@ const spec = chart.getSpec();</code></pre>
 const stop = chart.on("select", (event) =&gt; console.log(event.detail));
 document.getElementById("chart")
   .addEventListener("geneviewer:click", (event) =&gt; console.log(event.detail));</code></pre>
+    <p>Select from code, and read the selection back. With
+      <code>events: { drag: true }</code>, <code>undo()</code> and
+      <code>redo()</code> step through moves, as the toolbar does.</p>
+<pre><code>chart.select([{ component: "genes", data: { rowID: 3 } }]);
+const selected = chart.getSelection();
+chart.undo();</code></pre>
 
     <h2 id="export">Export</h2>
     <p>The toolbar's save button downloads the chart as SVG or PNG. From code:</p>
 <pre><code>const svg = chart.toSVG();          // text
-const png = await chart.toPNG();    // a Blob</code></pre>
+const png = await chart.toPNG();    // a Blob
+await chart.download("png", "clusters.png");</code></pre>
     <p>Pass <code>saveAs(blob, filename)</code> to <code>newChart</code>'s
       options to save files your own way.</p>
   </main>
