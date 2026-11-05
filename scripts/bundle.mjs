@@ -28,6 +28,9 @@ export async function bundle(entry, options = {}) {
     logLevel: "warning",
     write: false,
     loader: { ".css": "text" },
+    // package.json's sideEffects is for users' bundlers (dist/ is one module
+    // each); the library's own modules add to container.prototype on import
+    ignoreAnnotations: true,
     inject: d3 === "global" ? [] : ["src/d3.js"],
     external: d3 === "import" ? ["d3"] : [],
   });

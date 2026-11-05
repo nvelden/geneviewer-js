@@ -1,10 +1,75 @@
-# geneviewer-js
+# geneviewer
 
-The D3 rendering code behind [geneviewer](https://github.com/nvelden/geneviewer),
-kept in one place so the R package and a future Python package can draw
-gene cluster charts with the same JavaScript.
+Interactive gene cluster, transcript and genome alignment charts in the
+browser, drawn with D3. The same library draws the charts of the
+[geneviewer R package](https://github.com/nvelden/geneviewer) and its Shiny
+app.
 
-## Contents
+**Docs and examples:** https://nvelden.github.io/geneviewer-js/
+
+## Install
+
+```sh
+npm install geneviewer
+```
+
+Or load it from a CDN, with D3 included:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/geneviewer@0.3/dist/geneviewer.min.js"></script>
+```
+
+## A first chart
+
+```html
+<div id="chart" style="width: 800px; height: 300px"></div>
+<script src="https://cdn.jsdelivr.net/npm/geneviewer@0.3/dist/geneviewer.min.js"></script>
+<script>
+  const chart = geneviewer.newChart("#chart", {
+    version: 1,
+    data: [
+      { cluster: "A", name: "geneA", start: 100, end: 900, class: "kinase" },
+      { cluster: "A", name: "geneB", start: 1200, end: 2000, class: "transporter" },
+      { cluster: "B", name: "geneA", start: 300, end: 1100, class: "kinase" },
+    ],
+    fields: { cluster: "cluster", group: "class" },
+    labels: { label: "name" },
+    title: { title: "Two clusters" },
+  });
+  chart.on("click", (event) => console.log(event.detail));
+</script>
+```
+
+With a bundler (Vite, webpack, ...), import the ES module; it imports `d3`
+from npm:
+
+```js
+import { newChart } from "geneviewer";
+
+const chart = newChart(document.getElementById("chart"), spec);
+chart.update({ title: { title: "New title" } });
+```
+
+The chart spec has one key per part of the chart (`genes`, `labels`,
+`links`, `scale`, `theme`, ...); see the API reference on the docs site and
+`dist/spec.d.ts`. The library adds its stylesheet to the page; on pages
+whose Content-Security-Policy blocks that, pass `{ injectStyles: false }`
+and load `geneviewer/geneviewer.css`.
+
+## Files
+
+| File | For |
+|------|-----|
+| `dist/geneviewer.min.js` | Script tag, global `geneviewer`, D3 included |
+| `dist/geneviewer.mjs` | ES module for bundlers (`import ... from "geneviewer"`), imports `d3` |
+| `dist/geneviewer.standalone.mjs` | ES module with D3 included (`geneviewer/standalone`) |
+| `dist/geneviewer.core.js` | Script tag using the page's `d3`, not minified (the R package) |
+| `dist/geneviewer.css` | The stylesheet, when styles cannot be added by script |
+| `dist/geneviewer.d.ts`, `dist/spec.d.ts` | Types |
+
+# Development
+
+## Source
 
 | File | What it is |
 |------|------------|
@@ -15,19 +80,9 @@ gene cluster charts with the same JavaScript.
 | `src/styles.css` | Chart styles |
 | `src/htmlwidgets/geneviewerwidget.js` | htmlwidgets binding used by the R package: calls `newChart` and sends events to Shiny |
 
-The sources are ES modules. esbuild bundles them into `dist/geneviewer.js`, a classic browser
-script that defines the global `geneviewer` and needs the global `d3` (D3
-7.8.5); the binding also needs `HTMLWidgets`.
-
-```js
-const chart = geneviewer.newChart(el, renderModel, { on: { select: (e) => console.log(e.detail) } });
-chart.on("zoom", (e) => console.log(e.detail));
-```
-
-The render model is what the R package sends today (`widget$x`); from M4 it
-is the chart spec. Events also arrive as `geneviewer:<name>` DOM events on
-`el`. The save menu downloads with the browser; pass `options.saveAs(blob,
-filename)` to save another way.
+The sources are ES modules, bundled by esbuild (`scripts/files.mjs`). The
+code uses `d3` as a global; the ES module and bundled builds import it from
+the `d3` package instead (`src/d3.js`).
 
 ## Build
 
@@ -36,17 +91,18 @@ npm run check   # syntax-check the sources
 npm run build   # write dist/ and dist/SHA256SUMS
 ```
 
-`npm run build` needs the dev dependencies (`npm ci`). The bundle is not
+`npm run build` needs the dev dependencies (`npm ci`). It writes the four
+builds (see "Files" above), `geneviewer.css`, `themes.json`, the R binding,
+the type definitions and `SHA256SUMS`. `geneviewer.core.js` is not
 minified, so the R package can ship readable source, as CRAN expects;
-esbuild does drop the comments. D3 is not bundled; each host package
-ships it as a separate dependency with its own licence.
+esbuild does drop the comments.
 
 ## Chart spec schema
 
 `schema/spec-v1.schema.json` (JSON Schema 2020-12) defines the chart spec:
 one top-level key per `GC_*` function of the R package, one property per
 argument, in camelCase. `schema/NAMING.md` lists every R argument and its
-spec name. The schema is a draft until the names are approved.
+spec name; the names were approved for spec v1, which is frozen at 1.0.0.
 
 ```sh
 npm run schema:check   # validate the schema, NAMING.md and schema/examples/
@@ -75,14 +131,19 @@ Rscript test/coverage.R             # update test/coverage.md
 
 - **Fixtures** (`test/fixtures/`): 206 charts exported from the R package:
   its help-page examples, its vignettes and `test/charts.R`. Each has the
-  R code, the payload R sends to the browser, and `render.txt`, a canonical
-  listing of the drawn chart. `npm test` draws every payload and compares.
+  R code, the spec R recorded, the payload R sends to the browser, and
+  `render.txt`, a canonical listing of the drawn chart. `npm test` draws
+  every fixture and compares.
+- **compile()** (`npm run test:compile`, in `npm test`): `compile(spec)`
+  equals R's payload for every fixture, apart from the approved exceptions
+  (docs/roadmap.md).
 - **Interaction tests** (`test/interaction/`): scripted zoom, selection,
   drag and undo/redo, with the chart and its events recorded after each
   step.
-- **Two modes:** fixtures and interaction tests run twice against the same
-  baselines: through the R binding, as R draws charts, and with
-  `geneviewer.newChart()` directly (`test/harness/mount.js`).
+- **Three modes:** fixtures and interaction tests run against the same
+  baselines through the R binding, as R draws charts, with
+  `geneviewer.newChart()` and R's payload, and with `newChart()` and the
+  spec (`test/harness/mount.js`); the fixtures also with the min build.
 - **Save, two-chart and site checks** (`test/save.cjs`,
   `test/two-charts.cjs`, `test/site.cjs`): the save menu downloads a valid
   SVG and PNG; two charts on a page keep their own selection and undo
@@ -128,10 +189,10 @@ Set `PORT` to use a port other than 4849.
 
 1. Bump `version` in `package.json` and `src/lib/chart.js` (`npm run check`
    compares them).
-2. Commit, then tag and push: `git tag v0.2.1 && git push origin main v0.2.1`.
+2. Commit, then tag and push: `git tag v0.3.1 && git push origin main v0.3.1`.
 
-The release workflow checks that the tag matches `package.json`, builds
-`dist/` and publishes the files with `SHA256SUMS` as a GitHub release.
+The publish workflow tests and builds, publishes to npm with provenance,
+and attaches `dist/` to a GitHub release.
 
 ## Using a release in the R package
 
@@ -140,8 +201,8 @@ repo and shipped inside the package, so users never download JavaScript
 separately. A maintainer pulls a new release with:
 
 ```sh
-curl -sSLO https://github.com/nvelden/geneviewer-js/releases/download/v0.2.0/{geneviewer.js,styles.css,geneviewerwidget.js,SHA256SUMS}
-shasum -a 256 -c SHA256SUMS
+curl -sSLO https://github.com/nvelden/geneviewer-js/releases/download/v0.3.0/{geneviewer.core.js,geneviewer.css,themes.json,geneviewerwidget.js,SHA256SUMS}
+shasum -a 256 -c SHA256SUMS --ignore-missing
 ```
 
 They then copy the files into `inst/htmlwidgets/`. Do not edit those copies in
@@ -149,11 +210,9 @@ the R repo; make changes here and cut a new release.
 
 ## Roadmap
 
-See [docs/roadmap.md](docs/roadmap.md). Next:
-
-- Add an ES-module build with D3 included, for anywidget and Shinylive (Python).
-- Split `geneviewer.js` into ES modules.
+See [docs/roadmap.md](docs/roadmap.md).
 
 ## Licence
 
-MIT. Copyright (c) 2023 geneviewer authors.
+MIT. Copyright (c) 2023 geneviewer authors. The toolbar icons are Font
+Awesome Free (CC BY 4.0); see LICENSE-THIRD-PARTY.md.
