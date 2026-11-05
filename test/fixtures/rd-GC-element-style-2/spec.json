@@ -1,0 +1,1 @@
+{"version":1,"data":{"start":[10],"end":[40],"family":["A"]},"fields":{"group":"family"},"elementStyle":[{"component":"legend","text":"Family A","part":"label","group":"A"},{"component":"legend","fill":"red","part":"marker","group":"A"}]}

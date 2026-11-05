@@ -1,0 +1,1 @@
+{"version":1,"data":{"start":[10,50,90],"end":[40,80,120],"name":["Gene 1","Gene 2","Gene 3"]},"height":"150px","labels":{"label":"name"},"events":{"select":true,"drag":true},"toolbar":{"show":"always","position":"topleft","size":16,"color":"#9e9e9e","hoverColor":"black","icons":{"reset":"arrows-to-circle","save":"camera"}}}

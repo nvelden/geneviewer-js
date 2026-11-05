@@ -163,6 +163,7 @@
 ### events
 select {"component":"genes","cluster":"ophA","data":{"name":"ophC","start":5286,"end":4718,"class":"NTF2-like","cluster":"ophA","rowID":2,"strand":"reverse","direction":"reverse"},"style":{"fill":"#ff7f0e","opacity":1,"stroke":"#000000","strokeWidth":1,"strokeDasharray":"none","marker":"arrow","markerSize":"medium","arrowheadWidth":10,"arrowheadHeight":30,"markerHeight":15,"cornerRadius":0,"y":50}}
 selection [{"component":"genes","cluster":"ophA","data":{"name":"ophC","start":5286,"end":4718,"class":"NTF2-like","cluster":"ophA","rowID":2,"strand":"reverse","direction":"reverse"},"style":{"fill":"#ff7f0e","opacity":1,"stroke":"#000000","strokeWidth":1,"strokeDasharray":"none","marker":"arrow","markerSize":"medium","arrowheadWidth":10,"arrowheadHeight":30,"markerHeight":15,"cornerRadius":0,"y":50}}]
+click {"component":"genes","cluster":"ophA","data":{"name":"ophC","start":5286,"end":4718,"class":"NTF2-like","cluster":"ophA","rowID":2,"strand":"reverse","direction":"reverse"},"style":{"fill":"#ff7f0e","opacity":1,"stroke":"#000000","strokeWidth":1,"strokeDasharray":"none","marker":"arrow","markerSize":"medium","arrowheadWidth":10,"arrowheadHeight":30,"markerHeight":15,"cornerRadius":0,"y":50}}
 
 ### chart
 <div class="geneviewer-container" id="geneviewer-title-container-chart">
@@ -331,6 +332,7 @@ selection [{"component":"genes","cluster":"ophA","data":{"name":"ophC","start":5
 ### events
 select {"component":"genes","cluster":"ophA","data":{"name":"ophD","start":12616,"end":11859,"class":"O-acyltransferase","cluster":"ophA","rowID":4,"strand":"reverse","direction":"reverse"},"style":{"fill":"#d62728","opacity":1,"stroke":"#000000","strokeWidth":1,"strokeDasharray":"none","marker":"arrow","markerSize":"medium","arrowheadWidth":10,"arrowheadHeight":30,"markerHeight":15,"cornerRadius":0,"y":50}}
 selection [{"component":"genes","cluster":"ophA","data":{"name":"ophC","start":5286,"end":4718,"class":"NTF2-like","cluster":"ophA","rowID":2,"strand":"reverse","direction":"reverse"},"style":{"fill":"#ff7f0e","opacity":1,"stroke":"#000000","strokeWidth":1,"strokeDasharray":"none","marker":"arrow","markerSize":"medium","arrowheadWidth":10,"arrowheadHeight":30,"markerHeight":15,"cornerRadius":0,"y":50}},{"component":"genes","cluster":"ophA","data":{"name":"ophD","start":12616,"end":11859,"class":"O-acyltransferase","cluster":"ophA","rowID":4,"strand":"reverse","direction":"reverse"},"style":{"fill":"#d62728","opacity":1,"stroke":"#000000","strokeWidth":1,"strokeDasharray":"none","marker":"arrow","markerSize":"medium","arrowheadWidth":10,"arrowheadHeight":30,"markerHeight":15,"cornerRadius":0,"y":50}}]
+click {"component":"genes","cluster":"ophA","data":{"name":"ophD","start":12616,"end":11859,"class":"O-acyltransferase","cluster":"ophA","rowID":4,"strand":"reverse","direction":"reverse"},"style":{"fill":"#d62728","opacity":1,"stroke":"#000000","strokeWidth":1,"strokeDasharray":"none","marker":"arrow","markerSize":"medium","arrowheadWidth":10,"arrowheadHeight":30,"markerHeight":15,"cornerRadius":0,"y":50}}
 
 ### chart
 <div class="geneviewer-container" id="geneviewer-title-container-chart">

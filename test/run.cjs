@@ -5,8 +5,8 @@
 //   node test/run.cjs              compare
 //   node test/run.cjs --update     write render.txt instead of comparing
 //   node test/run.cjs --only <id>  one fixture (repeatable)
-//   node test/run.cjs --mode <m>   one harness mode, binding or direct
-//                                  (default both; --update: binding)
+//   node test/run.cjs --mode <m>   one harness mode, binding, direct or spec
+//                                  (default all; --update: binding)
 const fs = require("node:fs");
 const path = require("node:path");
 const { chromium } = require("playwright-core");
@@ -17,7 +17,7 @@ const args = process.argv.slice(2);
 const update = args.includes("--update");
 const only = args.flatMap((arg, i) => (arg === "--only" ? [args[i + 1]] : []));
 const modeArgs = args.flatMap((arg, i) => (arg === "--mode" ? [args[i + 1]] : []));
-const modes = modeArgs.length ? modeArgs : update ? ["binding"] : ["binding", "direct"];
+const modes = modeArgs.length ? modeArgs : update ? ["binding"] : ["binding", "direct", "spec"];
 
 // The first differing line with a few lines of context from both sides
 function firstDifference(expected, actual) {
@@ -46,7 +46,9 @@ function firstDifference(expected, actual) {
   try {
     for (const mode of modes) for (const id of ids) {
       const dir = path.join(fixturesDir, id);
-      const payload = JSON.parse(fs.readFileSync(path.join(dir, "payload.json"), "utf8"));
+      // In spec mode the chart is drawn from the spec R recorded
+      const input = mode === "spec" ? "spec.json" : "payload.json";
+      const payload = JSON.parse(fs.readFileSync(path.join(dir, input), "utf8"));
       const meta = JSON.parse(fs.readFileSync(path.join(dir, "meta.json"), "utf8"));
       const file = path.join(dir, "render.txt");
       let actual;

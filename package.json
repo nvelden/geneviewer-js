@@ -20,7 +20,9 @@
     "serve": "npm run -s site && python3 -m http.server 8484 --bind 127.0.0.1 --directory _site",
     "test": "bash scripts/test-docker.sh",
     "test:update": "bash scripts/test-docker.sh --update",
+    "test:compile": "node test/compile.mjs",
     "schema:check": "node scripts/schema-check.mjs",
+    "spec:check": "node scripts/spec-check.mjs",
     "types": "node scripts/build-types.mjs",
     "types:test": "tsc -p test/types/tsconfig.json",
     "types:src": "tsc -p jsconfig.json"
