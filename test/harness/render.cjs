@@ -8,7 +8,7 @@ const harness = pathToFileURL(path.join(__dirname, "index.html")).href;
  * @param {import("playwright-core").Browser} browser
  * @param {object} payload  widget$x as exported from R
  * @param {{ width?: number, height: string }} meta
- * @param {"binding"|"direct"|"spec"} mode  how the harness draws it (mount.js)
+ * @param {"binding"|"direct"|"spec"|"rspec"} mode  how the harness draws it (mount.js)
  * @param {"core"|"min"} build  the library build the page loads
  * @returns {Promise<string>} canonical listing of the drawn chart
  */

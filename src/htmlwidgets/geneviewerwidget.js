@@ -1,4 +1,4 @@
-// The htmlwidgets binding of the R package: draws each chart with
+// The htmlwidgets binding of the R package: draws each chart's spec with
 // geneviewer.newChart() (geneviewer.js) and, in Shiny, sends its events to
 // Shiny inputs. The R package may load this file before geneviewer.js, so
 // geneviewer is only used once a chart is drawn.
@@ -17,12 +17,6 @@ var addZoomHandler = function () {
     if (chart) chart.zoomTo(message.range);
   });
 };
-
-// Until the R package moves to the spec (M6): tests in the R package and the
-// app export a chart with the globals chartToSVG(el) and chartToPNG(el),
-// which geneviewer.js defined before it was bundled
-window.chartToSVG = function (el, exclude) { return geneviewer.chartToSVG(el, exclude); };
-window.chartToPNG = function (el, exclude) { return geneviewer.chartToPNG(el, exclude); };
 
 HTMLWidgets.widget({
   name: 'geneviewer',
@@ -50,16 +44,26 @@ HTMLWidgets.widget({
     if (HTMLWidgets.shinyMode) addZoomHandler();
 
     return {
+      // x is { spec } from the R package 0.3.0 on; before, a render model.
+      // A redraw from Shiny gives the whole chart again, so a spec replaces
+      // the chart's spec (setSpec), which update() would merge into.
       renderValue: function (x) {
+        var spec = x && x.spec;
         if (chart) {
-          chart.update(x);
+          if (spec) chart.setSpec(spec);
+          else chart.update(x);
           return;
         }
-        chart = geneviewer.newChart(el, x, options);
+        chart = geneviewer.newChart(el, spec || x, options);
         charts[el.id] = chart;
       },
       resize: function () {
         if (chart) chart.resize();
+      },
+      // The chart (geneviewer.newChart()), e.g. for chart.toSVG():
+      // HTMLWidgets.find("#" + id).getChart(); null before the first draw
+      getChart: function () {
+        return chart;
       }
     };
   }
