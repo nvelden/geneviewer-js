@@ -3,7 +3,7 @@
 // first (`npm run site` does both).
 import { cpSync, existsSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
 
-if (!existsSync("dist/geneviewer.js")) {
+if (!existsSync("dist/geneviewer.core.js")) {
   console.error("dist/ is missing: run npm run build first.");
   process.exit(1);
 }
@@ -13,8 +13,8 @@ cpSync("site", "_site", { recursive: true });
 mkdirSync("_site/lib");
 
 const lib = {
-  "dist/geneviewer.js": "geneviewer.js",
-  "dist/styles.css": "styles.css",
+  "dist/geneviewer.core.js": "geneviewer.js",
+  "dist/geneviewer.css": "styles.css",
   "vendor/d3-7.8.5/d3.min.js": "d3.min.js",
 };
 for (const [from, to] of Object.entries(lib)) cpSync(from, `_site/lib/${to}`);

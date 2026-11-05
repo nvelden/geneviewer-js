@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <title>geneviewer fixture harness</title>
-  <link rel="stylesheet" href="../../dist/styles.css">
   <!-- The chart starts 50px in, so the pointer, which starts at 0,0, is not over
        it: a mouse event there would show the trackMouse tooltip at random. -->
   <!-- No CSS transitions (label fade on hover), so styles read in events
@@ -13,8 +12,15 @@
     #chart { width: 1000px; }
     *, *::before, *::after { transition: none !important; }
   </style>
+  <!-- No stylesheet: the library adds its own (injectStyles). The build is
+       the page's ?build=: core (default; uses the page's d3, as in R) or
+       min (D3 included). -->
   <script src="../../vendor/d3-7.8.5/d3.min.js"></script>
-  <script src="../../dist/geneviewer.js"></script>
+  <script>
+    document.write('<script src="../../dist/geneviewer.' +
+      (new URLSearchParams(location.search).get("build") === "min" ? "min" : "core") +
+      '.js"><\/script>');
+  </script>
   <script src="htmlwidgets-shim.js"></script>
   <script src="../../dist/geneviewerwidget.js"></script>
   <script src="normalize.js"></script>
