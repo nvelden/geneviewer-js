@@ -52,15 +52,19 @@ pkg="$work/geneviewer"
 rsync -a --exclude .git --exclude docs --exclude renv --exclude revdep \
   "$GENEVIEWER_R_DIR/" "$pkg/"
 # The R package's files and the builds that replace them: the core build
-# (the page's d3, not minified), the stylesheet and the binding
+# (the page's d3, not minified), the stylesheet and the binding. An R package
+# that vendors a release (R 0.3.0, dev/update_js.R) has the builds' names;
+# before that, geneviewer.js and styles.css.
 for pair in geneviewer.core.js:geneviewer.js geneviewer.css:styles.css geneviewerwidget.js:geneviewerwidget.js; do
   file="dist/${pair%%:*}"
-  name="${pair##*:}"
   matches=()
-  while IFS= read -r match; do matches+=("$match"); done \
-    < <(find "$pkg/inst/htmlwidgets" -name "$name" -type f)
+  for name in "${pair%%:*}" "${pair##*:}"; do
+    while IFS= read -r match; do matches+=("$match"); done \
+      < <(find "$pkg/inst/htmlwidgets" -name "$name" -type f)
+    [ "${#matches[@]}" -gt 0 ] && break
+  done
   if [ "${#matches[@]}" -ne 1 ]; then
-    echo "Expected one $name in inst/htmlwidgets, found ${#matches[@]}." >&2
+    echo "Expected one ${pair%%:*} or ${pair##*:} in inst/htmlwidgets, found ${#matches[@]}." >&2
     exit 1
   fi
   if cmp -s "$file" "${matches[0]}"; then state="same as R repo"; else state="changed"; fi
