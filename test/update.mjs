@@ -103,6 +103,18 @@ try {
   await page.evaluate((spec) => window.__chart.setSpec({ ...spec, version: 2 }), spec);
   expect(warnings.some((w) => w.includes("spec version 2")), "a newer spec version warns");
 
+  // The stylesheet is added once, however many charts are drawn
+  expect(await page.evaluate(() => document.querySelectorAll("style[data-geneviewer]").length) === 1,
+    "the stylesheet is added to the page once");
+  const unstyled = await browser.newPage();
+  await unstyled.goto(harness, { waitUntil: "load" });
+  const added = await unstyled.evaluate((spec) => {
+    geneviewer.newChart(document.getElementById("chart"), spec, { injectStyles: false });
+    return document.querySelectorAll("style[data-geneviewer]").length;
+  }, spec);
+  expect(added === 0, "injectStyles: false adds no stylesheet");
+  await unstyled.close();
+
   expect(errors.length === 0, `no page errors${errors.length ? `: ${errors.join("; ")}` : ""}`);
 } finally {
   await browser.close();

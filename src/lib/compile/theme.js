@@ -4,6 +4,7 @@
 import themes from "../../themes.json" with { type: "json" };
 import { patternToJs } from "./genes.js";
 import { clone, isNamedList } from "./r.js";
+import { THEME_NAMES, renameOptions } from "./names.js";
 
 // Components of a theme, with their key in the browser, in R's order
 const THEME_COMPONENTS = {
@@ -116,6 +117,10 @@ export function theme(state, entry) {
       throw new Error(`name must be one of: ${Object.keys(builtinThemes).map((t) => `"${t}"`).join(", ")}`);
     }
     base = themeNames(clone(builtinThemes[name]));
+  }
+  // The spec names of components' options, as the renderer reads them
+  for (const name of Object.keys(settings)) {
+    if (name in THEME_NAMES) settings[name] = renameOptions(settings[name], THEME_NAMES[name]);
   }
   const removePattern = settings.pattern === false;
   if (removePattern) delete settings.pattern;

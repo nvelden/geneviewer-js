@@ -1,15 +1,15 @@
-// Draws geneviewer charts on this site from payloads exported by the R
-// package (the render model, payload.x), with geneviewer.newChart().
+// Draws geneviewer charts on this site from the examples' specs, recorded
+// from the R package (scripts/export-examples.R), with geneviewer.newChart().
 (function () {
   "use strict";
 
-  // Draw payload.x into el, sized to payload.height and the element's width.
-  // options go to newChart (e.g. on: event handlers). Gives the chart.
-  function render(el, payload, options) {
+  // Draw example.spec into el, sized to example.height and the element's
+  // width. options go to newChart (e.g. on: event handlers). Gives the chart.
+  function render(el, example, options) {
     el.style.width = "100%";
-    el.style.height = payload.height || "400px";
+    el.style.height = example.height || "400px";
 
-    var chart = geneviewer.newChart(el, payload.x, options);
+    var chart = geneviewer.newChart(el, example.spec, options);
 
     var width = el.clientWidth;
     var pending = false;

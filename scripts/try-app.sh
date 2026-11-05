@@ -51,8 +51,11 @@ work="$(mktemp -d "${TMPDIR:-/tmp}/geneviewer-try-app.XXXXXX")"
 pkg="$work/geneviewer"
 rsync -a --exclude .git --exclude docs --exclude renv --exclude revdep \
   "$GENEVIEWER_R_DIR/" "$pkg/"
-for file in dist/*.js dist/*.css; do
-  name="$(basename "$file")"
+# The R package's files and the builds that replace them: the core build
+# (the page's d3, not minified), the stylesheet and the binding
+for pair in geneviewer.core.js:geneviewer.js geneviewer.css:styles.css geneviewerwidget.js:geneviewerwidget.js; do
+  file="dist/${pair%%:*}"
+  name="${pair##*:}"
   matches=()
   while IFS= read -r match; do matches+=("$match"); done \
     < <(find "$pkg/inst/htmlwidgets" -name "$name" -type f)

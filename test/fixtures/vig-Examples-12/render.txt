@@ -449,7 +449,9 @@
         <rect class="legend-marker" data-part="marker" height="12" id="legend-marker-8" rx="3" style="cursor: pointer; fill: white; stroke: rgb(189, 189, 189)" transform="translate(0, 0)" width="12" x="294.11" y="18">
 <div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar" style="--gv-toolbar-color: #C1232B; --gv-toolbar-font: sans-serif; --gv-toolbar-hover: #E87C25; --gv-toolbar-tip-background: rgba(50, 50, 50, 0.85); --gv-toolbar-tip-border: none; --gv-toolbar-tip-color: #ffffff; --gv-toolbar-tip-radius: 4px">
   <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
-    <i aria-haspopup="menu" aria-label="Save chart" class="fa-solid fa-download geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+    <span aria-haspopup="menu" aria-label="Save chart" class="geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+      <svg aria-hidden="true" class="geneviewer-icon-svg" focusable="false" style="width: 1em" viewBox="0 0 512 512">
+        <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z">
     <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
       <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
         "Save as SVG"
