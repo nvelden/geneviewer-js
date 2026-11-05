@@ -12,9 +12,12 @@
   "engines": {
     "node": ">=18"
   },
+  "dependencies": {
+    "d3": "^7.8.5"
+  },
   "scripts": {
     "check": "node scripts/check.mjs",
-    "build": "node scripts/build.mjs && node scripts/build-types.mjs",
+    "build": "node scripts/build.mjs && node scripts/build-types.mjs && node scripts/sums.mjs",
     "try-app": "bash scripts/try-app.sh",
     "site": "node scripts/build.mjs && node scripts/build-site.mjs",
     "serve": "npm run -s site && python3 -m http.server 8484 --bind 127.0.0.1 --directory _site",
@@ -26,9 +29,6 @@
     "types": "node scripts/build-types.mjs",
     "types:test": "tsc -p test/types/tsconfig.json",
     "types:src": "tsc -p jsconfig.json"
-  },
-  "peerDependencies": {
-    "d3": "7.8.5"
   },
   "devDependencies": {
     "ajv": "8.20.0",

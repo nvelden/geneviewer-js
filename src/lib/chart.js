@@ -3,6 +3,7 @@
 import { clusterLabelMargin } from "./components/clusterLabel.js";
 import { compile } from "./compile/index.js";
 import { mergeSpec } from "./compile/merge.js";
+import { injectStyles } from "./styles.js";
 import { createContainer } from "./container.js";
 import { chartToPNG, chartToSVG, createSaveIcon } from "./export.js";
 import { colorBarSettings, getClusterLinks, makeColorBar, makeLinks } from "./links.js";
@@ -166,6 +167,10 @@ var createMoveHistory = function () {
  *   fixed pixel width in renderModel.size is applied to el, clicks are
  *   reported, and moved elements are kept by the server's redraws instead of
  *   in the chart. Read each time it is used.
+ * @property {boolean} [injectStyles=true]  Add the library's stylesheet to
+ *   the page, once, as a <style data-geneviewer> element. Turn it off for
+ *   pages whose Content-Security-Policy blocks such styles, and load
+ *   geneviewer.css instead.
  */
 
 /**
@@ -191,6 +196,7 @@ function newChart(target, renderModel, options) {
     var el = /** @type {HTMLElement} */ (target);
     // Kept as given: server is read each time it is used
     options = options || {};
+    if (options.injectStyles !== false) injectStyles(el.ownerDocument);
     // The stylesheet styles charts by this class (htmlwidgets also sets it)
     var addedClass = !el.classList.contains("geneviewer");
     el.classList.add("geneviewer");

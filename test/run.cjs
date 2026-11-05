@@ -5,6 +5,8 @@
 //   node test/run.cjs              compare
 //   node test/run.cjs --update     write render.txt instead of comparing
 //   node test/run.cjs --only <id>  one fixture (repeatable)
+//   node test/run.cjs --build min  with dist/geneviewer.min.js (default:
+//                                  geneviewer.core.js, as in R)
 //   node test/run.cjs --mode <m>   one harness mode, binding, direct or spec
 //                                  (default all; --update: binding)
 const fs = require("node:fs");
@@ -17,6 +19,7 @@ const args = process.argv.slice(2);
 const update = args.includes("--update");
 const only = args.flatMap((arg, i) => (arg === "--only" ? [args[i + 1]] : []));
 const modeArgs = args.flatMap((arg, i) => (arg === "--mode" ? [args[i + 1]] : []));
+const build = args.includes("--build") ? args[args.indexOf("--build") + 1] : "core";
 const modes = modeArgs.length ? modeArgs : update ? ["binding"] : ["binding", "direct", "spec"];
 
 // The first differing line with a few lines of context from both sides
@@ -53,7 +56,7 @@ function firstDifference(expected, actual) {
       const file = path.join(dir, "render.txt");
       let actual;
       try {
-        actual = await renderFixture(browser, payload, meta, mode);
+        actual = await renderFixture(browser, payload, meta, mode, build);
       } catch (error) {
         failed++;
         console.log(`FAIL  ${mode}  ${id}  (error while drawing)\n${error.message}\n`);
@@ -85,7 +88,7 @@ function firstDifference(expected, actual) {
     await browser.close();
   }
   if (update) console.log(`${written} of ${ids.length} listings written`);
-  else console.log(`${ids.length * modes.length - failed} passed, ${failed} failed (${ids.length} fixtures; ${modes.join(" and ")})`);
+  else console.log(`${ids.length * modes.length - failed} passed, ${failed} failed (${ids.length} fixtures; ${build} build; ${modes.join(" and ")})`);
   process.exit(failed ? 1 : 0);
 })().catch((error) => {
   console.error(error);

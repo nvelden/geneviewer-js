@@ -8,10 +8,11 @@ const harness = pathToFileURL(path.join(__dirname, "index.html")).href;
  * @param {import("playwright-core").Browser} browser
  * @param {object} payload  widget$x as exported from R
  * @param {{ width?: number, height: string }} meta
- * @param {"binding"|"direct"} mode  how the harness draws it (mount.js)
+ * @param {"binding"|"direct"|"spec"} mode  how the harness draws it (mount.js)
+ * @param {"core"|"min"} build  the library build the page loads
  * @returns {Promise<string>} canonical listing of the drawn chart
  */
-async function renderFixture(browser, payload, meta, mode = "binding") {
+async function renderFixture(browser, payload, meta, mode = "binding", build = "core") {
   const page = await browser.newPage({
     viewport: { width: 1200, height: 900 },
     deviceScaleFactor: 1,
@@ -22,7 +23,7 @@ async function renderFixture(browser, payload, meta, mode = "binding") {
     if (message.type() === "error") errors.push("console: " + message.text());
   });
   try {
-    await page.goto(harness + "?mode=" + mode, { waitUntil: "load" });
+    await page.goto(`${harness}?mode=${mode}&build=${build}`, { waitUntil: "load" });
     const listing = await page.evaluate(async ({ payload, meta }) => {
       mountChart(payload, meta);
       await document.fonts.ready;
