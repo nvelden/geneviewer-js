@@ -110,6 +110,8 @@ try {
   expect((await bindingTitles()).includes(drawnTitle), "the binding draws x.spec");
   expect(await bindingPage.evaluate(() => window.__widget.getChart().toSVG().includes("<svg")),
     "the widget gives its chart (getChart())");
+  expect(await bindingPage.evaluate(() => window.chartToSVG === undefined && window.chartToPNG === undefined),
+    "the binding defines no chartToSVG() or chartToPNG() globals");
   const withoutTitle = { ...spec };
   delete withoutTitle.title;
   await bindingPage.evaluate((spec) => window.__widget.renderValue({ spec }), withoutTitle);
