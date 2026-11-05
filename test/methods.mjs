@@ -74,6 +74,27 @@ try {
   expect(same(await selection(), [["genes", 2, null]]), "the items of getSelection() select their elements again");
   expect((await events("selection")).length === 0, "selecting the same elements reports nothing");
 
+  // getSelection() and the events give copies: changing them changes nothing
+  const copies = await page.evaluate(() => {
+    const chart = window.__chart;
+    const [item] = chart.getSelection();
+    item.component = "labels";
+    item.data.rowID = 99;
+    chart.getSelection().length = 0;
+    const kept = chart.getSelection().map((i) => [i.component, i.data.rowID]);
+    // A selection handler that changes what it gets
+    const off = chart.on("selection", (event) => { event.detail.length = 0; });
+    const offSelect = chart.on("select", (event) => { if (event.detail) event.detail.component = "labels"; });
+    chart.select([{ component: "genes", data: { rowID: 3 } }]);
+    off(); offSelect();
+    const after = chart.getSelection().map((i) => [i.component, i.data.rowID]);
+    chart.select([{ component: "genes", data: { rowID: 2 } }]);
+    return { kept, after, again: chart.getSelection().map((i) => [i.component, i.data.rowID]) };
+  });
+  expect(same(copies.kept, [["genes", 2]]), "changing what getSelection() gives leaves the selection as it was");
+  expect(same(copies.after, [["genes", 3]]), "changing what the select and selection events give leaves it too");
+  expect(same(copies.again, [["genes", 2]]), "the drawn rows keep their rowID");
+
   await page.evaluate(() => window.__chart.select({ component: "labels" }));
   expect(same(await selection(), [["labels", 1, null], ["labels", 2, null], ["labels", 3, null]]),
     "an item with only a component selects every element of it");

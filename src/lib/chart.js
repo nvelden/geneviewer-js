@@ -172,6 +172,7 @@ var createMoveHistory = function () {
  *   Needs events: { select: true }.
  * @property {() => Array<SelectionItem>} getSelection  The selected elements,
  *   as the selection event reports them; the last is the one select reports.
+ *   The items are copies: changing them does not change the selection.
  * @property {() => void} undo  Undo the last move, as the toolbar's undo
  *   button does (events: { drag: true }); nothing when there is none.
  * @property {() => void} redo  Redo the last move undone; nothing when there
@@ -389,9 +390,13 @@ function newChart(target, renderModel, options) {
       var key = keyOf(detail);
       return key !== null && selection.some(function (item) { return keyOf(item) === key; });
     };
+    // The selection as handlers and getSelection() get it: copies, so
+    // changing them does not change the chart's selection or its data
+    var copyItem = function (item) { return item === null ? null : structuredClone(item); };
+    var copySelection = function () { return selection.map(copyItem); };
     var reportSelection = function () {
-      report("select", selected);
-      report("selection", selection);
+      report("select", copyItem(selected));
+      report("selection", copySelection());
     };
     var applySelection = function (refresh) {
       var previous = JSON.stringify(selection.map(function (item) { return item.style; }));
@@ -1874,7 +1879,7 @@ function newChart(target, renderModel, options) {
         changeSelection(matchItems(items == null ? [] : Array.isArray(items) ? items : [items]), "replace");
       },
       getSelection: function () {
-        return selection.slice();
+        return copySelection();
       },
       undo: function () {
         if (!destroyed) step(true);
