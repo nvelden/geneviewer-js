@@ -108,6 +108,8 @@ try {
   await bindingPage.evaluate(({ spec, meta }) => { window.__widget = mountChart(spec, meta); }, { spec, meta });
   const drawnTitle = spec.title.title;
   expect((await bindingTitles()).includes(drawnTitle), "the binding draws x.spec");
+  expect(await bindingPage.evaluate(() => window.__widget.getChart().toSVG().includes("<svg")),
+    "the widget gives its chart (getChart())");
   const withoutTitle = { ...spec };
   delete withoutTitle.title;
   await bindingPage.evaluate((spec) => window.__widget.renderValue({ spec }), withoutTitle);
