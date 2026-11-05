@@ -1471,7 +1471,29 @@ function newChart(target, renderModel, options) {
       reportZoom("set");
     };
 
+    // A redraw empties the chart first, so the page is shorter while it is
+    // drawn and the browser scrolls containers back up. Keep where the
+    // chart's scrolled ancestors (and the page) were scrolled to.
     var draw = function () {
+      var scrolled = [];
+      for (var node = el.parentElement; node; node = node.parentElement) {
+        if (node.scrollTop || node.scrollLeft) scrolled.push([node, node.scrollTop, node.scrollLeft]);
+      }
+      var page = el.ownerDocument.scrollingElement;
+      if (page && (page.scrollTop || page.scrollLeft) && !scrolled.some(function (s) { return s[0] === page; })) {
+        scrolled.push([page, page.scrollTop, page.scrollLeft]);
+      }
+      try {
+        drawChart();
+      } finally {
+        scrolled.forEach(function (s) {
+          if (s[0].scrollTop !== s[1]) s[0].scrollTop = s[1];
+          if (s[0].scrollLeft !== s[2]) s[0].scrollLeft = s[2];
+        });
+      }
+    };
+
+    var drawChart = function () {
       cancelDrag();
       zoomCharts = [];
       legendColorBar = null;
