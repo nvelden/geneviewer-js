@@ -192,7 +192,7 @@ Set `PORT` to use a port other than 4849.
 
 1. Bump `version` in `package.json` and `src/lib/chart.js` (`npm run check`
    compares them).
-2. Commit, then tag and push: `git tag v0.3.1 && git push origin main v0.3.1`.
+2. Commit, then tag and push: `git tag v0.3.2 && git push origin main v0.3.2`.
 
 The publish workflow tests and builds, publishes to npm with provenance,
 and attaches `dist/` to a GitHub release.
@@ -201,15 +201,16 @@ and attaches `dist/` to a GitHub release.
 
 The R package vendors a release: its copies of the files are stored in the R
 repo and shipped inside the package, so users never download JavaScript
-separately. A maintainer pulls a new release with:
+separately. From the R repo, a maintainer pulls a release with:
 
 ```sh
-curl -sSLO https://github.com/nvelden/geneviewer-js/releases/download/v0.3.1/{geneviewer.core.js,geneviewer.css,themes.json,geneviewerwidget.js,SHA256SUMS}
-shasum -a 256 -c SHA256SUMS --ignore-missing
+Rscript dev/update_js.R 0.3.2
 ```
 
-They then copy the files into `inst/htmlwidgets/`. Do not edit those copies in
-the R repo; make changes here and cut a new release.
+It downloads `geneviewer.core.js`, `geneviewer.css`, `themes.json`, the
+binding and `SHA256SUMS` from the GitHub release, checks the checksums and
+writes them to `inst/htmlwidgets/`. Do not edit those copies in the R repo;
+make changes here and cut a new release.
 
 ## Roadmap
 
