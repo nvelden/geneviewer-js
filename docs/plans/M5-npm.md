@@ -1,6 +1,6 @@
 # M5: npm 0.3.0
 
-**Goal:** `geneviewer` 0.3.0 on npm and jsDelivr, with complete docs.
+**Goal:** `geneviewer-js` 0.3.0 on npm and jsDelivr, with complete docs.
 **Repo:** geneviewer-js.
 **Branch:** `m5-npm`.
 **Needs:** M4 merged.
@@ -50,7 +50,8 @@
 ### M5.3: Package metadata
 
 `package.json`:
-- `name: "geneviewer"`; remove `private`.
+- `name: "geneviewer"`; remove `private`. (Renamed `geneviewer-js` in
+  M5.7: npm refused `geneviewer` as too similar to `gene-viewer`.)
 - `version: "0.3.0"`.
 - `module` and `types`; `unpkg` and `jsdelivr` pointing at
   `dist/geneviewer.min.js`.
@@ -118,11 +119,11 @@ Each smoke test checks in headless Chrome that genes are drawn.
 ### M5.7: Release
 
 - With **Niels's** approval: merge, tag `v0.3.0`, push.
-- **Afterwards:** `npm view geneviewer version` shows 0.3.0. The jsDelivr URL
+- **Afterwards:** `npm view geneviewer-js version` shows 0.3.0. The jsDelivr URL
   serves `dist/geneviewer.min.js`. The plain-html smoke test passes against
   the jsDelivr URL instead of the tarball.
 
 ## Done when
 
-`geneviewer` 0.3.0 is on npm, jsDelivr serves it, and the docs site
+`geneviewer-js` 0.3.0 is on npm, jsDelivr serves it, and the docs site
 describes it with no "Planned" labels left for released features.

@@ -10,20 +10,20 @@ app.
 ## Install
 
 ```sh
-npm install geneviewer
+npm install geneviewer-js
 ```
 
 Or load it from a CDN, with D3 included:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/geneviewer@0.3/dist/geneviewer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/geneviewer-js@0.3/dist/geneviewer.min.js"></script>
 ```
 
 ## A first chart
 
 ```html
 <div id="chart" style="width: 800px; height: 300px"></div>
-<script src="https://cdn.jsdelivr.net/npm/geneviewer@0.3/dist/geneviewer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/geneviewer-js@0.3/dist/geneviewer.min.js"></script>
 <script>
   const chart = geneviewer.newChart("#chart", {
     version: 1,
@@ -44,7 +44,7 @@ With a bundler (Vite, webpack, ...), import the ES module; it imports `d3`
 from npm:
 
 ```js
-import { newChart } from "geneviewer";
+import { newChart } from "geneviewer-js";
 
 const chart = newChart(document.getElementById("chart"), spec);
 chart.update({ title: { title: "New title" } });
@@ -54,15 +54,15 @@ The chart spec has one key per part of the chart (`genes`, `labels`,
 `links`, `scale`, `theme`, ...); see the API reference on the docs site and
 `dist/spec.d.ts`. The library adds its stylesheet to the page; on pages
 whose Content-Security-Policy blocks that, pass `{ injectStyles: false }`
-and load `geneviewer/geneviewer.css`.
+and load `geneviewer-js/geneviewer.css`.
 
 ## Files
 
 | File | For |
 |------|-----|
 | `dist/geneviewer.min.js` | Script tag, global `geneviewer`, D3 included |
-| `dist/geneviewer.mjs` | ES module for bundlers (`import ... from "geneviewer"`), imports `d3` |
-| `dist/geneviewer.standalone.mjs` | ES module with D3 included (`geneviewer/standalone`) |
+| `dist/geneviewer.mjs` | ES module for bundlers (`import ... from "geneviewer-js"`), imports `d3` |
+| `dist/geneviewer.standalone.mjs` | ES module with D3 included (`geneviewer-js/standalone`) |
 | `dist/geneviewer.core.js` | Script tag using the page's `d3`, not minified (the R package) |
 | `dist/geneviewer.css` | The stylesheet, when styles cannot be added by script |
 | `dist/geneviewer.d.ts`, `dist/spec.d.ts` | Types |
