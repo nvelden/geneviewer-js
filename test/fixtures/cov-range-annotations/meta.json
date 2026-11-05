@@ -1,0 +1,7 @@
+{
+  "id": "cov-range-annotations",
+  "source": "charts",
+  "width": 1000,
+  "height": "250px",
+  "covers": ["GC_annotation", "GC_chart", "GC_scale"]
+}

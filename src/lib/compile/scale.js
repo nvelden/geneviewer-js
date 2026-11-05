@@ -109,7 +109,9 @@ export function shiftAnnotation(options, shift) {
   }
   if (options.position !== null && options.position !== undefined) {
     if (options.type === "rectangle") {
-      options.position = [options.position].flat(0).map((corners) => {
+      // R's lapply() over the rectangles, then over the corners of each
+      const rectangles = Array.isArray(options.position) ? options.position : [options.position];
+      options.position = rectangles.map((corners) => {
         if (!Array.isArray(corners)) return [move(corners)];
         return corners.map((point) => (Array.isArray(point) ? [move(point[0]), ...point.slice(1)] : move(point)));
       });
