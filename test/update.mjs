@@ -1,5 +1,6 @@
 // chart.update(), setSpec() and getSpec(). The merge rules of update() in
-// Node: objects merge key by key, arrays and other values replace. Then in
+// Node: objects merge key by key, arrays and other values replace, tables
+// (data, links.data) replace as a whole. Then in
 // the browser: a chart drawn from a spec (rd-GC-title-1) is updated with a
 // partial spec, given a new spec, and gives its spec back; a chart drawn
 // from a render model keeps update() with a render model, as the R binding
@@ -37,7 +38,10 @@ expect(same(merged.title, { title: "A", titleFont: { fontSize: "20px", fill: "re
   "objects merge at every level");
 expect(same(merged.labels, [{ label: "group" }]), "an array replaces the array");
 expect(same(merged.zoom.range, [0.5, 0.6]), "an array inside an object replaces it");
-expect(same(merged.data, { start: [5], end: [40, 90] }), "data columns merge by name, each column replaced");
+expect(same(merged.data, { start: [5] }), "data replaces the table as a whole");
+expect(same(mergeSpec({ links: { data: { start1: [1], end1: [2] }, curve: true } },
+  { links: { data: { start1: [3] } } }).links, { data: { start1: [3] }, curve: true }),
+  "links.data replaces the table; the other links options merge");
 expect(same(merged.legend, { show: false }), "a new key is added");
 expect(same(mergeSpec(base, { title: null }).title, null), "null replaces the value");
 expect(base.title.titleFont.fontSize === "12px" && base.labels.length === 2, "the spec given is not changed");
