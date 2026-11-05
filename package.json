@@ -1,34 +1,74 @@
 {
-  "name": "geneviewer-js",
-  "version": "0.3.0-alpha.1",
-  "description": "D3 rendering library shared by the geneviewer R and Python packages",
+  "name": "geneviewer",
+  "version": "0.3.0",
+  "description": "Interactive gene cluster, transcript and genome alignment charts in the browser, drawn with D3",
+  "keywords": [
+    "gene cluster",
+    "genome",
+    "synteny",
+    "transcript",
+    "bioinformatics",
+    "visualization",
+    "d3",
+    "chart"
+  ],
+  "homepage": "https://nvelden.github.io/geneviewer-js/",
+  "bugs": {
+    "url": "https://github.com/nvelden/geneviewer-js/issues"
+  },
   "license": "MIT",
-  "private": true,
+  "author": "Niels van der Velden",
   "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/nvelden/geneviewer-js.git"
   },
+  "module": "./dist/geneviewer.mjs",
+  "types": "./dist/geneviewer.d.ts",
+  "unpkg": "./dist/geneviewer.min.js",
+  "jsdelivr": "./dist/geneviewer.min.js",
+  "exports": {
+    ".": {
+      "types": "./dist/geneviewer.d.ts",
+      "import": "./dist/geneviewer.mjs"
+    },
+    "./standalone": {
+      "types": "./dist/geneviewer.d.ts",
+      "import": "./dist/geneviewer.standalone.mjs"
+    },
+    "./geneviewer.css": "./dist/geneviewer.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE.md",
+    "LICENSE-THIRD-PARTY.md"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
   "engines": {
     "node": ">=18"
   },
+  "dependencies": {
+    "d3": "^7.8.5"
+  },
   "scripts": {
     "check": "node scripts/check.mjs",
-    "build": "node scripts/build.mjs && node scripts/build-types.mjs",
+    "build": "node scripts/build.mjs && node scripts/build-types.mjs && node scripts/sums.mjs",
     "try-app": "bash scripts/try-app.sh",
-    "site": "node scripts/build.mjs && node scripts/build-site.mjs",
+    "site": "npm run -s build && node scripts/build-site.mjs",
     "serve": "npm run -s site && python3 -m http.server 8484 --bind 127.0.0.1 --directory _site",
     "test": "bash scripts/test-docker.sh",
     "test:update": "bash scripts/test-docker.sh --update",
     "test:compile": "node test/compile.mjs",
+    "test:smoke": "node test/smoke/run.mjs",
     "schema:check": "node scripts/schema-check.mjs",
     "spec:check": "node scripts/spec-check.mjs",
     "types": "node scripts/build-types.mjs",
     "types:test": "tsc -p test/types/tsconfig.json",
     "types:src": "tsc -p jsconfig.json"
-  },
-  "peerDependencies": {
-    "d3": "7.8.5"
   },
   "devDependencies": {
     "ajv": "8.20.0",

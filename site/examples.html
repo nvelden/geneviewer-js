@@ -3,14 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Examples: geneviewer-js</title>
+  <title>Examples: geneviewer</title>
   <meta name="description" content="Gene clusters, protein alignments, plasmid alignment blocks and transcripts drawn with geneviewer-js.">
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="assets/site.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="lib/styles.css">
-  <script src="lib/d3.min.js"></script>
-  <script src="lib/geneviewer.js"></script>
+  <script src="lib/geneviewer.min.js"></script>
   <script src="assets/embed.js"></script>
 </head>
 <body>
@@ -19,6 +16,7 @@
       <a class="brand" href="./">geneviewer<span>-js</span></a>
       <nav>
         <a href="./">Overview</a>
+        <a href="getting-started.html">Getting started</a>
         <a href="examples.html" aria-current="page">Examples</a>
         <a href="api.html">API</a>
       </nav>
@@ -29,16 +27,11 @@
   <main class="inner">
     <h1>Examples</h1>
     <p class="lead">
-      Every chart here is drawn live by geneviewer-js v0.2.0. Hover over
+      Every chart here is drawn live by geneviewer from its spec. Hover over
       genes for tooltips, or over a chart for its save button (SVG or PNG).
+      Each example shows its code in JavaScript and in R; both draw the same
+      chart.
     </p>
-    <div class="notice planned">
-      <p>
-        The code shown is the R code that produced each chart, because the
-        JavaScript API is not built yet. When it is, each example will show
-        its JavaScript too.
-      </p>
-    </div>
 
     <div id="examples"></div>
   </main>
@@ -47,7 +40,7 @@
     <div class="inner">
       Data: the example datasets of the
       <a href="https://nvelden.github.io/geneviewer/articles/Examples.html">geneviewer R package</a>.
-      geneviewer-js is MIT licensed.
+      geneviewer is MIT licensed.
     </div>
   </footer>
 
@@ -83,16 +76,40 @@
           });
         }
 
+        section.append(codeTabs(payload));
+        return { section: section, chart: chart, on: on };
+      }
+
+      // The example's code, in a JavaScript and an R tab
+      function codeTabs(payload) {
         var details = document.createElement("details");
         var summaryEl = document.createElement("summary");
-        summaryEl.textContent = "R code";
-        var pre = document.createElement("pre");
-        var code = document.createElement("code");
-        code.textContent = payload.code;
-        pre.append(code);
-        details.append(summaryEl, pre);
-        section.append(details);
-        return { section: section, chart: chart, on: on };
+        summaryEl.textContent = "Code";
+        var tabs = document.createElement("div");
+        tabs.className = "tabs";
+        tabs.setAttribute("role", "tablist");
+        details.append(summaryEl, tabs);
+        [["JavaScript", payload.js], ["R", payload.code]].forEach(function (tab, i) {
+          var button = document.createElement("button");
+          button.type = "button";
+          button.className = "tab";
+          button.setAttribute("role", "tab");
+          button.setAttribute("aria-selected", i === 0 ? "true" : "false");
+          button.textContent = tab[0];
+          var pre = document.createElement("pre");
+          pre.setAttribute("role", "tabpanel");
+          pre.hidden = i !== 0;
+          var code = document.createElement("code");
+          code.textContent = tab[1];
+          pre.append(code);
+          button.addEventListener("click", function () {
+            details.querySelectorAll(".tab").forEach(function (b) { b.setAttribute("aria-selected", b === button ? "true" : "false"); });
+            details.querySelectorAll("pre").forEach(function (p) { p.hidden = p !== pre; });
+          });
+          tabs.append(button);
+          details.append(pre);
+        });
+        return details;
       }
 
       // A short, one-line view of an event's detail

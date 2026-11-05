@@ -3,12 +3,14 @@
 import { clusterLabelMargin } from "./components/clusterLabel.js";
 import { compile } from "./compile/index.js";
 import { mergeSpec } from "./compile/merge.js";
+import { injectStyles } from "./styles.js";
+import { appendIcon } from "./icons.js";
 import { createContainer } from "./container.js";
 import { chartToPNG, chartToSVG, createSaveIcon } from "./export.js";
 import { colorBarSettings, getClusterLinks, makeColorBar, makeLinks } from "./links.js";
 import { computeSize, mergeOptions, themeTextScale, toRows } from "./util.js";
 
-var version = "0.3.0-alpha.1";
+var version = "0.3.0";
 // Shared by all chart instances, including ones removed and recreated.
 var renderSequence = 0;
 // Charts on elements without an id get one of their own for their parts' ids
@@ -166,6 +168,10 @@ var createMoveHistory = function () {
  *   fixed pixel width in renderModel.size is applied to el, clicks are
  *   reported, and moved elements are kept by the server's redraws instead of
  *   in the chart. Read each time it is used.
+ * @property {boolean} [injectStyles=true]  Add the library's stylesheet to
+ *   the page, once, as a <style data-geneviewer> element. Turn it off for
+ *   pages whose Content-Security-Policy blocks such styles, and load
+ *   geneviewer.css instead.
  */
 
 /**
@@ -191,6 +197,7 @@ function newChart(target, renderModel, options) {
     var el = /** @type {HTMLElement} */ (target);
     // Kept as given: server is read each time it is used
     options = options || {};
+    if (options.injectStyles !== false) injectStyles(el.ownerDocument);
     // The stylesheet styles charts by this class (htmlwidgets also sets it)
     var addedClass = !el.classList.contains("geneviewer");
     el.classList.add("geneviewer");
@@ -417,7 +424,8 @@ function newChart(target, renderModel, options) {
         var adds = event.shiftKey || event.metaKey || event.ctrlKey;
         if (adds) {
           if (keyOf(detail) !== null) changeSelection([detail], "toggle");
-        } else if (detail || event.target.closest("svg") || event.target === el) {
+        } else if (detail || (event.target.closest("svg") && !event.target.closest(".geneviewer-toolbar")) ||
+                   event.target === el) {
           var only = selection.length === 1 && sameSelection(selected, detail);
           selectElement(only ? null : detail ?? null);
         }
@@ -941,7 +949,8 @@ function newChart(target, renderModel, options) {
       var save = saveButton && wanted("save");
       var zoomButton = !!zoomOptions && wanted("zoom");
       if (opts.show === "never" || (!movable && !save && !zoomButton)) return;
-      var icon = function (name, fallback) { return iconClass(opts.icons[name] ?? fallback); };
+      // A custom icon (by Font Awesome name) or none: the default, as SVG
+      var customIcon = function (name) { return opts.icons[name] != null ? iconClass(opts.icons[name]) : null; };
       toolbar = d3.select(el).append("div")
         .attr("class", `geneviewer-toolbar geneviewer-toolbar-${opts.position}` +
                        (opts.show === "always" ? " geneviewer-toolbar-always" : ""))
@@ -965,7 +974,11 @@ function newChart(target, renderModel, options) {
           .attr("aria-keyshortcuts", b.shortcuts)
           .property("disabled", !!b.disabled)
           .on("click", b.onClick);
-        button.append("i").attr("class", icon(b.name, b.icon)).attr("aria-hidden", "true");
+        if (customIcon(b.name)) {
+          button.append("i").attr("class", customIcon(b.name)).attr("aria-hidden", "true");
+        } else {
+          appendIcon(button.append("span").attr("class", "geneviewer-icon").attr("aria-hidden", "true"), b.icon);
+        }
         var tip = button.append("span").attr("class", "geneviewer-toolbar-tip").attr("aria-hidden", "true");
         tip.append("span").text(b.label);
         if (b.kbd) tip.append("kbd").text(b.kbd);
@@ -999,7 +1012,7 @@ function newChart(target, renderModel, options) {
                                kbd: null, shortcuts: null, onClick: resetZoom });
         if (save) zoomGroup.append("span").attr("class", "geneviewer-toolbar-divider");
       }
-      if (save) createSaveIcon(widgetId, el, toolbar.node(), icon("save", "download"), options.saveAs);
+      if (save) createSaveIcon(widgetId, el, toolbar.node(), customIcon("save"), options.saveAs);
     };
 
     // A link below a cluster SVG gets no :hover, so it is highlighted here

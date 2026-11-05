@@ -3,14 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>geneviewer-js: interactive gene cluster charts</title>
-  <meta name="description" content="geneviewer-js draws interactive gene cluster, transcript and genome alignment charts in the browser with D3.">
+  <title>geneviewer: interactive gene cluster charts</title>
+  <meta name="description" content="geneviewer draws interactive gene cluster, transcript and genome alignment charts in the browser with D3.">
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="assets/site.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="lib/styles.css">
-  <script src="lib/d3.min.js"></script>
-  <script src="lib/geneviewer.js"></script>
+  <script src="lib/geneviewer.min.js"></script>
   <script src="assets/embed.js"></script>
 </head>
 <body>
@@ -19,6 +16,7 @@
       <a class="brand" href="./">geneviewer<span>-js</span></a>
       <nav>
         <a href="./" aria-current="page">Overview</a>
+        <a href="getting-started.html">Getting started</a>
         <a href="examples.html">Examples</a>
         <a href="api.html">API</a>
       </nav>
@@ -29,25 +27,22 @@
   <main class="inner">
     <h1>Gene cluster charts for the web</h1>
     <p class="lead">
-      geneviewer-js draws interactive gene clusters, transcripts and genome
-      alignments in the browser with D3. It is the drawing engine of the
-      <a href="https://nvelden.github.io/geneviewer/">geneviewer R package</a>,
-      being made into a standalone JavaScript library.
+      geneviewer draws interactive gene clusters, transcripts and genome
+      alignments in the browser with D3. One chart spec, in JavaScript, R or
+      soon Python, draws the same chart: it is also the drawing engine of the
+      <a href="https://nvelden.github.io/geneviewer/">geneviewer R package</a>.
     </p>
 
     <div class="chart" id="hero-chart"></div>
 
-    <div class="notice planned">
-      <p>
-        <strong>Pre-release.</strong> The charts on this site are drawn by
-        geneviewer-js v0.2.0, the code in the development version of the R package. Today the
-        library is used through the R package and the
-        <a href="https://nvelden.github.io/geneviewer-shinylive/">Gene Cluster Dashboard</a>.
-        The standalone JavaScript API, <code>geneviewer.newChart()</code>, is
-        designed but not built yet; the <a href="api.html">API page</a> shows
-        the plan.
-      </p>
+    <div class="notice planned" data-release-notice>
+      <p><strong>0.3.0 is being released.</strong> The <code>npm install</code>
+        and jsDelivr instructions work once it is on npm.</p>
     </div>
+    <pre><code>npm install geneviewer</code></pre>
+    <p>Start with the <a href="getting-started.html">getting started guide</a>,
+      browse the <a href="examples.html">examples</a>, or look up an option in
+      the <a href="api.html">API reference</a>.</p>
 
     <h2>What it draws</h2>
     <div class="features">
@@ -77,7 +72,21 @@
       </div>
     </div>
 
-    <h2>Using it today</h2>
+    <h2>Using it</h2>
+    <h3>From JavaScript <span class="badge available">Available</span></h3>
+    <p>
+      A script tag or <code>npm install geneviewer</code>, then one call:
+    </p>
+<pre><code>const chart = geneviewer.newChart("#chart", {
+  version: 1,
+  data: genes,
+  fields: { cluster: "cluster", group: "class" },
+  labels: { label: "name" },
+  links: { data: homologs, measure: "identity" },  // pairs of genes
+});</code></pre>
+    <p>See <a href="getting-started.html">getting started</a> and the
+      <a href="api.html">API reference</a>.</p>
+
     <h3>From R <span class="badge available">Available</span></h3>
     <p>
       The <a href="https://cran.r-project.org/package=geneviewer">geneviewer</a>
@@ -99,36 +108,20 @@ GC_chart(ophA_clusters, group = "class", cluster = "cluster") %&gt;%
       and click. It runs entirely in your browser.
     </p>
 
-    <h3>From JavaScript <span class="badge">Planned</span></h3>
-    <p>
-      A script tag or <code>npm install geneviewer</code>, then one call:
-    </p>
-<pre><code>const chart = geneviewer.newChart("#chart", {
-  data: genes,
-  fields: { cluster: "cluster", start: "start", end: "end", group: "class" },
-  labels: { label: "name" },
-  links: { data: homologs, measure: "identity" },  // pairs of genes
-});</code></pre>
-    <p>See the <a href="api.html">planned API</a>.</p>
-
     <h3>From Python <span class="badge">Planned</span></h3>
     <p>
       A <code>geneviewer</code> Python package for Jupyter and Shiny for
-      Python, built on the same JavaScript API, so charts look and behave the
-      same in every language.
+      Python, built on the same JavaScript library, so charts look and behave
+      the same in every language.
     </p>
 
     <h2>Roadmap</h2>
-    <ol>
-      <li><strong>Reference fixtures:</strong> every R chart feature recorded as a test, checked on every change.</li>
-      <li><strong>Library core:</strong> rendering and interaction moved out of the R binding into <code>newChart()</code>.</li>
-      <li><strong>Modules and schema:</strong> the code split into modules; the chart spec defined as a JSON Schema.</li>
-      <li><strong>Chart spec in JavaScript:</strong> splitting clusters, per-cluster settings, layout and themes resolved by the library instead of R, matching R exactly. Data processing stays in R and Python.</li>
-      <li><strong>npm 0.3.0:</strong> builds for script tags and bundlers, TypeScript types and a full API reference.</li>
-      <li><strong>R package 0.3.0</strong> on the library, and the Gene Cluster Dashboard with it.</li>
-      <li><strong>Python package 0.1.0</strong> for Shiny for Python, with file readers and alignment.</li>
-      <li><strong>1.0.0</strong> once R and Python both use the library.</li>
-    </ol>
+    <p>
+      Next: the R package 0.3.0 on this library, then a Python package for
+      Shiny for Python with file readers and alignment, then 1.0.0 once R and
+      Python both use it. See the
+      <a href="https://github.com/nvelden/geneviewer-js/blob/main/docs/roadmap.md">roadmap</a>.
+    </p>
     <p>
       Follow progress on
       <a href="https://github.com/nvelden/geneviewer-js">GitHub</a>. Releases
@@ -139,7 +132,7 @@ GC_chart(ophA_clusters, group = "class", cluster = "cluster") %&gt;%
 
   <footer>
     <div class="inner">
-      geneviewer-js is MIT licensed. Charts are drawn with <a href="https://d3js.org">D3</a>.
+      geneviewer is MIT licensed. Charts are drawn with <a href="https://d3js.org">D3</a>.
     </div>
   </footer>
 

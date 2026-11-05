@@ -9,6 +9,7 @@ import { cluster } from "./cluster.js";
 import { color, coordinates, genes, labels, legend, pattern, sequence, tooltip } from "./genes.js";
 import { clusterFooter, clusterLabel, clusterTitle, grid, title } from "./layout.js";
 import { clone } from "./r.js";
+import { OPTION_NAMES, renameOptions } from "./names.js";
 import { align, scale, scaleBar } from "./scale.js";
 import { links } from "./links.js";
 import { transcript } from "./transcript.js";
@@ -85,7 +86,7 @@ export function compile(spec) {
     if (CHART_KEYS.has(key)) continue;
     const apply = handlers[key];
     if (!apply) continue;
-    for (const entry of entries(value)) apply(state, entry);
+    for (const entry of entries(value)) apply(state, renameOptions(entry, OPTION_NAMES[key]));
   }
   return toModel(renderTheme(state));
 }

@@ -208,10 +208,17 @@
 }
 /* Glyphs the size of the save icon */
 .geneviewer-toolbar-button > i,
+.geneviewer-toolbar-button > .geneviewer-icon,
 .geneviewer-toolbar .geneviewer-save-icon {
   display: block;
   padding: 5px;
   font-size: var(--gv-toolbar-size);
+}
+/* The default icons: inline SVG, 1em high, in the text colour */
+.geneviewer-icon-svg {
+  display: block;
+  height: 1em;
+  fill: currentColor;
 }
 .geneviewer-toolbar .geneviewer-save-icon {
   color: var(--gv-toolbar-color);

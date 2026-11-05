@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "data": [
+    { "cluster": "A", "name": "geneA", "start": 100, "end": 900, "class": "kinase" },
+    { "cluster": "A", "name": "geneB", "start": 1200, "end": 2000, "class": "transporter" },
+    { "cluster": "B", "name": "geneA", "start": 300, "end": 1100, "class": "kinase" }
+  ],
+  "fields": { "cluster": "cluster", "group": "class" },
+  "labels": { "label": "name" },
+  "title": { "title": "Two clusters" }
+}

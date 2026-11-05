@@ -1,4 +1,6 @@
 // Export: the chart as one SVG or PNG, downloads and the save menu.
+import { appendIcon } from "./icons.js";
+
 // Styles copied from the page onto each element of an exported SVG, so it
 // looks the same without the page's stylesheets (e.g. styles.css, fonts)
 const svgExportInheritedStyles = [
@@ -195,16 +197,17 @@ function downloadBlob(blob, filename) {
 // The save icon and its formats, in the chart's toolbar (container), which
 // shows and places it. Its colours are those of the stylesheet, set with
 // GC_toolbar() and GC_theme(toolbar = ...). save(blob, filename) saves the
-// file; by default the browser downloads it.
-export function createSaveIcon(widgetId, el, container, iconClass = "fa-solid fa-download", save = downloadBlob) {
+// file; by default the browser downloads it. iconClass names a Font Awesome
+// icon; without it the icon is the default download icon, as SVG.
+export function createSaveIcon(widgetId, el, container, iconClass = null, save = downloadBlob) {
   var saveMenu = d3.select(container).append("div")
       .attr("id", `saveMenu-${widgetId}`)
       .style("position", "relative")
       .style("z-index", "1000")
       .style("display", "block");
 
-  var icon = saveMenu.append("i")
-      .attr("class", iconClass + " geneviewer-save-icon")
+  var icon = saveMenu.append(iconClass ? "i" : "span")
+      .attr("class", (iconClass ? iconClass + " " : "") + "geneviewer-save-icon")
       .attr("id", `saveIcon-${widgetId}`)
       .attr("tabindex", "0")
       .attr("role", "button")
@@ -212,6 +215,7 @@ export function createSaveIcon(widgetId, el, container, iconClass = "fa-solid fa
       .attr("aria-haspopup", "menu")
       .style("text-align", "right")
       .style("cursor", "pointer");
+  if (!iconClass) appendIcon(icon, "download");
 
   // Format options, shown when hovering or focusing the icon
   var options = saveMenu.append("div")
