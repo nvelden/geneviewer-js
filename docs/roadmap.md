@@ -243,6 +243,7 @@ Niels's approval before the milestone that introduces it closes.
 | 3 | M4 | After `GC_normalize(cluster = )` on some clusters (`rd-GC-normalize-1`, `vig-geneviewer-26`, `vig-geneviewer-27`), the other clusters' data has `original_start` and `original_end`, all null; in R they had no such columns. | The spec's data has the columns for all rows; compile() splits it into clusters as R does. Not drawn; tooltips leave out empty fields. Draws the same. | Niels, 2026-11-04 |
 | 4 | M4 | `GC_tooltip(FALSE)` (`vig-geneviewer-53` to `-62`): the tooltip's `formatter` is the default text, not `false`. | The spec records `show: false`; the formatter of a hidden tooltip is not used. Draws the same. | Niels, 2026-11-04 |
 | 5 | M4 | `GC_chart(save_button = FALSE)` (`cov-chart-without-extras`): the render model has `toolbar.buttons` without "save"; R had no toolbar options. | NAMING.md case 1: the spec has no `saveButton`. The toolbar draws the same. | Niels, 2026-11-04 |
+| 6 | M5 | The toolbar's default icons are inline SVG (the same Font Awesome glyphs), not `<i class="fa-solid ...">`; the toolbar's markup in the SVG baselines changes. | The library needs no icon font (design/api.md, Distribution). Custom icons by Font Awesome name are unchanged. | Niels, 2026-11-04 |
 
 ## Risks
 

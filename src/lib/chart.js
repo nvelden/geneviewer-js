@@ -4,6 +4,7 @@ import { clusterLabelMargin } from "./components/clusterLabel.js";
 import { compile } from "./compile/index.js";
 import { mergeSpec } from "./compile/merge.js";
 import { injectStyles } from "./styles.js";
+import { appendIcon } from "./icons.js";
 import { createContainer } from "./container.js";
 import { chartToPNG, chartToSVG, createSaveIcon } from "./export.js";
 import { colorBarSettings, getClusterLinks, makeColorBar, makeLinks } from "./links.js";
@@ -423,7 +424,8 @@ function newChart(target, renderModel, options) {
         var adds = event.shiftKey || event.metaKey || event.ctrlKey;
         if (adds) {
           if (keyOf(detail) !== null) changeSelection([detail], "toggle");
-        } else if (detail || event.target.closest("svg") || event.target === el) {
+        } else if (detail || (event.target.closest("svg") && !event.target.closest(".geneviewer-toolbar")) ||
+                   event.target === el) {
           var only = selection.length === 1 && sameSelection(selected, detail);
           selectElement(only ? null : detail ?? null);
         }
@@ -947,7 +949,8 @@ function newChart(target, renderModel, options) {
       var save = saveButton && wanted("save");
       var zoomButton = !!zoomOptions && wanted("zoom");
       if (opts.show === "never" || (!movable && !save && !zoomButton)) return;
-      var icon = function (name, fallback) { return iconClass(opts.icons[name] ?? fallback); };
+      // A custom icon (by Font Awesome name) or none: the default, as SVG
+      var customIcon = function (name) { return opts.icons[name] != null ? iconClass(opts.icons[name]) : null; };
       toolbar = d3.select(el).append("div")
         .attr("class", `geneviewer-toolbar geneviewer-toolbar-${opts.position}` +
                        (opts.show === "always" ? " geneviewer-toolbar-always" : ""))
@@ -971,7 +974,11 @@ function newChart(target, renderModel, options) {
           .attr("aria-keyshortcuts", b.shortcuts)
           .property("disabled", !!b.disabled)
           .on("click", b.onClick);
-        button.append("i").attr("class", icon(b.name, b.icon)).attr("aria-hidden", "true");
+        if (customIcon(b.name)) {
+          button.append("i").attr("class", customIcon(b.name)).attr("aria-hidden", "true");
+        } else {
+          appendIcon(button.append("span").attr("class", "geneviewer-icon").attr("aria-hidden", "true"), b.icon);
+        }
         var tip = button.append("span").attr("class", "geneviewer-toolbar-tip").attr("aria-hidden", "true");
         tip.append("span").text(b.label);
         if (b.kbd) tip.append("kbd").text(b.kbd);
@@ -1005,7 +1012,7 @@ function newChart(target, renderModel, options) {
                                kbd: null, shortcuts: null, onClick: resetZoom });
         if (save) zoomGroup.append("span").attr("class", "geneviewer-toolbar-divider");
       }
-      if (save) createSaveIcon(widgetId, el, toolbar.node(), icon("save", "download"), options.saveAs);
+      if (save) createSaveIcon(widgetId, el, toolbar.node(), customIcon("save"), options.saveAs);
     };
 
     // A link below a cluster SVG gets no :hover, so it is highlighted here
