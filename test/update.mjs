@@ -97,6 +97,28 @@ try {
   }, { payload });
   expect((await titleText()).includes("Render model"), "update() with a render model draws it");
 
+  // The R binding with { spec }, as R sends it from 0.3.0 on: a redraw from
+  // Shiny gives the whole spec, which replaces the chart's spec
+  const bindingPage = await browser.newPage({ viewport: { width: 1200, height: 900 }, deviceScaleFactor: 1 });
+  bindingPage.on("pageerror", (error) => errors.push(error.message));
+  await bindingPage.goto(harness.replace("?mode=spec", "?mode=rspec"), { waitUntil: "load" });
+  const bindingTitles = () => bindingPage.evaluate(() =>
+    [...document.querySelectorAll("#chart .geneviewer-title, #chart text")]
+      .map((node) => node.textContent).join("|"));
+  await bindingPage.evaluate(({ spec, meta }) => { window.__widget = mountChart(spec, meta); }, { spec, meta });
+  const drawnTitle = spec.title.title;
+  expect((await bindingTitles()).includes(drawnTitle), "the binding draws x.spec");
+  expect(await bindingPage.evaluate(() => window.__widget.getChart().toSVG().includes("<svg")),
+    "the widget gives its chart (getChart())");
+  expect(await bindingPage.evaluate(() => window.chartToSVG === undefined && window.chartToPNG === undefined),
+    "the binding defines no chartToSVG() or chartToPNG() globals");
+  const withoutTitle = { ...spec };
+  delete withoutTitle.title;
+  await bindingPage.evaluate((spec) => window.__widget.renderValue({ spec }), withoutTitle);
+  expect(!(await bindingTitles()).includes(drawnTitle),
+    "a redraw through the binding replaces the spec (a key left out goes)");
+  await bindingPage.close();
+
   // A newer spec version warns and draws
   const warnings = [];
   page.on("console", (message) => { if (message.type() === "warning") warnings.push(message.text()); });
