@@ -1,6 +1,6 @@
 // The htmlwidgets binding of the R package: draws each chart's spec with
-// geneviewer.newChart() (geneviewer.js) and, in Shiny, sends its events to
-// Shiny inputs. The R package may load this file before geneviewer.js, so
+// geneviewer.newChart() (geneviewer.core.js) and, in Shiny, sends its events to
+// Shiny inputs. The R package may load this file before geneviewer.core.js, so
 // geneviewer is only used once a chart is drawn.
 (function () {
 // The events sent to Shiny, as the inputs <output id>_<name>

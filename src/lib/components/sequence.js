@@ -10,11 +10,6 @@ container.prototype.sequence = function (show = true, options = {}) {
     return this;
   }
 
-  if (!this.data) {
-    console.error('No data has been added to this cluster container. Please use the addGeneData() function before attempting to draw a gene line.');
-    return this;
-  }
-
   const defaultOptions = {
     y: 50,
     start: null,

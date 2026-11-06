@@ -111,12 +111,6 @@ container.prototype.labels = function (label, show = true, options = {}) {
     return this;
   }
 
-  // Verify that the data exists
-  if (!this.data) {
-    console.error('No data has been added to this cluster container. Please use the addGeneData() function before attempting to draw genes.');
-    return this;
-  }
-
   const defaultOptions = {
     x: 0,
     y: 55,

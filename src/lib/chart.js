@@ -112,8 +112,8 @@ var createMoveHistory = function () {
 };
 
 /**
- * A chart's events: where they come from and what they carry are in the R
- * package's GC_events() documentation.
+ * A chart's events: what each one carries is under Events in the site's API
+ * reference.
  * @typedef {"click"|"dblclick"|"select"|"selection"|"drag"|"dragmove"|"moves"|"zoom"|"rendered"} ChartEvent
  */
 

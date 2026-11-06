@@ -64,7 +64,7 @@ const CHART_KEYS = new Set(["version", "data", "fields", "width", "height", "sty
  * @param {*} value
  * @returns {Object<string, *>[]}
  */
-export function entries(value) {
+function entries(value) {
   if (value === null || value === undefined) return [];
   return Array.isArray(value) ? value : [value];
 }

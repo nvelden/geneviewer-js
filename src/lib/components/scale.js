@@ -5,12 +5,6 @@ import { applyMove, extractAdditionalOptions, setStyleFromOptions } from "../sty
 import { mergeOptions } from "../util.js";
 
 container.prototype.scale = function (options = {}) {
-  // Verify that the data exists
-  if (!this.data) {
-    console.error('No data has been added to this cluster container.');
-    return this;
-  }
-
   // Default options specific for scales and axis
   const defaultScaleOptions = {
     start: null,

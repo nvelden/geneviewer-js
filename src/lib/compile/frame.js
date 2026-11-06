@@ -18,7 +18,6 @@ export class Frame {
    * @returns {Frame}
    */
   static from(data) {
-    if (data instanceof Frame) return data.copy();
     if (Array.isArray(data)) {
       const names = [];
       for (const row of data) {
@@ -83,15 +82,6 @@ export class Frame {
   }
 
   /**
-   * @param {string} name
-   * @returns {Frame} this
-   */
-  drop(name) {
-    this.columns.delete(name);
-    return this;
-  }
-
-  /**
    * The rows at the given 0-based indices, in that order.
    * @param {number[]} indices
    * @returns {Frame}
@@ -122,17 +112,6 @@ export class Frame {
     const frame = new Frame();
     for (const name of names) if (this.columns.has(name)) frame.columns.set(name, this.columns.get(name).slice());
     return frame;
-  }
-
-  /**
-   * Row i as an object.
-   * @param {number} i
-   * @returns {Object<string, *>}
-   */
-  row(i) {
-    const row = {};
-    for (const [name, values] of this.columns) row[name] = values[i];
-    return row;
   }
 
   /** @returns {Object<string, Array<*>>} The columns, as htmlwidgets writes a data frame. */
