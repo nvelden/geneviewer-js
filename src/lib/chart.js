@@ -10,7 +10,7 @@ import { chartToPNG, chartToSVG, createSaveIcon, downloadBlob } from "./export.j
 import { colorBarSettings, getClusterLinks, makeColorBar, makeLinks } from "./links.js";
 import { computeSize, mergeOptions, themeTextScale, toRows, warnOnce } from "./util.js";
 
-var version = "0.3.4";
+var version = "0.3.5";
 // Shared by all chart instances, including ones removed and recreated.
 var renderSequence = 0;
 // Charts on elements without an id get one of their own for their parts' ids
