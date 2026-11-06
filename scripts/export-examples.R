@@ -1,10 +1,12 @@
-# Export the documentation examples from the geneviewer R package.
+# Export the charts of the documentation site from the geneviewer R package.
 #
-# For each example this writes site/examples/<id>.json with the R code, the
-# chart height and the chart spec R records (options(geneviewer.record_spec =
-# TRUE)). The site draws the charts from the specs with the JavaScript in
-# this repo, and shows each example's JavaScript, made from its spec by
-# scripts/build-site.mjs.
+# Runs the two vignettes the site follows, vignettes/Examples.Rmd and
+# vignettes/geneviewer.Rmd, and writes for each chart they draw
+# site/public/charts/<id>.json: its R code, height and the chart spec R
+# records (options(geneviewer.record_spec = TRUE)). The examples page is
+# listed in site/.vitepress/examples.json, by section of the vignette. The site
+# draws the charts from the specs with the JavaScript in this repo and shows
+# each chart's JavaScript, made from its spec (site/.vitepress/charts.mjs).
 #
 # Run from the repo root, with GENEVIEWER_R_DIR set (or in .try-app.env):
 #   Rscript scripts/export-examples.R
@@ -17,201 +19,159 @@ r_dir <- gsub('^"|"$', "", Sys.getenv("GENEVIEWER_R_DIR"))
 if (!dir.exists(r_dir)) stop("Set GENEVIEWER_R_DIR to the geneviewer R package repo.")
 
 suppressMessages(pkgload::load_all(r_dir, quiet = TRUE))
+suppressMessages(library(dplyr))
 library(magrittr)
 options(geneviewer.record_spec = TRUE)
 
-examples <- list(
-  list(
-    id = "ophA",
-    title = "Gene cluster with labels",
-    description = "Genes drawn from their start and end positions, coloured by class, with a label above each gene.",
-    code = '
-gene_cluster <- data.frame(
-  name = c("ophB1", "ophC", "ophA", "ophD", "ophB2", "ophP", "ophE"),
-  start = c(2522, 5286, 9536, 12616, 13183, 19346, 20170),
-  end = c(4276, 4718, 10904, 11859, 15046, 16016, 21484),
-  class = c("Monooxygenase", "NTF2-like", "Methyltransferase",
-  "O-acyltransferase", "Monooxygenase", "Prolyloligopeptidase",
-  "F-box/RNHI-like")
+out_dir <- "site/public/charts"
+unlink(out_dir, recursive = TRUE)
+dir.create(out_dir, recursive = TRUE)
+
+slug <- function(text) {
+  text <- gsub("[*`]", "", text)
+  text <- gsub("[^a-z0-9]+", "-", tolower(text))
+  gsub("^-|-$", "", text)
+}
+
+# The headings, prose and code chunks of an R Markdown file, in order
+parse_rmd <- function(path) {
+  lines <- readLines(path, warn = FALSE)
+  lines <- lines[(which(lines == "---")[2] + 1):length(lines)]
+  blocks <- list()
+  i <- 1
+  while (i <= length(lines)) {
+    line <- lines[i]
+    if (grepl("^```\\{r", line)) {
+      end <- i + which(lines[(i + 1):length(lines)] == "```")[1]
+      options <- sub("^```\\{r,?\\s*(.*)\\}$", "\\1", line)
+      blocks[[length(blocks) + 1]] <- list(
+        type = "chunk",
+        code = paste(lines[seq_len(end - i - 1) + i], collapse = "\n"),
+        echo = !grepl("echo\\s*=\\s*FALSE", options),
+        eval = !grepl("eval\\s*=\\s*FALSE", options),
+        hidden = grepl("results\\s*=\\s*['\"]hide['\"]", options),
+        include = !grepl("include\\s*=\\s*FALSE", options)
+      )
+      i <- end + 1
+      next
+    }
+    if (grepl("^#{2,3} ", line)) {
+      text <- sub("\\s*\\{#[^}]*\\}\\s*$", "", sub("^#+ ", "", line))
+      blocks[[length(blocks) + 1]] <- list(type = "heading", text = text)
+    } else if (nzchar(trimws(line)) && !grepl("^</?(details|summary|br)", line)) {
+      blocks[[length(blocks) + 1]] <- list(type = "prose", text = line)
+    }
+    i <- i + 1
+  }
+  blocks
+}
+
+# Write the chart, gives its id
+write_chart <- function(widget, id, code, title = NULL) {
+  sent <- htmlwidgets:::createPayload(widget)
+  if (length(sent$evals)) {
+    stop(id, ": JavaScript functions in the payload are not supported.")
+  }
+  height <- widget$height
+  if (is.numeric(height)) height <- paste0(height, "px")
+  width <- widget$width
+  if (is.numeric(width)) width <- paste0(width, "px")
+  meta <- list(
+    id = id,
+    code = code,
+    height = if (is.null(height)) "400px" else height
+  )
+  if (!is.null(width)) meta$width <- width
+  if (!is.null(title)) meta$title <- title
+  # The spec is serialised on its own so htmlwidgets' JSON settings apply
+  json <- as.character(jsonlite::toJSON(meta, auto_unbox = TRUE))
+  json <- paste0(substr(json, 1, nchar(json) - 1), ',"spec":', htmlwidgets:::toJSON(sent$x$spec), "}")
+  writeLines(json, file.path(out_dir, paste0(id, ".json")), useBytes = TRUE)
+  id
+}
+
+# Run a vignette in one environment and write its charts. A chart's R code
+# is its own chunk when that is shown, else the chunks shown before it that
+# nothing has claimed yet (the vignettes show the code in a chunk that is
+# not run, or run with results = 'hide', above the chunk that draws).
+export_vignette <- function(path, prefix = "") {
+  env <- new.env(parent = globalenv())
+  # Column values drawn at random in the vignettes stay the same between runs
+  set.seed(1)
+  sections <- list()
+  section <- NULL
+  pending <- character()
+  counts <- list()
+  flush <- function() if (!is.null(section)) sections[[length(sections) + 1]] <<- section
+  for (block in parse_rmd(path)) {
+    if (block$type == "heading") {
+      flush()
+      section <- list(heading = block$text, id = slug(block$text), prose = character(), charts = character())
+      pending <- character()
+      next
+    }
+    if (is.null(section)) {
+      section <- list(heading = "", id = "top", prose = character(), charts = character())
+    }
+    if (block$type == "prose") {
+      section$prose <- c(section$prose, block$text)
+      next
+    }
+    if (block$eval) {
+      expressions <- parse(text = block$code, keep.source = FALSE)
+      for (expression in expressions) {
+        result <- tryCatch(
+          suppressMessages(suppressWarnings(withVisible(eval(expression, env)))),
+          error = function(e) {
+            message("FAILED in '", section$heading, "': ", conditionMessage(e))
+            list(visible = FALSE, value = NULL)
+          }
+        )
+        if (result$visible && inherits(result$value, "htmlwidget") && block$include && !block$hidden) {
+          code <- if (block$echo || !length(pending)) block$code else paste(pending, collapse = "\n\n")
+          if (!block$echo) pending <- character()
+          n <- (if (is.null(counts[[section$id]])) 0 else counts[[section$id]]) + 1
+          counts[[section$id]] <- n
+          id <- paste0(prefix, section$id, if (n > 1) paste0("-", n))
+          section$charts <- c(section$charts, write_chart(result$value, id, code))
+        }
+      }
+    }
+    # Shown, but what it draws (if anything) is drawn by a later chunk
+    if (block$echo && block$include && (!block$eval || block$hidden)) {
+      pending <- c(pending, block$code)
+    }
+  }
+  flush()
+  sections
+}
+
+vignettes <- file.path(r_dir, "vignettes")
+
+# The examples page follows Examples.Rmd section by section
+examples <- export_vignette(file.path(vignettes, "Examples.Rmd"))
+examples <- Filter(function(s) length(s$charts) > 0, examples)
+writeLines(
+  jsonlite::toJSON(examples, auto_unbox = FALSE, pretty = TRUE),
+  "site/.vitepress/examples.json"
 )
+cat(length(examples), "example sections,", sum(lengths(lapply(examples, `[[`, "charts"))), "charts\n")
 
-GC_chart(gene_cluster, group = "class", height = "100px") %>%
-  GC_labels("name")'
-  ),
-  list(
-    id = "lac-operon",
-    title = "E. coli lac operon",
-    description = "A single operon with a scale bar, custom tooltips, a footer and coordinates at the ends only.",
-    code = '
-lacZ_operon <- data.frame(
-  start = c(361249, 361926, 363231, 366428),
-  end = c(361860, 363179, 366305, 367510),
-  Gene_symbol = c("lacA", "lacY", "lacZ", "lacI"),
-  Strand = c("minus", "minus", "minus", "minus"),
-  NCBI_Gene_ID = as.character(c(945674, 949083, 945006, 945007)),
-  Description = c("galactoside O-acetyltransferase",
-                  "lactose permease", "beta-galactosidase",
-                  "DNA-binding transcriptional repressor LacI")
-)
+# The getting started page picks charts of geneviewer.Rmd by id
+guide <- export_vignette(file.path(vignettes, "geneviewer.Rmd"), prefix = "guide-")
+cat(sum(lengths(lapply(guide, `[[`, "charts"))), "getting started charts\n")
 
-GC_chart(lacZ_operon, group = "Gene_symbol", height = "140px") %>%
-  GC_labels() %>%
-  GC_scaleBar(title = "0.2 kb", scaleBarUnit = 200, y = 30) %>%
-  GC_tooltip(
-    formatter = "
-    <b>ID:</b> {NCBI_Gene_ID}<br>
-    <b>Description:</b> {Description}<br>
-    <b>Start:</b> {start}<br>
-    <b>End:</b> {end}"
-  ) %>%
-  GC_clusterFooter(
-    align = "center",
-    y = -30,
-    subtitle = "<i>Escherichia coli</i> str. K-12 substr. MG1655"
-  ) %>%
-  GC_coordinates(
-    rotate = 0,
-    tickValuesBottom = c(min(lacZ_operon$start), max(lacZ_operon$end)),
-    textStyle = list(fontSize = "10px", x = -2.2, y = 1.2),
-    tickStyle = list(lineLength = 10)
-  ) %>%
-  GC_legend(FALSE)'
-  ),
-  list(
-    id = "erythromycin-blastp",
-    title = "Protein alignment between clusters",
-    description = "Erythromycin gene clusters compared by BlastP. Genes with a hit share a colour by function; the identity of each match is shown beside the gene.",
-    code = '
-blastp <- erythromycin_BlastP
-blastp$Functions[is.na(blastp$Functions)] <- "No Hit"
-
-GC_chart(blastp,
-         cluster = "cluster",
-         strand = "strand",
-         group = "Functions",
-         height = 700) %>%
-  GC_title(title = "Protein Alignment Results") %>%
-  GC_labels("Gene", cluster = 1) %>%
-  GC_links(group = "Gene",
-           show_links = FALSE,
-           color_bar = FALSE,
-           labelStyle = list(fontSize = "10px")) %>%
+# The chart whose events the "What is geneviewer?" page shows
+interactive <- GC_chart(ophA_clusters, group = "class", cluster = "cluster", height = "320px") %>%
+  GC_labels("name") %>%
+  GC_links("class", measure = "identity") %>%
   GC_clusterLabel() %>%
-  GC_genes(stroke = "#6E7079", strokeWidth = 0.5) %>%
-  GC_legend(order = c(setdiff(sort(unique(blastp$Functions)), "No Hit"), "No Hit")) %>%
-  GC_color(customColors = list("No Hit" = "white")) %>%
-  GC_theme("infographic", textColor = "#333333", palette = "okabeIto")'
-  ),
-  list(
-    id = "pqeb1",
-    title = "Plasmid alignment blocks",
-    description = "Plasmid pQEB1 and rearranged variants, linked by whole-sequence alignment blocks. Orange links mark inversions.",
-    code = '
-plasmids <- dplyr::distinct(pQEB1_plasmids, cluster, host)
-colors <- list(
-  "Carbapenemase (KPC)" = "#d62728",
-  "Other resistance" = "#ff7f0e",
-  "Arsenic resistance" = "#8c564b",
-  "Mobile element" = "#9467bd",
-  "Conjugation" = "#1f77b4",
-  "Replication & maintenance" = "#2ca02c",
-  "Hypothetical" = "#d9d9d9",
-  "Other" = "#9e9e9e"
-)
-
-GC_chart(pQEB1_plasmids, cluster = "cluster", group = "category",
-         strand = "strand", height = "760px") %>%
-  GC_links(data = pQEB1_alignment, measure = "none", label = FALSE,
-           color_bar = FALSE, normal_color = "#7f9cbf",
-           inverted_color = "#e6894e") %>%
-  GC_genes(marker_size = "small") %>%
-  GC_scale(axis_type = "range") %>%
-  GC_clusterLabel(
-    title = plasmids$cluster,
-    subtitle = plasmids$host,
-    width = "175px",
-    fontSize = "13px",
-    subtitleFont = list(fontSize = "12px", fontStyle = "italic"),
-    align = "right",
-    x = -10
-  ) %>%
-  GC_title(
-    "<i>bla</i>KPC-2 plasmid pQEB1 and its rearranged variants",
-    subtitle = paste("IncN plasmids aligned with nucmer",
-                     "(all blocks \\u2265 99.2% identity);",
-                     "orange links mark inversions"),
-    height = "70px",
-    titleFont = list(fontSize = "20px", fontWeight = "bold"),
-    subtitleFont = list(fontSize = "15px", fontStyle = "italic")
-  ) %>%
-  GC_tooltip(formatter = "<b>{gene}</b> {product}<br>{start} - {end}") %>%
-  GC_color(customColors = colors) %>%
-  GC_legend(position = "top", align = "center", order = names(colors),
-            legendTextOptions = list(fontSize = "14px")) %>%
-  GC_theme("publication")'
-  ),
-  list(
-    id = "brca1",
-    title = "Transcripts",
-    description = "BRCA1 splice variants drawn as exons and introns, with a title and footer per transcript.",
-    code = '
-GC_chart(BRCA1_splice_variants, height = "600px") %>%
-  GC_transcript(
-    transcript = "ensembl_transcript_id",
-    strand = "strand",
-    type = "type"
-  ) %>%
-  GC_clusterTitle(
-    title = unique(BRCA1_splice_variants$ensembl_transcript_id),
-    titleFont = list(fontSize = "12px")
-  ) %>%
-  GC_clusterFooter(
-    title = c("0.8%", "0.1%", "0.07%", "0.02%", "0.01%"),
-    align = "center"
-  ) %>%
-  GC_theme("infographic", textColor = "#333333")'
-  ),
-  list(
-    id = "interactive",
-    title = "Zoom, select and drag",
-    description = "The toolbar and zoom slider. Drag the slider to zoom, click genes to select them, drag labels to move them, and use undo, redo and save.",
-    code = '
-GC_chart(ophA_clusters, group = "class", cluster = "cluster",
+  GC_zoom() %>%
+  GC_events(select = TRUE)
+write_chart(interactive, "interactive", 'GC_chart(ophA_clusters, group = "class", cluster = "cluster",
          height = "320px") %>%
   GC_labels("name") %>%
   GC_links("class", measure = "identity") %>%
   GC_clusterLabel() %>%
   GC_zoom() %>%
-  GC_events(select = TRUE)'
-  )
-)
-
-dir.create("site/examples", recursive = TRUE, showWarnings = FALSE)
-for (example in examples) {
-  code <- trimws(example$code)
-  widget <- eval(parse(text = code))
-  # What htmlwidgets sends to the browser, after the widget's preRenderHook
-  sent <- htmlwidgets:::createPayload(widget)
-  if (length(sent$evals)) {
-    stop(example$id, ": JavaScript functions in the payload are not supported.")
-  }
-  height <- widget$height
-  if (is.numeric(height)) height <- paste0(height, "px")
-  meta <- list(
-    id = example$id,
-    title = example$title,
-    description = example$description,
-    code = code,
-    height = if (is.null(height)) "400px" else height
-  )
-  # The spec is serialised on its own so htmlwidgets' JSON settings apply
-  json <- sub("}$", paste0(',"spec":', htmlwidgets:::toJSON(sent$x$spec), "}"),
-              jsonlite::toJSON(meta, auto_unbox = TRUE))
-  writeLines(json, file.path("site/examples", paste0(example$id, ".json")), useBytes = TRUE)
-  cat("wrote site/examples/", example$id, ".json\n", sep = "")
-}
-writeLines(
-  jsonlite::toJSON(vapply(examples, `[[`, "", "id")),
-  "site/examples/index.json"
-)
-cat("wrote site/examples/index.json\n")
+  GC_events(select = TRUE)')
