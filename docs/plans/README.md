@@ -139,6 +139,5 @@ needs a decision the plan leaves open.
 | `npm run build` | geneviewer-js | Build `dist/` |
 | `npm test` | geneviewer-js | Fixture tests (from M1) |
 | `npm run try-app` | geneviewer-js | Run the app with this repo's JS and its tests |
-| `npm run site` / `serve` | geneviewer-js | Build / preview the docs site |
 | `Rscript -e 'devtools::test()'` | geneviewer | R package tests |
 | `R CMD check --as-cran` | geneviewer | Full package check |

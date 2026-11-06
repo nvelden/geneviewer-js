@@ -165,7 +165,8 @@ approved exceptions; SVG baselines identical.
 - **Docs site:** the examples show JavaScript, with R in a second tab. Add a
   full API reference generated from the schema, a getting-started guide, and
   examples for a plain HTML page and for a bundler (Vite). Remove the
-  "Planned" labels.
+  "Planned" labels. The site has since moved to
+  [geneviewer-docs](https://github.com/nvelden/geneviewer-docs).
 
 **Niels, once:** create the npm account with two-factor sign-in and link the
 repository for trusted publishing.

@@ -5,7 +5,7 @@ browser, drawn with D3. The same library draws the charts of the
 [geneviewer R package](https://github.com/nvelden/geneviewer) and its Shiny
 app.
 
-**Docs and examples:** https://nvelden.github.io/geneviewer-js/
+**Docs and examples:** https://nvelden.github.io/geneviewer-docs/
 
 ## Install
 
@@ -147,11 +147,9 @@ Rscript test/coverage.R             # update test/coverage.md
   spec (`test/harness/mount.js`); the fixtures also with the min build.
 - **Chart methods** (`test/methods.mjs`): `select()`, `getSelection()`,
   `undo()`, `redo()` and `download()`.
-- **Save, two-chart and site checks** (`test/save.cjs`,
-  `test/two-charts.cjs`, `test/site.cjs`): the save menu downloads a valid
-  SVG and PNG; two charts on a page keep their own selection and undo
-  history; every chart on the docs site draws without errors, and the
-  JavaScript shown with each chart runs and draws the same chart.
+- **Save and two-chart checks** (`test/save.cjs`, `test/two-charts.cjs`):
+  the save menu downloads a valid SVG and PNG; two charts on a page keep
+  their own selection and undo history.
 - **Coverage** (`test/coverage.md`): every documented argument of the `GC_*`
   chart functions is used by at least one fixture.
 - **Fixed environment:** the tests run in a Docker image (`docker/`) with
@@ -224,17 +222,7 @@ Awesome Free (CC BY 4.0); see LICENSE-THIRD-PARTY.md.
 
 ## Docs site
 
-The site in `site/` is built with [VitePress](https://vitepress.dev) to
-`_site/` and published to GitHub Pages from `main` by
-`.github/workflows/pages.yml`.
-
-| Command | What it does |
-|---------|--------------|
-| `npm run site:dev` | Serve the site with live reload (run `npm run build` first) |
-| `npm run serve` | Build the library and the site, and preview it at http://127.0.0.1:8484/geneviewer-js/ |
-| `Rscript scripts/export-examples.R` | Run the R package's `Examples.Rmd` and `geneviewer.Rmd` and write each chart to `site/public/charts/` (needs `GENEVIEWER_R_DIR`) |
-| `npm run site:gallery` | Remake the home page's thumbnails from those charts (`GENEVIEWER_CHROME=1` uses Chrome) |
-
-A page places a chart with a line `@chart <id>`, optionally followed by
-`nocode`, `fold` or `log`. `site/.vitepress/charts.mjs` turns it into the live
-chart and its code tabs, and makes the JavaScript from the chart's spec.
+The site, for all languages, has its own repository:
+[geneviewer-docs](https://github.com/nvelden/geneviewer-docs). It builds with
+the newest version of this library on npm, and its tests check that every chart
+draws.
