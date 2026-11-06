@@ -32,7 +32,7 @@ const REVERSE = ["-1", "0", "reverse", "-", "antisense", "complement"];
  * @param {string|null} strand
  * @returns {Frame|null}
  */
-export function addStrand(data, strand = null) {
+function addStrand(data, strand = null) {
   if (!data || data.nrow === 0) return null;
   if (strand === null && data.has("strand")) strand = "strand";
   if (!data.has("start")) throw new Error("start column not found in data");

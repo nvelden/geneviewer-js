@@ -12,7 +12,7 @@ import { recycleDots, setClusterOptions, shiftSequence } from "./genes.js";
  * @param {string} padding
  * @returns {number}
  */
-export function breakPaddingBp(padding) {
+function breakPaddingBp(padding) {
   if (!/^\s*[0-9]*\.?[0-9]+\s*bp\s*$/.test(padding)) {
     throw new Error('scale_break_padding must be a percentage, e.g. 1, or base pairs, e.g. "500bp"');
   }
@@ -27,7 +27,7 @@ export function breakPaddingBp(padding) {
  * @param {number|string} padding A percentage of the region shown, or "500bp".
  * @returns {Array<{start: number, end: number}>}
  */
-export function getScaleBreaks(genes, thresholdPercentage = 0, padding = 0) {
+function getScaleBreaks(genes, thresholdPercentage = 0, padding = 0) {
   let starts = genes.get("start").slice();
   let ends = genes.get("end").slice();
   starts.forEach((s, i) => {
@@ -275,7 +275,7 @@ export function align(state, entry) {
  * scale breaks and reversed clusters included.
  * @param {import("./chart.js").ChartState} state
  */
-export function applyAlign(state) {
+function applyAlign(state) {
   const options = state.align;
   if (!options) return;
   const x = state.x;

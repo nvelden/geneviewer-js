@@ -67,9 +67,6 @@ export function isWhite(color) {
   return !!rgb && rgb.r === 255 && rgb.g === 255 && rgb.b === 255 && rgb.opacity === 1;
 }
 
-// Styles a title or subtitle text: the font options of defaultFont as styles,
-// in their order, then the text with its <b>, <i> and <u> tags and the font
-// options not in defaultFont
 // The style a title or subtitle has of its own (GC_element_style(part = )):
 // its text, and the options of its font
 export function partStyle(itemStyle, part) {

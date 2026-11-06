@@ -11,11 +11,6 @@ container.prototype.transcript = function (group, show = true, options = {}) {
     return this;
   }
 
-  if (!this.data) {
-    console.error('No data has been added to this cluster container. Please use the geneData() function before attempting to draw arrows.');
-    return this;
-  }
-
   const defaultOptions = {
     x: 1,
     y: 50,

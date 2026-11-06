@@ -90,7 +90,7 @@ function themeNames(theme) {
  * @param {Object<string, *>} y
  * @returns {Object<string, *>}
  */
-export function mergeThemeSettings(x, y) {
+function mergeThemeSettings(x, y) {
   const out = { ...x };
   for (const [name, value] of Object.entries(y || {})) {
     if (value === null || value === undefined) delete out[name];

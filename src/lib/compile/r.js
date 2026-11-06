@@ -40,7 +40,7 @@ export function asCharacter(x) {
  * @param {*} x
  * @returns {number|null}
  */
-export function asNumeric(x) {
+function asNumeric(x) {
   if (x === null || x === undefined) return null;
   if (typeof x === "number") return x;
   if (typeof x === "boolean") return x ? 1 : 0;
@@ -93,17 +93,6 @@ export function arg(entry, name, fallback) {
  */
 export function isNamedList(x) {
   return x !== null && typeof x === "object" && !Array.isArray(x);
-}
-
-/**
- * R's c(x) as an array: an array as it is, a value in an array of one, no
- * value an empty array.
- * @param {*} x
- * @returns {Array<*>}
- */
-export function asArray(x) {
-  if (x === null || x === undefined) return [];
-  return Array.isArray(x) ? x : [x];
 }
 
 /**

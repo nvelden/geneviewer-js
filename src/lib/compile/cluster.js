@@ -51,7 +51,7 @@ export function order(n, keys) {
  * @param {number|string} overlapMin Base pairs, or a share of the shorter gene ("10%").
  * @returns {import("./frame.js").Frame|null}
  */
-export function addGeneTrack(data, nested = false, overlapMin = 0) {
+function addGeneTrack(data, nested = false, overlapMin = 0) {
   if (!data || data.nrow === 0) return null;
   const starts = data.get("start");
   const ends = data.get("end");

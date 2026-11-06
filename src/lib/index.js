@@ -1,5 +1,6 @@
-// Entry of the library: the public API. scripts/build.mjs bundles it into
-// dist/geneviewer.js, which defines the global `geneviewer`.
+// Entry of the library: the public API. scripts/build.mjs bundles it into the
+// builds listed in scripts/files.mjs; the script-tag builds define the global
+// `geneviewer`.
 
 // The drawn parts add their methods to container.prototype
 import "./components/scale.js";
