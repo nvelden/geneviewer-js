@@ -213,9 +213,8 @@ var createMoveHistory = function () {
  *
  * @param {HTMLElement|string} target  The element to draw into, or a CSS
  *   selector for it; the chart takes its size.
- * @param {Object} renderModel  The chart spec (schema/spec-v1.schema.json),
- *   which has a version; or a render model, as the R package sends it
- *   (widget$x), drawn as it is.
+ * @param {Object} renderModel  The chart spec (schema/spec-v1.schema.json);
+ *   or a render model, as compile() gives it, drawn as it is.
  * @param {ChartOptions} [options]
  * @returns {Chart}
  */
@@ -1834,13 +1833,21 @@ function newChart(target, renderModel, options) {
 
     // The spec the chart was drawn from; null for a render model
     var spec = null;
+    // Only a render model has a graphContainer: compile() sets it, and the
+    // schema has no such key
+    var isRenderModel = function (input) {
+      return input?.graphContainer !== undefined;
+    };
     var drawInput = function (input) {
-      if (input && input.version !== undefined) {
-        spec = structuredClone(input);
-        renderValue(compile(spec));
-      } else {
+      if (isRenderModel(input)) {
         spec = null;
         renderValue(input);
+      } else {
+        // A spec that does not compile leaves the chart as it is
+        var next = structuredClone(input);
+        var model = compile(next);
+        spec = next;
+        renderValue(model);
       }
     };
 
@@ -1856,7 +1863,7 @@ function newChart(target, renderModel, options) {
       },
       setSpec: function (next) {
         if (destroyed) return;
-        if (!next || next.version === undefined) throw new Error("setSpec() needs a spec with a version");
+        if (!next || isRenderModel(next)) throw new Error("setSpec() needs a spec");
         drawInput(next);
       },
       getSpec: function () {

@@ -52,7 +52,8 @@ const handlers = {
   trackMouse,
 };
 
-// The version of the spec this library reads
+// The version of the spec this library reads. A spec without a version is
+// version 1, also when a later version exists
 const SPEC_VERSION = 1;
 
 // Keys GC_chart() itself reads
