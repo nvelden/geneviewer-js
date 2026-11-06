@@ -176,7 +176,7 @@ export function color(state, entry) {
   const colorScheme = entry.colorScheme ?? null;
   const customColors = entry.customColors ?? null;
   if (colorScheme !== null && customColors !== null && !isNamedList(customColors)) {
-    state.warnings.push("Both colorScheme and customColors are selected. Use a named list of customColors to set the colours of some groups, or choose only one.");
+    state.warnings.push("Both colorScheme and customColors are selected. Use an object of customColors, by group, to set the colours of some groups, or choose only one.");
     return;
   }
   setPath(state.x, ["legend", "legendOptions", "colorScheme"], colorScheme);
@@ -348,7 +348,7 @@ export function coordinates(state, entry) {
   let styleBy = entry.styleBy ?? null;
   if (styleBy === null && state.x.group !== undefined) styleBy = state.x.group;
   if (entry.groupStyle != null && styleBy === null) {
-    throw new Error("groupStyle needs a group in GC_chart() or a style_by column");
+    throw new Error("groupStyle needs fields.group or a styleBy column");
   }
   const extra = dots(entry, COORDINATES);
   setClusterOptions(state, entry.clusters, "coordinates", (i) => {

@@ -4,14 +4,14 @@ Documented arguments of the exported `GC_*` chart functions, and the
 fixtures whose code uses them. Written by `Rscript test/coverage.R`.
 
 - 208 fixtures
-- 286 arguments: 279 covered, 6 not drawable, 1 uncovered
+- 286 arguments: 279 covered, 7 not drawable, 0 uncovered
 
 | Function | Argument | Status | Fixtures |
 |----------|----------|--------|----------|
-| `GC_scale` | `...` | UNCOVERED |  |
 | `GC_chart` | `elementId` | not drawable | the id of the HTML element, not part of the drawing |
 | `GC_events` | `render_id` | not drawable | Shiny only: identifies a render in input$<id>_rendered |
 | `GC_events` | `rendered` | not drawable | Shiny only: reports a finished render |
+| `GC_scale` | `...` | not drawable | every scale option in the schema has its own argument |
 | `GC_zoom_to` | `outputId` | not drawable | Shiny only |
 | `GC_zoom_to` | `range` | not drawable | Shiny only (GC_zoom(range = ) covers the drawing) |
 | `GC_zoom_to` | `session` | not drawable | Shiny only |

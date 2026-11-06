@@ -14,7 +14,7 @@ import { recycleDots, setClusterOptions, shiftSequence } from "./genes.js";
  */
 function breakPaddingBp(padding) {
   if (!/^\s*[0-9]*\.?[0-9]+\s*bp\s*$/.test(padding)) {
-    throw new Error('scale_break_padding must be a percentage, e.g. 1, or base pairs, e.g. "500bp"');
+    throw new Error('breakPadding must be a percentage, e.g. 1, or base pairs, e.g. "500bp"');
   }
   return Number(padding.replace(/\s*bp\s*$/, ""));
 }
@@ -252,7 +252,7 @@ function alignPosition(align, start, end, reversed) {
 export function align(state, entry) {
   const x = state.x;
   if (x.cluster === undefined) {
-    state.warnings.push("Could not align selected gene. Please define cluster in the GC_chart function.");
+    state.warnings.push("Could not align the selected gene. The spec needs fields.cluster.");
     return;
   }
   if (!x.data.has(entry.idColumn)) {
@@ -292,7 +292,7 @@ function applyAlign(state) {
   const rows = [];
   for (let i = 0; i < data.nrow; i++) if (ids[i] !== null && asCharacter(ids[i]) === id) rows.push(i);
   if (!rows.length) {
-    state.warnings.push(`Selected gene coud not be aligned. Gene ${options.id} not found in the ${options.idColumn} column.`);
+    state.warnings.push(`Selected gene could not be aligned. Gene ${options.id} not found in the ${options.idColumn} column.`);
     return;
   }
   if (new Set(rows.map((i) => clusterOf[i])).size < rows.length) {

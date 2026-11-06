@@ -133,7 +133,7 @@ export function chart(spec) {
   const kept = data.filter((i) => startValues[i] !== null && endValues[i] !== null);
   const warnings = [];
   if (kept.nrow < data.nrow) {
-    warnings.push("Rows with NA values in 'start' or 'end' columns have been filtered out.");
+    warnings.push("Rows with no value in the start or end column have been filtered out.");
   }
   data = kept;
 

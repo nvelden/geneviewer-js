@@ -1,8 +1,8 @@
 // Build the type definitions in dist/ (npm run types):
 // - spec.d.ts: the chart spec, from schema/spec-v1.schema.json
 //   (json-schema-to-typescript);
-// - geneviewer.d.ts: the public API, from the JSDoc of src/lib/chart.js and
-//   src/lib/export.js (tsc), with the global `geneviewer` of the script build.
+// - geneviewer.d.ts: the public API, from the JSDoc of src/lib/chart.js (tsc),
+//   with the global `geneviewer` of the script build.
 // Run after npm run build, which empties dist/.
 import { execFileSync } from "node:child_process";
 import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
@@ -49,17 +49,10 @@ try {
     .replace(/^declare function newChart/m, "export declare function newChart")
     // The JSDoc reaches the spec's types in dist/ from src/lib/
     .replaceAll('import("../../dist/spec").Spec', "Spec");
-  // chartToSVG and chartToPNG, with their JSDoc
-  const exportsDts = readFileSync(path.join(out, "lib", "export.d.ts"), "utf8");
   // compile(), with its JSDoc
   const compileDts = readFileSync(path.join(out, "lib", "compile", "index.d.ts"), "utf8");
   const compileMatch = /\/\*\*(?:(?!\*\/)[\s\S])*\*\/\nexport declare function compile\(.*\n/.exec(compileDts);
   if (!compileMatch) throw new Error("compile/index.d.ts has no compile");
-  const pick = (name) => {
-    const match = new RegExp(`/\\*\\*(?:(?!\\*/)[\\s\\S])*\\*/\\n export declare function ${name}\\(.*\\n`.replace(" export", "export")).exec(exportsDts);
-    if (!match) throw new Error(`export.d.ts has no ${name}`);
-    return match[0];
-  };
 
   const dts = [
     "// geneviewer: types of the public API. Generated from the JSDoc in src/lib/; do not edit.",
@@ -73,9 +66,6 @@ try {
     "export declare const version: string;",
     "",
     chart.trim(),
-    "",
-    pick("chartToSVG").trim(),
-    pick("chartToPNG").trim(),
     "",
     compileMatch[0].trim(),
     "",

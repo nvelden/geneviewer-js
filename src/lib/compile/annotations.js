@@ -87,7 +87,7 @@ export function elementStyle(state, entry) {
   let clusters;
   if (byRow) {
     if (typeof rowID !== "number" || !x.data.get("rowID").includes(rowID)) {
-      throw new Error("'row_id' must identify one row in the chart's data.");
+      throw new Error("'rowID' must identify one row in the chart's data.");
     }
     id = end === null ? { rowID } : { rowID, end };
     same = (item) => Number(item.rowID) === Number(rowID) && (item.end ?? null) === end;

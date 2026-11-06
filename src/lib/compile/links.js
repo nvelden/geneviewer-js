@@ -40,11 +40,11 @@ export function links(state, entry) {
   if (!MEASURES.includes(measure)) {
     throw new Error("Invalid measure specified. Choose 'identity', 'similarity', or 'none'.");
   }
-  if (!["gene", "link"].includes(labelPosition)) throw new Error("'label_position' must be one of \"gene\", \"link\".");
+  if (!["gene", "link"].includes(labelPosition)) throw new Error("'labelPosition' must be one of \"gene\", \"link\".");
   for (const [name, choices] of Object.entries(COLOR_BAR_CHOICES)) {
     const value = colorBarOptions[name];
     if (value != null && !choices.includes(value)) {
-      throw new Error(`'colorBarOptions$${name}' must be one of ${choices.map((c) => `"${c}"`).join(", ")}.`);
+      throw new Error(`'colorBarOptions.${name}' must be one of ${choices.map((c) => `"${c}"`).join(", ")}.`);
     }
   }
   const vmin = entry.vmin ?? null;

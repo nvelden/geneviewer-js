@@ -9,6 +9,7 @@ import { cluster } from "./cluster.js";
 import { color, coordinates, genes, labels, legend, pattern, sequence, tooltip } from "./genes.js";
 import { clusterFooter, clusterLabel, clusterTitle, grid, title } from "./layout.js";
 import { clone } from "./r.js";
+import { warnOnce } from "../util.js";
 import { OPTION_NAMES, renameOptions } from "./names.js";
 import { align, scale, scaleBar } from "./scale.js";
 import { links } from "./links.js";
@@ -89,7 +90,9 @@ export function compile(spec) {
     if (!apply) continue;
     for (const entry of entries(value)) apply(state, renameOptions(entry, OPTION_NAMES[key]));
   }
-  return toModel(renderTheme(state));
+  const model = toModel(renderTheme(state));
+  for (const warning of state.warnings) warnOnce("geneviewer: " + warning);
+  return model;
 }
 
 /**

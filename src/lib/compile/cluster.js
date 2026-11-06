@@ -102,7 +102,7 @@ export function cluster(state, entry) {
   let preventGeneOverlap = entry.preventGeneOverlap ?? null;
   const overlapMin = entry.overlapMin ?? null;
   if (separateStrands === true && preventGeneOverlap !== null && preventGeneOverlap !== false) {
-    state.warnings.push("Setting both 'separate_strands' and 'prevent_gene_overlap' to TRUE is not supported. Resetting to NULL.");
+    state.warnings.push("Setting both separateStrands and preventGeneOverlap is not supported. Neither is applied.");
     separateStrands = null;
     preventGeneOverlap = null;
   }
