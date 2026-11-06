@@ -30,6 +30,6 @@ chart <- GC_chart(
   end = "end",
   group = "gene_kind",
   strand = "strand",
-  height = "150px"
+  height = "180px"
 )
 chart

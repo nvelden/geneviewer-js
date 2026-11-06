@@ -30,7 +30,7 @@ chart <- GC_chart(
   end = "end",
   group = "gene_kind",
   strand = "strand",
-  height = "150px"
+  height = "180px"
 )
 colors <- list(
   "biosynthetic" = "#810E15", 
@@ -50,7 +50,7 @@ cds_clusters_df <- gbk_features_to_df(
   )
 source_clusters_df <- gbk_features_to_df(gbk_list, feature = "source")
 cds_clusters_df$region <- NULL
-kable(head(cds_df))
+kable(head(cds_clusters_df))
 cds_clusters_df$gene_kind[is.na(cds_clusters_df$gene_kind)] <- "other"
 colors <- list(
   "biosynthetic" = "#810E15", 

@@ -129,7 +129,7 @@ pattern_genes <- data.frame(
   row = rep(c("1", "2"), each = 8)
 )
 geneviewer_palette()
-GC_chart(ophA_cluster, group = "class", height = "180px") %>%
+GC_chart(ophA_cluster, group = "class", height = "220px") %>%
   GC_title("ophA gene cluster") %>%
   GC_labels("name") %>%
   GC_theme("classic", textScale = 1.4)

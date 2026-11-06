@@ -8,15 +8,14 @@
 #
 # Every top-level expression whose value is a geneviewer chart becomes a
 # fixture in test/fixtures/<id>/: call.R (the code before it in the same
-# source, then the expression), payload.json (the x that htmlwidgets sends to
-# the browser, after the widget's preRenderHook), spec.json (the chart spec R
-# records with options(geneviewer.record_spec = TRUE), taken out of x) and
-# meta.json. Charts identical to an earlier one are
-# skipped. Expressions that fail (e.g. no network, MUMmer not installed) are
+# source, then the expression), spec.json (the chart's spec, as htmlwidgets
+# sends it to the browser) and meta.json. Charts identical to an earlier one
+# are skipped. Expressions that fail (e.g. no network, MUMmer not installed) are
 # logged and the source continues.
 #
 # Run from the repo root, with GENEVIEWER_R_DIR set (or in .try-app.env):
-#   Rscript scripts/export-fixtures.R
+#   Rscript scripts/export-fixtures.R             into test/fixtures
+#   Rscript scripts/export-fixtures.R <folder>    into another folder, to compare
 
 env_file <- ".try-app.env"
 if (file.exists(env_file) && !nzchar(Sys.getenv("GENEVIEWER_R_DIR"))) {
@@ -27,10 +26,10 @@ if (!dir.exists(r_dir)) stop("Set GENEVIEWER_R_DIR to the geneviewer R package r
 
 suppressMessages(pkgload::load_all(r_dir, quiet = TRUE))
 suppressMessages(library(magrittr))
-# R records the spec of each chart in x$spec; it does not change the chart
-options(geneviewer.record_spec = TRUE)
 
-out_dir <- "test/fixtures"
+args <- commandArgs(trailingOnly = TRUE)
+out_dir <- if (length(args)) args[[1]] else "test/fixtures"
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 log_lines <- character()
 note <- function(...) {
   line <- paste0(...)
@@ -112,8 +111,6 @@ export_source <- function(name, file) {
     }
     widget <- result$value
     sent <- htmlwidgets:::createPayload(widget)
-    spec <- sent$x$spec
-    sent$x$spec <- NULL
     count <- count + 1
     id <- if (!is.na(pending)) pending else paste0(slug(name), "-", count)
     pending <- NA_character_
@@ -121,8 +118,8 @@ export_source <- function(name, file) {
       note(id, ": skipped, payload contains JavaScript functions")
       next
     }
-    payload <- as.character(htmlwidgets:::toJSON(sent$x))
-    hash <- digest_text(payload)
+    spec <- as.character(htmlwidgets:::toJSON(sent$x$spec))
+    hash <- digest_text(spec)
     if (hash %in% seen) {
       note(id, ": skipped, same chart as an earlier fixture")
       next
@@ -136,13 +133,7 @@ export_source <- function(name, file) {
     dir <- file.path(out_dir, id)
     dir.create(dir, recursive = TRUE, showWarnings = FALSE)
     writeLines(c(setup, code), file.path(dir, "call.R"), useBytes = TRUE)
-    writeLines(payload, file.path(dir, "payload.json"), useBytes = TRUE)
-    if (is.null(spec)) {
-      note(id, ": no spec recorded")
-    } else {
-      writeLines(as.character(htmlwidgets:::toJSON(spec)), file.path(dir, "spec.json"),
-                 useBytes = TRUE)
-    }
+    writeLines(spec, file.path(dir, "spec.json"), useBytes = TRUE)
     meta <- list(id = id, source = name, width = 1000, height = height, covers = covers)
     writeLines(jsonlite::toJSON(meta, auto_unbox = TRUE, pretty = TRUE),
                file.path(dir, "meta.json"))
@@ -168,5 +159,5 @@ for (name in names(sources)) export_source(name, sources[[name]])
 stale <- setdiff(list.dirs(out_dir, full.names = FALSE, recursive = FALSE), written)
 for (id in stale) note("stale fixture (no longer exported): ", id)
 
-writeLines(c(sprintf("%d fixtures", length(written)), log_lines), "test/fixtures/EXPORT-LOG.txt")
+writeLines(c(sprintf("%d fixtures", length(written)), log_lines), file.path(out_dir, "EXPORT-LOG.txt"))
 message(length(written), " fixtures written")

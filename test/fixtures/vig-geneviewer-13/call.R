@@ -8,7 +8,7 @@ GC_chart(
   subset(human_hox_genes, cluster %in% c("HOXA", "HOXB")),
   group = "name",
   cluster = "cluster",
-  height = "300px" 
+  height = "390px" 
   ) %>% 
   GC_labels(label = "name", adjustLabels = FALSE) %>%
   GC_labels(label = "name", 

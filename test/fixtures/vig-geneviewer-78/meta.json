@@ -2,6 +2,6 @@
   "id": "vig-geneviewer-78",
   "source": "vig-geneviewer",
   "width": 1000,
-  "height": "180px",
+  "height": "220px",
   "covers": ["GC_chart", "GC_labels", "GC_theme", "GC_title"]
 }

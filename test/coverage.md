@@ -3,40 +3,41 @@
 Documented arguments of the exported `GC_*` chart functions, and the
 fixtures whose code uses them. Written by `Rscript test/coverage.R`.
 
-- 205 fixtures
-- 286 arguments: 280 covered, 6 not drawable, 0 uncovered
+- 208 fixtures
+- 286 arguments: 279 covered, 6 not drawable, 1 uncovered
 
 | Function | Argument | Status | Fixtures |
 |----------|----------|--------|----------|
+| `GC_scale` | `...` | UNCOVERED |  |
 | `GC_chart` | `elementId` | not drawable | the id of the HTML element, not part of the drawing |
 | `GC_events` | `render_id` | not drawable | Shiny only: identifies a render in input$<id>_rendered |
 | `GC_events` | `rendered` | not drawable | Shiny only: reports a finished render |
 | `GC_zoom_to` | `outputId` | not drawable | Shiny only |
 | `GC_zoom_to` | `range` | not drawable | Shiny only (GC_zoom(range = ) covers the drawing) |
 | `GC_zoom_to` | `session` | not drawable | Shiny only |
-| `GC_align` | `GC_chart` | covered | 8: rd-GC-align-1, vig-Examples-15, vig-Examples-16, ... |
-| `GC_align` | `align` | covered | 8: rd-GC-align-1, vig-Examples-15, vig-Examples-16, ... |
-| `GC_align` | `id` | covered | 8: rd-GC-align-1, vig-Examples-15, vig-Examples-16, ... |
-| `GC_align` | `id_column` | covered | 8: rd-GC-align-1, vig-Examples-15, vig-Examples-16, ... |
-| `GC_annotation` | `...` | covered | 12: rd-GC-annotation-1, vig-Examples-7, vig-Examples-8, ... |
-| `GC_annotation` | `GC_chart` | covered | 12: rd-GC-annotation-1, vig-Examples-7, vig-Examples-8, ... |
-| `GC_annotation` | `cluster` | covered | 12: rd-GC-annotation-1, vig-Examples-7, vig-Examples-8, ... |
-| `GC_annotation` | `type` | covered | 12: rd-GC-annotation-1, vig-Examples-7, vig-Examples-8, ... |
-| `GC_chart` | `cluster` | covered | 180: cov-chart-without-extras, cov-coordinates-group-style, cov-coordinates-style-by, ... |
-| `GC_chart` | `data` | covered | 205: cov-chart-without-extras, cov-coordinates-group-style, cov-coordinates-style-by, ... |
+| `GC_align` | `GC_chart` | covered | 9: rd-GC-align-1, vig-Examples-15, vig-Examples-16, ... |
+| `GC_align` | `align` | covered | 9: rd-GC-align-1, vig-Examples-15, vig-Examples-16, ... |
+| `GC_align` | `id` | covered | 9: rd-GC-align-1, vig-Examples-15, vig-Examples-16, ... |
+| `GC_align` | `id_column` | covered | 9: rd-GC-align-1, vig-Examples-15, vig-Examples-16, ... |
+| `GC_annotation` | `...` | covered | 13: cov-range-annotations, rd-GC-annotation-1, vig-Examples-7, ... |
+| `GC_annotation` | `GC_chart` | covered | 13: cov-range-annotations, rd-GC-annotation-1, vig-Examples-7, ... |
+| `GC_annotation` | `cluster` | covered | 13: cov-range-annotations, rd-GC-annotation-1, vig-Examples-7, ... |
+| `GC_annotation` | `type` | covered | 13: cov-range-annotations, rd-GC-annotation-1, vig-Examples-7, ... |
+| `GC_chart` | `cluster` | covered | 183: cov-chart-without-extras, cov-coordinates-group-style, cov-coordinates-style-by, ... |
+| `GC_chart` | `data` | covered | 208: cov-chart-without-extras, cov-coordinates-group-style, cov-coordinates-style-by, ... |
 | `GC_chart` | `end` | covered | 21: rd-GC-transcript-1, rd-GC-transcript-2, rd-mitochondrial-gene-order-1, ... |
-| `GC_chart` | `group` | covered | 185: cov-chart-without-extras, cov-coordinates-group-style, cov-coordinates-style-by, ... |
-| `GC_chart` | `height` | covered | 196: cov-chart-without-extras, cov-coordinates-group-style, cov-coordinates-style-by, ... |
+| `GC_chart` | `group` | covered | 188: cov-chart-without-extras, cov-coordinates-group-style, cov-coordinates-style-by, ... |
+| `GC_chart` | `height` | covered | 199: cov-chart-without-extras, cov-coordinates-group-style, cov-coordinates-style-by, ... |
 | `GC_chart` | `save_button` | covered | 1: cov-chart-without-extras |
 | `GC_chart` | `start` | covered | 21: rd-GC-transcript-1, rd-GC-transcript-2, rd-mitochondrial-gene-order-1, ... |
-| `GC_chart` | `strand` | covered | 20: rd-mitochondrial-gene-order-1, vig-Examples-12, vig-Examples-13, ... |
+| `GC_chart` | `strand` | covered | 21: rd-mitochondrial-gene-order-1, vig-Examples-12, vig-Examples-13, ... |
 | `GC_chart` | `style` | covered | 2: vig-geneviewer-15, vig-geneviewer-3 |
 | `GC_chart` | `width` | covered | 46: vig-Examples-7, vig-geneviewer-53, vig-geneviewer-54, ... |
 | `GC_cluster` | `...` | covered | 1: vig-geneviewer-11 |
 | `GC_cluster` | `GC_chart` | covered | 11: rd-GC-cluster-1, rd-GC-cluster-2, vig-Examples-16, ... |
 | `GC_cluster` | `cluster` | covered | 1: vig-geneviewer-11 |
 | `GC_cluster` | `overlap_min` | covered | 2: vig-Examples-16, vig-Examples-17 |
-| `GC_cluster` | `overlap_spacing` | covered | 3: vig-Examples-16, vig-Examples-17, vig-geneviewer-13 |
+| `GC_cluster` | `overlap_spacing` | covered | 4: vig-Examples-16, vig-Examples-17, vig-geneviewer-13, ... |
 | `GC_cluster` | `prevent_gene_overlap` | covered | 6: rd-GC-cluster-2, vig-Examples-16, vig-Examples-17, ... |
 | `GC_cluster` | `separate_strands` | covered | 4: rd-GC-cluster-1, vig-Examples-17, vig-MUMMER-1, ... |
 | `GC_cluster` | `strand_spacing` | covered | 3: rd-GC-cluster-1, vig-Examples-17, vig-geneviewer-12 |
@@ -51,17 +52,17 @@ fixtures whose code uses them. Written by `Rscript test/coverage.R`.
 | `GC_clusterFooter` | `subtitleFont` | covered | 1: rd-GC-clusterFooter-2 |
 | `GC_clusterFooter` | `title` | covered | 9: rd-GC-clusterFooter-1, rd-GC-clusterFooter-2, vig-Examples-10, ... |
 | `GC_clusterFooter` | `titleFont` | covered | 1: rd-GC-clusterFooter-2 |
-| `GC_clusterLabel` | `...` | covered | 6: rd-GC-clusterLabel-4, vig-Examples-14, vig-Examples-15, ... |
-| `GC_clusterLabel` | `GC_chart` | covered | 39: cov-chart-without-extras, interactive, rd-GC-clusterLabel-1, ... |
-| `GC_clusterLabel` | `align` | covered | 5: rd-GC-clusterLabel-4, vig-Examples-14, vig-Examples-15, ... |
+| `GC_clusterLabel` | `...` | covered | 7: rd-GC-clusterLabel-4, vig-Examples-14, vig-Examples-15, ... |
+| `GC_clusterLabel` | `GC_chart` | covered | 40: cov-chart-without-extras, interactive, rd-GC-clusterLabel-1, ... |
+| `GC_clusterLabel` | `align` | covered | 6: rd-GC-clusterLabel-4, vig-Examples-14, vig-Examples-15, ... |
 | `GC_clusterLabel` | `cluster` | covered | 1: rd-GC-clusterLabel-2 |
 | `GC_clusterLabel` | `position` | covered | 1: rd-GC-clusterLabel-4 |
 | `GC_clusterLabel` | `show` | covered | 1: cov-chart-without-extras |
 | `GC_clusterLabel` | `spacing` | covered | 1: rd-GC-clusterLabel-3 |
-| `GC_clusterLabel` | `subtitle` | covered | 6: rd-GC-clusterLabel-3, vig-Examples-14, vig-Examples-15, ... |
-| `GC_clusterLabel` | `subtitleFont` | covered | 5: rd-GC-clusterLabel-3, vig-Examples-14, vig-Examples-15, ... |
-| `GC_clusterLabel` | `title` | covered | 24: rd-GC-clusterLabel-1, rd-GC-clusterLabel-2, rd-GC-clusterLabel-3, ... |
-| `GC_clusterLabel` | `width` | covered | 6: rd-GC-clusterLabel-4, vig-Examples-14, vig-Examples-15, ... |
+| `GC_clusterLabel` | `subtitle` | covered | 7: rd-GC-clusterLabel-3, vig-Examples-14, vig-Examples-15, ... |
+| `GC_clusterLabel` | `subtitleFont` | covered | 6: rd-GC-clusterLabel-3, vig-Examples-14, vig-Examples-15, ... |
+| `GC_clusterLabel` | `title` | covered | 25: rd-GC-clusterLabel-1, rd-GC-clusterLabel-2, rd-GC-clusterLabel-3, ... |
+| `GC_clusterLabel` | `width` | covered | 7: rd-GC-clusterLabel-4, vig-Examples-14, vig-Examples-15, ... |
 | `GC_clusterLabel` | `wrapLabel` | covered | 3: rd-GC-clusterLabel-4, vig-Examples-7, vig-Examples-8 |
 | `GC_clusterLabel` | `wrapOptions` | covered | 1: rd-GC-clusterLabel-4 |
 | `GC_clusterTitle` | `...` | covered | 5: rd-GC-clusterTitle-2, vig-Examples-16, vig-Examples-17, ... |
@@ -75,9 +76,9 @@ fixtures whose code uses them. Written by `Rscript test/coverage.R`.
 | `GC_clusterTitle` | `subtitleFont` | covered | 1: rd-GC-clusterTitle-2 |
 | `GC_clusterTitle` | `title` | covered | 11: rd-GC-clusterTitle-1, rd-GC-clusterTitle-2, rd-GC-element-style-1, ... |
 | `GC_clusterTitle` | `titleFont` | covered | 7: rd-GC-clusterTitle-2, vig-Examples-10, vig-Examples-16, ... |
-| `GC_color` | `GC_chart` | covered | 25: rd-GC-color-1, rd-GC-color-2, rd-GC-color-3, ... |
+| `GC_color` | `GC_chart` | covered | 26: rd-GC-color-1, rd-GC-color-2, rd-GC-color-3, ... |
 | `GC_color` | `colorScheme` | covered | 6: rd-GC-color-1, rd-GC-color-4, vig-geneviewer-17, ... |
-| `GC_color` | `customColors` | covered | 20: rd-GC-color-2, rd-GC-color-3, rd-GC-color-4, ... |
+| `GC_color` | `customColors` | covered | 21: rd-GC-color-2, rd-GC-color-3, rd-GC-color-4, ... |
 | `GC_coordinates` | `...` | covered | 3: rd-GC-coordinates-2, vig-Examples-1, vig-geneviewer-92 |
 | `GC_coordinates` | `GC_chart` | covered | 9: cov-coordinates-group-style, cov-coordinates-style-by, rd-GC-coordinates-1, ... |
 | `GC_coordinates` | `cluster` | covered | 1: rd-GC-coordinates-2 |
@@ -98,52 +99,52 @@ fixtures whose code uses them. Written by `Rscript test/coverage.R`.
 | `GC_element_style` | `part` | covered | 4: rd-GC-element-style-1, rd-GC-element-style-2, vig-geneviewer-10, ... |
 | `GC_element_style` | `reset` | covered | 1: cov-element-style-reset |
 | `GC_element_style` | `row_id` | covered | 4: cov-element-style-reset, rd-GC-element-style-1, vig-geneviewer-10, ... |
-| `GC_events` | `GC_chart` | covered | 9: cov-events, cov-toolbar, interactive, ... |
+| `GC_events` | `GC_chart` | covered | 10: cov-events, cov-toolbar, interaction-zoom-events, ... |
 | `GC_events` | `click` | covered | 1: cov-events |
 | `GC_events` | `dblclick` | covered | 1: cov-events |
 | `GC_events` | `drag` | covered | 6: cov-toolbar, rd-GC-toolbar-1, vig-geneviewer-5, ... |
 | `GC_events` | `highlight` | covered | 2: cov-events, vig-geneviewer-4 |
 | `GC_events` | `legend_click` | covered | 1: cov-events |
 | `GC_events` | `select` | covered | 7: interactive, rd-GC-toolbar-1, vig-geneviewer-4, ... |
-| `GC_events` | `zoom` | covered | 1: cov-events |
-| `GC_genes` | `...` | covered | 13: rd-GC-genes-1, vig-Examples-12, vig-Examples-13, ... |
-| `GC_genes` | `GC_chart` | covered | 74: cov-corner-radius, rd-GC-cluster-2, rd-GC-genes-1, ... |
+| `GC_events` | `zoom` | covered | 2: cov-events, interaction-zoom-events |
+| `GC_genes` | `...` | covered | 14: rd-GC-genes-1, vig-Examples-12, vig-Examples-13, ... |
+| `GC_genes` | `GC_chart` | covered | 75: cov-corner-radius, rd-GC-cluster-2, rd-GC-genes-1, ... |
 | `GC_genes` | `cluster` | covered | 2: rd-GC-genes-1, rd-GC-genes-2 |
 | `GC_genes` | `colorScheme` | covered | 47: rd-GC-genes-1, rd-geneviewer-palette-1, vig-geneviewer-53, ... |
 | `GC_genes` | `corner_radius` | covered | 1: cov-corner-radius |
 | `GC_genes` | `customColors` | covered | 1: rd-GC-genes-1 |
 | `GC_genes` | `group` | covered | 2: rd-GC-genes-1, vig-LoadGFF-1 |
-| `GC_genes` | `groupStyle` | covered | 9: rd-GC-cluster-2, rd-GC-genes-3, vig-Examples-15, ... |
+| `GC_genes` | `groupStyle` | covered | 10: rd-GC-cluster-2, rd-GC-genes-3, vig-Examples-15, ... |
 | `GC_genes` | `itemStyle` | covered | 1: rd-GC-genes-2 |
 | `GC_genes` | `marker` | covered | 60: cov-corner-radius, rd-GC-genes-1, vig-Examples-11, ... |
-| `GC_genes` | `marker_size` | covered | 18: rd-GC-genes-1, vig-Examples-11, vig-Examples-13, ... |
+| `GC_genes` | `marker_size` | covered | 19: rd-GC-genes-1, vig-Examples-11, vig-Examples-13, ... |
 | `GC_genes` | `show` | covered | 2: rd-GC-genes-1, vig-geneviewer-17 |
-| `GC_genes` | `style_by` | covered | 7: rd-GC-cluster-2, vig-Examples-15, vig-Examples-16, ... |
+| `GC_genes` | `style_by` | covered | 8: rd-GC-cluster-2, vig-Examples-15, vig-Examples-16, ... |
 | `GC_grid` | `GC_chart` | covered | 8: rd-GC-grid-1, rd-GC-grid-2, vig-Examples-16, ... |
 | `GC_grid` | `cluster` | covered | 6: rd-GC-grid-2, vig-Examples-16, vig-Examples-17, ... |
 | `GC_grid` | `direction` | covered | 1: vig-geneviewer-16 |
 | `GC_grid` | `height` | covered | 6: rd-GC-grid-2, vig-Examples-16, vig-Examples-17, ... |
 | `GC_grid` | `margin` | covered | 5: rd-GC-grid-1, vig-Examples-16, vig-Examples-17, ... |
 | `GC_grid` | `width` | covered | 1: vig-geneviewer-16 |
-| `GC_labels` | `...` | covered | 15: rd-GC-labels-3, rd-GC-theme-6, vig-Examples-15, ... |
-| `GC_labels` | `GC_chart` | covered | 72: cov-chart-without-extras, cov-element-style-reset, cov-theme-background, ... |
+| `GC_labels` | `...` | covered | 16: rd-GC-labels-3, rd-GC-theme-6, vig-Examples-15, ... |
+| `GC_labels` | `GC_chart` | covered | 74: cov-chart-without-extras, cov-element-style-reset, cov-theme-background, ... |
 | `GC_labels` | `cluster` | covered | 11: rd-GC-labels-4, rd-GC-links-4, vig-Examples-12, ... |
-| `GC_labels` | `groupStyle` | covered | 5: rd-GC-labels-2, vig-Examples-15, vig-Examples-16, ... |
+| `GC_labels` | `groupStyle` | covered | 6: rd-GC-labels-2, vig-Examples-15, vig-Examples-16, ... |
 | `GC_labels` | `itemStyle` | covered | 5: rd-GC-labels-4, vig-geneviewer-13, vig-geneviewer-39, ... |
-| `GC_labels` | `label` | covered | 68: cov-chart-without-extras, cov-element-style-reset, cov-theme-background, ... |
+| `GC_labels` | `label` | covered | 70: cov-chart-without-extras, cov-element-style-reset, cov-theme-background, ... |
 | `GC_labels` | `show` | covered | 1: rd-GC-labels-3 |
-| `GC_labels` | `style_by` | covered | 4: vig-Examples-15, vig-Examples-16, vig-Examples-17, ... |
+| `GC_labels` | `style_by` | covered | 5: vig-Examples-15, vig-Examples-16, vig-Examples-17, ... |
 | `GC_legend` | `...` | covered | 4: rd-GC-legend-1, vig-geneviewer-82, vig-geneviewer-83, ... |
-| `GC_legend` | `GC_chart` | covered | 110: cov-corner-radius, cov-events, rd-GC-align-1, ... |
-| `GC_legend` | `align` | covered | 10: rd-GC-legend-1, vig-Examples-14, vig-Examples-15, ... |
+| `GC_legend` | `GC_chart` | covered | 111: cov-corner-radius, cov-events, rd-GC-align-1, ... |
+| `GC_legend` | `align` | covered | 11: rd-GC-legend-1, vig-Examples-14, vig-Examples-15, ... |
 | `GC_legend` | `backgroundColor` | covered | 1: rd-GC-legend-1 |
 | `GC_legend` | `corner_radius` | covered | 1: cov-corner-radius |
 | `GC_legend` | `group` | covered | 89: cov-events, rd-GC-align-1, rd-GC-cluster-1, ... |
-| `GC_legend` | `groupStyle` | covered | 3: vig-Examples-15, vig-Examples-16, vig-Examples-17 |
+| `GC_legend` | `groupStyle` | covered | 4: vig-Examples-15, vig-Examples-16, vig-Examples-17, ... |
 | `GC_legend` | `legendOptions` | covered | 3: rd-GC-legend-1, vig-geneviewer-82, vig-geneviewer-83 |
-| `GC_legend` | `legendTextOptions` | covered | 9: rd-GC-legend-1, vig-Examples-14, vig-Examples-15, ... |
-| `GC_legend` | `order` | covered | 17: rd-GC-legend-1, vig-Examples-11, vig-Examples-12, ... |
-| `GC_legend` | `position` | covered | 18: rd-GC-legend-1, rd-GC-links-3, vig-Examples-14, ... |
+| `GC_legend` | `legendTextOptions` | covered | 10: rd-GC-legend-1, vig-Examples-14, vig-Examples-15, ... |
+| `GC_legend` | `order` | covered | 18: rd-GC-legend-1, vig-Examples-11, vig-Examples-12, ... |
+| `GC_legend` | `position` | covered | 19: rd-GC-legend-1, rd-GC-links-3, vig-Examples-14, ... |
 | `GC_legend` | `show` | covered | 1: vig-geneviewer-82 |
 | `GC_legend` | `style` | covered | 3: rd-GC-legend-1, vig-geneviewer-15, vig-geneviewer-82 |
 | `GC_links` | `...` | covered | 1: cov-links-low-color |
@@ -176,26 +177,25 @@ fixtures whose code uses them. Written by `Rscript test/coverage.R`.
 | `GC_normalize` | `group` | covered | 2: vig-geneviewer-26, vig-geneviewer-27 |
 | `GC_normalize` | `normalize` | covered | 1: cov-normalize |
 | `GC_normalize` | `preserve_gene_length` | covered | 4: cov-normalize, rd-GC-normalize-1, vig-geneviewer-26, ... |
-| `GC_pattern` | `GC_chart` | covered | 15: rd-GC-pattern-1, rd-GC-pattern-2, rd-GC-pattern-3, ... |
-| `GC_pattern` | `background` | covered | 11: rd-GC-pattern-2, rd-GC-pattern-3, rd-GC-pattern-4, ... |
+| `GC_pattern` | `GC_chart` | covered | 16: rd-GC-pattern-1, rd-GC-pattern-2, rd-GC-pattern-3, ... |
+| `GC_pattern` | `background` | covered | 12: rd-GC-pattern-2, rd-GC-pattern-3, rd-GC-pattern-4, ... |
 | `GC_pattern` | `color` | covered | 4: rd-GC-pattern-4, vig-Examples-16, vig-Examples-17, ... |
-| `GC_pattern` | `patterns` | covered | 11: rd-GC-pattern-2, rd-GC-pattern-4, vig-Examples-15, ... |
-| `GC_pattern` | `size` | covered | 6: vig-Examples-15, vig-Examples-16, vig-Examples-17, ... |
+| `GC_pattern` | `patterns` | covered | 12: rd-GC-pattern-2, rd-GC-pattern-4, vig-Examples-15, ... |
+| `GC_pattern` | `size` | covered | 7: vig-Examples-15, vig-Examples-16, vig-Examples-17, ... |
 | `GC_pattern` | `strokeWidth` | covered | 3: vig-Examples-16, vig-Examples-17, vig-geneviewer-69 |
-| `GC_scale` | `...` | covered | 1: vig-geneviewer-84 |
-| `GC_scale` | `GC_chart` | covered | 28: rd-GC-scale-1, rd-GC-sequence-2, vig-Examples-11, ... |
-| `GC_scale` | `axis_position` | covered | 1: rd-GC-scale-1 |
-| `GC_scale` | `axis_type` | covered | 12: vig-Examples-14, vig-Examples-15, vig-Examples-16, ... |
+| `GC_scale` | `GC_chart` | covered | 30: cov-range-annotations, rd-GC-scale-1, rd-GC-sequence-2, ... |
+| `GC_scale` | `axis_position` | covered | 2: rd-GC-scale-1, vig-geneviewer-84 |
+| `GC_scale` | `axis_type` | covered | 14: cov-range-annotations, vig-Examples-14, vig-Examples-15, ... |
 | `GC_scale` | `breaks` | covered | 1: vig-geneviewer-86 |
 | `GC_scale` | `cluster` | covered | 4: vig-Examples-3, vig-Examples-5, vig-Examples-9, ... |
 | `GC_scale` | `end` | covered | 3: rd-GC-scale-1, vig-Examples-11, vig-geneviewer-86 |
-| `GC_scale` | `hidden` | covered | 17: rd-GC-scale-1, rd-GC-sequence-2, vig-Examples-15, ... |
+| `GC_scale` | `hidden` | covered | 18: rd-GC-scale-1, rd-GC-sequence-2, vig-Examples-15, ... |
 | `GC_scale` | `lineStyle` | covered | 2: rd-GC-scale-1, vig-geneviewer-89 |
 | `GC_scale` | `padding` | covered | 2: rd-GC-scale-1, vig-geneviewer-84 |
 | `GC_scale` | `reverse` | covered | 6: rd-GC-scale-1, vig-Examples-3, vig-Examples-5, ... |
-| `GC_scale` | `scale_break_padding` | covered | 9: rd-GC-scale-1, vig-Examples-15, vig-Examples-16, ... |
+| `GC_scale` | `scale_break_padding` | covered | 10: rd-GC-scale-1, vig-Examples-15, vig-Examples-16, ... |
 | `GC_scale` | `scale_break_threshold` | covered | 2: rd-GC-scale-1, vig-geneviewer-85 |
-| `GC_scale` | `scale_breaks` | covered | 12: rd-GC-scale-1, rd-GC-sequence-2, vig-Examples-15, ... |
+| `GC_scale` | `scale_breaks` | covered | 13: rd-GC-scale-1, rd-GC-sequence-2, vig-Examples-15, ... |
 | `GC_scale` | `start` | covered | 3: rd-GC-scale-1, vig-Examples-11, vig-geneviewer-86 |
 | `GC_scale` | `textStyle` | covered | 2: rd-GC-scale-1, vig-geneviewer-89 |
 | `GC_scale` | `tickStyle` | covered | 2: rd-GC-scale-1, vig-geneviewer-89 |
@@ -218,7 +218,7 @@ fixtures whose code uses them. Written by `Rscript test/coverage.R`.
 | `GC_sequence` | `show` | covered | 47: rd-GC-sequence-1, vig-geneviewer-37, vig-geneviewer-53, ... |
 | `GC_sequence` | `y` | covered | 2: rd-GC-sequence-1, vig-geneviewer-37 |
 | `GC_theme` | `...` | covered | 3: rd-GC-theme-6, vig-geneviewer-79, vig-geneviewer-80 |
-| `GC_theme` | `GC_chart` | covered | 31: cov-theme-background, rd-GC-theme-1, rd-GC-theme-2, ... |
+| `GC_theme` | `GC_chart` | covered | 32: cov-theme-background, rd-GC-theme-1, rd-GC-theme-2, ... |
 | `GC_theme` | `background` | covered | 1: cov-theme-background |
 | `GC_theme` | `fontFamily` | covered | 3: rd-GC-theme-2, vig-Examples-17, vig-geneviewer-77 |
 | `GC_theme` | `lineColor` | covered | 1: vig-geneviewer-77 |
@@ -226,18 +226,18 @@ fixtures whose code uses them. Written by `Rscript test/coverage.R`.
 | `GC_theme` | `pattern` | covered | 1: rd-GC-theme-4 |
 | `GC_theme` | `textColor` | covered | 6: vig-Examples-10, vig-Examples-12, vig-Examples-13, ... |
 | `GC_theme` | `textScale` | covered | 2: rd-GC-theme-5, vig-geneviewer-78 |
-| `GC_theme` | `theme` | covered | 31: cov-theme-background, rd-GC-theme-1, rd-GC-theme-2, ... |
+| `GC_theme` | `theme` | covered | 32: cov-theme-background, rd-GC-theme-1, rd-GC-theme-2, ... |
 | `GC_title` | `...` | covered | 2: rd-GC-title-2, vig-geneviewer-15 |
-| `GC_title` | `GC_chart` | covered | 16: rd-GC-title-1, rd-GC-title-2, vig-Examples-11, ... |
+| `GC_title` | `GC_chart` | covered | 17: rd-GC-title-1, rd-GC-title-2, vig-Examples-11, ... |
 | `GC_title` | `align` | covered | 5: rd-GC-title-2, vig-Examples-11, vig-LoadGenBankFiles-2, ... |
-| `GC_title` | `height` | covered | 6: rd-GC-title-2, vig-Examples-14, vig-Examples-15, ... |
+| `GC_title` | `height` | covered | 7: rd-GC-title-2, vig-Examples-14, vig-Examples-15, ... |
 | `GC_title` | `show` | covered | 2: rd-GC-title-1, rd-GC-title-2 |
 | `GC_title` | `spacing` | covered | 1: rd-GC-title-2 |
 | `GC_title` | `style` | covered | 2: rd-GC-title-2, vig-geneviewer-15 |
-| `GC_title` | `subtitle` | covered | 7: rd-GC-title-1, rd-GC-title-2, vig-Examples-14, ... |
-| `GC_title` | `subtitleFont` | covered | 5: rd-GC-title-2, vig-Examples-14, vig-Examples-15, ... |
-| `GC_title` | `title` | covered | 16: rd-GC-title-1, rd-GC-title-2, vig-Examples-11, ... |
-| `GC_title` | `titleFont` | covered | 6: rd-GC-title-2, vig-Examples-14, vig-Examples-15, ... |
+| `GC_title` | `subtitle` | covered | 8: rd-GC-title-1, rd-GC-title-2, vig-Examples-14, ... |
+| `GC_title` | `subtitleFont` | covered | 6: rd-GC-title-2, vig-Examples-14, vig-Examples-15, ... |
+| `GC_title` | `title` | covered | 17: rd-GC-title-1, rd-GC-title-2, vig-Examples-11, ... |
+| `GC_title` | `titleFont` | covered | 7: rd-GC-title-2, vig-Examples-14, vig-Examples-15, ... |
 | `GC_toolbar` | `GC_chart` | covered | 3: cov-toolbar, rd-GC-toolbar-1, vig-geneviewer-7 |
 | `GC_toolbar` | `buttons` | covered | 1: cov-toolbar |
 | `GC_toolbar` | `color` | covered | 2: rd-GC-toolbar-1, vig-geneviewer-7 |
@@ -253,9 +253,9 @@ fixtures whose code uses them. Written by `Rscript test/coverage.R`.
 | `GC_toolbar` | `tooltipRadius` | covered | 1: cov-toolbar |
 | `GC_toolbar` | `tooltipShadow` | covered | 1: cov-toolbar |
 | `GC_tooltip` | `...` | covered | 1: cov-tooltip-style |
-| `GC_tooltip` | `GC_chart` | covered | 61: cov-chart-without-extras, cov-tooltip-style, rd-GC-tooltip-1, ... |
+| `GC_tooltip` | `GC_chart` | covered | 62: cov-chart-without-extras, cov-tooltip-style, rd-GC-tooltip-1, ... |
 | `GC_tooltip` | `cluster` | covered | 2: vig-geneviewer-26, vig-geneviewer-27 |
-| `GC_tooltip` | `formatter` | covered | 60: cov-tooltip-style, rd-GC-tooltip-1, vig-Examples-1, ... |
+| `GC_tooltip` | `formatter` | covered | 61: cov-tooltip-style, rd-GC-tooltip-1, vig-Examples-1, ... |
 | `GC_tooltip` | `show` | covered | 1: cov-chart-without-extras |
 | `GC_trackMouse` | `...` | covered | 1: cov-track-mouse |
 | `GC_trackMouse` | `GC_chart` | covered | 13: cov-track-mouse, rd-GC-annotation-1, rd-GC-trackMouse-1, ... |
@@ -282,7 +282,7 @@ fixtures whose code uses them. Written by `Rscript test/coverage.R`.
 | `GC_transcript` | `style_by` | covered | 1: cov-transcript-group-styles |
 | `GC_transcript` | `transcript` | covered | 9: cov-transcript-group-styles, rd-GC-transcript-1, rd-GC-transcript-2, ... |
 | `GC_transcript` | `type` | covered | 6: cov-transcript-group-styles, rd-GC-transcript-1, rd-GC-transcript-2, ... |
-| `GC_zoom` | `GC_chart` | covered | 11: cov-zoom-no-overview, cov-zoom-styles, interactive, ... |
+| `GC_zoom` | `GC_chart` | covered | 12: cov-zoom-no-overview, cov-zoom-styles, interaction-zoom-events, ... |
 | `GC_zoom` | `color` | covered | 1: cov-zoom-styles |
 | `GC_zoom` | `handleStyle` | covered | 2: rd-GC-zoom-2, vig-geneviewer-91 |
 | `GC_zoom` | `height` | covered | 4: rd-GC-zoom-2, vig-Examples-16, vig-Examples-17, ... |

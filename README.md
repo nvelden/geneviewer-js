@@ -129,14 +129,13 @@ Rscript scripts/export-fixtures.R   # re-export fixtures from the R package
 Rscript test/coverage.R             # update test/coverage.md
 ```
 
-- **Fixtures** (`test/fixtures/`): 206 charts exported from the R package:
+- **Fixtures** (`test/fixtures/`): charts exported from the R package:
   its help-page examples, its vignettes and `test/charts.R`. Each has the
-  R code, the spec R recorded, the payload R sends to the browser, and
-  `render.txt`, a canonical listing of the drawn chart. `npm test` draws
-  every fixture and compares.
+  R code, the spec R recorded and `render.txt`, a canonical listing of the
+  drawn chart. `npm test` draws every fixture and compares.
 - **compile()** (`npm run test:compile`, in `npm test`): `compile(spec)`
-  equals R's payload for every fixture, apart from the approved exceptions
-  (docs/roadmap.md).
+  equals the `payload.json` R 0.2 made, for the fixtures that still have one,
+  apart from the approved exceptions (docs/roadmap.md).
 - **Interaction tests** (`test/interaction/`): scripted zoom, selection,
   drag and undo/redo, with the chart and its events recorded after each
   step.

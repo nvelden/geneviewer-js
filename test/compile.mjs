@@ -134,7 +134,7 @@ const short = (value) => {
 function main() {
   const dir = "test/fixtures";
   let ids = readdirSync(dir, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory() && existsSync(`${dir}/${entry.name}/spec.json`))
+    .filter((entry) => entry.isDirectory() && existsSync(`${dir}/${entry.name}/payload.json`))
     .map((entry) => entry.name)
     .sort();
   if (fixtures.length) ids = ids.filter((id) => fixtures.includes(id));
