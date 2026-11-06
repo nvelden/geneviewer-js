@@ -1,4 +1,4 @@
-// The chart: draws a render model into an element and handles everything the
+// The chart: draws a spec into an element and handles everything the
 // user does with it (toolbar, zoom, selection, drag, undo and redo).
 import { clusterLabelMargin } from "./components/clusterLabel.js";
 import { compile } from "./compile/index.js";
@@ -149,13 +149,13 @@ var createMoveHistory = function () {
 /**
  * A chart, as newChart() gives it.
  * @typedef {Object} Chart
- * @property {(input: Object) => void} update  Draw again. A chart drawn from a
- *   spec merges a partial spec into it: objects are merged, arrays, other
- *   values and tables (data, links.data) replace. A chart drawn from a render model is drawn with the new
- *   render model.
- * @property {(spec: Object) => void} setSpec  Draw again from a new spec.
- * @property {() => ?Object} getSpec  A copy of the chart's spec; null when it
- *   was drawn from a render model.
+ * @property {(spec: Partial<import("../../dist/spec").Spec>) => void} update
+ *   Merge a partial spec into the chart's spec and draw again: objects are
+ *   merged, arrays, other values and tables (data, links.data) replace.
+ * @property {(spec: import("../../dist/spec").Spec) => void} setSpec  Draw again
+ *   from a new spec.
+ * @property {() => import("../../dist/spec").Spec} getSpec  A copy of the
+ *   chart's spec.
  * @property {() => void} resize  Draw again at the element's current size.
  * @property {(name: ChartEvent, handler: ChartEventHandler) => (() => void)} on
  *   Call a handler with each event of that name, as { type, detail }; gives
@@ -196,7 +196,7 @@ var createMoveHistory = function () {
  *   events (rendered, zoom). Same as chart.on() for each.
  * @property {boolean} [server=false]  The chart's events go to a server that
  *   may draw it again with what they report, as in an R or Python app: a
- *   fixed pixel width in renderModel.size is applied to el, clicks are
+ *   fixed pixel width of the chart is applied to el, clicks are
  *   reported, and moved elements are kept by the server's redraws instead of
  *   in the chart. Read each time it is used.
  * @property {boolean} [injectStyles=true]  Add the library's stylesheet to
@@ -213,12 +213,12 @@ var createMoveHistory = function () {
  *
  * @param {HTMLElement|string} target  The element to draw into, or a CSS
  *   selector for it; the chart takes its size.
- * @param {Object} renderModel  The chart spec (schema/spec-v1.schema.json);
- *   or a render model, as compile() gives it, drawn as it is.
+ * @param {import("../../dist/spec").Spec} spec  The chart spec
+ *   (schema/spec-v1.schema.json).
  * @param {ChartOptions} [options]
  * @returns {Chart}
  */
-function newChart(target, renderModel, options) {
+function newChart(target, spec, options) {
     if (typeof target === "string") {
       var found = document.querySelector(target);
       if (!found) throw new Error("No element matches " + target);
@@ -1754,7 +1754,6 @@ function newChart(target, renderModel, options) {
     // The rows of all clusters in the columns of the chart data (dataColumns),
     // in the order of the data in R: the order of the groups sets the colours
     var chartData = function (input) {
-        if (input.data) return toRows(input.data);
         var columns = input.dataColumns ?? [];
         var rows = [];
         Object.values(input.series ?? {}).forEach(function (cluster) {
@@ -1831,43 +1830,28 @@ function newChart(target, renderModel, options) {
         }
     };
 
-    // The spec the chart was drawn from; null for a render model
-    var spec = null;
-    // Only a render model has a graphContainer: compile() sets it, and the
-    // schema has no such key
-    var isRenderModel = function (input) {
-      return input?.graphContainer !== undefined;
-    };
-    var drawInput = function (input) {
-      if (isRenderModel(input)) {
-        spec = null;
-        renderValue(input);
-      } else {
-        // A spec that does not compile leaves the chart as it is
-        var next = structuredClone(input);
-        var model = compile(next);
-        spec = next;
-        renderValue(model);
-      }
+    // The spec the chart was drawn from
+    var currentSpec = null;
+    var drawSpec = function (input) {
+      // A spec that does not compile leaves the chart as it is
+      var next = structuredClone(input);
+      var model = compile(next);
+      currentSpec = next;
+      renderValue(model);
     };
 
     var chart = {
       update: function (input) {
         if (destroyed) return;
-        if (spec !== null) {
-          spec = mergeSpec(spec, input);
-          renderValue(compile(spec));
-        } else {
-          drawInput(input);
-        }
+        drawSpec(mergeSpec(currentSpec, input));
       },
       setSpec: function (next) {
         if (destroyed) return;
-        if (!next || isRenderModel(next)) throw new Error("setSpec() needs a spec");
-        drawInput(next);
+        if (!next) throw new Error("setSpec() needs a spec");
+        drawSpec(next);
       },
       getSpec: function () {
-        return spec === null ? null : structuredClone(spec);
+        return structuredClone(currentSpec);
       },
       resize: function () {
         if (!destroyed) redraw();
@@ -1944,7 +1928,7 @@ function newChart(target, renderModel, options) {
       }
     };
     Object.keys(options.on || {}).forEach(function (name) { chart.on(name, options.on[name]); });
-    drawInput(renderModel);
+    drawSpec(spec);
     return chart;
 }
 

@@ -28,7 +28,7 @@ const svg: string = chart.toSVG();
 const png: Promise<Blob> = chart.toPNG();
 chart.update({ title: { title: "Clusters" } });
 chart.setSpec({ ...spec, align: { idColumn: "class", id: "x" } });
-const current: Object | null = chart.getSpec();
+const current: Spec = chart.getSpec();
 chart.select([{ component: "genes", data: { rowID: 3 } }]);
 chart.select(null);
 const selected: SelectionItem[] = chart.getSelection();

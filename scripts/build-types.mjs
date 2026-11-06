@@ -46,7 +46,9 @@ try {
     .replace(/\/\*\*(?:(?!\*\/)[\s\S])*@(?:typedef|callback)(?:(?!\*\/)[\s\S])*\*\/\n/g, "")
     .replace(/^declare var version: string;\n/m, "")
     .replace(/^export \{ newChart, version \};\n/m, "")
-    .replace(/^declare function newChart/m, "export declare function newChart");
+    .replace(/^declare function newChart/m, "export declare function newChart")
+    // The JSDoc reaches the spec's types in dist/ from src/lib/
+    .replaceAll('import("../../dist/spec").Spec', "Spec");
   // chartToSVG and chartToPNG, with their JSDoc
   const exportsDts = readFileSync(path.join(out, "lib", "export.d.ts"), "utf8");
   // compile(), with its JSDoc
@@ -64,7 +66,8 @@ try {
     "// The script build defines the global `geneviewer`.",
     "export as namespace geneviewer;",
     "",
-    'export type { Spec } from "./spec";',
+    'import type { Spec } from "./spec";',
+    "export type { Spec };",
     "",
     "/** The library's version. */",
     "export declare const version: string;",

@@ -18,18 +18,18 @@ const checks = [
 ];
 
 (async () => {
-  const payload = JSON.parse(fs.readFileSync(path.join(fixture, "payload.json"), "utf8"));
+  const spec = JSON.parse(fs.readFileSync(path.join(fixture, "spec.json"), "utf8"));
   const meta = JSON.parse(fs.readFileSync(path.join(fixture, "meta.json"), "utf8"));
   const browser = await chromium.launch({ args: ["--font-render-hinting=none", "--disable-gpu"] });
   let failed = 0;
   try {
-    for (const mode of ["binding", "direct"]) for (const check of checks) {
+    for (const mode of ["rspec", "spec"]) for (const check of checks) {
       const page = await browser.newPage({ viewport: { width: 1200, height: 900 }, acceptDownloads: true });
       const errors = [];
       page.on("pageerror", (error) => errors.push(error.message));
       try {
         await page.goto(harness + "?mode=" + mode, { waitUntil: "load" });
-        await page.evaluate(({ payload, meta }) => mountChart(payload, meta), { payload, meta });
+        await page.evaluate(({ spec, meta }) => mountChart(spec, meta), { spec, meta });
         // With the keyboard: the menu shows while the save icon has focus.
         // (The harness has no icon font, so the icon has no size to hover.)
         await page.focus("#chart .geneviewer-save-icon");

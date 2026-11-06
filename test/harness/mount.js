@@ -1,36 +1,32 @@
-// Draws a fixture's payload into #chart, sized as in R (meta.json). Three modes:
-//   binding  through the R binding (geneviewerwidget.js and the htmlwidgets
-//            stand-in), as R draws it
-//   direct   with geneviewer.newChart()
-//   spec     with geneviewer.newChart() and the fixture's spec.json, which
-//            the caller passes as the payload
-//   rspec    through the R binding with { spec: <spec.json> }, as the R
-//            package draws it from 0.3.0 on; the caller passes the spec
-// The mode is the page's ?mode= (default binding). With record(name, detail),
+// Draws a fixture's spec into #chart, sized as in R (meta.json). Two modes:
+//   spec     with geneviewer.newChart()
+//   rspec    through the R binding (geneviewerwidget.js and the htmlwidgets
+//            stand-in) with { spec }, as the R package draws it
+// The mode is the page's ?mode= (default rspec). With record(name, detail),
 // the events named in eventNames are recorded from the first draw on: as
-// geneviewer:<name> DOM events in binding mode, through newChart's options.on
-// in direct and spec mode. Gives the binding's widget object or the chart.
+// geneviewer:<name> DOM events in rspec mode, through newChart's options.on in
+// spec mode. Gives the binding's widget object or the chart.
 function harnessMode() {
-  return new URLSearchParams(location.search).get("mode") || "binding";
+  return new URLSearchParams(location.search).get("mode") || "rspec";
 }
 
-function mountChart(payload, meta, eventNames, record) {
+function mountChart(spec, meta, eventNames, record) {
   var el = document.getElementById("chart");
   el.classList.add("html-widget", "geneviewer");
   el.style.width = (meta.width || 1000) + "px";
   el.style.height = meta.height || "400px";
   eventNames = record ? eventNames : [];
-  if (harnessMode() === "direct" || harnessMode() === "spec") {
+  if (harnessMode() === "spec") {
     var on = {};
     eventNames.forEach(function (name) {
       on[name] = function (event) { record(event.type, event.detail); };
     });
-    return geneviewer.newChart(el, payload, { on: on });
+    return geneviewer.newChart(el, spec, { on: on });
   }
   eventNames.forEach(function (name) {
     el.addEventListener("geneviewer:" + name, function (event) { record(name, event.detail); });
   });
   var widget = HTMLWidgets.bindings.geneviewer.factory(el, el.clientWidth, el.clientHeight);
-  widget.renderValue(harnessMode() === "rspec" ? { spec: payload } : payload);
+  widget.renderValue({ spec: spec });
   return widget;
 }

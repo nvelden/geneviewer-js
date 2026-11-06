@@ -7,8 +7,7 @@
 //   node test/run.cjs --only <id>  one fixture (repeatable)
 //   node test/run.cjs --build min  with dist/geneviewer.min.js (default:
 //                                  geneviewer.core.js, as in R)
-//   node test/run.cjs --mode <m>   one harness mode, binding, direct, spec or rspec
-//                                  (default all; --update: binding)
+//   node test/run.cjs --mode <m>   one harness mode, spec or rspec (default rspec)
 const fs = require("node:fs");
 const path = require("node:path");
 const { chromium } = require("playwright-core");
@@ -20,7 +19,7 @@ const update = args.includes("--update");
 const only = args.flatMap((arg, i) => (arg === "--only" ? [args[i + 1]] : []));
 const modeArgs = args.flatMap((arg, i) => (arg === "--mode" ? [args[i + 1]] : []));
 const build = args.includes("--build") ? args[args.indexOf("--build") + 1] : "core";
-const modes = modeArgs.length ? modeArgs : update ? ["binding"] : ["binding", "direct", "spec", "rspec"];
+const modes = modeArgs.length ? modeArgs : ["rspec"];
 
 // The first differing line with a few lines of context from both sides
 function firstDifference(expected, actual) {
@@ -36,7 +35,7 @@ function firstDifference(expected, actual) {
 
 (async () => {
   const ids = fs.readdirSync(fixturesDir)
-    .filter((id) => fs.existsSync(path.join(fixturesDir, id, "payload.json")))
+    .filter((id) => fs.existsSync(path.join(fixturesDir, id, "spec.json")))
     .filter((id) => !only.length || only.includes(id))
     .sort();
   if (!ids.length) throw new Error("No fixtures found.");
@@ -49,14 +48,12 @@ function firstDifference(expected, actual) {
   try {
     for (const mode of modes) for (const id of ids) {
       const dir = path.join(fixturesDir, id);
-      // In spec and rspec mode the chart is drawn from the spec R recorded
-      const input = mode === "spec" || mode === "rspec" ? "spec.json" : "payload.json";
-      const payload = JSON.parse(fs.readFileSync(path.join(dir, input), "utf8"));
+      const spec = JSON.parse(fs.readFileSync(path.join(dir, "spec.json"), "utf8"));
       const meta = JSON.parse(fs.readFileSync(path.join(dir, "meta.json"), "utf8"));
       const file = path.join(dir, "render.txt");
       let actual;
       try {
-        actual = await renderFixture(browser, payload, meta, mode, build);
+        actual = await renderFixture(browser, spec, meta, mode, build);
       } catch (error) {
         failed++;
         console.log(`FAIL  ${mode}  ${id}  (error while drawing)\n${error.message}\n`);
