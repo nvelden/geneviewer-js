@@ -6,11 +6,11 @@ const path = require("node:path");
 const { pathToFileURL } = require("node:url");
 const { chromium } = require("playwright-core");
 
-const harness = pathToFileURL(path.join(__dirname, "harness", "index.html")).href + "?mode=direct";
+const harness = pathToFileURL(path.join(__dirname, "harness", "index.html")).href + "?mode=spec";
 const fixture = path.join(__dirname, "fixtures", "vig-geneviewer-5");
 
 (async () => {
-  const payload = JSON.parse(fs.readFileSync(path.join(fixture, "payload.json"), "utf8"));
+  const spec = JSON.parse(fs.readFileSync(path.join(fixture, "spec.json"), "utf8"));
   const meta = JSON.parse(fs.readFileSync(path.join(fixture, "meta.json"), "utf8"));
   const browser = await chromium.launch({ args: ["--font-render-hinting=none", "--disable-gpu"] });
   const page = await browser.newPage({ viewport: { width: 1200, height: 1100 }, deviceScaleFactor: 1 });
@@ -23,7 +23,7 @@ const fixture = path.join(__dirname, "fixtures", "vig-geneviewer-5");
   };
   try {
     await page.goto(harness, { waitUntil: "load" });
-    await page.evaluate(({ payload, meta }) => {
+    await page.evaluate(({ spec, meta }) => {
       const second = document.createElement("div");
       second.id = "chart2";
       document.body.appendChild(second);
@@ -37,9 +37,9 @@ const fixture = path.join(__dirname, "fixtures", "vig-geneviewer-5");
         ["select", "selection", "drag", "moves"].forEach((name) => {
           on[name] = (event) => window.__events[id].push({ name: event.type, detail: event.detail });
         });
-        window.__charts[id] = geneviewer.newChart(el, payload, { on });
+        window.__charts[id] = geneviewer.newChart(el, spec, { on });
       });
-    }, { payload, meta });
+    }, { spec, meta });
 
     const settle = async () => {
       await page.mouse.move(5, 5);
@@ -115,11 +115,11 @@ const fixture = path.join(__dirname, "fixtures", "vig-geneviewer-5");
 
     // A legend click hides genes in its own chart only, whatever the id of the
     // chart's element: none (as on the docs site), or one that is no selector
-    const legendPayload = JSON.parse(fs.readFileSync(path.join(__dirname, "fixtures", "vig-Examples-15", "payload.json"), "utf8"));
+    const legendSpec = JSON.parse(fs.readFileSync(path.join(__dirname, "fixtures", "vig-Examples-15", "spec.json"), "utf8"));
     const legendMeta = JSON.parse(fs.readFileSync(path.join(__dirname, "fixtures", "vig-Examples-15", "meta.json"), "utf8"));
     for (const ids of [["", ""], ["my.chart:1", "my.chart:2"]]) {
       const name = ids[0] ? "ids with . and :" : "no id";
-      await page.evaluate(({ payload, meta, ids }) => {
+      await page.evaluate(({ spec, meta, ids }) => {
         document.querySelectorAll(".legend-test").forEach((node) => {
           node.__chart.destroy();
           node.remove();
@@ -131,9 +131,9 @@ const fixture = path.join(__dirname, "fixtures", "vig-geneviewer-5");
           el.style.width = (meta.width || 1000) + "px";
           el.style.height = meta.height || "400px";
           document.body.appendChild(el);
-          el.__chart = geneviewer.newChart(el, payload);
+          el.__chart = geneviewer.newChart(el, spec);
         });
-      }, { payload: legendPayload, meta: legendMeta, ids });
+      }, { spec: legendSpec, meta: legendMeta, ids });
       const hiddenRows = (nth) => page.locator(".legend-test").nth(nth).evaluate((el) =>
         Array.from(el.querySelectorAll("[rowID]")).filter((node) => node.style.display === "none").length);
       await page.locator(".legend-test").nth(0).locator(".legend").nth(0).click();

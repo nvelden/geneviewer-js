@@ -48,17 +48,11 @@ HTMLWidgets.widget({
     if (HTMLWidgets.shinyMode) addZoomHandler();
 
     return {
-      // x is { spec } from the R package 0.3.0 on; before, a render model.
-      // A redraw from Shiny gives the whole chart again, so a spec replaces
-      // the chart's spec (setSpec), which update() would merge into.
+      // x is { spec }. A redraw from Shiny gives the whole chart again, so it
+      // replaces the chart's spec (setSpec), which update() would merge into.
       renderValue: function (x) {
-        var spec = x && x.spec;
-        if (chart) {
-          if (spec) chart.setSpec(spec);
-          else chart.update(x);
-          return;
-        }
-        chart = geneviewer.newChart(el, spec || x, options);
+        if (chart) chart.setSpec(x.spec);
+        else chart = geneviewer.newChart(el, x.spec, options);
       },
       resize: function () {
         if (chart) chart.resize();

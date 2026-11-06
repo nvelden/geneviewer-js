@@ -2,9 +2,8 @@
 // Node: objects merge key by key, arrays and other values replace, tables
 // (data, links.data) replace as a whole. Then in
 // the browser: a chart drawn from a spec (rd-GC-title-1) is updated with a
-// partial spec, given a new spec, and gives its spec back; a chart drawn
-// from a render model keeps update() with a render model, as the R binding
-// uses it. Run through `npm test`.
+// partial spec, given a new spec, and gives its spec back. Run through
+// `npm test`.
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -50,7 +49,6 @@ expect(base.title.titleFont.fontSize === "12px" && base.labels.length === 2, "th
 const harness = pathToFileURL(path.join(here, "harness", "index.html")).href + "?mode=spec";
 const fixture = path.join(here, "fixtures", "rd-GC-title-1");
 const spec = JSON.parse(readFileSync(path.join(fixture, "spec.json"), "utf8"));
-const payload = JSON.parse(readFileSync(path.join(fixture, "payload.json"), "utf8"));
 const meta = JSON.parse(readFileSync(path.join(fixture, "meta.json"), "utf8"));
 
 const browser = await chromium.launch({ args: ["--font-render-hinting=none", "--disable-gpu"] });
@@ -101,18 +99,8 @@ try {
   const before = await page.evaluate(() => window.__chart.getSpec());
   expect((await setSpecError({ title: { title: "x" } })) !== null, "setSpec() without data throws");
   expect(same(await page.evaluate(() => window.__chart.getSpec()), before), "a spec that fails leaves the chart's spec");
-  expect((await setSpecError(payload)) !== null, "setSpec() with a render model throws");
-
-  // A chart drawn from a render model, as compile() gives it
-  await page.evaluate(({ payload }) => {
-    window.__chart.destroy();
-    window.__chart = geneviewer.newChart(document.getElementById("chart"), payload);
-  }, { payload });
-  expect((await page.evaluate(() => window.__chart.getSpec())) === null, "a render model chart has no spec");
-  await page.evaluate(({ payload }) => {
-    window.__chart.update({ ...payload, title: { ...payload.title, title: "Render model" } });
-  }, { payload });
-  expect((await titleText()).includes("Render model"), "update() with a render model draws it");
+  expect((await setSpecError(await page.evaluate((spec) => geneviewer.compile(spec), spec))) !== null,
+    "setSpec() with the output of compile() throws");
 
   // The R binding with { spec }, as R sends it from 0.3.0 on: a redraw from
   // Shiny gives the whole spec, which replaces the chart's spec

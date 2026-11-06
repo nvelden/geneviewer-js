@@ -140,10 +140,10 @@ Rscript test/coverage.R             # update test/coverage.md
 - **Interaction tests** (`test/interaction/`): scripted zoom, selection,
   drag and undo/redo, with the chart and its events recorded after each
   step.
-- **Three modes:** fixtures and interaction tests run against the same
-  baselines through the R binding, as R draws charts, with
-  `geneviewer.newChart()` and R's payload, and with `newChart()` and the
-  spec (`test/harness/mount.js`); the fixtures also with the min build.
+- **Two modes:** interaction tests run against the same baselines through
+  the R binding, as R draws charts, and with `geneviewer.newChart()`
+  (`test/harness/mount.js`). Fixtures run through the R binding in the core
+  build and with `newChart()` in the min build.
 - **Chart methods** (`test/methods.mjs`): `select()`, `getSelection()`,
   `undo()`, `redo()` and `download()`.
 - **Save and two-chart checks** (`test/save.cjs`, `test/two-charts.cjs`):
