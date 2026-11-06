@@ -1,9 +1,8 @@
-// Write the API reference page, _site/api.html, from the schema
+// The body of the API reference page, from the schema
 // (schema/spec-v1.schema.json): one section per component with each option's
 // name, type, default and description; plus newChart(), the chart's methods,
-// its events and the builds. Run by scripts/build-site.mjs.
-import { readFileSync, writeFileSync } from "node:fs";
-import { page } from "./site-page.mjs";
+// its events and the builds. The site puts it in site/api.md.
+import { readFileSync } from "node:fs";
 
 const schema = JSON.parse(readFileSync("schema/spec-v1.schema.json", "utf8"));
 const { version } = JSON.parse(readFileSync("package.json", "utf8"));
@@ -211,10 +210,5 @@ ${componentSections}
     </ul>
 `;
 
-writeFileSync("_site/api.html", page({
-  title: "API reference",
-  description: "The geneviewer JavaScript API: newChart, the chart spec and every option, chart methods, events and builds.",
-  current: "api.html",
-  body,
-}));
-console.log(`built _site/api.html (${components.length} components)`);
+/** @returns {string} The HTML of the page. */
+export const referenceHtml = () => body;

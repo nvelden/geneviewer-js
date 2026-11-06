@@ -58,8 +58,10 @@
     "check": "node scripts/check.mjs",
     "build": "node scripts/build.mjs && node scripts/build-types.mjs && node scripts/sums.mjs",
     "try-app": "bash scripts/try-app.sh",
-    "site": "npm run -s build && node scripts/build-site.mjs",
-    "serve": "npm run -s site && python3 -m http.server 8484 --bind 127.0.0.1 --directory _site",
+    "site": "npm run -s build && vitepress build site",
+    "site:dev": "vitepress dev site --host 127.0.0.1 --port 8484",
+    "site:gallery": "node scripts/site-gallery.mjs",
+    "serve": "npm run -s site && vitepress preview site --host 127.0.0.1 --port 8484",
     "test": "bash scripts/test-docker.sh",
     "test:update": "bash scripts/test-docker.sh --update",
     "test:compile": "node test/compile.mjs",
@@ -75,6 +77,7 @@
     "esbuild": "0.28.2",
     "json-schema-to-typescript": "16.0.0",
     "playwright-core": "1.64.1",
-    "typescript": "7.0.2"
+    "typescript": "7.0.2",
+    "vitepress": "1.6.4"
   }
 }
