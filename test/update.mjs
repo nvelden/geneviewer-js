@@ -81,12 +81,29 @@ try {
   expect((await titleText()).includes("New spec") && !(await titleText()).includes("Updated title"),
     "setSpec() draws the new spec");
 
-  const thrown = await page.evaluate(() => {
-    try { window.__chart.setSpec({ title: { title: "x" } }); return null; } catch (e) { return e.message; }
-  });
-  expect(thrown !== null, "setSpec() without a version throws");
+  // The version is optional: without one, the spec draws the same
+  const { version, ...unversioned } = spec;
+  await page.evaluate((unversioned) => window.__chart.setSpec({ ...unversioned, title: { title: "No version" } }), unversioned);
+  expect((await titleText()).includes("No version"), "setSpec() without a version draws the spec");
+  await page.evaluate((unversioned) => {
+    window.__chart.destroy();
+    window.__chart = geneviewer.newChart(document.getElementById("chart"), { ...unversioned, title: { title: "New chart" } });
+  }, unversioned);
+  expect((await titleText()).includes("New chart"), "newChart() without a version draws the spec");
+  await page.evaluate(() => window.__chart.update({ title: { title: "Updated again" } }));
+  expect((await titleText()).includes("Updated again"), "update() merges into a spec without a version");
+  expect((await page.evaluate(() => window.__chart.getSpec())).version === undefined,
+    "getSpec() gives the spec as it was given");
 
-  // A chart drawn from a render model, as the R binding draws it
+  const setSpecError = (input) => page.evaluate((input) => {
+    try { window.__chart.setSpec(input); return null; } catch (e) { return e.message; }
+  }, input);
+  const before = await page.evaluate(() => window.__chart.getSpec());
+  expect((await setSpecError({ title: { title: "x" } })) !== null, "setSpec() without data throws");
+  expect(same(await page.evaluate(() => window.__chart.getSpec()), before), "a spec that fails leaves the chart's spec");
+  expect((await setSpecError(payload)) !== null, "setSpec() with a render model throws");
+
+  // A chart drawn from a render model, as compile() gives it
   await page.evaluate(({ payload }) => {
     window.__chart.destroy();
     window.__chart = geneviewer.newChart(document.getElementById("chart"), payload);

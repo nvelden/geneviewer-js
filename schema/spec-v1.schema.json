@@ -5,14 +5,14 @@
   "description": "What newChart() draws. Each top-level key is a GC_* function of the R package, each property one of its arguments in camelCase; see schema/NAMING.md.",
   "type": "object",
   "required": [
-    "version",
     "data"
   ],
   "additionalProperties": false,
   "properties": {
     "version": {
       "const": 1,
-      "description": "The spec version."
+      "default": 1,
+      "description": "The spec version. Optional: a spec without one is version 1."
     },
     "data": {
       "$ref": "#/$defs/data",

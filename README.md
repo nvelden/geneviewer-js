@@ -26,7 +26,6 @@ Or load it from a CDN, with D3 included:
 <script src="https://cdn.jsdelivr.net/npm/geneviewer-js@0.3/dist/geneviewer.min.js"></script>
 <script>
   const chart = geneviewer.newChart("#chart", {
-    version: 1,
     data: [
       { cluster: "A", name: "geneA", start: 100, end: 900, class: "kinase" },
       { cluster: "A", name: "geneB", start: 1200, end: 2000, class: "transporter" },

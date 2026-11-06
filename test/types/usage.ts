@@ -47,6 +47,7 @@ chart.destroy();
 chart.on("hover", () => {});
 // @ts-expect-error: download() saves SVG or PNG
 chart.download("pdf");
+const noVersion: Spec = { data: [] };
 // @ts-expect-error: the spec version is 1
 const wrongVersion: Spec = { version: 2, data: [] };
 // @ts-expect-error: unknown top-level key
@@ -54,4 +55,4 @@ const unknownKey: Spec = { version: 1, data: [], colors: {} };
 // @ts-expect-error: zoom takes no other options (R's GC_zoom() has no ...)
 const oldName: Spec = { version: 1, data: [], zoom: { window: [0, 1] } };
 
-export { svg, png, saved, exported, version, wrongVersion, unknownKey, oldName };
+export { svg, png, saved, exported, version, noVersion, wrongVersion, unknownKey, oldName };

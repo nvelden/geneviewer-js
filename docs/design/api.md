@@ -93,7 +93,7 @@ function maps to one top-level key; arguments become camelCase fields.
 
 ```js
 {
-  version: 1,
+  version: 1,  // optional
 
   // Data: an array of row objects, or columns ({ start: [...], end: [...] }).
   // Columns are what R and Python send; they are smaller and need no
@@ -133,8 +133,9 @@ labels: [
 ```
 
 **Versioning.** `version` is the spec version, separate from the package
-version. A renderer that sees a newer major version than it knows warns and
-draws what it can. Breaking spec changes bump the major version.
+version. It is optional: a spec without one is version 1, also once later
+versions exist. A renderer that sees a newer major version than it knows warns
+and draws what it can. Breaking spec changes bump the major version.
 
 **Schema.** The spec is defined once as a JSON Schema in this repo
 (`schema/spec-v1.schema.json`; names approved 2026-11-04, see
