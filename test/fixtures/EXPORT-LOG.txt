@@ -1,4 +1,4 @@
-206 fixtures
+208 fixtures
 vig-BLASTP #4: error: es gibt kein Paket namens 'Biostrings'
 vig-BLASTP #5: error: es gibt kein Paket namens 'pwalign'
 vig-BLASTP #12: error: Biostrings package is not installed. Install with BiocManager::install("Biostrings").
@@ -22,4 +22,3 @@ vig-LoadFastaFiles #19: error: Objekt 'fasta_df_with_keywords' nicht gefunden
 vig-LoadFastaFiles #20: error: Objekt 'fasta_df_with_keywords' nicht gefunden
 vig-LoadFastaFiles #21: error: Objekt 'fasta_df_with_keywords' nicht gefunden
 vig-LoadFastaFiles-2: skipped, same chart as an earlier fixture
-vig-Tn7-CRISPR-6: skipped, same chart as an earlier fixture
