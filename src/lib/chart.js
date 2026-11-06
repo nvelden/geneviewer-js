@@ -1608,7 +1608,7 @@ function newChart(target, renderModel, options) {
           legendOpts,
           theme)
           .legendData(data)
-          .legend(legendOpts.group ?? false, legendOpts.show ?? false, el.id, legendOpts,
+          .legend(legendOpts.group ?? false, legendOpts.show ?? false, el, legendOpts,
                   legendColorBar);
 
         var legendElement = d3.select(`#geneviewer-legend-container-${widgetId}`).node();

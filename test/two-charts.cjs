@@ -112,6 +112,35 @@ const fixture = path.join(__dirname, "fixtures", "vig-geneviewer-5");
     events = await takeEvents();
     expect(events.chart2.includes("select") && events.chart.length === 0,
       `chart 2 still selects after chart 1 is destroyed (chart: ${events.chart}; chart2: ${events.chart2})`);
+
+    // A legend click hides genes in its own chart only, whatever the id of the
+    // chart's element: none (as on the docs site), or one that is no selector
+    const legendPayload = JSON.parse(fs.readFileSync(path.join(__dirname, "fixtures", "vig-Examples-15", "payload.json"), "utf8"));
+    const legendMeta = JSON.parse(fs.readFileSync(path.join(__dirname, "fixtures", "vig-Examples-15", "meta.json"), "utf8"));
+    for (const ids of [["", ""], ["my.chart:1", "my.chart:2"]]) {
+      const name = ids[0] ? "ids with . and :" : "no id";
+      await page.evaluate(({ payload, meta, ids }) => {
+        document.querySelectorAll(".legend-test").forEach((node) => {
+          node.__chart.destroy();
+          node.remove();
+        });
+        ids.forEach((id) => {
+          const el = document.createElement("div");
+          el.className = "legend-test";
+          if (id) el.id = id;
+          el.style.width = (meta.width || 1000) + "px";
+          el.style.height = meta.height || "400px";
+          document.body.appendChild(el);
+          el.__chart = geneviewer.newChart(el, payload);
+        });
+      }, { payload: legendPayload, meta: legendMeta, ids });
+      const hiddenRows = (nth) => page.locator(".legend-test").nth(nth).evaluate((el) =>
+        Array.from(el.querySelectorAll("[rowID]")).filter((node) => node.style.display === "none").length);
+      await page.locator(".legend-test").nth(0).locator(".legend").nth(0).click();
+      await settle();
+      expect(await hiddenRows(0) > 0, `${name}: the legend click hides genes in its own chart`);
+      expect(await hiddenRows(1) === 0, `${name}: the other chart keeps its genes`);
+    }
     expect(errors.length === 0, "no page errors" + (errors.length ? ": " + errors.join("; ") : ""));
   } finally {
     await browser.close();

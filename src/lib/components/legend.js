@@ -13,9 +13,10 @@ container.prototype.legendData = function (data) {
 
 };
 
+// chartElement: the element of the chart, where a click on a group hides its genes.
 // colorBar: the colorBarSettings() of the links when their colour bar goes in
 // the legend; it is drawn as the first item
-container.prototype.legend = function (group, show = true, parentId = null, options = {}, colorBar = null) {
+container.prototype.legend = function (group, show = true, chartElement, options = {}, colorBar = null) {
   if (!show) {
     return this;
   }
@@ -240,27 +241,11 @@ container.prototype.legend = function (group, show = true, parentId = null, opti
         .filter(item => unselectedLegend.includes(item[group]))
         .map(item => item.rowID);
 
-      if (parentId && typeof parentId === 'string') {
-           // If parentId is not null and is a string, select within the parent
-          d3.select('#' + parentId).selectAll('[rowID]').each(function () {
-          const currentRowID = +d3.select(this).attr("rowID"); // Convert string to number
-      if (unselectedRowIds.includes(currentRowID)) {
-          d3.select(this).style("display", "none"); // Hide it
-      } else {
-          d3.select(this).style("display", ""); // Show it
-        }
-      });
-      } else {
-      // If parentId is null or not a string, select globally
-      d3.selectAll('[rowID]').each(function () {
+      // Rows are numbered per chart, so this looks in this chart only
+      d3.select(chartElement).selectAll('[rowID]').each(function () {
         const currentRowID = +d3.select(this).attr("rowID"); // Convert string to number
-        if (unselectedRowIds.includes(currentRowID)) {
-          d3.select(this).style("display", "none"); // Hide it
-      } else {
-        d3.select(this).style("display", ""); // Show it
-      }
+        d3.select(this).style("display", unselectedRowIds.includes(currentRowID) ? "none" : "");
       });
-}
     });
 
   if (colorBar && barSide === "right") {
