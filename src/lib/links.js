@@ -290,7 +290,9 @@ export function colorBarSettings(links, themeOptions = {}) {
         colorBar: true,
         ...defaultLinkColors,
         measure: "identity",
-        margin: { top: 5, right: 25, bottom: 0, left: 50 },
+        // Right of the plot area, which ends 50 pixels from the edge: the two
+        // bars of normal and inverted links stay clear of the genes
+        margin: { top: 5, right: 19, bottom: 0, left: 50 },
         colorBarOptions: {
             // Where the bar goes: a corner of the plot area or "legend", and
             // whether it stands up or lies down

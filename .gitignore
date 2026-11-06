@@ -4,3 +4,5 @@ node_modules/
 .try-app.env
 _site/
 test/harness/build/
+site/.vitepress/cache
+site/.vitepress/dist

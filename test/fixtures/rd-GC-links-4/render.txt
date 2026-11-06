@@ -2,7 +2,7 @@
   <div style="height: 100%; position: relative; width: 100%">
     <svg class="color-bar" data-component="links" height="199.97" style="position: absolute" width="1000">
       <g transform="translate(50, 5)">
-        <g transform="translate(905, 110.97)">
+        <g transform="translate(911, 110.97)">
           <defs>
             <lineargradient gradientTransform="rotate(90)" id="linear-gradient-1">
               <stop offset="0%" stop-color="rgb(31, 119, 180)">

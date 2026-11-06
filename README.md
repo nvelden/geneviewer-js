@@ -150,7 +150,8 @@ Rscript test/coverage.R             # update test/coverage.md
 - **Save, two-chart and site checks** (`test/save.cjs`,
   `test/two-charts.cjs`, `test/site.cjs`): the save menu downloads a valid
   SVG and PNG; two charts on a page keep their own selection and undo
-  history; every chart on the docs site draws without errors.
+  history; every chart on the docs site draws without errors, and the
+  JavaScript shown with each chart runs and draws the same chart.
 - **Coverage** (`test/coverage.md`): every documented argument of the `GC_*`
   chart functions is used by at least one fixture.
 - **Fixed environment:** the tests run in a Docker image (`docker/`) with
@@ -220,3 +221,20 @@ See [docs/roadmap.md](docs/roadmap.md).
 
 MIT. Copyright (c) 2023 geneviewer authors. The toolbar icons are Font
 Awesome Free (CC BY 4.0); see LICENSE-THIRD-PARTY.md.
+
+## Docs site
+
+The site in `site/` is built with [VitePress](https://vitepress.dev) to
+`_site/` and published to GitHub Pages from `main` by
+`.github/workflows/pages.yml`.
+
+| Command | What it does |
+|---------|--------------|
+| `npm run site:dev` | Serve the site with live reload (run `npm run build` first) |
+| `npm run serve` | Build the library and the site, and preview it at http://127.0.0.1:8484/geneviewer-js/ |
+| `Rscript scripts/export-examples.R` | Run the R package's `Examples.Rmd` and `geneviewer.Rmd` and write each chart to `site/public/charts/` (needs `GENEVIEWER_R_DIR`) |
+| `npm run site:gallery` | Remake the home page's thumbnails from those charts (`GENEVIEWER_CHROME=1` uses Chrome) |
+
+A page places a chart with a line `@chart <id>`, optionally followed by
+`nocode`, `fold` or `log`. `site/.vitepress/charts.mjs` turns it into the live
+chart and its code tabs, and makes the JavaScript from the chart's spec.
