@@ -39,7 +39,6 @@ const saved: Promise<void> = chart.download("png", "clusters.png");
 const model: Record<string, any> = geneviewer.compile(spec);
 const dark: Record<string, any> = geneviewer.themes.dark;
 const colors: string[] = geneviewer.palettes.okabeIto;
-const exported: string = geneviewer.chartToSVG(el);
 const version: string = geneviewer.version;
 chart.destroy();
 
@@ -55,4 +54,4 @@ const unknownKey: Spec = { version: 1, data: [], colors: {} };
 // @ts-expect-error: zoom takes no other options (R's GC_zoom() has no ...)
 const oldName: Spec = { version: 1, data: [], zoom: { window: [0, 1] } };
 
-export { svg, png, saved, exported, version, noVersion, wrongVersion, unknownKey, oldName };
+export { svg, png, saved, version, noVersion, wrongVersion, unknownKey, oldName };

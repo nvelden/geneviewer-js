@@ -16,6 +16,7 @@ ns <- asNamespace("geneviewer")
 # Arguments that a static fixture cannot show, with the reason
 not_drawable <- list(
   "GC_chart:elementId" = "the id of the HTML element, not part of the drawing",
+  "GC_scale:..." = "every scale option in the schema has its own argument",
   "GC_zoom_to:session" = "Shiny only",
   "GC_zoom_to:outputId" = "Shiny only",
   "GC_zoom_to:range" = "Shiny only (GC_zoom(range = ) covers the drawing)",

@@ -50,6 +50,16 @@ const internals = path.join(__dirname, "harness", "build", "internals.js");
     expect(r.warnings.length === 1 && /colors will repeat/.test(r.warnings[0]),
       `colours repeat: one warning for 51 scales (${r.warnings.length})`);
     expect(JSON.stringify(r.result) === JSON.stringify(["#111111", "#222222", "#111111"]), "and the colours repeat as before");
+
+    // What compile() finds in a spec reaches the console, once per page
+    r = await run(() => {
+      const spec = { data: { start: [1], end: [9], cluster: ["A"], name: ["x"] }, fields: { cluster: "cluster" },
+                     align: { idColumn: "name", id: "nope" } };
+      geneviewer.compile(spec);
+      geneviewer.compile(spec);
+    });
+    expect(r.warnings.length === 1 && /^geneviewer: .*nope.*not found/.test(r.warnings[0]),
+      `a gene to align on that is not there: one warning (${r.warnings})`);
   } finally {
     await browser.close();
   }
