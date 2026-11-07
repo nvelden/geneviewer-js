@@ -33,7 +33,8 @@ sees a chart, R:
 - splits the gene table into one series per cluster, with its own data,
   coordinate range and copy of every component's options;
 - resolves per-cluster settings (`GC_labels(cluster = 1)` and so on);
-- shifts coordinates for `GC_align()` and `GC_normalize()`;
+- shifts coordinates for `GC_align()` and `GC_normalize()` (`GC_align()`
+  moved into the library in M4);
 - computes link pairs for `GC_links()`;
 - expands a theme name into its full options (`R/theme.R`, about 780 lines).
 
@@ -70,11 +71,12 @@ and Python (decided 2026-11-04). The line falls here:
 | Per-cluster settings, defaults, themes, palettes | Alignment: `protein_blast`, `mummer_alignment` |
 | Reading strand values (`+`, `1`, `complement`, ...) | Introns from exons (`get_introns`, used by `GC_transcript`) |
 | Automatic scale breaks at gaps | Matching genes for links (`GC_links(group = )`) |
-| Gene tracks to avoid overlap | Shifting coordinates: `GC_align`, `GC_normalize` |
+| Gene tracks to avoid overlap | Shifting coordinates: `GC_normalize` |
 | Drawing links from a links table | |
+| Aligning clusters on a gene (`align`; moved here in M4) | |
 
 So the spec carries finished data: transcripts with their intron rows,
-links as a table of pairs, coordinates already aligned or normalised. R and
+links as a table of pairs, coordinates already normalised. R and
 Python both implement the processing functions, and must give identical
 results.
 
