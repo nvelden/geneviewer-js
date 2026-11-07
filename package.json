@@ -37,6 +37,7 @@
       "import": "./dist/geneviewer.standalone.mjs"
     },
     "./geneviewer.css": "./dist/geneviewer.css",
+    "./spec-v1.schema.json": "./dist/spec-v1.schema.json",
     "./package.json": "./package.json"
   },
   "files": [

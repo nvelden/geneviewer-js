@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [main, "m*-*"]
   pull_request:
 
 permissions:
@@ -37,3 +37,15 @@ jobs:
       - run: npm run test:smoke
         env:
           CHROME_PATH: /usr/bin/google-chrome
+
+  # Fixture and interaction tests in the Docker test image. The image runs
+  # natively on arm64 (see docker/Dockerfile), hence the arm64 runner.
+  test:
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npm test

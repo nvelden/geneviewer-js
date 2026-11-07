@@ -4,7 +4,10 @@
 // d3 is the page's global (d3: "global"), imported from the d3 package
 // (d3: "import", left as an import), or bundled in (d3: "bundle"). The
 // stylesheet src/styles.css is bundled as text; the library injects it.
+import { readFileSync } from "node:fs";
 import * as esbuild from "esbuild";
+
+const { version } = JSON.parse(readFileSync("package.json", "utf8"));
 
 /**
  * Bundles entry; gives the output files ({ path, text }) by name.
@@ -28,6 +31,7 @@ export async function bundle(entry, options = {}) {
     logLevel: "warning",
     write: false,
     loader: { ".css": "text" },
+    define: { __VERSION__: JSON.stringify(version) },
     // package.json's sideEffects is for users' bundlers (dist/ is one module
     // each); the library's own modules add to container.prototype on import
     ignoreAnnotations: true,
