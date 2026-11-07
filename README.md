@@ -1,13 +1,22 @@
-# geneviewer
+<h1><strong>geneviewer-js</strong> - Gene Cluster Visualizations in JavaScript</h1>
 
-Interactive gene cluster, transcript and genome alignment charts in the
-browser, drawn with D3. The same library draws the charts of the
-[geneviewer R package](https://github.com/nvelden/geneviewer) and its Shiny
-app.
+<img src="https://raw.githubusercontent.com/nvelden/geneviewer/main/man/figures/logo.png" height="150px" align="right" alt="geneviewer logo">
 
-**Docs and examples:** https://nvelden.github.io/geneviewer-docs/
+[![CI](https://github.com/nvelden/geneviewer-js/actions/workflows/ci.yml/badge.svg)](https://github.com/nvelden/geneviewer-js/actions/workflows/ci.yml) [![npm version](https://img.shields.io/npm/v/geneviewer-js)](https://www.npmjs.com/package/geneviewer-js) [![npm downloads](https://img.shields.io/npm/dt/geneviewer-js)](https://www.npmjs.com/package/geneviewer-js) ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-## Install
+**geneviewer-js** is a JavaScript library for drawing interactive gene cluster, transcript and genome alignment charts in the browser, built on D3. Charts can include legends, labels, annotations, scales, links, colors, tooltips and more, with zooming, selection and SVG or PNG export. The same library draws the charts of the [geneviewer R package](https://github.com/nvelden/geneviewer). To explore all features visit the [documentation](https://nvelden.github.io/geneviewer-docs/).
+
+<br clear="right">
+
+## Interactive Shiny Dashboard
+
+Try the **[Gene Cluster Dashboard](https://nvelden.github.io/geneviewer-shinylive/)** - a web interface that provides point-and-click access to geneviewer's visualization features, with charts drawn by this library. *(Allow 1-2 minutes for loading)* Its source code is in the [geneviewer-shinylive](https://github.com/nvelden/geneviewer-shinylive) repository.
+
+<p align="center"><a href="https://nvelden.github.io/geneviewer-shinylive/"><img src="https://raw.githubusercontent.com/nvelden/geneviewer/main/man/figures/geneviewer_promo.gif" width="100%" alt="geneviewer: load GenBank, FASTA or CSV files, add titles, labels and a legend, zoom in with the zoom bar, drag labels, switch the theme and export the SVG"/></a></p>
+
+## Installation
+
+You can install **geneviewer-js** from npm with:
 
 ```sh
 npm install geneviewer-js
@@ -19,41 +28,47 @@ Or load it from a CDN, with D3 included:
 <script src="https://cdn.jsdelivr.net/npm/geneviewer-js@0.3/dist/geneviewer.min.js"></script>
 ```
 
-## A first chart
+## Usage
+
+The below example demonstrates using **geneviewer-js** to plot a gene cluster on a genomic sequence, using the start and end positions of each gene. The genes are grouped by class and labels are added with the `labels` key.
 
 ```html
-<div id="chart" style="width: 800px; height: 300px"></div>
+<div id="chart"></div>
 <script src="https://cdn.jsdelivr.net/npm/geneviewer-js@0.3/dist/geneviewer.min.js"></script>
 <script>
+  // Data
+  const geneCluster = [
+    { name: "ophB1", start: 2522, end: 4276, class: "Monooxygenase" },
+    { name: "ophC", start: 5286, end: 4718, class: "NTF2-like" },
+    { name: "ophA", start: 9536, end: 10904, class: "Methyltransferase" },
+    { name: "ophD", start: 12616, end: 11859, class: "O-acyltransferase" },
+    { name: "ophB2", start: 13183, end: 15046, class: "Monooxygenase" },
+    { name: "ophP", start: 19346, end: 16016, class: "Prolyloligopeptidase" },
+    { name: "ophE", start: 20170, end: 21484, class: "F-box/RNHI-like" },
+  ];
+
+  // Chart
   const chart = geneviewer.newChart("#chart", {
-    data: [
-      { cluster: "A", name: "geneA", start: 100, end: 900, class: "kinase" },
-      { cluster: "A", name: "geneB", start: 1200, end: 2000, class: "transporter" },
-      { cluster: "B", name: "geneA", start: 300, end: 1100, class: "kinase" },
-    ],
-    fields: { cluster: "cluster", group: "class" },
+    data: geneCluster,
+    height: "100px",
+    fields: { group: "class" },
     labels: { label: "name" },
-    title: { title: "Two clusters" },
   });
-  chart.on("click", (event) => console.log(event.detail));
 </script>
 ```
 
-With a bundler (Vite, webpack, ...), import the ES module; it imports `d3`
-from npm:
+<img src="https://raw.githubusercontent.com/nvelden/geneviewer/main/man/figures/ophA_gene_cluster_2x.png" width="776" alt="The ophA gene cluster: seven labelled gene arrows colored by class, with a legend below"/>
+
+With a bundler (Vite, webpack, ...), import the ES module; it imports `d3` from npm:
 
 ```js
 import { newChart } from "geneviewer-js";
 
-const chart = newChart(document.getElementById("chart"), spec);
+const chart = newChart("#chart", spec);
 chart.update({ title: { title: "New title" } });
 ```
 
-The chart spec has one key per part of the chart (`genes`, `labels`,
-`links`, `scale`, `theme`, ...); see the API reference on the docs site and
-`dist/spec.d.ts`. The library adds its stylesheet to the page; on pages
-whose Content-Security-Policy blocks that, pass `{ injectStyles: false }`
-and load `geneviewer-js/geneviewer.css`.
+The chart spec has one key per part of the chart (`genes`, `labels`, `links`, `scale`, `theme`, ...); see the API reference in the [documentation](https://nvelden.github.io/geneviewer-docs/) and `dist/spec.d.ts`. The library adds its stylesheet to the page; on pages whose Content-Security-Policy blocks that, pass `{ injectStyles: false }` and load `geneviewer-js/geneviewer.css`.
 
 ## Files
 
@@ -66,161 +81,14 @@ and load `geneviewer-js/geneviewer.css`.
 | `dist/geneviewer.css` | The stylesheet, when styles cannot be added by script |
 | `dist/geneviewer.d.ts`, `dist/spec.d.ts` | Types |
 
-# Development
+## Development
 
-## Source
+To build, test or release the library, see the [development guide](docs/development.md).
 
-| File | What it is |
-|------|------------|
-| `src/lib/index.js` | Entry of the bundle: the public API, what the global `geneviewer` holds |
-| `src/lib/chart.js` | `geneviewer.newChart()`: the chart, with its toolbar, zoom, selection, drag and undo/redo |
-| `src/lib/container.js` | The container of one chart part; `components/*.js` add a method to it for each part drawn (genes, labels, legend, ...) |
-| `src/lib/*.js` | Shared helpers: `util`, `style`, `text`, `color`, `scale`, `links` (and colour bar), `export` (SVG/PNG, save menu) |
-| `src/styles.css` | Chart styles |
-| `src/htmlwidgets/geneviewerwidget.js` | htmlwidgets binding used by the R package: calls `newChart` and sends events to Shiny |
+## Issues
 
-The sources are ES modules, bundled by esbuild (`scripts/files.mjs`). The
-code uses `d3` as a global; the ES module and bundled builds import it from
-the `d3` package instead (`src/d3.js`).
+If you encounter any issues or have feature requests, please open an [Issue](https://github.com/nvelden/geneviewer-js/issues).
 
-## Build
+## License
 
-```sh
-npm run check   # syntax-check the sources
-npm run build   # write dist/ and dist/SHA256SUMS
-```
-
-`npm run build` needs the dev dependencies (`npm ci`). It writes the four
-builds (see "Files" above), `geneviewer.css`, `themes.json`, the R binding,
-the type definitions and `SHA256SUMS`. `geneviewer.core.js` is not
-minified, so the R package can ship readable source, as CRAN expects;
-esbuild does drop the comments.
-
-## Chart spec schema
-
-`schema/spec-v1.schema.json` (JSON Schema 2020-12) defines the chart spec:
-one top-level key per `GC_*` function of the R package, one property per
-argument, in camelCase. `schema/NAMING.md` lists every R argument and its
-spec name; the names were approved for spec v1, which is frozen at 1.0.0.
-
-```sh
-npm run schema:check   # validate the schema, NAMING.md and schema/examples/
-npm run spec:check     # validate the spec.json R recorded for each fixture
-```
-
-## Types
-
-`npm run build` also writes `dist/geneviewer.d.ts`, from the JSDoc in
-`src/lib/`, and `dist/spec.d.ts`, from the schema. The source stays plain
-JavaScript.
-
-```sh
-npm run types:test   # compile test/types/ against the .d.ts files (in npm test)
-npm run types:src    # type-check src/lib/ (jsconfig.json); some errors remain
-```
-
-## Tests
-
-```sh
-npm test               # all tests, in Docker
-npm run test:update    # write new baselines (only when output should change)
-npm run test:smoke     # the packed package in a plain page, a Vite project and TypeScript
-Rscript scripts/export-fixtures.R   # re-export fixtures from the R package
-Rscript test/coverage.R             # update test/coverage.md
-```
-
-- **Fixtures** (`test/fixtures/`): charts exported from the R package:
-  its help-page examples, its vignettes and `test/charts.R`. Each has the
-  R code, the spec R recorded and `render.txt`, a canonical listing of the
-  drawn chart. `npm test` draws every fixture and compares.
-- **compile()** (`npm run test:compile`, in `npm test`): `compile(spec)`
-  equals the `payload.json` R 0.2 made, for the fixtures that still have one,
-  apart from the approved exceptions (docs/roadmap.md).
-- **Interaction tests** (`test/interaction/`): scripted zoom, selection,
-  drag and undo/redo, with the chart and its events recorded after each
-  step.
-- **Two modes:** interaction tests run against the same baselines through
-  the R binding, as R draws charts, and with `geneviewer.newChart()`
-  (`test/harness/mount.js`). Fixtures run through the R binding in the core
-  build and with `newChart()` in the min build.
-- **Chart methods** (`test/methods.mjs`): `select()`, `getSelection()`,
-  `undo()`, `redo()` and `download()`.
-- **Save and two-chart checks** (`test/save.cjs`, `test/two-charts.cjs`):
-  the save menu downloads a valid SVG and PNG; two charts on a page keep
-  their own selection and undo history.
-- **Coverage** (`test/coverage.md`): every documented argument of the `GC_*`
-  chart functions is used by at least one fixture.
-- **Fixed environment:** the tests run in a Docker image (`docker/`) with
-  pinned Chromium (Playwright) and fonts, because chart layout depends on
-  text measures. The image runs natively on arm64: on Apple silicon
-  locally, and on GitHub's `ubuntu-24.04-arm` runners in CI. Chrome under
-  amd64 emulation misreads numbers, so emulation is not supported.
-
-## Trying a change in the Shiny app
-
-```sh
-npm run try-app               # build, start the app, run the app's tests
-npm run try-app -- --no-tests # build and start the app only
-npm run try-app -- --r-tests  # also run the R package's tests on the copy
-```
-
-This runs the [geneviewer Shiny app](https://github.com/nvelden/geneviewer-shinylive)
-with the JavaScript from this repo:
-
-- **Isolated:** the R package is copied to a temporary folder and the built
-  files replace its JavaScript there, so neither the R repo nor your R library
-  changes.
-- **Tests:** the app starts at <http://127.0.0.1:4849/> and the app's
-  `tests/testthat` and `tests/browser` suites run against it. The browser
-  tests need `puppeteer`.
-- **Left running:** the app stays up afterwards so you can try it by hand; the
-  script prints the command that stops it.
-
-Set the two repo locations in a `.try-app.env` file (ignored by git):
-
-```sh
-GENEVIEWER_R_DIR="/path/to/geneviewer"
-GENEVIEWER_APP_DIR="/path/to/geneviewer-shinylive"
-```
-
-Set `PORT` to use a port other than 4849.
-
-## Releases
-
-1. `npm version <version>` sets the version, commits and tags. The build
-   takes the library's version from `package.json`.
-2. Push: `git push origin main v<version>`.
-
-The publish workflow tests, builds, runs the smoke test, publishes to npm with provenance,
-and attaches `dist/` to a GitHub release.
-
-## Using a release in the R package
-
-The R package vendors a release: its copies of the files are stored in the R
-repo and shipped inside the package, so users never download JavaScript
-separately. From the R repo, a maintainer pulls a release with:
-
-```sh
-Rscript dev/update_js.R <version>
-```
-
-It downloads `geneviewer.core.js`, `geneviewer.css`, `themes.json`, the
-binding and `SHA256SUMS` from the GitHub release, checks the checksums and
-writes them to `inst/htmlwidgets/`. Do not edit those copies in the R repo;
-make changes here and cut a new release.
-
-## Roadmap
-
-See [docs/roadmap.md](docs/roadmap.md).
-
-## Licence
-
-MIT. Copyright (c) 2023 geneviewer authors. The toolbar icons are Font
-Awesome Free (CC BY 4.0); see LICENSE-THIRD-PARTY.md.
-
-## Docs site
-
-The site, for all languages, has its own repository:
-[geneviewer-docs](https://github.com/nvelden/geneviewer-docs). It builds with
-the newest version of this library on npm, and its tests check that every chart
-draws.
+MIT. Copyright (c) 2023 geneviewer authors. The toolbar icons are Font Awesome Free (CC BY 4.0); see [LICENSE-THIRD-PARTY.md](LICENSE-THIRD-PARTY.md).
