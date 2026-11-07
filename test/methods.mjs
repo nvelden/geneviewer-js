@@ -183,6 +183,28 @@ try {
   await page.evaluate(() => window.__chart.select([{ component: "genes" }]));
   expect(same(await selection(), []), "select() needs events.select");
   expect(warnings.some((text) => /select\(\) needs events/.test(text)), "and warns once without it");
+
+  // chart.on() warns when the event is off, not for options.on or when an
+  // update in the same tick turns it on
+  const listen = (name, turnOn) => page.evaluate(async ({ name, turnOn }) => {
+    window.__chart.on(name, () => {});
+    if (turnOn) window.__chart.update({ events: turnOn });
+    await Promise.resolve();
+  }, { name, turnOn });
+  await mount({ ...spec, events: { drag: true } });
+  expect(!warnings.some((text) => /chart\.on\(/.test(text)), "options.on does not warn about events that are off");
+  await listen("drag");
+  expect(!warnings.some((text) => /chart\.on\(/.test(text)), "chart.on() does not warn about an event that is on");
+  // Clicks are on as soon as the spec has an events key
+  await mount({ ...spec, events: undefined });
+  await listen("click");
+  expect(warnings.some((text) => text === 'chart.on("click") reports nothing without events: { click: true }.'),
+    "chart.on() warns about an event that is off");
+  await listen("selection");
+  expect(warnings.some((text) => text === 'chart.on("selection") reports nothing without events: { select: true }.'),
+    "and names the option that turns it on");
+  await listen("dblclick", { dblclick: true });
+  expect(!warnings.some((text) => /chart\.on\("dblclick"/.test(text)), "chart.on() does not warn when an update turns the event on");
 } finally {
   await browser.close();
 }

@@ -40,6 +40,8 @@ var toolbarButtons = ["undo", "redo", "reset", "zoom", "save"];
 // The events a chart reports, to chart.on() handlers and as
 // geneviewer:<name> DOM events on its element
 var eventNames = ["click", "dblclick", "select", "selection", "drag", "dragmove", "moves", "zoom", "rendered"];
+// The option of the events key (GC_events()) that turns each event on
+var eventOption = { selection: "select", dragmove: "drag", moves: "drag" };
 
 // Positions of moved elements: moveX and moveY (GC_element_style())
 var samePosition = function (a, b) {
@@ -159,7 +161,8 @@ var createMoveHistory = function () {
  * @property {() => void} resize  Draw again at the element's current size.
  * @property {(name: ChartEvent, handler: ChartEventHandler) => (() => void)} on
  *   Call a handler with each event of that name, as { type, detail }; gives
- *   the function that removes it.
+ *   the function that removes it. An event needs its option in the spec's
+ *   events key, such as events: { click: true }, and warns without it.
  * @property {(name: ChartEvent, handler: ChartEventHandler) => void} off
  *   Remove a handler.
  * @property {(range: ?Array<number>) => void} zoomTo  Set the zoom window
@@ -1859,6 +1862,14 @@ function newChart(target, spec, options) {
       on: function (name, handler) {
         if (!eventNames.includes(name)) throw new Error("Unknown event: " + name);
         (handlers[name] = handlers[name] || []).push(handler);
+        // After this tick, so chart.on() may come before the chart.update()
+        // that turns the event on
+        queueMicrotask(function () {
+          var option = eventOption[name] || name;
+          if (!destroyed && events[option] !== true) {
+            warnOnce('chart.on("' + name + '") reports nothing without events: { ' + option + ": true }.");
+          }
+        });
         return function () { chart.off(name, handler); };
       },
       off: function (name, handler) {
@@ -1927,7 +1938,11 @@ function newChart(target, spec, options) {
         if (addedClass) el.classList.remove("geneviewer");
       }
     };
-    Object.keys(options.on || {}).forEach(function (name) { chart.on(name, options.on[name]); });
+    // Not through chart.on(): the R binding listens for every event, on or off
+    Object.keys(options.on || {}).forEach(function (name) {
+      if (!eventNames.includes(name)) throw new Error("Unknown event: " + name);
+      (handlers[name] = handlers[name] || []).push(options.on[name]);
+    });
     drawSpec(spec);
     return chart;
 }
