@@ -6,13 +6,9 @@
 
 **geneviewer-js** is a JavaScript library for drawing interactive gene cluster, transcript and genome alignment charts in the browser, built on D3. Charts can include legends, labels, annotations, scales, links, colors, tooltips and more, with zooming, selection and SVG or PNG export. The same library draws the charts of the [geneviewer R package](https://github.com/nvelden/geneviewer). To explore all features visit the [documentation](https://nvelden.github.io/geneviewer-docs/).
 
+The library only draws charts, from the data you pass to it. It does not read GenBank, FASTA or GFF files or run alignments; those are done by the R package.
+
 <br clear="right">
-
-## Interactive Shiny Dashboard
-
-Try the **[Gene Cluster Dashboard](https://nvelden.github.io/geneviewer-shinylive/)** - a web interface that provides point-and-click access to geneviewer's visualization features, with charts drawn by this library. *(Allow 1-2 minutes for loading)* Its source code is in the [geneviewer-shinylive](https://github.com/nvelden/geneviewer-shinylive) repository.
-
-<p align="center"><a href="https://nvelden.github.io/geneviewer-shinylive/"><img src="https://raw.githubusercontent.com/nvelden/geneviewer/main/man/figures/geneviewer_promo.gif" width="100%" alt="geneviewer: load GenBank, FASTA or CSV files, add titles, labels and a legend, zoom in with the zoom bar, drag labels, switch the theme and export the SVG"/></a></p>
 
 ## Installation
 
@@ -30,7 +26,7 @@ Or load it from a CDN, with D3 included:
 
 ## Usage
 
-The below example demonstrates using **geneviewer-js** to plot a gene cluster on a genomic sequence, using the start and end positions of each gene. The genes are grouped by class and labels are added with the `labels` key.
+This example plots a gene cluster from the start and end positions of each gene, colors the genes by class and labels them by name. Click a gene to log its data to the console.
 
 ```html
 <div id="chart"></div>
@@ -53,22 +49,52 @@ The below example demonstrates using **geneviewer-js** to plot a gene cluster on
     height: "100px",
     fields: { group: "class" },
     labels: { label: "name" },
+    events: { click: true },
   });
+
+  chart.on("click", (event) => console.log(event.detail));
 </script>
 ```
 
 <img src="https://raw.githubusercontent.com/nvelden/geneviewer/main/man/figures/ophA_gene_cluster_2x.png" width="776" alt="The ophA gene cluster: seven labelled gene arrows colored by class, with a legend below"/>
 
-With a bundler (Vite, webpack, ...), import the ES module; it imports `d3` from npm:
+Each row of `data` is one gene. A gene needs a `start` and an `end`; when `start` is greater than `end` the arrow points left, on the reverse strand. The `fields` key says which columns hold what:
+
+| Field | Column that holds | Default |
+|-------|-------------------|---------|
+| `start`, `end` | The position of the gene | `"start"`, `"end"` |
+| `cluster` | The cluster the gene belongs to | One cluster |
+| `group` | The group of the gene, which sets its color and the legend | No groups |
+| `strand` | The strand of the gene; when set, it decides the arrow direction instead of `start` and `end` | Taken from `start` and `end` |
+
+The rest of the spec has one key per part of the chart (`genes`, `labels`, `links`, `scale`, `theme`, ...); see the API reference in the [documentation](https://nvelden.github.io/geneviewer-docs/) and `dist/spec.d.ts`.
+
+### With a bundler
+
+With a bundler (Vite, webpack, ...), import the ES module; it imports `d3` from npm. `chart.update()` changes a chart that is already drawn:
 
 ```js
 import { newChart } from "geneviewer-js";
 
-const chart = newChart("#chart", spec);
+const chart = newChart("#chart", {
+  data: [{ name: "geneA", start: 100, end: 900 }],
+  labels: { label: "name" },
+});
+
 chart.update({ title: { title: "New title" } });
 ```
 
-The chart spec has one key per part of the chart (`genes`, `labels`, `links`, `scale`, `theme`, ...); see the API reference in the [documentation](https://nvelden.github.io/geneviewer-docs/) and `dist/spec.d.ts`. The library adds its stylesheet to the page; on pages whose Content-Security-Policy blocks that, pass `{ injectStyles: false }` and load `geneviewer-js/geneviewer.css`.
+### Content-Security-Policy
+
+The library adds its stylesheet to the page. On pages whose Content-Security-Policy blocks that, load `geneviewer-js/geneviewer.css` yourself and pass the option as the third argument:
+
+```js
+newChart("#chart", spec, { injectStyles: false });
+```
+
+## See it in action
+
+Try the **[Gene Cluster Dashboard](https://nvelden.github.io/geneviewer-shinylive/)** - a web interface that provides point-and-click access to geneviewer's visualization features, with charts drawn by this library. *(Allow 1-2 minutes for loading)* Its source code is in the [geneviewer-shinylive](https://github.com/nvelden/geneviewer-shinylive) repository.
 
 ## Files
 
