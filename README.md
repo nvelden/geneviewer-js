@@ -187,11 +187,11 @@ Set `PORT` to use a port other than 4849.
 
 ## Releases
 
-1. Bump `version` in `package.json` and `src/lib/chart.js` (`npm run check`
-   compares them).
-2. Commit, then tag and push: `git tag v0.3.7 && git push origin main v0.3.7`.
+1. `npm version <version>` sets the version, commits and tags. The build
+   takes the library's version from `package.json`.
+2. Push: `git push origin main v<version>`.
 
-The publish workflow tests and builds, publishes to npm with provenance,
+The publish workflow tests, builds, runs the smoke test, publishes to npm with provenance,
 and attaches `dist/` to a GitHub release.
 
 ## Using a release in the R package
@@ -201,7 +201,7 @@ repo and shipped inside the package, so users never download JavaScript
 separately. From the R repo, a maintainer pulls a release with:
 
 ```sh
-Rscript dev/update_js.R 0.3.7
+Rscript dev/update_js.R <version>
 ```
 
 It downloads `geneviewer.core.js`, `geneviewer.css`, `themes.json`, the

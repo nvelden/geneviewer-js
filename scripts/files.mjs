@@ -13,9 +13,11 @@ export const bundles = [
   { name: "geneviewer.core.js", format: "iife", d3: "global" },
 ];
 
-// Copied from src/ unchanged (several sources are joined in order)
+// Copied unchanged, paths from src/ (several sources are joined in order)
 export const files = [
   { name: "geneviewer.css", sources: ["styles.css"] },
   { name: "themes.json", sources: ["themes.json"] },
   { name: "geneviewerwidget.js", sources: ["htmlwidgets/geneviewerwidget.js"] },
+  // For the docs site and the Python package
+  { name: "spec-v1.schema.json", sources: ["../schema/spec-v1.schema.json"] },
 ];

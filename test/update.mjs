@@ -79,6 +79,9 @@ try {
   expect((await titleText()).includes("New spec") && !(await titleText()).includes("Updated title"),
     "setSpec() draws the new spec");
 
+  const { version: packageVersion } = JSON.parse(readFileSync(path.join(here, "..", "package.json"), "utf8"));
+  expect((await page.evaluate(() => geneviewer.version)) === packageVersion, "geneviewer.version is the one in package.json");
+
   // The version is optional: without one, the spec draws the same
   const { version, ...unversioned } = spec;
   await page.evaluate((unversioned) => window.__chart.setSpec({ ...unversioned, title: { title: "No version" } }), unversioned);

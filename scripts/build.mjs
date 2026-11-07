@@ -1,7 +1,7 @@
 // Build dist/: the release files (flat, as GitHub release assets are) plus
 // SHA256SUMS. The bundles are in scripts/files.mjs: geneviewer.core.js stays
 // unminified, so the R package can ship it as readable source and verify it
-// against SHA256SUMS. The other files are copied from src/ unchanged.
+// against SHA256SUMS. The other files are copied unchanged.
 import { mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { bundle } from "./bundle.mjs";
 import { bundles, files } from "./files.mjs";

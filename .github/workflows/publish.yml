@@ -13,7 +13,24 @@ permissions:
   id-token: write
 
 jobs:
+  # The package as users install it, before anything is published
+  smoke:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          package-manager-cache: false
+      - run: npm ci
+      - run: npm run test:smoke
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+
   publish:
+    needs: smoke
     # npm test runs in the arm64 Docker test image (docker/Dockerfile)
     runs-on: ubuntu-24.04-arm
     steps:

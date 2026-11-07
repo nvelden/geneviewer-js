@@ -3,6 +3,9 @@
 // against D3's own types.
 declare const d3: any;
 
+// The version in package.json, set by the build (scripts/bundle.mjs)
+declare const __VERSION__: string;
+
 // The stylesheet, bundled as text (scripts/bundle.mjs)
 declare module "*.css" {
   const text: string;
