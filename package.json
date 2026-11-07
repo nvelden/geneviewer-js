@@ -1,6 +1,6 @@
 {
   "name": "geneviewer-js",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "Interactive gene cluster, transcript and genome alignment charts in the browser, drawn with D3",
   "keywords": [
     "gene cluster",
