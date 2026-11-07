@@ -22,6 +22,18 @@ const chart: Chart = geneviewer.newChart(el, spec, {
 });
 const off: () => void = chart.on("zoom", (event) => console.log(event.type));
 off();
+// Each event's detail has its own type
+chart.on("zoom", (event) => {
+  const shown: number = event.detail.end - event.detail.start;
+  const cluster: string = event.detail.clusters[0].cluster;
+  console.log(shown, cluster, event.detail.action);
+});
+chart.on("click", (event) => console.log(event.detail.component, event.detail.cluster, event.detail.data));
+chart.on("select", (event) => console.log(event.detail?.part));
+chart.on("selection", (event) => console.log(event.detail.length));
+chart.on("drag", (event) => console.log(event.detail.position.moveX, event.detail.action));
+chart.on("moves", (event) => console.log(event.detail.moves.map((move) => move.position.moveY)));
+chart.on("rendered", (event) => console.log(event.detail.width, event.detail.id));
 chart.zoomTo([1000, 2000]);
 chart.zoomTo(null);
 const svg: string = chart.toSVG();
@@ -44,6 +56,10 @@ chart.destroy();
 
 // @ts-expect-error: not an event
 chart.on("hover", () => {});
+// @ts-expect-error: a zoom reports no position
+chart.on("zoom", (event) => console.log(event.detail.position));
+// @ts-expect-error: select is null when the selection is cleared
+chart.on("select", (event) => console.log(event.detail.component));
 // @ts-expect-error: download() saves SVG or PNG
 chart.download("pdf");
 const noVersion: Spec = { data: [] };

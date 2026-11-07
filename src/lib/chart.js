@@ -114,22 +114,93 @@ var createMoveHistory = function () {
 };
 
 /**
- * A chart's events: what each one carries is under Events in the site's API
- * reference.
+ * A chart's events. Each needs its option in the spec's events key; what each
+ * reports is in ChartEventDetails.
  * @typedef {"click"|"dblclick"|"select"|"selection"|"drag"|"dragmove"|"moves"|"zoom"|"rendered"} ChartEvent
  */
 
 /**
+ * An element of the chart, as click, dblclick, select and selection report it.
+ * @typedef {Object} ElementDetail
+ * @property {string} component  The part of the chart: "genes", "transcript",
+ *   "labels", "coordinates", "links", "legend", "scale", "scaleBar",
+ *   "sequence", "title", "clusterTitle", "clusterFooter", "clusterLabel" or
+ *   "annotations".
+ * @property {?string} cluster  The cluster's name; null for the chart title,
+ *   the legend and links between clusters.
+ * @property {*} data  The element's data, or null: the gene's row for genes,
+ *   transcripts and labels, the link's row for links, the group for the
+ *   legend.
+ * @property {string} [part]  The title or subtitle of a cluster title, footer
+ *   or label; label or marker in the legend.
+ * @property {Object<string, *>} [style]  How a selectable element is drawn,
+ *   with the names of elementStyle options (fill, stroke, fontSize, ...), so an
+ *   editor can show the current values.
+ */
+
+/**
+ * Where a moved element is: its offset in pixels from where it is drawn.
+ * @typedef {Object} MovePosition
+ * @property {number} moveX
+ * @property {number} moveY
+ */
+
+/**
+ * A moved element, as drag and moves report it.
+ * @typedef {ElementDetail & { position: MovePosition, action: "drag"|"undo"|"redo"|"reset"|"nudge" }} MoveDetail
+ */
+
+/**
+ * The zoom window, as the zoom event reports it.
+ * @typedef {Object} ZoomDetail
+ * @property {"relative"|"absolute"} mode  As zoom.mode.
+ * @property {number} start  The window's start, in the units of its mode.
+ * @property {number} end  The window's end.
+ * @property {boolean} zoomed  False when everything shows.
+ * @property {?Array<number>} range  [start, end] for zoom.range, or null when
+ *   everything shows.
+ * @property {Array<{ cluster: string, start: number, end: number }>} clusters
+ *   The base pairs each cluster shows.
+ * @property {"drag"|"keyboard"|"reset"|"set"|"render"} action  What changed it:
+ *   the user (drag, keyboard, reset), chart.zoomTo() (set) or a draw (render).
+ */
+
+/**
+ * What each event reports, as its handlers' event.detail and the
+ * geneviewer:<name> DOM event's detail.
+ * @typedef {Object} ChartEventDetails
+ * @property {ElementDetail} click  The element clicked.
+ * @property {ElementDetail} dblclick  The element double-clicked.
+ * @property {?ElementDetail} select  The element selected last, or null when
+ *   the selection is cleared.
+ * @property {Array<ElementDetail>} selection  All selected elements, in the
+ *   order they were selected.
+ * @property {MoveDetail} drag  One element moved: dropped, nudged with the
+ *   arrow keys, or moved by undo, redo or reset.
+ * @property {ElementDetail & { position: MovePosition }} dragmove  An element
+ *   being moved, as it moves.
+ * @property {{ action: MoveDetail["action"], moves: Array<MoveDetail> }} moves
+ *   More than one element moved in one step.
+ * @property {ZoomDetail} zoom  The zoom window changed.
+ * @property {{ id: string, chartId: string, width: number, height: number }} rendered
+ *   The chart was drawn: id is events.renderId, or one made for each draw;
+ *   chartId is the element's id; width and height its size in pixels.
+ */
+
+/**
  * An event as chart.on() handlers get it: its name and what it reports.
+ * @template {ChartEvent} [K=ChartEvent]
  * @typedef {Object} ChartEventObject
- * @property {ChartEvent} type  The event's name.
- * @property {*} detail  What it reports, as the geneviewer:<name> DOM event's detail.
+ * @property {K} type  The event's name.
+ * @property {ChartEventDetails[K]} detail  What it reports, as the
+ *   geneviewer:<name> DOM event's detail.
  */
 
 /**
  * A handler of a chart event.
+ * @template {ChartEvent} [K=ChartEvent]
  * @callback ChartEventHandler
- * @param {ChartEventObject} event
+ * @param {ChartEventObject<K>} event
  * @returns {void}
  */
 
@@ -159,11 +230,11 @@ var createMoveHistory = function () {
  * @property {() => import("../../dist/spec").Spec} getSpec  A copy of the
  *   chart's spec.
  * @property {() => void} resize  Draw again at the element's current size.
- * @property {(name: ChartEvent, handler: ChartEventHandler) => (() => void)} on
+ * @property {<K extends ChartEvent>(name: K, handler: ChartEventHandler<K>) => (() => void)} on
  *   Call a handler with each event of that name, as { type, detail }; gives
  *   the function that removes it. An event needs its option in the spec's
  *   events key, such as events: { click: true }, and warns without it.
- * @property {(name: ChartEvent, handler: ChartEventHandler) => void} off
+ * @property {<K extends ChartEvent>(name: K, handler: ChartEventHandler<K>) => void} off
  *   Remove a handler.
  * @property {(range: ?Array<number>) => void} zoomTo  Set the zoom window
  *   (GC_zoom()): a range in the units of its mode, or null for everything.
@@ -194,7 +265,7 @@ var createMoveHistory = function () {
  * @property {(blob: Blob, filename: string) => *} [saveAs]  Saves a file from
  *   the save menu, given the blob and a file name. By default the browser
  *   downloads it.
- * @property {Partial<Record<ChartEvent, ChartEventHandler>>} [on]  Event
+ * @property {{ [K in ChartEvent]?: ChartEventHandler<K> }} [on]  Event
  *   handlers by name, added before the first draw, so they also get its
  *   events (rendered, zoom). Same as chart.on() for each.
  * @property {boolean} [server=false]  The chart's events go to a server that
