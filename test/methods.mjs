@@ -1,5 +1,6 @@
-// The chart methods select(), getSelection(), undo(), redo() and download(),
-// on rd-GC-toolbar-1 (three labelled genes, events select and drag) drawn
+// The chart methods select(), getSelection(), undo(), redo(), resize() and
+// download(), on rd-GC-toolbar-1 (three labelled genes, events select and
+// drag) drawn
 // from its spec. Run through `npm test`.
 import { readFileSync } from "node:fs";
 import path from "node:path";
@@ -146,6 +147,15 @@ try {
   expect((await events("drag")).length === 0, "redo() with nothing undone does nothing");
   expect(await page.evaluate(() => !document.querySelector("#chart .geneviewer-undo").disabled),
     "the toolbar's undo button follows undo() and redo()");
+
+  // Without a server the chart keeps moves itself: resize() draws again and
+  // puts the moved label back where it was dropped
+  const moved = () => page.locator("#chart .geneviewer-move-overlay text.label").first().boundingBox();
+  const beforeResize = await moved();
+  await page.evaluate(() => window.__chart.resize());
+  const afterResize = await moved();
+  expect(beforeResize && afterResize && Math.abs(beforeResize.x - afterResize.x) < 0.5 &&
+    Math.abs(beforeResize.y - afterResize.y) < 0.5, "a moved label stays where it was dropped after resize()");
 
   // download()
   await page.evaluate(() => window.__chart.download("svg"));

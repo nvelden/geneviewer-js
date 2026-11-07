@@ -3,5 +3,4 @@ dist
 .git
 test
 src
-vendor
 docs

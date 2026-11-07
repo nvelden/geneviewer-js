@@ -524,12 +524,12 @@ function newChart(target, spec, options) {
       var matrix = parent.getScreenCTM();
       if (!matrix) return null;
       var ns = "http://www.w3.org/2000/svg";
-      var overlay = el.querySelector(".geneviewer-move-overlay");
+      var overlay = /** @type {SVGSVGElement} */ (el.querySelector(".geneviewer-move-overlay"));
       if (!overlay) {
-        overlay = document.createElementNS(ns, "svg");
+        overlay = /** @type {SVGSVGElement} */ (document.createElementNS(ns, "svg"));
         overlay.setAttribute("class", "geneviewer-move-overlay");
-        overlay.setAttribute("width", el.clientWidth);
-        overlay.setAttribute("height", el.clientHeight);
+        overlay.setAttribute("width", String(el.clientWidth));
+        overlay.setAttribute("height", String(el.clientHeight));
         overlay.setAttribute("viewBox", `0 0 ${el.clientWidth} ${el.clientHeight}`);
         Object.assign(overlay.style, { position: "absolute", left: "0", top: "0",
           width: "100%", height: "100%", pointerEvents: "none", zIndex: "4" });
@@ -558,7 +558,7 @@ function newChart(target, spec, options) {
     // Moved legend parts are dimmed with the rest of a hidden group
     var syncLegendFrames = function () {
       el.querySelectorAll(".geneviewer-move-overlay [data-part]").forEach(function (node) {
-        if (node.__home__) node.parentNode.classList.toggle("unselected", node.__home__.classList.contains("unselected"));
+        if (node.__home__) node.parentElement.classList.toggle("unselected", node.__home__.classList.contains("unselected"));
       });
     };
     var liftMovedElements = function () {
@@ -924,6 +924,7 @@ function newChart(target, spec, options) {
       updateToolbar(nodes);
     };
     var restoreLocalMoves = function () {
+      if (!Object.keys(localMoves).length) return;
       var nodes = movableNodes();
       Object.keys(localMoves).forEach(function (key) {
         if (nodes[key]) placeAt(nodes[key], localMoves[key]);
@@ -1010,7 +1011,8 @@ function newChart(target, spec, options) {
       var opts = mergeOptions({ show: "hover", position: "topright",
                                 buttons: toolbarButtons, icons: {} },
                               "toolbarOptions", toolbarOptions, theme);
-      // One button from R arrives as a string
+      // A theme's toolbar.buttons may be one string: R unboxes a single button
+      // (GC_theme(toolbar = list(buttons = "save"))), and themes skip compile's check
       var buttons = [].concat(opts.buttons);
       var wanted = function (name) { return buttons.includes(name); };
       var movable = events.drag === true && ["undo", "redo", "reset"].some(wanted);
@@ -1080,7 +1082,7 @@ function newChart(target, spec, options) {
                                kbd: null, shortcuts: null, onClick: resetZoom });
         if (save) zoomGroup.append("span").attr("class", "geneviewer-toolbar-divider");
       }
-      if (save) createSaveIcon(widgetId, el, toolbar.node(), customIcon("save"), options.saveAs);
+      if (save) createSaveIcon(widgetId, el, toolbar.node(), customIcon("save"), function (format) { return chart.download(format); });
     };
 
     // A link below a cluster SVG gets no :hover, so it is highlighted here
@@ -1164,12 +1166,14 @@ function newChart(target, spec, options) {
     var zoomFrame = null;
     var zoomTimer = null;
     var zoomMode = function () { return zoomOptions?.mode === "absolute" ? "absolute" : "relative"; };
-    var initialZoom = function () {
-      var range = zoomOptions?.range;
+    // A zoom range in order, or null for everything (no range, or a relative
+    // range covering the whole track)
+    var zoomWindow = function (range) {
       if (!Array.isArray(range) || range.length !== 2) return null;
       range = range.slice().sort(function (a, b) { return a - b; });
       return zoomMode() === "relative" && range[0] <= 0 && range[1] >= 1 ? null : range;
     };
+    var initialZoom = function () { return zoomWindow(zoomOptions?.range); };
     // Shares of the track of the window, and back
     var toTrack = function (value) { return (value - zoomTrack[0]) / (zoomTrack[1] - zoomTrack[0]); };
     var fromTrack = function (share) { return zoomTrack[0] + share * (zoomTrack[1] - zoomTrack[0]); };
@@ -1294,19 +1298,21 @@ function newChart(target, spec, options) {
       zoomDrag.part = part;
       zoomDrag.shares = shares;
     };
+    // The window shares after moving a handle ("start", "end") or the whole
+    // window by delta, a share of the track, kept on the track and at least
+    // min wide
+    var shiftShares = function (s, part, delta, min) {
+      if (part === "start") return [Math.max(0, Math.min(s[1] - min, s[0] + delta)), s[1]];
+      if (part === "end") return [s[0], Math.min(1, Math.max(s[0] + min, s[1] + delta))];
+      var shift = Math.max(-s[0], Math.min(1 - s[1], delta));
+      return [s[0] + shift, s[1] + shift];
+    };
     var moveZoomDrag = function (event) {
       if (!zoomDrag || event.pointerId !== zoomDrag.id) return;
       event.preventDefault();
       var delta = (event.clientX - zoomDrag.left) / zoomDrag.width - zoomDrag.at;
-      var s = zoomDrag.shares, min = minShare();
-      var next = zoomDrag.part === "start" ? [Math.max(0, Math.min(s[1] - min, s[0] + delta)), s[1]]
-        : zoomDrag.part === "end" ? [s[0], Math.min(1, Math.max(s[0] + min, s[1] + delta))]
-        : (function () {
-          var shift = Math.max(-s[0], Math.min(1 - s[1], delta));
-          return [s[0] + shift, s[1] + shift];
-        })();
       zoomDrag.moved = true;
-      changeZoom(next);
+      changeZoom(shiftShares(zoomDrag.shares, zoomDrag.part, delta, minShare()));
     };
     var endZoomDrag = function (event) {
       if (!zoomDrag || (event.pointerId !== undefined && event.pointerId !== zoomDrag.id)) return;
@@ -1326,10 +1332,7 @@ function newChart(target, spec, options) {
       var step = { ArrowLeft: -1, ArrowDown: -1, ArrowRight: 1, ArrowUp: 1 }[event.key];
       var next = null;
       if (step) {
-        var delta = step * (event.shiftKey ? 0.1 : 0.01);
-        next = part === "start" ? [Math.max(0, Math.min(s[1] - min, s[0] + delta)), s[1]]
-          : part === "end" ? [s[0], Math.min(1, Math.max(s[0] + min, s[1] + delta))]
-          : [s[0] + Math.max(-s[0], Math.min(1 - s[1], delta)), s[1] + Math.max(-s[0], Math.min(1 - s[1], delta))];
+        next = shiftShares(s, part, step * (event.shiftKey ? 0.1 : 0.01), min);
       } else if (event.key === "Home") {
         next = part === "end" ? [s[0], Math.min(1, s[0] + min)] : part === "start" ? [0, s[1]] : [0, s[1] - s[0]];
       } else if (event.key === "End") {
@@ -1448,9 +1451,9 @@ function newChart(target, spec, options) {
           var chart = item.chart;
           var svgBox = chart.svg.node().getBoundingClientRect(), svgScale = svgBox.width / chart.width || 1;
           var rect = document.createElementNS(ns, "rect");
-          rect.setAttribute("x", (svgBox.left + chart.margin.left * svgScale - box.left) / scale);
-          rect.setAttribute("y", 0);
-          rect.setAttribute("width", (chart.width - chart.margin.left - chart.margin.right) * svgScale / scale);
+          rect.setAttribute("x", String((svgBox.left + chart.margin.left * svgScale - box.left) / scale));
+          rect.setAttribute("y", "0");
+          rect.setAttribute("width", String((chart.width - chart.margin.left - chart.margin.right) * svgScale / scale));
           rect.setAttribute("height", svg.getAttribute("height"));
           clipPath.appendChild(rect);
         });
@@ -1466,9 +1469,7 @@ function newChart(target, spec, options) {
     // GC_zoom_to(): a range in the units of the mode, or null for everything
     var zoomTo = function (range) {
       if (destroyed || !zoomOptions) return;
-      zoomRange = Array.isArray(range) && range.length === 2
-        ? range.slice().sort(function (a, b) { return a - b; }) : null;
-      if (zoomRange && zoomMode() === "relative" && zoomRange[0] <= 0 && zoomRange[1] >= 1) zoomRange = null;
+      zoomRange = zoomWindow(range);
       redrawZoom(true);
       reportZoom("set");
     };
@@ -1737,20 +1738,22 @@ function newChart(target, spec, options) {
       makeColorBar(graphContainer, links, theme, legendColorBar !== null);
       clipZoomLinks();
     };
+    // Draw the chart, its links and the moves kept here, and wire its events
+    var drawWithMoves = function () {
+      draw();
+      addLinks();
+      liftMovedElements();
+      restoreLocalMoves();
+      wireEvents();
+      checkMoves();
+    };
     // Draw again with the same settings, as on resize: moves kept here stay.
     // Adding the links and restoring moves are part of what keeps the scroll.
     var redraw = function () {
       // A slider handle with keyboard focus keeps it
       var focused = zoomBar && zoomBar.contains(document.activeElement)
         ? document.activeElement.getAttribute("data-zoom-part") : null;
-      keepScroll(function () {
-        draw();
-        addLinks();
-        liftMovedElements();
-        restoreLocalMoves();
-        wireEvents();
-        checkMoves();
-      });
+      keepScroll(drawWithMoves);
       if (focused && zoomBar) zoomBar.querySelector('[data-zoom-part="' + focused + '"]')?.focus({ preventScroll: true });
     };
 
@@ -1816,11 +1819,7 @@ function newChart(target, spec, options) {
         theme = input.theme ?? {};
         events = input.events ?? {};
         size = input.size ?? {};
-        draw();
-        addLinks();
-        liftMovedElements();
-        wireEvents();
-        checkMoves();
+        drawWithMoves();
         reportZoom("render");
         if (events.rendered === true) {
           var detail = {
@@ -1927,10 +1926,11 @@ function newChart(target, spec, options) {
         if (zoomFrame) cancelAnimationFrame(zoomFrame);
         if (activeShortcuts === onShortcut) activeShortcuts = null;
         handlers = {};
-        [["click", onCaptureClick, true], ["click", syncLegendFrames], ["pointerdown", markActive, true],
+        /** @type {Array<[string, EventListener, boolean?]>} */
+        var listeners = [["click", onCaptureClick, true], ["click", syncLegendFrames], ["pointerdown", markActive, true],
          ["focusin", markActive], ["click", onClick], ["dblclick", onDoubleClick], ["keydown", onKeyDown],
-         ["pointerdown", startDrag], ["mousemove", onMouseMove], ["mouseleave", onMouseLeave]]
-          .forEach(function (l) { el.removeEventListener(l[0], l[1], l[2]); });
+         ["pointerdown", startDrag], ["mousemove", onMouseMove], ["mouseleave", onMouseLeave]];
+        listeners.forEach(function (l) { el.removeEventListener(l[0], l[1], l[2]); });
         d3.select(el).on("mouseleave", null).selectAll("*").remove();
         appliedStyleKeys.forEach(function (key) { el.style[key] = ""; });
         el.classList.remove("geneviewer-draggable", "geneviewer-selectable", "geneviewer-highlight",

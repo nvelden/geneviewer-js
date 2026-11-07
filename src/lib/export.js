@@ -38,8 +38,8 @@ export function chartToSVG(el, exclude = null) {
 
   const root = document.createElementNS(ns, "svg");
   root.setAttribute("xmlns", ns);
-  root.setAttribute("width", width);
-  root.setAttribute("height", height);
+  root.setAttribute("width", String(width));
+  root.setAttribute("height", String(height));
   root.setAttribute("viewBox", `0 0 ${width} ${height}`);
 
   const addBackground = (parent, x, y, w, h, color) => {
@@ -97,17 +97,18 @@ export function chartToSVG(el, exclude = null) {
 
     addBackground(root, x, y, rect.width, rect.height, svgStyle.backgroundColor);
 
-    const clone = svg.cloneNode(true);
+    const clone = /** @type {SVGSVGElement} */ (svg.cloneNode(true));
     clone.removeAttribute("style");
     clone.removeAttribute("class");
-    clone.setAttribute("x", x);
-    clone.setAttribute("y", y);
-    clone.setAttribute("width", rect.width);
-    clone.setAttribute("height", rect.height);
+    clone.setAttribute("x", String(x));
+    clone.setAttribute("y", String(y));
+    clone.setAttribute("width", String(rect.width));
+    clone.setAttribute("height", String(rect.height));
 
     // cloneNode keeps the structure, so both lists are in the same order
     const sources = svg.querySelectorAll("*");
     const targets = clone.querySelectorAll("*");
+    /** @type {Map<Element, *>} */
     const computedStyles = new Map([[svg, copyStyles(svg, clone, null)]]);
     sources.forEach((source, i) => {
       const target = targets[i];
@@ -118,7 +119,7 @@ export function chartToSVG(el, exclude = null) {
       }
       if (source.closest("defs")) return;
       target.removeAttribute("class");
-      computedStyles.set(source, copyStyles(source, target, computedStyles.get(source.parentNode)));
+      computedStyles.set(source, copyStyles(source, target, computedStyles.get(/** @type {Element} */ (source.parentNode))));
     });
 
     // An SVG over the slider band, such as the one of moved text, keeps
@@ -194,12 +195,12 @@ export function downloadBlob(blob, filename) {
   setTimeout(() => URL.revokeObjectURL(url), 40000);
 }
 
-// The save icon and its formats, in the chart's toolbar (container), which
-// shows and places it. Its colours are those of the stylesheet, set with
-// GC_toolbar() and GC_theme(toolbar = ...). save(blob, filename) saves the
-// file; by default the browser downloads it. iconClass names a Font Awesome
-// icon; without it the icon is the default download icon, as SVG.
-export function createSaveIcon(widgetId, el, container, iconClass = null, save = downloadBlob) {
+// The save icon and its formats, in the toolbar (container) of the chart in
+// el, which shows and places it. Its colours are those of the stylesheet, set
+// with GC_toolbar() and GC_theme(toolbar = ...). download(format) saves the
+// chart as "svg" or "png", as chart.download() does. iconClass names a Font
+// Awesome icon; without it the icon is the default download icon, as SVG.
+export function createSaveIcon(widgetId, el, container, iconClass, download) {
   var saveMenu = d3.select(container).append("div")
       .attr("id", `saveMenu-${widgetId}`)
       .style("position", "relative")
@@ -233,19 +234,8 @@ export function createSaveIcon(widgetId, el, container, iconClass = null, save =
   };
 
   var formats = [
-    {
-      label: "Save as SVG",
-      save: function () {
-        var svg = chartToSVG(el, container);
-        save(new Blob([svg], { type: "image/svg+xml;charset=utf-8" }), "graph.svg");
-      }
-    },
-    {
-      label: "Save as PNG",
-      save: function () {
-        return chartToPNG(el, container).then(blob => save(blob, "graph.png"));
-      }
-    }
+    { label: "Save as SVG", save: function () { return download("svg"); } },
+    { label: "Save as PNG", save: function () { return download("png"); } }
   ];
 
   formats.forEach(function (format) {

@@ -20,6 +20,7 @@ export function getColorScale(colorScheme, customColors, uniqueGroups) {
   // the palette of a theme), by default schemeCategory30. usesScheme tells
   // which groups take their colour from it: a warning that colours repeat is
   // only for those.
+  /** @param {(group: *) => boolean} [usesScheme] */
   const schemeRange = (usesScheme = () => true) => {
     if (colorScheme && (Array.isArray(colorScheme) || d3[colorScheme])) {
       const scheme = Array.isArray(colorScheme) ? colorScheme : d3[colorScheme];

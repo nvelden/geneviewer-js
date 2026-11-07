@@ -18,6 +18,7 @@ jobs:
           node-version: 22
       - run: npm ci
       - run: npm run check
+      - run: npm run types:src
       - run: npm run schema:check
       - run: npm run spec:check
       - run: npm run test:compile

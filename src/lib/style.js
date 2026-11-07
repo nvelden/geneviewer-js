@@ -3,6 +3,12 @@ export function camelToKebab(string) {
   return string.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2').toLowerCase();
 }
 
+/**
+ * The options of combinedOptions that defaultOptions does not have.
+ * @param {Object<string, *>} combinedOptions
+ * @param {Object<string, *>} defaultOptions
+ * @returns {Object<string, *>}
+ */
 export function extractAdditionalOptions(combinedOptions, defaultOptions) {
   // Extract additional options that are not in defaultOptions
   const additionalOptions = Object.keys(combinedOptions).reduce((acc, key) => {
@@ -53,7 +59,7 @@ export function applyStyleToElement(currentElement, itemStyle, i) {
   const style = itemStyle.find(s => s.index === i);
   if (style) {
     for (const [key, value] of Object.entries(style)) {
-      if (!['index', 'rowID', 'text', 'labelAdjustmentOptions', ...moveKeys].includes(key)) {
+      if (!notStyles.includes(key)) {
         currentElement.style(camelToKebab(key), value);
       }
     }

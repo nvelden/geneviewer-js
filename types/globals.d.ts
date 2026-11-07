@@ -11,3 +11,12 @@ declare module "*.css" {
   const text: string;
   export default text;
 }
+
+// What the library keeps on drawn nodes: D3's bound datum, and its own state
+// of moved elements (chart.js)
+interface Element {
+  __data__?: any;
+  __drawn__?: any;
+  __home__?: Element | null;
+  __text__?: string;
+}

@@ -14,8 +14,9 @@
   </style>
   <!-- No stylesheet: the library adds its own (injectStyles). The build is
        the page's ?build=: core (default; uses the page's d3, as in R) or
-       min (D3 included). -->
-  <script src="../../vendor/d3-7.8.5/d3.min.js"></script>
+       min (D3 included). D3 is the npm dependency, at the version of the
+       lockfile, which is the R package's (7.8.5). -->
+  <script src="../../node_modules/d3/dist/d3.min.js"></script>
   <script>
     document.write('<script src="../../dist/geneviewer.' +
       (new URLSearchParams(location.search).get("build") === "min" ? "min" : "core") +

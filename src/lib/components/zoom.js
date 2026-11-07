@@ -13,8 +13,8 @@ container.prototype.clipZoom = function () {
   const clip = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   clip.setAttribute("class", "geneviewer-zoom-clip");
   clip.setAttribute("x", this.margin.left);
-  clip.setAttribute("y", 0);
-  clip.setAttribute("width", plotWidth);
+  clip.setAttribute("y", "0");
+  clip.setAttribute("width", String(plotWidth));
   clip.setAttribute("height", this.height);
   clip.setAttribute("viewBox", `${this.margin.left} 0 ${plotWidth} ${this.height}`);
   clip.setAttribute("preserveAspectRatio", "none");
