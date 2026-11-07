@@ -48,7 +48,7 @@ JavaScript.
 
 ```sh
 npm run types:test   # compile test/types/ against the .d.ts files (in npm test)
-npm run types:src    # type-check src/lib/ (jsconfig.json; in CI)
+npm run types:src    # type-check src/lib/ (jsconfig.json; after a build; in CI)
 ```
 
 ## Tests

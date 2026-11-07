@@ -18,12 +18,13 @@ jobs:
           node-version: 22
       - run: npm ci
       - run: npm run check
-      - run: npm run types:src
       - run: npm run schema:check
       - run: npm run spec:check
       - run: npm run test:compile
       - run: npm run build
+      # Both read the type definitions the build writes (dist/spec.d.ts)
       - run: npm run types:test
+      - run: npm run types:src
 
   # The package as users install it (test/smoke/run.mjs): a plain page, a
   # Vite project and the types, from an npm pack tarball
