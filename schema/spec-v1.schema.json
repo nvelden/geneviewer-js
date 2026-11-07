@@ -43,7 +43,7 @@
         },
         "strand": {
           "$ref": "#/$defs/column",
-          "description": "Column with the strand of each gene: 1, \"forward\", \"sense\" or \"+\" for forward; -1, 0, \"reverse\", \"antisense\", \"complement\" or \"-\" for reverse. Default: all genes forward."
+          "description": "Column with the strand of each gene: 1, \"forward\", \"sense\" or \"+\" for forward; -1, 0, \"reverse\", \"antisense\", \"complement\" or \"-\" for reverse. Default: a column named strand if the data has one; otherwise a gene with start less than end is forward and any other gene is reverse."
         }
       }
     },
@@ -1119,7 +1119,7 @@
       "properties": {
         "click": {
           "type": "boolean",
-          "description": "Whether clicks are reported.",
+          "description": "Whether clicks are reported, in a spec with an events key; a spec without one reports nothing.",
           "default": true
         },
         "highlight": {

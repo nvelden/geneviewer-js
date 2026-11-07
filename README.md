@@ -65,7 +65,7 @@ Each row of `data` is one gene. A gene needs a `start` and an `end`; when `start
 | `start`, `end` | The position of the gene | `"start"`, `"end"` |
 | `cluster` | The cluster the gene belongs to | One cluster |
 | `group` | The group of the gene, which sets its color and the legend | No groups |
-| `strand` | The strand of the gene; when set, it decides the arrow direction instead of `start` and `end` | Taken from `start` and `end` |
+| `strand` | The strand of the gene; when set, it decides the arrow direction instead of `start` and `end` | A `strand` column if there is one, otherwise from `start` and `end` |
 
 The rest of the spec has one key per part of the chart (`genes`, `labels`, `links`, `scale`, `theme`, ...); see the API reference in the [documentation](https://nvelden.github.io/geneviewer-docs/) and `dist/spec.d.ts`.
 
