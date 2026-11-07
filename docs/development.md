@@ -48,7 +48,7 @@ JavaScript.
 
 ```sh
 npm run types:test   # compile test/types/ against the .d.ts files (in npm test)
-npm run types:src    # type-check src/lib/ (jsconfig.json); some errors remain
+npm run types:src    # type-check src/lib/ (jsconfig.json; in CI)
 ```
 
 ## Tests
@@ -76,10 +76,16 @@ Rscript test/coverage.R             # update test/coverage.md
   (`test/harness/mount.js`). Fixtures run through the R binding in the core
   build and with `newChart()` in the min build.
 - **Chart methods** (`test/methods.mjs`): `select()`, `getSelection()`,
-  `undo()`, `redo()` and `download()`.
+  `undo()`, `redo()`, `resize()` and `download()`, and the warnings of
+  `select()` and `chart.on()` when their event is off.
+- **Spec updates** (`test/update.mjs`): how `update()` merges, the scroll
+  position kept on a redraw, the warning for a newer spec version.
 - **Save and two-chart checks** (`test/save.cjs`, `test/two-charts.cjs`):
   the save menu downloads a valid SVG and PNG; two charts on a page keep
   their own selection and undo history.
+- **Icons, binding and warnings** (`test/icons.cjs`, `test/binding.cjs`,
+  `test/warnings.cjs`): the toolbar without Font Awesome; the Shiny zoom
+  message and a removed output's chart; warnings shown once per page.
 - **Coverage** (`test/coverage.md`): every documented argument of the `GC_*`
   chart functions is used by at least one fixture.
 - **Fixed environment:** the tests run in a Docker image (`docker/`) with

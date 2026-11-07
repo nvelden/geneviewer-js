@@ -147,69 +147,31 @@ generated from it.
 
 ## Decision 3: the JavaScript API
 
-```ts
-geneviewer.newChart(target: string | Element, spec: Spec, options?: {
-  saveAs?: (blob: Blob, filename: string) => void,   // override downloads
-}): Chart
+`geneviewer.newChart(target, spec, options)` draws a chart and gives a
+`Chart` with methods to update, zoom, select, undo and export it, and
+`chart.on()` for its events. `compile(spec)` is public for tests and
+debugging. The API itself is documented once: the site's
+[API reference](https://nvelden.github.io/geneviewer-docs/api) and
+`dist/geneviewer.d.ts`, generated from the JSDoc in `src/lib/`.
 
-interface Chart {
-  update(partial: Partial<Spec>): void   // deep-merge into the spec, redraw
-  setSpec(spec: Spec): void              // replace the spec, redraw
-  getSpec(): Spec
+The decisions behind it:
 
-  on(event: string, handler: (e) => void): () => void   // returns off()
-  off(event: string, handler): void
-
-  zoomTo(range: [number, number] | null): void
-  select(items: Item[]): void
-  getSelection(): Item[]
-  undo(): void
-  redo(): void
-
-  toSVG(): string
-  toPNG(scale?: number): Promise<Blob>
-  download(format: "svg" | "png", filename?: string): Promise<void>
-
-  resize(): void
-  destroy(): void
-}
-
-geneviewer.compile(spec): RenderModel    // exposed for tests and debugging
-geneviewer.themes                        // built-in theme names and options
-geneviewer.palettes
-geneviewer.version
-```
-
-**Events** are the ones the R package already reports to Shiny, so the R
-and Python bindings forward them unchanged: `click`, `dblclick`, `select`,
-`selection`, `drag`, `moves`, `zoom`, `rendered`. Each event's payload is
-documented in the schema.
-
-**Interaction stays in the library.** Toolbar, zoom slider, selection, drag
-and undo/redo currently live in the R htmlwidgets binding. They move into
-the library, switched on through `toolbar`, `zoom` and `events`, so every
-host gets them.
-
-## Distribution
-
-| File | Format | D3 | Minified | For |
-|------|--------|----|----------|-----|
-| `geneviewer.min.js` | script tag, global `geneviewer` | included | yes, with source map | CDN, plain HTML |
-| `geneviewer.mjs` | ES module | `import "d3"` (npm dependency) | no | bundlers (Vite, webpack) |
-| `geneviewer.standalone.mjs` | ES module | included | yes | anywidget (Python), browser `import` |
-| `geneviewer.core.js` | script tag | global `d3` | no | R package (CRAN wants readable source) |
-| `geneviewer.d.ts` | types | | | editors, TypeScript users |
-
-- **CSS:** styles are injected when the first chart is drawn, so users load
-  one file. `geneviewer.css` is also shipped, for pages whose
-  Content-Security-Policy blocks injected styles.
-- **No host dependencies:** `HTMLWidgets`, FileSaver and Font Awesome go.
-  Downloads use the browser's own `<a download>`; the toolbar icons become
-  inline SVG.
-- **npm:** published as `geneviewer-js`. npm refused `geneviewer` as too
-  similar to the existing `gene-viewer` (2026-11-05); the global name stays
-  `geneviewer`.
-  jsDelivr and unpkg serve it automatically.
+- **`update()` deep-merges** into the spec, like plotly's `relayout`;
+  `setSpec()` replaces it.
+- **Events** are the ones the R package already reports to Shiny, so the R
+  and Python bindings forward them unchanged. Each event's payload is typed
+  in `ChartEventDetails` (`src/lib/chart.js`).
+- **Interaction stays in the library.** Toolbar, zoom slider, selection,
+  drag and undo/redo moved out of the R htmlwidgets binding into the
+  library, switched on through `toolbar`, `zoom` and `events`, so every
+  host gets them.
+- **No host dependencies:** no `HTMLWidgets`, FileSaver or Font Awesome.
+  Downloads use the browser's own `<a download>`; the toolbar icons are
+  inline SVG; styles are injected, with `geneviewer.css` for pages whose
+  Content-Security-Policy blocks that.
+- **Names:** published on npm as `geneviewer-js`, since npm refused
+  `geneviewer` as too similar to `gene-viewer` (2026-11-05). The global
+  name stays `geneviewer`. The builds are listed in the README.
 
 ## Not in scope for 1.0
 
@@ -217,23 +179,6 @@ host gets them.
 - Rendering without a browser (static images from R or Python). Possible
   later through a headless browser.
 - Canvas or WebGL rendering for very large genomes.
-
-## Phases
-
-Each phase ends with `npm run try-app` passing all app tests.
-
-0. **Fixtures.** Export about 15 charts from R covering every component. For
-   each, store R's payload and the rendered SVG as baselines.
-1. **Library core.** Move the render pipeline and interaction out of the
-   htmlwidgets binding into `newChart(el, renderModel)`. The R binding
-   becomes a thin wrapper. Check: SVG baselines unchanged.
-2. **compile().** Implement spec resolution in JavaScript, component by
-   component. Check: `compile(spec)` equals R's payload for every fixture.
-3. **Public release.** Remove host dependencies, add the builds, schema,
-   types, docs and examples; publish 0.3.0 to npm (continuing from v0.2.0).
-4. **R package.** `GC_*` functions build the spec; ship the core build.
-   Released after CRAN accepts 0.2.x.
-5. **Python package** on the same API.
 
 ## Decisions taken
 
