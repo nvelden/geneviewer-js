@@ -1,0 +1,7 @@
+{
+  "id": "beh-transcript-marker",
+  "source": "charts",
+  "width": 1000,
+  "height": "200px",
+  "covers": ["GC_chart", "GC_transcript"]
+}

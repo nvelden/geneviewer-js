@@ -1,0 +1,1 @@
+{"version":1,"data":{"start":[1,110,800],"end":[100,200,1000],"kind":["a","b","b"],"name":["a rather long gene name","another long gene name",""]},"fields":{"group":"kind"},"width":"700px","height":"300px","labels":{"label":"name","groupStyle":{"a":{"adjustLabels":"spread"}}}}

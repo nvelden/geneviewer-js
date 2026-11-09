@@ -1,0 +1,7 @@
+{
+  "id": "beh-editor-link-click",
+  "source": "charts",
+  "width": 1000,
+  "height": "400px",
+  "covers": ["GC_chart", "GC_events", "GC_links", "GC_trackMouse"]
+}

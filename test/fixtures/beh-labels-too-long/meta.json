@@ -1,0 +1,7 @@
+{
+  "id": "beh-labels-too-long",
+  "source": "charts",
+  "width": 1000,
+  "height": "260px",
+  "covers": "GC_labels"
+}

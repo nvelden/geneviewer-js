@@ -1,0 +1,1 @@
+{"version":1,"data":{"cluster":["A","B"],"start":[1,1],"end":[400,400]},"fields":{"cluster":"cluster"},"height":"300px","links":{"data":{"cluster1":["A","A","A","A"],"start1":[1,101,201,301],"end1":[90,190,290,390],"cluster2":["B","B","B","B"],"start2":[1,101,201,301],"end2":[90,190,290,390],"identity":[40,60,80,100]},"normalColor":"#000000","vmin":60,"vmax":100}}

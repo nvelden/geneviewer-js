@@ -1,0 +1,7 @@
+{
+  "id": "beh-labels-link-measures-zoomed",
+  "source": "charts",
+  "width": 1000,
+  "height": "260px",
+  "covers": ["GC_labels", "GC_links", "GC_zoom"]
+}

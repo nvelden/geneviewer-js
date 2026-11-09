@@ -1,0 +1,7 @@
+{
+  "id": "beh-editor-scaled-drag",
+  "source": "charts",
+  "width": 1000,
+  "height": "250px",
+  "covers": ["GC_chart", "GC_events", "GC_labels"]
+}

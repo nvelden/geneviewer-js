@@ -1,0 +1,1 @@
+{"version":1,"data":{"start":[10,100],"end":[50,140],"name":["Gene","Other"],"group":["A","B"]},"fields":{"group":"group"},"height":"300px","labels":{"label":"name","adjustLabels":false},"legend":{"show":true},"events":{"click":false,"select":true,"drag":true}}

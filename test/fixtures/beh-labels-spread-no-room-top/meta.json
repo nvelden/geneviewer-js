@@ -1,0 +1,7 @@
+{
+  "id": "beh-labels-spread-no-room-top",
+  "source": "charts",
+  "width": 1000,
+  "height": "300px",
+  "covers": ["GC_grid", "GC_labels"]
+}

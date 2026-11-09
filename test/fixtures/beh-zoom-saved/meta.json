@@ -1,0 +1,7 @@
+{
+  "id": "beh-zoom-saved",
+  "source": "charts",
+  "width": 1000,
+  "height": "400px",
+  "covers": ["GC_chart", "GC_element_style", "GC_legend", "GC_title", "GC_zoom"]
+}

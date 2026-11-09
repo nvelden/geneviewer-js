@@ -1,0 +1,38 @@
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <svg class="geneviewer-svg-content" data-cluster="cluster" height="300" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 700 300" width="700">
+    <g data-component="sequence" transform="translate(50,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="600" y1="145" y2="145">
+    <g data-component="genes" transform="translate(50, 5)">
+      <path class="gene" cluster="cluster" d="M0 7.5 L0 22.5 L497.43 22.5 L497.43 30 L507.43 15 L497.43 0 L497.43 7.5 Z" end="880" fill="#1f77b4" id="cluster-gene-0" rowID="1" start="1" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 11.53, 145) translate(11.53, 130)">
+      <path class="gene" cluster="cluster" d="M0 7.5 L0 22.5 L6.16 22.5 L6.16 30 L16.16 15 L6.16 0 L6.16 7.5 Z" end="928" fill="#1f77b4" id="cluster-gene-1" rowID="2" start="900" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 530.51, 145) translate(530.51, 130)">
+      <path class="gene" cluster="cluster" d="M0 7.5 L0 22.5 L6.16 22.5 L6.16 30 L16.16 15 L6.16 0 L6.16 7.5 Z" end="958" fill="#1f77b4" id="cluster-gene-2" rowID="3" start="930" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 547.83, 145) translate(547.83, 130)">
+      <path class="gene" cluster="cluster" d="M0 7.5 L0 22.5 L3.28 22.5 L3.28 30 L13.28 15 L3.28 0 L3.28 7.5 Z" end="983" fill="#1f77b4" id="cluster-gene-3" rowID="4" start="960" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 565.14, 145) translate(565.14, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.66 15 L0 0 L0 7.5 Z" end="1000" fill="#1f77b4" id="cluster-gene-4" rowID="5" start="985" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 579.58, 145) translate(579.58, 130)">
+    <g data-component="labels" transform="translate(50,5)">
+      <g class="leader-lines" style="pointer-events: none">
+        <line style="stroke-width: 0.75; stroke: rgb(153, 153, 153)" x1="265.25" x2="265.25" y1="162" y2="178">
+        <line style="stroke-width: 0.75; stroke: rgb(153, 153, 153)" x1="538.59" x2="428.1" y1="162" y2="178">
+        <line style="stroke-width: 0.75; stroke: rgb(153, 153, 153)" x1="555.91" x2="460.78" y1="162" y2="178">
+        <line style="stroke-width: 0.75; stroke: rgb(153, 153, 153)" x1="571.78" x2="498.79" y1="162" y2="178">
+        <line style="stroke-width: 0.75; stroke: rgb(153, 153, 153)" x1="583.91" x2="562.48" y1="162" y2="178">
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-0" rowID="1" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) translate(-0.16, 75.5)" x="265.25" y="115.5">
+        "first gene"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-1" rowID="2" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) translate(-110.65, 75.5)" x="538.59" y="115.5">
+        "alpha"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-2" rowID="3" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) translate(-95.29, 75.5)" x="555.91" y="115.5">
+        "beta"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-3" rowID="4" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) translate(-73.15, 75.5)" x="571.78" y="115.5">
+        "gamma"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-4" rowID="5" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) translate(-21.59, 75.5)" x="583.91" y="115.5">
+        "last label here"
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <span aria-haspopup="menu" aria-label="Save chart" class="geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+      <svg aria-hidden="true" class="geneviewer-icon-svg" focusable="false" style="width: 1em" viewBox="0 0 512 512">
+        <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"

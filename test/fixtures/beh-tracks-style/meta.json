@@ -1,0 +1,7 @@
+{
+  "id": "beh-tracks-style",
+  "source": "charts",
+  "width": 1000,
+  "height": "150px",
+  "covers": ["GC_chart", "GC_cluster", "GC_genes", "GC_labels"]
+}

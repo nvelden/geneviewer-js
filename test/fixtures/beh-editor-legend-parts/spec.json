@@ -1,0 +1,1 @@
+{"version":1,"data":{"start":[10,60],"end":[40,90],"group":["A","B"]},"fields":{"group":"group"},"height":"300px","elementStyle":[{"component":"legend","text":"Edited","fill":"red","part":"label","group":"A"},{"component":"legend","fill":"blue","strokeWidth":3,"part":"marker","group":"A"}],"events":{"dblclick":true,"select":true}}

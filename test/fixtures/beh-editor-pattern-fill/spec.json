@@ -1,0 +1,1 @@
+{"version":1,"data":{"start":[10,60],"end":[40,90],"group":["A","B"]},"fields":{"group":"group"},"height":"200px","color":{"customColors":{"A":"#c7e02c","B":"#1f77b4"}},"pattern":{"patterns":{"B":"diagonal"},"background":null},"events":{"select":true}}

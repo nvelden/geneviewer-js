@@ -1,0 +1,7 @@
+{
+  "id": "beh-title-descenders",
+  "source": "charts",
+  "width": 1000,
+  "height": "150px",
+  "covers": ["GC_chart", "GC_theme", "GC_title"]
+}

@@ -1,0 +1,1 @@
+{"version":1,"data":{"start":[10,50,90,130],"end":[40,80,120,160],"name":["a1","b1","a2","c1"],"class":["A","B","A","C"],"family":["x","y","y","x"],"cluster":[1,1,1,1]},"fields":{"group":"class"},"height":"200px","coordinates":{"groupStyle":{"y":{"show":false}},"styleBy":"family"}}

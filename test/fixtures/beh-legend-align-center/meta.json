@@ -1,0 +1,7 @@
+{
+  "id": "beh-legend-align-center",
+  "source": "charts",
+  "width": 1000,
+  "height": "150px",
+  "covers": ["GC_chart", "GC_legend"]
+}

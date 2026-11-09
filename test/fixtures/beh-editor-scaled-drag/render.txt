@@ -1,0 +1,47 @@
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <svg class="geneviewer-svg-content" data-cluster="cluster" height="250" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 250" width="1000">
+    <g data-component="sequence" transform="translate(50,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="900" y1="120" y2="120">
+    <g data-component="genes" transform="translate(50, 5)">
+      <path class="gene" cluster="cluster" d="M0 7.5 L0 22.5 L855.05 22.5 L855.05 30 L865.05 15 L855.05 0 L855.05 7.5 Z" end="50" fill="#1f77b4" id="cluster-gene-0" rowID="1" start="10" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 17.3, 120) translate(17.3, 105)">
+    <g data-component="labels" transform="translate(50,5)">
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-0" rowID="1" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 449.83, 93)" x="449.83" y="93">
+        "Gene"
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar">
+  <div aria-label="Positions" class="geneviewer-history" hidden="" role="group">
+    <button aria-keyshortcuts="Control+Z Meta+Z" aria-label="Undo" class="geneviewer-toolbar-button geneviewer-undo" disabled="" type="button">
+      <span aria-hidden="true" class="geneviewer-icon">
+        <svg aria-hidden="true" class="geneviewer-icon-svg" focusable="false" style="width: 1em" viewBox="0 0 512 512">
+          <path d="M48.5 224H40c-13.3 0-24-10.7-24-24V72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8H48.5z">
+      <span aria-hidden="true" class="geneviewer-toolbar-tip">
+        <span>
+          "Undo"
+        <kbd>
+          "Ctrl+Z"
+    <button aria-keyshortcuts="Control+Shift+Z Meta+Shift+Z Control+Y" aria-label="Redo" class="geneviewer-toolbar-button geneviewer-redo" disabled="" type="button">
+      <span aria-hidden="true" class="geneviewer-icon">
+        <svg aria-hidden="true" class="geneviewer-icon-svg" focusable="false" style="width: 1em" viewBox="0 0 512 512">
+          <path d="M463.5 224H472c13.3 0 24-10.7 24-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1c-87.5 87.5-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H463.5z">
+      <span aria-hidden="true" class="geneviewer-toolbar-tip">
+        <span>
+          "Redo"
+        <kbd>
+          "Ctrl+Y"
+    <button aria-label="Reset positions" class="geneviewer-toolbar-button geneviewer-reset" disabled="" type="button">
+      <span aria-hidden="true" class="geneviewer-icon">
+        <svg aria-hidden="true" class="geneviewer-icon-svg" focusable="false" style="width: 1.13em" viewBox="0 0 576 512">
+          <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z">
+      <span aria-hidden="true" class="geneviewer-toolbar-tip">
+        <span>
+          "Reset positions"
+    <span class="geneviewer-toolbar-divider">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <span aria-haspopup="menu" aria-label="Save chart" class="geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+      <svg aria-hidden="true" class="geneviewer-icon-svg" focusable="false" style="width: 1em" viewBox="0 0 512 512">
+        <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"

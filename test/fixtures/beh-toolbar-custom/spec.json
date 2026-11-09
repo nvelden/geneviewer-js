@@ -1,0 +1,1 @@
+{"version":1,"data":{"start":[10,60],"end":[40,90],"name":["A","B"]},"height":"200px","labels":{"label":"name"},"events":{"select":true,"drag":true},"theme":{"base":"dark"},"toolbar":{"show":"always","position":"bottomleft","buttons":["undo","save"],"size":16,"color":"rgb(1, 2, 3)","tooltipBackground":"rgb(4, 5, 6)","icons":{"undo":"fa-regular fa-circle-left","save":"camera"}}}

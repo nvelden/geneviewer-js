@@ -1,0 +1,1 @@
+{"version":1,"data":{"start":[10,20],"end":[50,60],"cluster":["A","B"]},"fields":{"cluster":"cluster"},"height":"400px","scale":{"hidden":false},"scaleBar":{"unit":10},"elementStyle":[{"component":"scale","moveX":5,"moveY":-5,"cluster":"A"}],"events":{"click":false,"select":true,"drag":true}}

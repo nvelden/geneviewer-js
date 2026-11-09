@@ -1,0 +1,7 @@
+{
+  "id": "beh-render-events",
+  "source": "charts",
+  "width": 1000,
+  "height": "400px",
+  "covers": ["GC_chart", "GC_events", "GC_labels", "GC_links", "GC_title"]
+}

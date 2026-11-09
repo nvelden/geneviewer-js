@@ -1,0 +1,7 @@
+{
+  "id": "beh-every-part-events",
+  "source": "charts",
+  "width": 1000,
+  "height": "500px",
+  "covers": "GC_events"
+}

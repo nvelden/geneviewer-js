@@ -1,0 +1,30 @@
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <svg class="geneviewer-svg-content" data-cluster="cluster" height="200" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 1000 200" width="1000">
+    <g data-component="sequence" transform="translate(50,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: rgb(238, 238, 238)" x1="0" x2="900" y1="95" y2="95">
+    <g data-component="genes" transform="translate(50, 5)">
+      <path aria-label="genes: A" aria-pressed="false" class="gene" cluster="cluster" d="M0 10.5 L0 19.5 Q0 22.5 3 22.5 L314.39 22.5 Q314.39 22.5 314.39 22.5 L314.39 27 Q314.39 30 316.06 27.5 L322.73 17.5 Q324.39 15 322.73 12.5 L316.06 2.5 Q314.39 0 314.39 3 L314.39 7.5 Q314.39 7.5 314.39 7.5 L3 7.5 Q0 7.5 0 10.5 Z" end="40" fill="#dd6b66" id="cluster-gene-0" role="button" rowID="1" start="10" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" tabindex="0" transform="rotate(0, 17.3, 95) translate(17.3, 80)">
+      <path aria-label="genes: B" aria-pressed="false" class="gene" cluster="cluster" d="M0 10.5 L0 19.5 Q0 22.5 3 22.5 L314.39 22.5 Q314.39 22.5 314.39 22.5 L314.39 27 Q314.39 30 316.06 27.5 L322.73 17.5 Q324.39 15 322.73 12.5 L316.06 2.5 Q314.39 0 314.39 3 L314.39 7.5 Q314.39 7.5 314.39 7.5 L3 7.5 Q0 7.5 0 10.5 Z" end="90" fill="#dd6b66" id="cluster-gene-1" role="button" rowID="2" start="60" strand="forward" style="cursor: default; stroke-width: 1; stroke: none" tabindex="0" transform="rotate(0, 557.96, 95) translate(557.96, 80)">
+    <g data-component="labels" transform="translate(50,5)">
+      <text aria-label="labels: A" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-cluster-label-0" role="button" rowID="1" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 12px; font-style: normal" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 179.5, 70.5)" x="179.5" y="70.5">
+        "A"
+      <text aria-label="labels: B" aria-pressed="false" class="label" dx="0em" dy="0em" id="cluster-cluster-label-1" role="button" rowID="2" style="cursor: default; fill: rgb(238, 238, 238); font-family: sans-serif; font-size: 12px; font-style: normal" tabindex="0" text-anchor="middle" transform="translate(0, 0) rotate(0, 720.16, 70.5)" x="720.16" y="70.5">
+        "B"
+<div class="cluster-tooltip" style="--tooltip-bg: #ffffff; background-color: rgb(255, 255, 255); border-radius: 4px; border: 1px solid rgb(183, 185, 190); box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; color: rgb(109, 110, 115); font-family: sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-bottomleft geneviewer-toolbar-always" id="geneviewer-toolbar-chart" role="toolbar" style="--gv-toolbar-color: rgb(1, 2, 3); --gv-toolbar-font: sans-serif; --gv-toolbar-hover: #eeeeee; --gv-toolbar-size: 16px; --gv-toolbar-tip-background: rgb(4, 5, 6); --gv-toolbar-tip-border: 1px solid #b7b9be; --gv-toolbar-tip-color: #6d6e73; --gv-toolbar-tip-radius: 4px; --gv-toolbar-tip-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2)">
+  <div aria-label="Positions" class="geneviewer-history" hidden="" role="group">
+    <button aria-keyshortcuts="Control+Z Meta+Z" aria-label="Undo" class="geneviewer-toolbar-button geneviewer-undo" disabled="" type="button">
+      <i aria-hidden="true" class="fa-regular fa-circle-left">
+      <span aria-hidden="true" class="geneviewer-toolbar-tip">
+        <span>
+          "Undo"
+        <kbd>
+          "Ctrl+Z"
+    <span class="geneviewer-toolbar-divider">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <i aria-haspopup="menu" aria-label="Save chart" class="fa-solid fa-camera geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"

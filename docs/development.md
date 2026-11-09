@@ -83,6 +83,12 @@ Rscript test/coverage.R             # update test/coverage.md
 - **Save and two-chart checks** (`test/save.cjs`, `test/two-charts.cjs`):
   the save menu downloads a valid SVG and PNG; two charts on a page keep
   their own selection and undo history.
+- **Behaviour tests** (`test/behaviour/`, `test/behaviour.cjs`): what a
+  drawn chart does, checked with assertions: the element editor and
+  toolbar, label placement, the color bar, the zoom slider, layout, group
+  styles, render events, Shiny sizing and PNG export. Each case draws a
+  `beh-*` fixture through the R binding. Moved from the R package's browser
+  tests; `node test/behaviour.cjs --only <text>` runs some of them.
 - **Icons, binding and warnings** (`test/icons.cjs`, `test/binding.cjs`,
   `test/warnings.cjs`): the toolbar without Font Awesome; the Shiny zoom
   message and a removed output's chart; warnings shown once per page.

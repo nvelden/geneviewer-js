@@ -1,0 +1,212 @@
+<div class="geneviewer-container" id="geneviewer-graph-container-chart" style="flex-direction: column; position: relative">
+  <svg class="geneviewer-svg-content" data-cluster="cluster" height="300" id="svg-container-1" preserveAspectRatio="xMinYMin meet" style="background-color: rgba(0, 0, 0, 0); box-sizing: border-box; width: 100%" viewBox="0 0 700 300" width="700">
+    <g data-component="sequence" transform="translate(50,5)">
+      <line class="baseline" style="stroke-width: 1; stroke: grey" x1="0" x2="600" y1="145" y2="145">
+    <g data-component="genes" transform="translate(50, 5)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="90" fill="#1f77b4" id="cluster-gene-0" rowID="1" start="1" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 11.53, 145) translate(11.53, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="190" fill="#1f77b4" id="cluster-gene-1" rowID="2" start="101" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 21.16, 145) translate(21.16, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="290" fill="#1f77b4" id="cluster-gene-2" rowID="3" start="201" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 30.79, 145) translate(30.79, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="390" fill="#1f77b4" id="cluster-gene-3" rowID="4" start="301" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 40.42, 145) translate(40.42, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="490" fill="#1f77b4" id="cluster-gene-4" rowID="5" start="401" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 50.05, 145) translate(50.05, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="590" fill="#1f77b4" id="cluster-gene-5" rowID="6" start="501" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 59.68, 145) translate(59.68, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="690" fill="#1f77b4" id="cluster-gene-6" rowID="7" start="601" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 69.31, 145) translate(69.31, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="790" fill="#1f77b4" id="cluster-gene-7" rowID="8" start="701" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 78.94, 145) translate(78.94, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="890" fill="#1f77b4" id="cluster-gene-8" rowID="9" start="801" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 88.57, 145) translate(88.57, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="990" fill="#1f77b4" id="cluster-gene-9" rowID="10" start="901" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 98.2, 145) translate(98.2, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="1090" fill="#1f77b4" id="cluster-gene-10" rowID="11" start="1001" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 107.83, 145) translate(107.83, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="1190" fill="#1f77b4" id="cluster-gene-11" rowID="12" start="1101" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 117.46, 145) translate(117.46, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="1290" fill="#1f77b4" id="cluster-gene-12" rowID="13" start="1201" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 127.09, 145) translate(127.09, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="1390" fill="#1f77b4" id="cluster-gene-13" rowID="14" start="1301" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 136.72, 145) translate(136.72, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="1490" fill="#1f77b4" id="cluster-gene-14" rowID="15" start="1401" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 146.34, 145) translate(146.34, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="1590" fill="#1f77b4" id="cluster-gene-15" rowID="16" start="1501" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 155.97, 145) translate(155.97, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="1690" fill="#1f77b4" id="cluster-gene-16" rowID="17" start="1601" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 165.6, 145) translate(165.6, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="1790" fill="#1f77b4" id="cluster-gene-17" rowID="18" start="1701" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 175.23, 145) translate(175.23, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="1890" fill="#1f77b4" id="cluster-gene-18" rowID="19" start="1801" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 184.86, 145) translate(184.86, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="1990" fill="#1f77b4" id="cluster-gene-19" rowID="20" start="1901" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 194.49, 145) translate(194.49, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="2090" fill="#1f77b4" id="cluster-gene-20" rowID="21" start="2001" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 204.12, 145) translate(204.12, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="2190" fill="#1f77b4" id="cluster-gene-21" rowID="22" start="2101" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 213.75, 145) translate(213.75, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="2290" fill="#1f77b4" id="cluster-gene-22" rowID="23" start="2201" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 223.38, 145) translate(223.38, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="2390" fill="#1f77b4" id="cluster-gene-23" rowID="24" start="2301" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 233.01, 145) translate(233.01, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="2490" fill="#1f77b4" id="cluster-gene-24" rowID="25" start="2401" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 242.64, 145) translate(242.64, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="2590" fill="#1f77b4" id="cluster-gene-25" rowID="26" start="2501" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 252.27, 145) translate(252.27, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="2690" fill="#1f77b4" id="cluster-gene-26" rowID="27" start="2601" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 261.9, 145) translate(261.9, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="2790" fill="#1f77b4" id="cluster-gene-27" rowID="28" start="2701" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 271.53, 145) translate(271.53, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="2890" fill="#1f77b4" id="cluster-gene-28" rowID="29" start="2801" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 281.16, 145) translate(281.16, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="2990" fill="#1f77b4" id="cluster-gene-29" rowID="30" start="2901" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 290.78, 145) translate(290.78, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="3090" fill="#1f77b4" id="cluster-gene-30" rowID="31" start="3001" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 300.41, 145) translate(300.41, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="3190" fill="#1f77b4" id="cluster-gene-31" rowID="32" start="3101" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 310.04, 145) translate(310.04, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="3290" fill="#1f77b4" id="cluster-gene-32" rowID="33" start="3201" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 319.67, 145) translate(319.67, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="3390" fill="#1f77b4" id="cluster-gene-33" rowID="34" start="3301" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 329.3, 145) translate(329.3, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="3490" fill="#1f77b4" id="cluster-gene-34" rowID="35" start="3401" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 338.93, 145) translate(338.93, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="3590" fill="#1f77b4" id="cluster-gene-35" rowID="36" start="3501" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 348.56, 145) translate(348.56, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="3690" fill="#1f77b4" id="cluster-gene-36" rowID="37" start="3601" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 358.19, 145) translate(358.19, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="3790" fill="#1f77b4" id="cluster-gene-37" rowID="38" start="3701" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 367.82, 145) translate(367.82, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="3890" fill="#1f77b4" id="cluster-gene-38" rowID="39" start="3801" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 377.45, 145) translate(377.45, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="3990" fill="#1f77b4" id="cluster-gene-39" rowID="40" start="3901" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 387.08, 145) translate(387.08, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="4090" fill="#1f77b4" id="cluster-gene-40" rowID="41" start="4001" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 396.71, 145) translate(396.71, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="4190" fill="#1f77b4" id="cluster-gene-41" rowID="42" start="4101" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 406.34, 145) translate(406.34, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="4290" fill="#1f77b4" id="cluster-gene-42" rowID="43" start="4201" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 415.97, 145) translate(415.97, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="4390" fill="#1f77b4" id="cluster-gene-43" rowID="44" start="4301" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 425.6, 145) translate(425.6, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="4490" fill="#1f77b4" id="cluster-gene-44" rowID="45" start="4401" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 435.23, 145) translate(435.23, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="4590" fill="#1f77b4" id="cluster-gene-45" rowID="46" start="4501" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 444.85, 145) translate(444.85, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="4690" fill="#1f77b4" id="cluster-gene-46" rowID="47" start="4601" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 454.48, 145) translate(454.48, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="4790" fill="#1f77b4" id="cluster-gene-47" rowID="48" start="4701" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 464.11, 145) translate(464.11, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="4890" fill="#1f77b4" id="cluster-gene-48" rowID="49" start="4801" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 473.74, 145) translate(473.74, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="4990" fill="#1f77b4" id="cluster-gene-49" rowID="50" start="4901" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 483.37, 145) translate(483.37, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="5090" fill="#1f77b4" id="cluster-gene-50" rowID="51" start="5001" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 493, 145) translate(493, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="5190" fill="#1f77b4" id="cluster-gene-51" rowID="52" start="5101" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 502.63, 145) translate(502.63, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="5290" fill="#1f77b4" id="cluster-gene-52" rowID="53" start="5201" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 512.26, 145) translate(512.26, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="5390" fill="#1f77b4" id="cluster-gene-53" rowID="54" start="5301" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 521.89, 145) translate(521.89, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="5490" fill="#1f77b4" id="cluster-gene-54" rowID="55" start="5401" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 531.52, 145) translate(531.52, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="5590" fill="#1f77b4" id="cluster-gene-55" rowID="56" start="5501" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 541.15, 145) translate(541.15, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="5690" fill="#1f77b4" id="cluster-gene-56" rowID="57" start="5601" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 550.78, 145) translate(550.78, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="5790" fill="#1f77b4" id="cluster-gene-57" rowID="58" start="5701" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 560.41, 145) translate(560.41, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="5890" fill="#1f77b4" id="cluster-gene-58" rowID="59" start="5801" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 570.04, 145) translate(570.04, 130)">
+      <path class="gene" cluster="cluster" d="M0 22.5 L0 30 L8.57 15 L0 0 L0 7.5 Z" end="5990" fill="#1f77b4" id="cluster-gene-59" rowID="60" start="5901" strand="forward" style="cursor: default; stroke-width: 1; stroke: black" transform="rotate(0, 579.67, 145) translate(579.67, 130)">
+    <g data-component="labels" transform="translate(50,5)">
+      <g class="leader-lines" style="pointer-events: none">
+        <line style="stroke-width: 0.75; stroke: rgb(153, 153, 153)" x1="15.82" x2="16.69" y1="162" y2="178">
+        <line style="stroke-width: 0.75; stroke: rgb(153, 153, 153)" x1="25.45" x2="56.22" y1="162" y2="178">
+        <line style="stroke-width: 0.75; stroke: rgb(153, 153, 153)" x1="35.08" x2="95.92" y1="162" y2="178">
+        <line style="stroke-width: 0.75; stroke: rgb(153, 153, 153)" x1="44.71" x2="135.61" y1="162" y2="178">
+        <line style="stroke-width: 0.75; stroke: rgb(153, 153, 153)" x1="54.34" x2="175.31" y1="162" y2="178">
+        <line style="stroke-width: 0.75; stroke: rgb(153, 153, 153)" x1="63.97" x2="215" y1="162" y2="178">
+        <line style="stroke-width: 0.75; stroke: rgb(153, 153, 153)" x1="73.6" x2="255.2" y1="162" y2="178">
+        <line style="stroke-width: 0.75; stroke: rgb(153, 153, 153)" x1="83.22" x2="295.39" y1="162" y2="178">
+        <line style="stroke-width: 0.75; stroke: rgb(153, 153, 153)" x1="92.85" x2="335.09" y1="162" y2="178">
+        <line style="stroke-width: 0.75; stroke: rgb(153, 153, 153)" x1="102.48" x2="378.12" y1="162" y2="178">
+        <line style="stroke-width: 0.75; stroke: rgb(153, 153, 153)" x1="112.11" x2="423.88" y1="162" y2="178">
+        <line style="stroke-width: 0.75; stroke: rgb(153, 153, 153)" x1="121.74" x2="469.65" y1="162" y2="178">
+        <line style="stroke-width: 0.75; stroke: rgb(153, 153, 153)" x1="131.37" x2="516.02" y1="162" y2="178">
+        <line style="stroke-width: 0.75; stroke: rgb(153, 153, 153)" x1="141" x2="562.39" y1="162" y2="178">
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-0" rowID="1" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) translate(0.87, 75.5)" x="15.82" y="115.5">
+        "gene1"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-1" rowID="2" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) translate(30.61, 75.5)" x="25.45" y="115.5">
+        "gene2"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-2" rowID="3" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) translate(60.68, 75.5)" x="35.08" y="115.5">
+        "gene3"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-3" rowID="4" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) translate(90.75, 75.5)" x="44.71" y="115.5">
+        "gene4"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-4" rowID="5" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) translate(120.81, 75.5)" x="54.34" y="115.5">
+        "gene5"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-5" rowID="6" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) translate(150.88, 75.5)" x="63.97" y="115.5">
+        "gene6"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-6" rowID="7" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) translate(180.94, 75.5)" x="73.6" y="115.5">
+        "gene7"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-7" rowID="8" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) translate(212.01, 75.5)" x="83.22" y="115.5">
+        "gene8"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-8" rowID="9" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) translate(242.08, 75.5)" x="92.85" y="115.5">
+        "gene9"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-9" rowID="10" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) translate(275.48, 75.5)" x="102.48" y="115.5">
+        "gene10"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-10" rowID="11" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) translate(311.77, 75.5)" x="112.11" y="115.5">
+        "gene11"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-11" rowID="12" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) translate(347.74, 75.5)" x="121.74" y="115.5">
+        "gene12"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-12" rowID="13" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) translate(384.48, 75.5)" x="131.37" y="115.5">
+        "gene13"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-13" rowID="14" style="cursor: default; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) translate(421.22, 75.5)" x="141" y="115.5">
+        "gene14"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-14" rowID="15" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 150.63, 115.5)" x="150.63" y="115.5">
+        "gene15"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-15" rowID="16" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 160.26, 115.5)" x="160.26" y="115.5">
+        "gene16"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-16" rowID="17" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 169.89, 115.5)" x="169.89" y="115.5">
+        "gene17"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-17" rowID="18" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 179.52, 115.5)" x="179.52" y="115.5">
+        "gene18"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-18" rowID="19" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 189.15, 115.5)" x="189.15" y="115.5">
+        "gene19"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-19" rowID="20" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 198.78, 115.5)" x="198.78" y="115.5">
+        "gene20"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-20" rowID="21" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 208.41, 115.5)" x="208.41" y="115.5">
+        "gene21"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-21" rowID="22" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 218.04, 115.5)" x="218.04" y="115.5">
+        "gene22"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-22" rowID="23" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 227.66, 115.5)" x="227.66" y="115.5">
+        "gene23"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-23" rowID="24" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 237.29, 115.5)" x="237.29" y="115.5">
+        "gene24"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-24" rowID="25" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 246.92, 115.5)" x="246.92" y="115.5">
+        "gene25"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-25" rowID="26" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 256.55, 115.5)" x="256.55" y="115.5">
+        "gene26"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-26" rowID="27" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 266.18, 115.5)" x="266.18" y="115.5">
+        "gene27"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-27" rowID="28" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 275.81, 115.5)" x="275.81" y="115.5">
+        "gene28"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-28" rowID="29" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 285.44, 115.5)" x="285.44" y="115.5">
+        "gene29"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-29" rowID="30" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 295.07, 115.5)" x="295.07" y="115.5">
+        "gene30"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-30" rowID="31" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 304.7, 115.5)" x="304.7" y="115.5">
+        "gene31"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-31" rowID="32" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 314.33, 115.5)" x="314.33" y="115.5">
+        "gene32"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-32" rowID="33" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 323.96, 115.5)" x="323.96" y="115.5">
+        "gene33"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-33" rowID="34" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 333.59, 115.5)" x="333.59" y="115.5">
+        "gene34"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-34" rowID="35" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 343.22, 115.5)" x="343.22" y="115.5">
+        "gene35"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-35" rowID="36" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 352.85, 115.5)" x="352.85" y="115.5">
+        "gene36"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-36" rowID="37" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 362.48, 115.5)" x="362.48" y="115.5">
+        "gene37"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-37" rowID="38" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 372.1, 115.5)" x="372.1" y="115.5">
+        "gene38"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-38" rowID="39" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 381.73, 115.5)" x="381.73" y="115.5">
+        "gene39"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-39" rowID="40" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 391.36, 115.5)" x="391.36" y="115.5">
+        "gene40"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-40" rowID="41" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 400.99, 115.5)" x="400.99" y="115.5">
+        "gene41"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-41" rowID="42" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 410.62, 115.5)" x="410.62" y="115.5">
+        "gene42"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-42" rowID="43" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 420.25, 115.5)" x="420.25" y="115.5">
+        "gene43"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-43" rowID="44" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 429.88, 115.5)" x="429.88" y="115.5">
+        "gene44"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-44" rowID="45" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 439.51, 115.5)" x="439.51" y="115.5">
+        "gene45"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-45" rowID="46" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 449.14, 115.5)" x="449.14" y="115.5">
+        "gene46"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-46" rowID="47" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 458.77, 115.5)" x="458.77" y="115.5">
+        "gene47"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-47" rowID="48" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 468.4, 115.5)" x="468.4" y="115.5">
+        "gene48"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-48" rowID="49" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 478.03, 115.5)" x="478.03" y="115.5">
+        "gene49"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-49" rowID="50" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 487.66, 115.5)" x="487.66" y="115.5">
+        "gene50"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-50" rowID="51" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 497.29, 115.5)" x="497.29" y="115.5">
+        "gene51"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-51" rowID="52" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 506.92, 115.5)" x="506.92" y="115.5">
+        "gene52"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-52" rowID="53" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 516.54, 115.5)" x="516.54" y="115.5">
+        "gene53"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-53" rowID="54" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 526.17, 115.5)" x="526.17" y="115.5">
+        "gene54"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-54" rowID="55" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 535.8, 115.5)" x="535.8" y="115.5">
+        "gene55"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-55" rowID="56" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 545.43, 115.5)" x="545.43" y="115.5">
+        "gene56"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-56" rowID="57" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 555.06, 115.5)" x="555.06" y="115.5">
+        "gene57"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-57" rowID="58" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 564.69, 115.5)" x="564.69" y="115.5">
+        "gene58"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-58" rowID="59" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 574.32, 115.5)" x="574.32" y="115.5">
+        "gene59"
+      <text class="label" dx="0em" dy="0em" id="cluster-cluster-label-59" rowID="60" style="cursor: default; display: none; font-family: sans-serif; font-size: 12px; font-style: italic" text-anchor="middle" transform="translate(0, 0) rotate(0, 583.95, 115.5)" x="583.95" y="115.5">
+        "gene60"
+<div class="cluster-tooltip" style="--tooltip-bg: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.9); border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0; padding: 8px; pointer-events: none; position: absolute; z-index: 1000">
+<div aria-label="Chart" class="geneviewer-toolbar geneviewer-toolbar-topright" id="geneviewer-toolbar-chart" role="toolbar">
+  <div id="saveMenu-chart" style="display: block; position: relative; z-index: 1000">
+    <span aria-haspopup="menu" aria-label="Save chart" class="geneviewer-save-icon" id="saveIcon-chart" role="button" style="cursor: pointer; text-align: right" tabindex="0">
+      <svg aria-hidden="true" class="geneviewer-icon-svg" focusable="false" style="width: 1em" viewBox="0 0 512 512">
+        <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z">
+    <div class="save-tooltip" id="saveIconTooltip-chart" role="menu" style="display: none; font-size: 12px; overflow: hidden; white-space: nowrap">
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as SVG"
+      <div class="save-option" role="menuitem" style="cursor: pointer; padding: 5px 8px" tabindex="0">
+        "Save as PNG"

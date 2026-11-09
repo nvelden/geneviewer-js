@@ -1,0 +1,7 @@
+{
+  "id": "beh-toolbar-custom",
+  "source": "charts",
+  "width": 1000,
+  "height": "200px",
+  "covers": ["GC_theme", "GC_toolbar"]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "beh-editor-legend-parts",
+  "source": "charts",
+  "width": 1000,
+  "height": "300px",
+  "covers": ["GC_chart", "GC_element_style", "GC_events"]
+}

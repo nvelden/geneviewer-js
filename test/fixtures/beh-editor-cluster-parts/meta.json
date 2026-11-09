@@ -1,0 +1,7 @@
+{
+  "id": "beh-editor-cluster-parts",
+  "source": "charts",
+  "width": 1000,
+  "height": "500px",
+  "covers": ["GC_chart", "GC_clusterFooter", "GC_clusterLabel", "GC_clusterTitle", "GC_coordinates", "GC_element_style", "GC_events"]
+}

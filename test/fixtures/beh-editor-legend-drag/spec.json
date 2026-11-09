@@ -1,0 +1,1 @@
+{"version":1,"data":{"start":[10,60],"end":[40,90],"group":["A","B"]},"fields":{"group":"group"},"height":"250px","legend":{"show":true},"elementStyle":[{"component":"legend","moveX":4,"moveY":-3,"part":"marker","group":"B"}],"events":{"click":false,"drag":true}}

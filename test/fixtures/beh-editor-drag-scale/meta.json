@@ -1,0 +1,7 @@
+{
+  "id": "beh-editor-drag-scale",
+  "source": "charts",
+  "width": 1000,
+  "height": "400px",
+  "covers": ["GC_chart", "GC_element_style", "GC_events", "GC_scale", "GC_scaleBar"]
+}

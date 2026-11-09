@@ -1,0 +1,1 @@
+{"version":1,"data":{"start":[10,100],"end":[50,140],"name":["Gene","Other"]},"height":"250px","labels":{"label":"name","adjustLabels":false},"elementStyle":[{"component":"labels","rowID":2,"moveX":5,"moveY":5}],"events":{"click":false,"select":true,"drag":true}}

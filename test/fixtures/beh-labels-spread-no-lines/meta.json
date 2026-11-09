@@ -1,0 +1,7 @@
+{
+  "id": "beh-labels-spread-no-lines",
+  "source": "charts",
+  "width": 1000,
+  "height": "300px",
+  "covers": "GC_labels"
+}
