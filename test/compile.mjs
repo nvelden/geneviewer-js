@@ -41,7 +41,7 @@ const only = valuesOf("--only");
 const fixtures = valuesOf("--fixture");
 const verbose = args.includes("--verbose");
 
-// Approved differences from R (docs/roadmap.md, exceptions list), by fixture
+// Approved differences from R, by fixture
 // and component: { "<fixture>": ["<component>", ...] }
 const EXCEPTIONS = {
   // 2: params of GenBank input have cluster and strand (from fields)

@@ -72,7 +72,7 @@ These are decisions about the whole spec, not one name.
 
 - **C. Data processing is not in the spec.** `GC_normalize` and the gene
   matching of `GC_links(group, value1, value2)` stay in R and
-  Python (roadmap, "Chart building only"). The spec gets their results:
+  Python (the library only builds charts). The spec gets their results:
   shifted positions in `data`, pairs in `links.data`. `GC_zoom_to` is a
   Shiny command; JavaScript calls `chart.zoomTo()`.
 

@@ -67,7 +67,7 @@ Rscript test/coverage.R             # update test/coverage.md
   drawn chart. `npm test` draws every fixture and compares.
 - **compile()** (`npm run test:compile`, in `npm test`): `compile(spec)`
   equals the `payload.json` R 0.2 made, for the fixtures that still have one,
-  apart from the approved exceptions (docs/roadmap.md).
+  apart from a few approved exceptions.
 - **Interaction tests** (`test/interaction/`): scripted zoom, selection,
   drag and undo/redo, with the chart and its events recorded after each
   step.
@@ -175,6 +175,3 @@ The site, for all languages, has its own repository:
 the newest version of this library on npm, and its tests check that every chart
 draws.
 
-## Roadmap
-
-See [roadmap.md](roadmap.md).

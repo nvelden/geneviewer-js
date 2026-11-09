@@ -3,3 +3,9 @@ node_modules/
 .DS_Store
 .try-app.env
 test/harness/build/
+
+# Internal planning: plans, roadmap, step reports and reviews stay local
+docs/plans/
+docs/roadmap.md
+docs/*REVIEW*.md
+docs/internal/
