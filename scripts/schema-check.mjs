@@ -3,9 +3,12 @@
 // - every documented R argument in test/coverage.md has a row in
 //   schema/NAMING.md, with a spec name or "not in spec";
 // - every spec name in schema/NAMING.md is a property in the schema;
-// - every example in schema/examples/ is a valid spec.
+// - every example in schema/examples/ is a valid spec;
+// - the built-in themes in src/themes.json use the spec's names: no snake_case
+//   and no renderer names, and each is a valid theme of a spec.
 import { readFileSync, readdirSync } from "node:fs";
 import Ajv2020 from "ajv/dist/2020.js";
+import { THEME_NAMES } from "../src/lib/compile/names.js";
 
 const failures = [];
 const fail = (message) => failures.push(message);
@@ -59,7 +62,21 @@ for (const file of readdirSync("schema/examples").filter((f) => f.endsWith(".jso
   if (!validate(spec)) fail(`examples/${file}: ${ajv.errorsText(validate.errors)}`);
 }
 
+const themes = JSON.parse(readFileSync("src/themes.json", "utf8")).themes;
+for (const [name, theme] of Object.entries(themes)) {
+  for (const [component, options] of Object.entries(theme)) {
+    if (!options || typeof options !== "object" || Array.isArray(options)) continue;
+    const rendererNames = Object.values(THEME_NAMES[component] || {});
+    for (const key of Object.keys(options)) {
+      if (key.includes("_")) fail(`themes.json: ${name}.${component}.${key} is not camelCase`);
+      if (rendererNames.includes(key)) fail(`themes.json: ${name}.${component}.${key} is the renderer's name`);
+    }
+  }
+  const spec = { version: 1, data: { start: [1], end: [2] }, theme: { base: name, ...theme } };
+  if (!validate(spec)) fail(`themes.json: ${name}: ${ajv.errorsText(validate.errors)}`);
+}
+
 failures.forEach((message) => console.error(`FAIL  ${message}`));
 console.log(`schema: ${failures.length ? failures.length + " failed" : "all passed"} ` +
-  `(${covered.length} R arguments, ${naming.size} rows in NAMING.md)`);
+  `(${covered.length} R arguments, ${naming.size} rows in NAMING.md, ${Object.keys(themes).length} themes)`);
 process.exit(failures.length ? 1 : 0);
