@@ -65,8 +65,10 @@ These are decisions about the whole spec, not one name.
   component's options have the component's spec names:
   `theme.legend.textStyle`, `theme.sequence.lineStyle`,
   `theme.scaleBar.lineStyle`, `theme.links.show`, `theme.scale.autoBreaks`.
-  compile() maps them to the renderer's names. `src/themes.json` keeps R's
-  names, for R to read.
+  compile() maps them to the renderer's names. The built-in themes in
+  `src/themes.json` use the same spec names (Niels, 2026-11-09), so a
+  built-in theme's settings can be passed back as a theme object; their
+  shape is part of spec v1. `npm run schema:check` checks this.
 
 - **C. Data processing is not in the spec.** `GC_normalize` and the gene
   matching of `GC_links(group, value1, value2)` stay in R and

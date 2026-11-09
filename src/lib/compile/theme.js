@@ -1,6 +1,7 @@
 // Themes: GC_theme(), resolve_theme(), merge_theme_settings(),
 // theme_global_options() and theme_to_js() (R/theme.R). The built-in themes
-// and palettes are in src/themes.json, as the R package defines them.
+// and palettes are in src/themes.json, in the spec's names (as a theme
+// entry gives them).
 import themes from "../../themes.json" with { type: "json" };
 import { patternToJs } from "./genes.js";
 import { clone, isNamedList } from "./r.js";
@@ -41,7 +42,7 @@ const ANNOTATION_TYPES = {
   arc: "curveAnnotationOptions",
 };
 
-/** The built-in themes, as R defines them. */
+/** The built-in themes, in the spec's names. */
 export const builtinThemes = themes.themes;
 /** The geneviewer palettes: their colours by name. */
 export const palettes = themes.palettes;
@@ -64,12 +65,12 @@ function camelCaseNames(options) {
 }
 
 /**
- * The options of a theme's components named as in the browser, as the spec
- * names them.
+ * Theme settings in spec names (a built-in theme, or a user's settings) with
+ * each component's options named as the renderer reads them.
  * @param {Object<string, *>} theme
  * @returns {Object<string, *>}
  */
-function themeNames(theme) {
+function rendererNames(theme) {
   const out = { ...theme };
   for (const name of Object.keys(out)) {
     if (name === "annotations") {
@@ -77,7 +78,7 @@ function themeNames(theme) {
         out[name] = Object.fromEntries(Object.entries(out[name]).map(([type, o]) => [type, camelCaseNames(o)]));
       }
     } else if (name in THEME_COMPONENTS) {
-      out[name] = camelCaseNames(out[name]);
+      out[name] = renameOptions(camelCaseNames(out[name]), THEME_NAMES[name]);
     }
   }
   return out;
@@ -116,7 +117,7 @@ export function theme(state, entry) {
     if (!(name in builtinThemes)) {
       throw new Error(`name must be one of: ${Object.keys(builtinThemes).map((t) => `"${t}"`).join(", ")}`);
     }
-    base = themeNames(clone(builtinThemes[name]));
+    base = rendererNames(clone(builtinThemes[name]));
   }
   // The spec names of components' options, as the renderer reads them
   for (const name of Object.keys(settings)) {
