@@ -138,6 +138,21 @@ Set `PORT` to use a port other than 4849.
 The publish workflow tests, builds, runs the smoke test, publishes to npm with provenance,
 and attaches `dist/` to a GitHub release.
 
+3. When the publish workflow has passed and `npm view geneviewer-js version`
+   shows the new version, update the docs site. A release does not rebuild
+   it: the site rebuilds only on a push to
+   [geneviewer-docs](https://github.com/nvelden/geneviewer-docs). In that
+   repo:
+
+   ```sh
+   npm install geneviewer-js@^<version>
+   git commit -am "The site uses geneviewer-js <version>"
+   git push origin main
+   ```
+
+   The push deploys the site (needs Niels's go, as every deploy does).
+   Check that the version in the site's nav bar shows the new version.
+
 ## Using a release in the R package
 
 The R package vendors a release: its copies of the files are stored in the R
