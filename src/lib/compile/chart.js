@@ -142,7 +142,10 @@ export function chart(spec) {
   data.set("start", original.get(start).slice());
   data.set("end", original.get(end).slice());
   if (cluster !== null) data.set(cluster, data.get(cluster).map(asCharacter));
-  data = addStrand(data, strand);
+  // Data without rows keeps its columns: a chart without clusters, e.g. a
+  // Shiny filter that leaves nothing (R's add_strand() gives NULL)
+  if (data.nrow === 0) data.set("strand", []);
+  else data = addStrand(data, strand);
 
   x.data = data;
   if (group !== null) x.group = group;
@@ -164,7 +167,7 @@ export function chart(spec) {
       else clusterRows.set(name, [i]);
     });
   }
-  const clusters = cluster === null ? ["cluster"] : [...clusterRows.keys()];
+  const clusters = data.nrow === 0 ? [] : cluster === null ? ["cluster"] : [...clusterRows.keys()];
   const blast = columnNames.includes("BlastP") && columnNames.includes("protein_id");
   /** @type {Map<string, Object<string, *>>} */
   const series = new Map();

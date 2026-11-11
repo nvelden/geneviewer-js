@@ -129,6 +129,17 @@ GC_chart(ophA_clusters, group = "class", cluster = "cluster", height = "300px") 
 GC_chart(ophA_clusters, group = "class", cluster = "cluster", height = "300px") %>%
   GC_zoom(range = c(0.3, 0.7), overview = FALSE)
 
+# Data without rows, e.g. a Shiny filter that leaves nothing: an empty chart
+# with its title, legend and other options, no error (R's B75)
+## fixture: cov-empty-data
+GC_chart(ophA_clusters[0, ], cluster = "cluster", group = "class", height = "200px") %>%
+  GC_title("No genes") %>% GC_labels("name") %>% GC_legend() %>% GC_coordinates() %>%
+  GC_zoom()
+
+## fixture: cov-empty-data-no-cluster
+GC_chart(data.frame(start = NA, end = 10, name = "a"), height = "150px") %>%
+  GC_labels("name")
+
 # Interaction tests (test/interaction/scenarios.cjs)
 
 ## fixture: interaction-zoom-events

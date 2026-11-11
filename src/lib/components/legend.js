@@ -76,7 +76,10 @@ container.prototype.legend = function (group, show = true, chartElement, options
   }
 
   if (!uniqueGroups.length) {
-    console.error(`Error: No labels provided and the group "${group}" does not exist in the data.`);
+    // A chart without rows has an empty legend, not an error
+    if (this.data.length) {
+      console.error(`Error: No labels provided and the group "${group}" does not exist in the data.`);
+    }
     return;
   }
 
