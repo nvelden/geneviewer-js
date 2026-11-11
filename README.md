@@ -4,9 +4,9 @@
 
 [![CI](https://github.com/nvelden/geneviewer-js/actions/workflows/ci.yml/badge.svg)](https://github.com/nvelden/geneviewer-js/actions/workflows/ci.yml) [![npm version](https://img.shields.io/npm/v/geneviewer-js)](https://www.npmjs.com/package/geneviewer-js) [![npm downloads](https://img.shields.io/npm/dt/geneviewer-js)](https://www.npmjs.com/package/geneviewer-js) ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-**geneviewer-js** is a JavaScript library for drawing interactive gene cluster, transcript and genome alignment charts in the browser, built on D3. Charts can include legends, labels, annotations, scales, links, colors, tooltips and more, with zooming, selection and SVG or PNG export. The same library draws the charts of the [geneviewer R package](https://github.com/nvelden/geneviewer). To explore all features visit the [documentation](https://nvelden.github.io/geneviewer-docs/).
+**geneviewer-js** is a JavaScript library for drawing interactive gene cluster, transcript and genome alignment charts in the browser, built on D3. Charts can include legends, labels, annotations, scales, links, colors, tooltips and more, with zooming, selection and SVG or PNG export. The same library draws the charts of the [geneviewer R package](https://github.com/nvelden/geneviewer) and the [geneviewer-py Python package](https://github.com/nvelden/geneviewer-py). To explore all features visit the [documentation](https://nvelden.github.io/geneviewer-docs/).
 
-The library only draws charts, from the data you pass to it. It does not read GenBank, FASTA or GFF files or run alignments; those are done by the R package.
+The library only draws charts, from the data you pass to it. It does not read GenBank, FASTA or GFF files or run alignments; those are done by the R and Python packages.
 
 <br clear="right">
 
@@ -102,9 +102,9 @@ Try the **[Gene Cluster Dashboard](https://nvelden.github.io/geneviewer-shinyliv
 
 | File | For |
 |------|-----|
-| `dist/geneviewer.min.js` | Script tag, global `geneviewer`, D3 included |
+| `dist/geneviewer.min.js` | Script tag, global `geneviewer`, D3 included (the Python package's Shiny output) |
 | `dist/geneviewer.mjs` | ES module for bundlers (`import ... from "geneviewer-js"`), imports `d3` |
-| `dist/geneviewer.standalone.mjs` | ES module with D3 included (`geneviewer-js/standalone`) |
+| `dist/geneviewer.standalone.mjs` | ES module with D3 included (`geneviewer-js/standalone`; the Python package's Jupyter widget) |
 | `dist/geneviewer.core.js` | Script tag using the page's `d3`, not minified (the R package) |
 | `dist/geneviewer.css` | The stylesheet, when styles cannot be added by script |
 | `dist/geneviewer.d.ts`, `dist/spec.d.ts` | Types |
