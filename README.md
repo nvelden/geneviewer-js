@@ -10,7 +10,7 @@ The library only draws charts, from the data you pass to it. It does not read Ge
 
 <br clear="right">
 
-<p align="center"><a href="https://nvelden.github.io/geneviewer-shinylive/"><img src="https://raw.githubusercontent.com/nvelden/geneviewer/main/man/figures/geneviewer_promo.gif" width="100%" alt="geneviewer: load GenBank, FASTA or CSV files, add titles, labels and a legend, zoom in with the zoom bar, drag labels, switch the theme and export the SVG"/></a></p>
+<p align="center"><a href="https://nvelden.github.io/geneviewer-shinylive/"><img src="https://raw.githubusercontent.com/nvelden/geneviewer/main/man/figures/geneviewer_promo.gif" width="100%" alt="geneviewer: load GenBank, FASTA or CSV files, add titles, labels and a legend, zoom in with the zoom bar, drag labels, switch the theme, and save the figure for a paper"/></a></p>
 
 ## Installation
 
