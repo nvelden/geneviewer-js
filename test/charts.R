@@ -637,6 +637,12 @@ GC_chart(data.frame(protein_id = c("A1", "A2", "B1", "B2"), cluster = c("A", "A"
          cluster = "cluster", group = "BlastP", width = "600px", height = "300px") %>%
   GC_links(group = "BlastP")
 
+## fixture: beh-tooltip-escape
+GC_chart(data.frame(start = c(1, 200), end = c(150, 350),
+                    product = c("<img src=x onerror=\"window.hacked = true\">", "A & B <i>")),
+         width = "600px", height = "200px") %>%
+  GC_tooltip(formatter = "<b>Product:</b> {product}")
+
 # The widget (test/behaviour/widget.cjs)
 
 ## fixture: beh-render-events
