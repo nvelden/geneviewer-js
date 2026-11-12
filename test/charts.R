@@ -140,6 +140,14 @@ GC_chart(ophA_clusters[0, ], cluster = "cluster", group = "class", height = "200
 GC_chart(data.frame(start = NA, end = 10, name = "a"), height = "150px") %>%
   GC_labels("name")
 
+# show = FALSE hides what an earlier call shows, per cluster; hidden labels
+# need no column, also without a group (R's B76)
+## fixture: cov-hide-shown
+GC_chart(ophA_clusters, cluster = "cluster", height = "250px") %>%
+  GC_labels("name") %>% GC_labels(show = FALSE, cluster = 2) %>%
+  GC_coordinates() %>% GC_coordinates(show = FALSE, cluster = 1) %>%
+  GC_clusterTitle("Title") %>% GC_clusterTitle(show = FALSE, cluster = 2)
+
 # Interaction tests (test/interaction/scenarios.cjs)
 
 ## fixture: interaction-zoom-events
