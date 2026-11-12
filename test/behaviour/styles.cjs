@@ -149,6 +149,31 @@ module.exports = [
     },
   },
   {
+    name: "tooltips show the values of the data as text, the formatter as HTML",
+    fixture: "beh-tooltip-escape",
+    async run(page, t) {
+      const tips = await page.evaluate(() => {
+        const tips = [];
+        d3.selectAll("[data-component=genes] *").filter((d) => d && d.product).each(function () {
+          this.dispatchEvent(new MouseEvent("mouseover", { bubbles: true }));
+          const tip = Array.from(document.querySelectorAll(".cluster-tooltip"))
+            .find((n) => n.innerText.includes("Product"));
+          tips.push({ text: tip.innerText, bold: tip.querySelectorAll("b").length,
+                      img: tip.querySelectorAll("img").length, italic: tip.querySelectorAll("i").length });
+          this.dispatchEvent(new MouseEvent("mouseout", { bubbles: true }));
+        });
+        return { tips, hacked: window.hacked === true };
+      });
+      t.equal(tips.tips.length, 2, "two tooltips");
+      t.match(tips.tips[0].text, /<img src=x onerror=/, "markup in the data shows as text");
+      t.equal(tips.tips[0].img, 0, "no image element");
+      t.ok(!tips.hacked, "no script ran");
+      t.match(tips.tips[1].text, /A & B <i>/, "& and < show as written");
+      t.equal(tips.tips[1].italic, 0, "no italic element");
+      t.equal(tips.tips[0].bold, 1, "the formatter stays HTML");
+    },
+  },
+  {
     name: "BlastP tooltips leave out lines without values",
     fixture: "beh-blast-tooltips",
     async run(page, t) {

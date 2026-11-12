@@ -87,9 +87,14 @@ const LABELS = ["label", "show", "clusters", "itemStyle", "groupStyle", "styleBy
 export function labels(state, entry) {
   let label = entry.label ?? null;
   const show = entry.show ?? true;
-  if (label === null && state.x.group === undefined) throw new Error("Please define labels");
-  if (label === null) label = state.x.group;
-  checkColumns(state, label, "label column not found in data");
+  // Labels that are hidden need no column: GC_labels(show = FALSE) hides the
+  // labels an earlier call shows, also on a chart without a group
+  const hidden = ![show].flat().some(Boolean);
+  if (label === null && !hidden) {
+    if (state.x.group === undefined) throw new Error("Please define labels");
+    label = state.x.group;
+  }
+  if (label !== null) checkColumns(state, label, "label column not found in data");
   const extra = dots(entry, LABELS);
   getUpdatedClusters(state, entry.clusters).forEach((name, i) => {
     const series = state.x.series.get(name);

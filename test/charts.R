@@ -129,6 +129,25 @@ GC_chart(ophA_clusters, group = "class", cluster = "cluster", height = "300px") 
 GC_chart(ophA_clusters, group = "class", cluster = "cluster", height = "300px") %>%
   GC_zoom(range = c(0.3, 0.7), overview = FALSE)
 
+# Data without rows, e.g. a Shiny filter that leaves nothing: an empty chart
+# with its title, legend and other options, no error (R's B75)
+## fixture: cov-empty-data
+GC_chart(ophA_clusters[0, ], cluster = "cluster", group = "class", height = "200px") %>%
+  GC_title("No genes") %>% GC_labels("name") %>% GC_legend() %>% GC_coordinates() %>%
+  GC_zoom()
+
+## fixture: cov-empty-data-no-cluster
+GC_chart(data.frame(start = NA, end = 10, name = "a"), height = "150px") %>%
+  GC_labels("name")
+
+# show = FALSE hides what an earlier call shows, per cluster; hidden labels
+# need no column, also without a group (R's B76)
+## fixture: cov-hide-shown
+GC_chart(ophA_clusters, cluster = "cluster", height = "250px") %>%
+  GC_labels("name") %>% GC_labels(show = FALSE, cluster = 2) %>%
+  GC_coordinates() %>% GC_coordinates(show = FALSE, cluster = 1) %>%
+  GC_clusterTitle("Title") %>% GC_clusterTitle(show = FALSE, cluster = 2)
+
 # Interaction tests (test/interaction/scenarios.cjs)
 
 ## fixture: interaction-zoom-events
@@ -617,6 +636,12 @@ GC_chart(data.frame(protein_id = c("A1", "A2", "B1", "B2"), cluster = c("A", "A"
                     identity = c(100, 100, 55.4, NA), similarity = c(100, 100, 68.2, NA)),
          cluster = "cluster", group = "BlastP", width = "600px", height = "300px") %>%
   GC_links(group = "BlastP")
+
+## fixture: beh-tooltip-escape
+GC_chart(data.frame(start = c(1, 200), end = c(150, 350),
+                    product = c("<img src=x onerror=\"window.hacked = true\">", "A & B <i>")),
+         width = "600px", height = "200px") %>%
+  GC_tooltip(formatter = "<b>Product:</b> {product}")
 
 # The widget (test/behaviour/widget.cjs)
 

@@ -1,0 +1,7 @@
+{
+  "id": "cov-empty-data",
+  "source": "charts",
+  "width": 1000,
+  "height": "200px",
+  "covers": ["GC_chart", "GC_coordinates", "GC_labels", "GC_legend", "GC_title", "GC_zoom"]
+}

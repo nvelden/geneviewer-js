@@ -1,0 +1,1 @@
+{"version":1,"data":{"start":[1,200],"end":[150,350],"product":["<img src=x onerror=\"window.hacked = true\">","A & B <i>"]},"width":"600px","height":"200px","tooltip":{"formatter":"<b>Product:<\/b> {product}"}}

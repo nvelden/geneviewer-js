@@ -47,11 +47,18 @@ const EXCEPTIONS = {
   // 2: params of GenBank input have cluster and strand (from fields)
   "rd-GC-chart-2": ["data"],
   // 3: clusters not normalised get the original_* columns, all null
-  "rd-GC-normalize-1": ["data"],
-  "vig-geneviewer-26": ["data"],
-  "vig-geneviewer-27": ["data"],
+  // and, with cov-normalize: R's GC_normalize() now shares the total gap
+  // between the gaps (it divided by the number of genes), so the positions
+  // and the end of the scale differ from the payload of R 0.2
+  "rd-GC-normalize-1": ["data", "scale"],
+  "vig-geneviewer-26": ["data", "scale"],
+  "vig-geneviewer-27": ["data", "scale"],
+  "cov-normalize": ["data", "scale"],
   // 4: GC_tooltip(FALSE): the hidden tooltip has the default formatter
   ...Object.fromEntries(Array.from({ length: 10 }, (_, i) => [`vig-geneviewer-${53 + i}`, ["tooltip"]])),
+  // 6: the example of GC_genes() no longer passes prevent_overlap and
+  // gene_overlap_spacing, which nothing reads; R 0.2's payload has them
+  "rd-GC-genes-1": ["genes"],
   // 5: save_button = FALSE is toolbar.buttons without "save"
   "cov-chart-without-extras": ["toolbar"],
 };

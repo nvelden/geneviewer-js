@@ -86,7 +86,9 @@ container.prototype.tooltip = function (show = true, options = {}) {
         if (typeof d[p1] === 'number') {
           return d3Format(d[p1]);
         }
-        return d[p1] || '';
+        // The formatter is HTML; the values of the data are text, so markup
+        // in them (e.g. a GenBank qualifier) is shown, not run
+        return escapeHtml(d[p1] || '');
       });
   };
 
@@ -134,3 +136,17 @@ container.prototype.tooltip = function (show = true, options = {}) {
 
   return this; // Return the instance for method chaining
 };
+
+/**
+ * A value as text in HTML: the characters that HTML reads as markup escaped.
+ * @param {*} value
+ * @returns {string}
+ */
+export function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}

@@ -1,0 +1,7 @@
+{
+  "id": "cov-empty-data-no-cluster",
+  "source": "charts",
+  "width": 1000,
+  "height": "150px",
+  "covers": ["GC_chart", "GC_labels"]
+}
